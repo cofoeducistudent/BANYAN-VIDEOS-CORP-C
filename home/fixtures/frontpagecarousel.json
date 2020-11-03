@@ -1,0 +1,113 @@
+
+[
+    {
+        "model": "home.frontpagecarousel",
+        "pk": 0,
+
+        "fields": {
+        "c_item": 8,
+        "c_name": "Piraytes of the Caribbean",
+        "c_url":  "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.dvdsreleasedates.com%2Fposters%2F800%2FP%2FPirates-of-the-Caribbean-The-Curse-of-the-Black-Pearl-movie-poster.jpg&f=1&nofb=1"
+    }
+    },
+
+    {
+        "model": "home.frontpagecarousel",
+        "pk": 1,
+
+        "fields": {
+        "c_item": 1,
+        "c_name": "20000 Leagues Under The Sea ",
+        "c_url":  "https://cinefex.com/blog/wp-content/uploads/2014/10/20000-leagues-poster.jpg" 
+    }
+    },
+
+ 
+    {
+        "model": "home.frontpagecarousel",
+        "pk": 2,
+
+        "fields": {
+        "c_item": 2,
+        "c_name": "Bladerunner",
+        "c_url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F2.bp.blogspot.com%2F-4pi_w2DS6ls%2FT8S_sostEgI%2FAAAAAAAAFcc%2FHYM0ghQDBUU%2Fs1600%2FBlade%2BRunner%2B%25281982%2529%2BOriginal.jpg&f=1&nofb=1"
+
+    }
+    },
+ 
+ 
+    {
+        "model": "home.frontpagecarousel",
+        "pk": 3,
+
+        "fields": {
+        "c_item": 3,
+        "c_name": "StarWars",
+        "c_url":  "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fcdn.collider.com%2Fwp-content%2Fuploads%2F2015%2F12%2Fstar-wars-a-new-hope-poster.jpg&f=1&nofb=1"
+
+    }
+    },
+ 
+    {
+        "model": "home.frontpagecarousel",
+        "pk": 4,
+
+        "fields": {
+        "c_item": 4,
+        "c_name": "The Dark Knight",
+        "c_url":  "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimgs.abduzeedo.com%2Ffiles%2Fmisc%2Fpaulo%2Fbatman%2F31.jpg&f=1&nofb=1"
+
+    }
+    },
+ 
+    {
+        "model": "home.frontpagecarousel",
+        "pk": 5,
+
+        "fields": {
+        "c_item": 5,
+        "c_name": "Spider-Man",
+        "c_url":  "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2F736x%2F6b%2F03%2Fa7%2F6b03a707147d21f639b1782a4bccb82b--spiderman-marvel-spider-man.jpg&f=1&nofb=1"
+
+    }
+    },
+
+    {
+        "model": "home.frontpagecarousel",
+        "pk": 6,
+
+        "fields": {
+        "c_item": 6,
+        "c_name": "Grease",
+        "c_url":  "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.movieartarena.com%2Fimgs%2Fgrease.jpg&f=1&nofb=1"
+
+    }
+    },
+
+    {
+        "model": "home.frontpagecarousel",
+        "pk": 7,
+
+        "fields": {
+        "c_item": 7,
+        "c_name": "American Grafiti",
+        "c_url":  "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.dvdsreleasedates.com%2Fposters%2F800%2FA%2FAmerican-Graffiti-movie-poster.jpg&f=1&nofb=1"
+
+    }
+    },
+
+    {
+        "model": "home.frontpagecarousel",
+        "pk": 8,
+
+        "fields": {
+        "c_item": 8,
+        "c_name": "The Day The Earth Stood Still",
+        "c_url":  "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.E-BpwKjEh3nNpCBZQzredQHaLT%26pid%3DApi&f=1"
+
+    }
+    }
+
+
+
+]

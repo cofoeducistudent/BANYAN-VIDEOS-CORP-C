@@ -1,0 +1,76 @@
+[
+
+    {
+        "model": "home.article",
+        "pk": 1,
+
+        "fields": {
+        "article_name": "brexit",
+        "article_friendly_name": "Brexit ‘trade talks are over’: UK sees no point in more negotiations unless EU changes its stance",
+        "article_image": "https://cdni.rt.com/files/2020.10/l/5f89b65785f54028dd0e87e3.JPG",
+        "article_content": "The UK sees no point in continuing trade talks with the EU unless it “fundamentally changes” its position, a spokesman for Britain’s PM Boris Johnson has said, blaming the bloc for failed negotiations. The EU’s chief negotiator Michel Barnier should only come to London for a meeting scheduled next week if he was willing to discuss details on travel and cargo haulage, the spokesman said on Friday."
+        
+    }
+    },
+
+    {
+        "model": "home.article",
+        "pk": 2,
+
+        "fields": {
+        "article_name": "biden_laptop",
+        "article_friendly_name": "Giuliani says shop owner who passed Biden laptop to FBI had copied data to friends in case he’s ‘KILLED",
+        "article_image": "https://cdni.rt.com/files/2020.10/l/5f8b563d20302728b114e609.JPG",
+        "article_content": "President Donald Trump’s lawyer Rudy Giuliani is insisting that the hard drive allegedly belonging to Hunter Biden contains such explosive revelations that the shop owner who handed the data to authorities feared for his life. The repair-shop owner handed the laptop, allegedly left for repair by Biden and then abandoned, over to the FBI some time in December – but not before making four complete copies of the data as insurance, the former New York City mayor claimed, in a recent interview with The Daily Caller."
+        
+    }},
+
+    {
+        "model": "home.article",
+        "pk": 3,
+
+        "fields": {
+        "article_name": "election_fraud",
+        "article_friendly_name": "Pennsylvania rejects 300,000+ ‘duplicate’ mail-in ballot applications as confused voters flood election offices with calls",
+        "article_image": "https://cdni.rt.com/files/2020.10/l/5f8a4d552030276f473d7117.jpg",
+        "article_content": "Hundreds of thousands of mail-in ballot applications have been scrapped by Pennsylvania election officials, with countless voters filing duplicate requests unwittingly thanks to a confusing and opaque system, ProPublica reported. The majority of the 372,000 denied ballot requests, some 90 percent, were rejected as duplicates after voters mistakenly submitted repeat applications. Many did so unaware they had already agreed to be sent a ballot by mail during the state’s June 2 primary, as ballots for the prior race allowed voters to check a box to automatically receive a ballot for the general election as well. Ultimately, one in five applications have been turned down."
+        
+    }},
+
+    {
+        "model": "home.article",
+        "pk": 4,
+
+        "fields": {
+        "article_name": "iran",
+        "article_friendly_name": "Iran claims victory over US as UN arms embargo expires",
+        "article_image": "https://cdni.rt.com/files/2020.10/l/5f8b671885f54028dd0e8923.JPG",
+        "article_content": "Iran’s foreign ministry has declared the victory of “multilateralism, peace and security”, claiming the UN’s conventional arms embargo effectively expired on October 18, despite Washington's pressure to reimpose sanctions."
+        
+    }},
+
+    {
+        "model": "home.article",
+        "pk": 5,
+
+        "fields": {
+        "article_name": "india_2050",
+        "article_friendly_name": "India can overtake Japan to become world’s third-largest economy by 2050",
+        "article_image": "https://cdni.rt.com/files/2020.10/l/5f855ae920302724f4766ff8.jpg",
+        "article_content": "The Indian economy may climb from fifth to third spot in the list of the world’s largest economies over the next three decades, according to a recent study published in the medical journal Lancet.The research, conducted earlier this year, is based on changes to the size of the working-age population in the world’s largest countries, which is then translated into scenarios for total gross domestic product (GDP). According to Lancet projections, India will have the largest working-age population prior to 2030, which will continue growing to reach peak levels before 2050. Despite a projected decline later on, India will still have more working-age adults than any country in the world by the end of the century."
+        
+    }},
+
+    {
+        "model": "home.article",
+        "pk": 6,
+
+        "fields": {
+        "article_name": "pandemic",
+        "article_friendly_name": "Pandemic fears & rising prices spurring countries to stockpile food – report",
+        "article_image": "https://cdni.rt.com/files/2020.10/l/5f871952203027786650b8bc.JPG",
+        "article_content": "The coronavirus shopping frenzy has spilled over into government level as countries begin hoarding food amid fears that the pandemic’s effect on global supply chains could cause price hikes. Nations dependent on food imports seem to be the most concerned about shortages of agricultural goods as the number of coronavirus infections continues to rise. For example, Egypt, the largest importer of wheat globally, increased purchases by almost 40 percent year-on-year between July and August. The country’s officials earlier told Reuters that Cairo wants to have sufficient “essential goods” for no less than six months as a preemptive measure in the light of the ongoing pandemic."
+        
+    }}
+
+]

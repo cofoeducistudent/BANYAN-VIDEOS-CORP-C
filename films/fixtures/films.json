@@ -1,0 +1,427 @@
+[
+    {
+        "model": "films.films",
+        "pk": 1,
+
+        "fields": {
+        "film_sku": "123456",
+        "film_genre": "1",
+        "film_title": "20000_leagues",
+        "film_friendly_title": "20000 leagues Under the Sea",
+        "film_box_cover_url": "https://cinefex.com/blog/wp-content/uploads/2014/10/20000-leagues-poster.jpg",
+        "film_description": "Twenty Thousand Leagues Under the Seas: A World Tour Underwater (French: Vingt mille lieues sous les mers: Tour du monde sous-marin) is a classic science fiction adventure novel by French writer Jules Verne.",
+        "film_price": 12.99,
+        "film_product_discount": 0.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":""
+    }
+    },
+    
+    {
+        "model": "films.films",
+        "pk": 2,
+
+        "fields": {
+        "film_sku": "133486",
+        "film_genre": "8",
+        "film_title": "bladerunner",
+        "film_friendly_title": "Bladerunner",
+        "film_box_cover_url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F2.bp.blogspot.com%2F-4pi_w2DS6ls%2FT8S_sostEgI%2FAAAAAAAAFcc%2FHYM0ghQDBUU%2Fs1600%2FBlade%2BRunner%2B%25281982%2529%2BOriginal.jpg&f=1&nofb=1",
+        "film_description": "Blade Runner is a 1982 science fiction film directed by Ridley Scott, and written by Hampton Fancher and David Peoples.Starring Harrison Ford, Rutger Hauer, Sean Young and Edward James Olmos, it is loosely based on Philip K. Dick's novel Do Androids Dream of Electric Sheep? (1968). The film is set in a dystopian future Los Angeles of 2019, in which synthetic humans known as replicants are bio ...",
+        "film_price": 9.99,
+        "film_product_discount": 15.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":""
+    }
+    },
+
+    {
+        "model": "films.films",
+        "pk": 3,
+
+        "fields": {
+        "film_sku": "133446",
+        "film_genre": "8",
+        "film_title": "starwars",
+        "film_friendly_title": "Star Wars",
+        "film_box_cover_url": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fcdn.collider.com%2Fwp-content%2Fuploads%2F2015%2F12%2Fstar-wars-a-new-hope-poster.jpg&f=1&nofb=1",
+        "film_description": "Star Wars is an American epic space opera[1] media franchise created by George Lucas, which began with the eponymous 1977 film and quickly became a worldwide pop-culture phenomenon. The franchise has been expanded into various films and other media, including television series, video games, novels, comic books, theme park attractions, and themed areas, comprising an all-encompassing fictional universe.[b] The franchise holds a Guinness World Records title for the Most successful film merchandising franchise. In 2020, the Star Wars franchise's total value was estimated at US$70 billion, and it is currently the fifth-highest-grossing media franchise of all time.",
+        "film_price": 9.99,
+        "film_product_discount": 0.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":""
+    }
+    },
+
+
+    {
+        "model": "films.films",
+        "pk": 4,
+
+        "fields": {
+        "film_sku": "123248",
+        "film_genre": "8",
+        "film_title": "the_empire_strikes_back",
+        "film_friendly_title": "The Empire Strikes Back",
+        "film_box_cover_url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn7.bigcommerce.com%2Fs-uolwqmm3ak%2Fimages%2Fstencil%2F1280x1280%2Fproducts%2F341%2F724%2FEmpire-Strikes-Back-Poster-845F__66931.1530431405.jpg%3Fc%3D2%26imbypass%3Don&f=1&nofb=1",
+        "film_description": "E.T. the Extra-Terrestrial is a 1982 American science fiction film produced and directed by Steven Spielberg, and written by Melissa Mathison. It tells the story of Elliott, a boy who befriends an extraterrestrial, dubbed E.T., who is stranded on Earth. The film stars Dee Wallace, Peter Coyote, and Henry Thomas, and features special effects by Carlo Rambaldi and Dennis Mure",
+        "film_price": 9.99,
+        "film_product_discount": 0.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":""
+    }
+    },
+
+    {
+        "model": "films.films",
+        "pk": 5,
+
+        "fields": {
+        "film_sku": "232446",
+        "film_genre": "6",
+        "film_title": "calamity_jane",
+        "film_friendly_title": "Calamity Jane",
+        "film_box_cover_url": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Flets-get-together.com%2Fwp-content%2Fuploads%2F2015%2F02%2Fcalamity-jane-movie-poster-1953-1020203311.jpg&f=1&nofb=1",
+        "film_description":"Calamity Jane is a 1953 American Technicolor western musical film loosely based on the life of Wild West heroine Calamity Jane, and explores an alleged romance between Calamity Jane and Wild Bill Hickok in the American Old West. The film starred Doris Day as the title character and Howard Keel as Hickok. It was devised by Warner Bros. in response to the success of Annie Get Your Gun. It was nominated for Scoring of a Musical Picture and Best Sound, Recording (William A. Mueller).[2] The songs and screenplay form the basis of a stage musical of the same name that has had a number of productions.",
+        "film_price": 8.99,
+        "film_product_discount": 10.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":""
+    }
+    },
+
+    {
+        "model": "films.films",
+        "pk": 6,
+
+        "fields": {
+        "film_sku": "123046",
+        "film_genre": "8",
+        "film_title": "dune",
+        "film_friendly_title": "Dune",
+        "film_box_cover_url": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimages2.fanpop.com%2Fimages%2Fphotos%2F8400000%2FDune-poster-dune-8428076-989-1500.jpg&f=1&nofb=1",
+        "film_description":"Dune is a 1984 American epic science fiction film written and directed by David Lynch and based on the 1965 Frank Herbert novel of the same name. The film stars Kyle MacLachlan (in his film debut) as young nobleman Paul Atreides, and includes an ensemble of well-known American and European actors in supporting roles. It was filmed at the Churubusco Studios in Mexico City and included a soundtrack by the rock band Toto, as well as Brian Eno.",
+        "film_price": 9.99,
+        "film_product_discount": 10.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":""
+    }
+    },
+
+    {
+        "model": "films.films",
+        "pk": 7,
+
+        "fields": {
+        "film_sku": "137846",
+        "film_genre": "1",
+        "film_title": "the_dark_knight",
+        "film_friendly_title": "The Dark Knight",
+        "film_box_cover_url": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimgs.abduzeedo.com%2Ffiles%2Fmisc%2Fpaulo%2Fbatman%2F31.jpg&f=1&nofb=1",
+        "film_description":"The Dark Knight is a 2008 superhero film directed, produced, and co-written by Christopher Nolan. Based on the DC Comics character Batman, the film is the second installment of Nolan's The Dark Knight Trilogy and a sequel to 2005's Batman Begins, starring Christian Bale and supported by Michael Caine, Heath Ledger, Gary Oldman, Aaron Eckhart, Maggie Gyllenhaal, and Morgan Freeman. In the film, Bruce Wayne / Batman (Bale), Police Lieutenant James Gordon (Oldman) and District Attorney Harvey Dent (Eckhart) form an alliance to dismantle organized crime in Gotham City, but are menaced by an anarchistic mastermind known as the Joker (Ledger), who seeks to undermine Batman's influence and throw the city into anarchy.",
+        "film_price": 9.99,
+        "film_product_discount": 15.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":""
+    }
+    },
+
+    {
+        "model": "films.films",
+        "pk": 8,
+
+        "fields": {
+        "film_sku": "133406",
+        "film_genre": "1",
+        "film_title": "spiderman",
+        "film_friendly_title": "Spider-Man",
+        "film_box_cover_url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2F736x%2F6b%2F03%2Fa7%2F6b03a707147d21f639b1782a4bccb82b--spiderman-marvel-spider-man.jpg&f=1&nofb=1",
+        "film_price": 9.99,
+        "film_product_discount": 7.50,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":""
+    }
+    },
+
+    {
+        "model": "films.films",
+        "pk": 9,
+        "fields": {
+        "film_sku": "103432",
+        "film_genre": "2",
+        "film_title": "shaun_of_the_dead",
+        "film_friendly_title": "Shaun Of The Dead",
+        "film_box_cover_url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthroughtwoblueeyes.files.wordpress.com%2F2014%2F04%2Fshaun-of-the-dead-poster.jpg&f=1&nofb=1",
+        "film_description":"Shaun of the Dead is a 2004 horror comedy drama film directed by Edgar Wright. The film was written by Wright and Simon Pegg, who stars in it as Shaun. Along with friend Ed, played by Nick Frost, Shaun is caught unaware by the zombie apocalypse; they attempt to take refuge in a local pub with their loved ones. The film co-stars Kate Ashfield, Lucy Davis, ",
+        "film_price": 9.99,
+        "film_product_discount": 10.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":""
+    }
+    },
+
+    {
+        "model": "films.films",
+        "pk": 10,
+        "fields": {
+        "film_sku": "133776",
+        "film_genre": "1",
+        "film_title": "jaws",
+        "film_friendly_title": "Jaws",
+        "film_box_cover_url": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fcolossuscollection.files.wordpress.com%2F2010%2F05%2Fjaws-poster.jpg&f=1&nofb=1",
+        "film_description":"Jaws is a 1975 American thriller film directed by Steven Spielberg and based on Peter Benchley's 1974 novel of the same name. In the film, a man-eating great white shark attacks beachgoers at a summer resort town, prompting police chief Martin Brody (Roy Scheider) to hunt it with the help of a marine biologist (Richard Dreyfuss) and a professional shark hunter (Robert Shaw).",
+        "film_price": 9.99,
+        "film_product_discount": 0.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":""
+    }
+    },
+
+    {
+        "model": "films.films",
+        "pk": 11,
+        "fields": {
+        "film_sku": "132446",
+        "film_genre": "2",
+        "film_title": "paper_moon",
+        "film_friendly_title": "Paper Moon",
+        "film_box_cover_url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fgfx.videobuster.de%2Farchive%2Fv%2FcLfiiBVmOVO5VRinlH6q0_gcz0lMkawqiUyRqglMkZpbWGZJTJGanBlZyUyRmZmxmZiZfxiOWPnzLHFu4s0YmFi0TA3LmpwZyZyPXfvOA%2Fpaper-moon.jpg&f=1&nofb=1",
+        "film_description":"Paper Moon is a 1973 American road comedy-drama film directed by Peter Bogdanovich and released by Paramount Pictures. Screenwriter Alvin Sargent adapted the script from the 1971 novel Addie Pray by Joe David Brown. The film, shot in black-and-white, is set in Kansas and Missouri during the Great Depression. It stars the real-life father and daughter pairing of Ryan and Tatum O'Neal as protagonists Moze and Addie.",
+        "film_price": 13.99,
+        "film_product_discount": 5.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":""
+    }
+    },
+
+
+    {
+        "model": "films.films",
+        "pk": 12,
+        "fields": {
+        "film_sku": "131116",
+        "film_genre": "9",
+        "film_title": "the_good_the_bad",
+        "film_friendly_title": "The Good The Bad and The Ugly",
+        "film_box_cover_url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi2.wp.com%2Fmedia.boingboing.net%2Fwp-content%2Fuploads%2F2015%2F07%2Fthe_good_the_bad_and_the_ugly___movie_poster_by_zungam80-d6mwe2c.jpg%3Fresize%3D800%252C926%26ssl%3D1&f=1&nofb=1",
+        "film_description":"The Good, the Bad and the Ugly (Italian: Il buono, il brutto, il cattivo, lit. '.The good, the ugly, the bad.') is a 1966 Italian epic Spaghetti Western film directed by Sergio Leone and starring Clint Eastwood as .the Good., Lee Van Cleef as .the Bad., and Eli Wallach as .the Ugly..[10] Its screenplay was written by Age & Scarpelli, Luciano Vincenzoni and Leone (with additional screenplay material",
+        "film_price": 9.99,
+        "film_product_discount": 0.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":""
+    }
+    },
+
+    {
+        "model": "films.films",
+        "pk": 13,
+        "fields": {
+        "film_sku": "112446",
+        "film_genre": "3",
+        "film_title": "life_on_earth",
+        "film_friendly_title": "Life On Earth",
+        "film_box_cover_url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.jeded.com%2Fi%2Fbbc-life-on-earth.20535.jpg&f=1&nofb=1",
+        "film_description":"Life on Earth: A Natural History by David Attenborough is a British television natural history series made by the BBC in association with Warner Bros. and Reiner Moritz Productions. It was transmitted in the UK from 16 January 1979.",
+        "film_price": 14.95,
+        "film_product_discount": 10.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":""
+    }
+    },
+
+
+    {
+        "model": "films.films",
+        "pk": 14,
+        "fields": {
+        "film_sku": "133446",
+        "film_genre": "4",
+        "film_title": "pride_and_prejudice",
+        "film_friendly_title": "Pride & Prejudice",
+        "film_box_cover_url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fobstinateheadstronggirl.files.wordpress.com%2F2013%2F03%2Fpride-and-prejudice-1995-1.jpg&f=1&nofb=1",
+        "film_description":"Pride and Prejudice is a six-episode 1995 British television drama, adapted by Andrew Davies from Jane Austen's 1813 novel of the same name. Jennifer Ehle and Colin Firth starred as Elizabeth Bennet and Mr Darcy respectively. Produced by Sue Birtwistle and directed by Simon Langton, the serial was a BBC production with additional funding from the American A&E Network. BBC1 originally broadcast the 55-minute episodes from 24 September to 29 October",
+        "film_price": 12.99,
+        "film_product_discount": 0.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":""
+    }
+    },
+
+    {
+        "model": "films.films",
+        "pk": 15,
+        "fields": {
+        "film_sku": "133336",
+        "film_genre": "7",
+        "film_title": "grease",
+        "film_friendly_title": "Grease",
+        "film_box_cover_url": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.movieartarena.com%2Fimgs%2Fgrease.jpg&f=1&nofb=1",
+        "film_description":"Grease is a 1978 American musical romantic comedy film based on the 1971 musical of the same name by Jim Jacobs and Warren Casey. Written by Bronte Woodard[2] and directed by Randal Kleiser in his theatrical feature film debut, the film depicts the lives of greaser Danny Zuko and Australian transfer student Sandy Olsson who develop an attraction for each other. The film stars",
+        "film_price": 9.99,
+        "film_product_discount": 5.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":""
+    }
+    },
+
+    {
+        "model": "films.films",
+        "pk": 16,
+        "fields": {
+        "film_sku": "145446",
+        "film_genre": "7",
+        "film_title": "american_grafiti",
+        "film_friendly_title": "American Grafiti",
+        "film_box_cover_url": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.dvdsreleasedates.com%2Fposters%2F800%2FA%2FAmerican-Graffiti-movie-poster.jpg&f=1&nofb=1",
+        "film_description":"American Graffiti is a 1973 American coming-of-age comedy film directed and co-written by George Lucas starring Richard Dreyfuss, Ron Howard, Paul Le Mat, Harrison Ford, Charles Martin Smith, Cindy Williams, Candy Clark, Mackenzie Phillips, Bo Hopkins, and Wolfman Jack. Suzanne Somers, Kathleen Quinlan, Debralee Scott, and Joe Spano also appear in the film.",
+        "film_price": 13.99,
+        "film_product_discount": 10.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":""
+    }
+    },
+
+    {
+        "model": "films.films",
+        "pk": 17,
+        "fields": {
+        "film_sku": "133211",
+        "film_genre": "6",
+        "film_title": "sounds_of_music",
+        "film_friendly_title": "The Sounds Of Music",
+        "film_box_cover_url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.goldenglobes.com%2Fsites%2Fdefault%2Ffiles%2Farticles%2Fcover_images%2F1966-the_sound_of_music.jpg&f=1&nofb=1",
+        "film_description":"The Sound of Music is a musical with music by Richard Rodgers, lyrics by Oscar Hammerstein II, and a book by Howard Lindsay and Russel Crouse. It is based on the 1949 memoir of Maria von Trapp, The Story of the Trapp Family Singers. Set in Austria on the eve of the Anschluss in 1938, the musical tells the story of Maria, who takes a job as governess to a large family while she decide",
+        "film_price": 12.99,
+        "film_product_discount": 0.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":""
+    }
+    },
+
+    {
+        "model": "films.films",
+        "pk": 18,
+        "fields": {
+        "film_sku": "133451",
+        "film_genre": "6",
+        "film_title": "oliver_twist",
+        "film_friendly_title": "Oliver Twist",
+        "film_box_cover_url": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimages.moviepostershop.com%2Foliver-twist-movie-poster-1948-1020434719.jpg&f=1&nofb=1",
+        "film_description":"Oliver Twist; or, the Parish Boy's Progress is Charles Dickens's second novel, and was published as a serial from 1837 to 1839 and released as a three-volume book in 1838, before the serialization ended.[1] The story centres on orphan Oliver Twist, born in a workhouse and sold into apprenticeship wit",
+        "film_price": 9.99,
+        "film_product_discount": 0.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":""
+    }
+    },
+
+    {
+        "model": "films.films",
+        "pk": 19,
+        "fields": {
+        "film_sku": "103446",
+        "film_genre": "5",
+        "film_title": "the_thing",
+        "film_friendly_title": "The Thing",
+        "film_box_cover_url": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F1.bp.blogspot.com%2F-dqjbWP2Pp9A%2FT-gHlCsjfkI%2FAAAAAAAAHeY%2FfKSiSBeSXHs%2Fs1600%2FThe%2BThing%2B%25281982%2529%2BOriginal.jpg&f=1&nofb=1",
+        "film_description":"The Thing is a 1982 American science fiction horror film directed by John Carpenter and written by Bill Lancaster. Based on the 1938 John W. Campbell Jr. novella Who Goes There?, it tells the story of a group of American researchers in Antarctica who encounter the eponymous Thing, a parasitic extraterrestrial life-form that assimilates, then imitates other organisms. The",
+        "film_price": 8.99,
+        "film_product_discount": 20.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":""
+    }
+    },
+
+
+    {
+        "model": "films.films",
+        "pk": 20,
+        "fields": {
+        "film_sku": "133466",
+        "film_genre": "8",
+        "film_title": "the_day_the_earth_stood_still",
+        "film_friendly_title": "The Day The Earth Stood Still",
+        "film_box_cover_url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.E-BpwKjEh3nNpCBZQzredQHaLT%26pid%3DApi&f=1",
+        "film_description":"The Day the Earth Stood Still (a.k.a. Farewell to the Master and Journey to the World) is a 1951 American black-and-white science fiction film from 20th Century Fox, produced by Julian Blaustein and directed by Robert Wise. The film stars Michael Rennie, Patricia Neal, Hugh Marlowe, Sam Jaffe, Billy Gray, Frances Bavier and Lock Martin. The screenplay was written by Edmund H. North, based on the 1940 science fiction short story Farewell to the Master by Harry Bates, and the film score was composed by Bernard Herrmann.[4]",
+        "film_price": 12.99,
+        "film_product_discount": 0.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":""
+    }
+    },
+
+    {
+        "model": "films.films",
+        "pk": 21,
+        "fields": {
+        "film_sku": "136746",
+        "film_genre": "9",
+        "film_title": "true_grit",
+        "film_friendly_title": "True Grit",
+        "film_box_cover_url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fposteritati.com%2Fposters%2F000%2F000%2F026%2F308%2Ftrue-grit-md-web.jpg&f=1&nofb=1",
+        "film_description":"True Grit is a 1969 American Western film starring John Wayne as U.S. Marshal Rooster Cogburn, Glen Campbell as La Boeuf and Kim Darby as Mattie Ross. It is the first film adaptation of Charles Portis' 1968 novel of the same name. The screenplay was written by Marguerite Roberts. Wayne won his only Oscar for his performance in the film and reprised his role for the 1975 sequel Rooster Cogburn.",
+        "film_price": 10.99,
+        "film_product_discount": 15.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":""
+    }
+    },
+
+    {
+        "model": "films.films",
+        "pk": 22,
+        "fields": {
+        "film_sku": "143446",
+        "film_genre": "1",
+        "film_title": "king_kong",
+        "film_friendly_title": "King Kong",
+        "film_box_cover_url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0747%2F3829%2Fproducts%2FmHP0285_1024x1024.jpeg%3Fv%3D1485014521&f=1&nofb=1",
+        "film_description":"King Kong is a 2005 epic monster adventure film co-written, produced, and directed by Peter Jackson. A second remake of the 1933 film of the same title, the film stars Naomi Watts, Jack Black, Adrien Brody, and, through motion capture, Andy Serkis as the title character. Set in 1933, it follows the story of an ambitious filmmaker who coerces his cast and hired ship crew to travel to the mysterious Skull Island. There, they encounter prehistoric creatures living on the island as well as a legendary giant gorilla known as Kong, whom they capture and take to New York City.",
+        "film_price": 9.99,
+        "film_product_discount": 0.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":""
+    }
+    },
+
+    {
+        "model": "films.films",
+        "pk": 23,
+        "fields": {
+        "film_sku": "134446",
+        "film_genre": "5",
+        "film_title": "halloween",
+        "film_friendly_title": "Halloween",
+        "film_box_cover_url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimagesvc.timeincapp.com%2Fv3%2Ffan%2Fimage%3Furl%3Dhttps%3A%2F%2F1428elm.com%2Fwp-content%2Fblogs.dir%2F304%2Ffiles%2F2018%2F04%2Fhalloween-poster.jpg%26c%3Dsc%26w%3D998%26h%3D1500&f=1&nofb=1",
+        "film_description":"",
+        "film_price": 9.99,
+        "film_product_discount": 0.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":""
+    }
+    }
+
+]

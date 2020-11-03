@@ -1,0 +1,78 @@
+[
+
+{
+    "model": "home.classifiedadds",
+    "pk": 1,
+
+    "fields": {
+    "classified_date":"2020-10-19",
+    "classified_name": "playmobile",
+    "classified_friendly_name": "Playmobile",
+    "classified_detail": "Playmobil treasure island with extras. The treasure island isn't complete, but there are some bits from another set (I can't remember the name) to use for extras. Lights and sounds work, requires 4aa batteries. No key to open the cave,but it can be done manually.",
+    "classified_image": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fmytoysdirect.files.wordpress.com%2F2013%2F04%2Fplaymobil-pirates.jpg&f=1&nofb=1"
+ 
+}
+},
+
+
+
+{
+    "model": "home.classifiedadds",
+    "pk": 2,
+
+    "fields": {
+    "classified_date":"2020-10-19",
+    "classified_name": "transformer",
+    "classified_friendly_name": "Transformer",
+    "classified_detail": "Transformer toy for sale. slightly beat up. £2.50. Must clear attic. call me",
+    "classified_image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.technocrazed.com%2Fwp-content%2Fuploads%2F2015%2F12%2FTransformer-Wallpaper-22.jpg&f=1&nofb=1"
+   
+}
+},
+
+{
+    "model": "home.classifiedadds",
+    "pk": 3,
+
+    "fields": {
+    "classified_date":"2020-10-19",
+    "classified_name": "bigbuns",
+    "classified_friendly_name": "Big Buns",
+    "classified_detail": "Big Buns Burgers. 1233 Ocean Drive. New Mexico . Come and enjoy!",
+    "classified_image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.j0oxgLb-ByjnwQXrmkialwHaDy%26pid%3DApi&f=1"
+  
+}
+},
+
+{
+    "model": "home.classifiedadds",
+    "pk": 4,
+
+    "fields": {
+    "classified_date":"2020-10-19",
+    "classified_name": "LOGIK",
+    "classified_friendly_name": "LOGIK L1DVDB20 DVD Player",
+    "classified_detail": "Enjoy your favourite movies, music and photos with the Logik L1DVDB20 DVD Player. It plays DVDs, CDs, and has a USB port, so you can plug in and play from a flash drive.And with a remote included, you can control your entertainment from the comfort of your sofa.",
+    "classified_image": "https://brain-images-ssl.cdn.dixons.com/4/2/10198524/u_10198524.jpg"
+ 
+}
+},
+
+{
+    "model": "home.classifiedadds",
+    "pk": 5,
+
+    "fields": {
+    "classified_date":"2020-10-19",
+    "classified_name": "scart_cable",
+    "classified_friendly_name": "ESSENTIALS C1SCT15 SCART Cable - 1 m",
+    "classified_detail": "Connect your AV equipment reliably with the 1 m Essential C1SCT15 SCART Cable. It's great for older AV equipment such as retro games consoles, DVD players, VCRs and certain TV models. You'll enjoy a solid, reliable connection and clear signal transfer thanks to its nickel-plated connectors. Dual-layer shielding ensures minimal interference so you can make the most of your entertainment.",
+    "classified_image": "https://brain-images-ssl.cdn.dixons.com/7/9/10115697/u_10115697.jpg"
+   
+}
+}
+
+
+
+ 
+]

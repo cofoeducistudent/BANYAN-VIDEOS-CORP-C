@@ -1,0 +1,70 @@
+[
+
+    {
+        "model": "home.snippet",
+        "pk": 1,
+
+        "fields": {
+        "snippet_name": "guardians",
+        "snippet_friendly_name": "Guardians Of The Galaxy’s James Gunn Explains Why He Made Changes To Star-Lord’s Weapons",
+        "snippet_detail": "As comic book movies get adapted for the screen, there are always going to be decisions to be made regarding what elements from the source material to use, and what elements to change. In the case of the Guardians of the Galaxy, James Gunn wasn't only deciding on the small details but also what members of the team itself to include. One element that even James Gunn admits he liked, Peter Quill's element gun, was something that didn't make the cut, though the director has a solid explanation for why.",
+        "snippet_image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic1.srcdn.com%2Fwordpress%2Fwp-content%2Fuploads%2F2019%2F11%2FGuardians-of-the-Galaxy-Vol-2.jpg&f=1&nofb=1",
+        "snippet_source_url": "https://www.bbc.co.uk/programmes/b04xt160"
+    }
+    },
+
+    {
+        "model": "home.snippet",
+        "pk": 2,
+
+        "fields": {
+        "snippet_name": "james_bond",
+        "snippet_friendly_name": "Release of James Bond film No Time To Die delayed - again",
+        "snippet_detail":"The release of the new James Bond film has been delayed again. The premiere of No Time To Die had already been moved from April to November because of the pandemic. The film has now been further delayed until 2 April 2021 in order to be seen by a worldwide theatrical audience, a statement on the film's website said. We understand the delay will be disappointing to our fans but we now look forward to sharing No Time To Die next year.",
+        "snippet_image": "https://ichef.bbci.co.uk/news/800/cpsprodpb/15269/production/_114733668_mediaitem114733667.jpg",
+        "snippet_source_url": "https://www.bbc.co.uk/news/entertainment-arts-54396415"
+    }
+    },
+
+    {
+        "model": "home.snippet",
+        "pk": 3,
+
+        "fields": {
+        "snippet_name": "led_zeppelin",
+        "snippet_friendly_name": "Led Zeppelin's Stairway To Heaven copyright battle is finally over",
+        "snippet_detail": "The final possible legal challenge to Led Zeppelin's ownership of Stairway To Heaven has been defeated. The band were sued for copyright in 2014 over claims they had stolen the song's opening riff from Taurus, by a US band called Spirit. Led Zeppelin won the case in 2016, but it was revived on appeal in 2018. A court of appeals upheld the original verdict earlier this year. Now, the US Supreme Court has declined to hear the case, definitively ending it.",
+        "snippet_image": "https://ichef.bbci.co.uk/news/800/cpsprodpb/5B67/production/_111199332_ledzepget2.jpg",
+        "snippet_source_url": "https://www.bbc.co.uk/news/entertainment-arts-54423922"
+        
+    }
+    },
+
+    {
+        "model": "home.snippet",
+        "pk": 4,
+
+        "fields": {
+        "snippet_name": "coronavirus",
+        "snippet_friendly_name": "Coronavirus: What are the rules for face masks or face coverings?",
+        "snippet_detail": "Face coverings reduce the spread of coronavirus droplets from coughs, sneezes and speaking. They should mainly be worn to protect other people from coronavirus, rather than yourself. When worn correctly, they should cover the nose and mouth, which are the main confirmed sources of transmission. ",
+        "snippet_image": "https://ichef.bbci.co.uk/news/800/cpsprodpb/EF24/production/_113402216_how_not_to_wear_a_mask_3x_640-nc.png",
+        "snippet_source_url": "https://www.bbc.co.uk/news/health-51205344"
+    }
+    },
+
+    {
+        "model": "home.snippet",
+        "pk": 5,
+
+        "fields": {
+        "snippet_name": "british_airways",
+        "snippet_friendly_name": "British Airways fined £20m over data breach",
+        "snippet_detail": "British Airways has been fined £20m ($26m) by the Information Commissioner's Office (ICO) for a data breach which affected more than 400,000 customers. The breach took place in 2018 and affected both personal and credit card data. The fine is considerably smaller than the £183m that the ICO originally said it intended to issue back in 2019.It said the economic impact of Covid-19, had been taken into account. However, it is still the largest penalty issued by the ICO to date. The incident took place when BA's systems were compromised by its attackers, and then modified to harvest customers' details as they were input",
+        "snippet_image": "https://ichef.bbci.co.uk/news/800/cpsprodpb/A2BC/production/_102606614_gettyimages-617928290.jpg",
+        "snippet_source_url": "https://www.bbc.co.uk/news/technology-54568784"
+    }
+    }
+
+
+]

@@ -1,0 +1,117 @@
+:root {
+    --theme-bgc: #202937;
+    --theme-fgc: #ffff;
+}
+
+html {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+body {
+    background-color: rgb(255, 253, 253);
+    color: black;
+}
+
+/* Code from Stackoverflow - Philip Feldmann */
+
+/* Keep text from overspilling out of columns */
+
+.keep-insideBSol {
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    word-wrap: break-word;
+}
+
+/* NAVBAR */
+
+button, span, navbar-toggler-icon {
+    background-color: var(--theme-bgc) !important;
+    color: orange !important;
+}
+
+span, navbar-toggler-icon {
+    background-color: var(--theme-bgc) !important;
+    color: var(--theme-fgc) !important;
+}
+
+.custom-nav-color, span {
+    background-color: var(--theme-bgc) !important;
+    color: var(--theme-fgc) !important;
+}
+
+.custom-nav-color, a {
+    /* background-color: #202937 !important; */
+    color: #ffffff !important;
+}
+
+/* .c-image-size{
+
+max-height: 80vh;
+width: auto;
+
+} */
+
+/* ARTICLE TITLE */
+
+.article-title {
+    background-color: #000;
+    color: #ffff;
+}
+
+/* GENRE */
+
+.genre-box {
+    height: 200px;
+    width: auto;
+}
+
+.genre-items {
+    list-style: none;
+}
+
+.genre-items, a {
+    color: var(--theme-bgc);
+}
+
+/* SECTION STUFF */
+
+.section-title {
+    font-size: 1.5rem;
+    color: var(--theme-bgc);
+    background-color: var(--theme-fgc);
+}
+
+.section-content {
+    font-size: 1rem;
+    color: var(--theme-bgc);
+    background-color: var(--theme-fgc);
+}
+
+.article_image_size {
+    height: 200px;
+    width: auto;
+}
+
+/* BANNER ADVERT ROTOR */
+
+#advert {
+    color: var(--theme-fgc);
+    background-color: var(--theme-bgc);
+    height: 100px;
+    width: 90%;
+    margin: auto;
+}
+
+#advert, h1 {
+
+    padding-top: 10px;
+  
+
+    font-size: 1.5rem;
+    width: 90%;
+    margin: auto;
+}

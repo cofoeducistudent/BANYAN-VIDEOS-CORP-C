@@ -1,0 +1,78 @@
+[
+  {
+    "model": "films.genre",
+    "pk": 1,
+    "fields": {
+      "genre_name": "action_adventure",
+      "genre_friendly_name": "Action/Adventure"
+    }
+  },
+  {
+    "model": "films.genre",
+    "pk": 2,
+    "fields": {
+      "genre_name": "comedy",
+      "genre_friendly_name": "Comedy"
+    }
+  },
+
+  {
+    "model": "films.genre",
+    "pk": 3,
+    "fields": {
+      "genre_name": "documentary",
+      "genre_friendly_name": "Documentary"
+    }
+  },
+  {
+    "model": "films.genre",
+    "pk": 4,
+    "fields": {
+      "genre_name": "drama",
+      "genre_friendly_name": "Drama"
+    }
+  },
+  {
+    "model": "films.genre",
+    "pk": 5,
+    "fields": {
+      "genre_name": "horror",
+      "genre_friendly_name": "Horror"
+    }
+  },
+  {
+    "model": "films.genre",
+    "pk": 6,
+    "fields": {
+      "genre_name": "musical",
+      "genre_friendly_name": "Musical"
+    }
+  },
+  {
+    "model": "films.genre",
+    "pk": 7,
+    "fields": {
+      "genre_name": "rom_com",
+      "genre_friendly_name": "Rom/Com"
+    }
+  },
+  {
+    "model": "films.genre",
+    "pk": 8,
+    "fields": {
+      "genre_name": "sci_fi",
+      "genre_friendly_name": "Sci/Fi"
+    }
+  },
+  {
+    "model": "films.genre",
+    "pk": 9,
+    "fields": {
+      "genre_name": "western",
+      "genre_friendly_name": "Western"
+    }
+  }
+
+
+
+]
