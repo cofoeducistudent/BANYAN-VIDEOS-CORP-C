@@ -115,3 +115,11 @@ width: auto;
     width: 90%;
     margin: auto;
 }
+
+
+.custom-alert{
+
+    background-color: var(--theme-bgc) !important;
+    color: var(--theme-fgc) !important;
+
+}
