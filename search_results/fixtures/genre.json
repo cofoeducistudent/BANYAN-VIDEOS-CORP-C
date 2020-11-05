@@ -1,6 +1,6 @@
 [
   {
-    "model": "films.genre",
+    "model": "search_results.genre",
     "pk": 1,
     "fields": {
       "genre_name": "action_adventure",
@@ -8,7 +8,7 @@
     }
   },
   {
-    "model": "films.genre",
+    "model": "search_results.genre",
     "pk": 2,
     "fields": {
       "genre_name": "comedy",
@@ -17,7 +17,7 @@
   },
 
   {
-    "model": "films.genre",
+    "model": "search_results.genre",
     "pk": 3,
     "fields": {
       "genre_name": "documentary",
@@ -25,7 +25,7 @@
     }
   },
   {
-    "model": "films.genre",
+    "model": "search_results.genre",
     "pk": 4,
     "fields": {
       "genre_name": "drama",
@@ -33,7 +33,7 @@
     }
   },
   {
-    "model": "films.genre",
+    "model": "search_results.genre",
     "pk": 5,
     "fields": {
       "genre_name": "horror",
@@ -41,7 +41,7 @@
     }
   },
   {
-    "model": "films.genre",
+    "model": "search_results.genre",
     "pk": 6,
     "fields": {
       "genre_name": "musical",
@@ -49,7 +49,7 @@
     }
   },
   {
-    "model": "films.genre",
+    "model": "search_results.genre",
     "pk": 7,
     "fields": {
       "genre_name": "rom_com",
@@ -57,7 +57,7 @@
     }
   },
   {
-    "model": "films.genre",
+    "model": "search_results.genre",
     "pk": 8,
     "fields": {
       "genre_name": "sci_fi",
@@ -65,7 +65,7 @@
     }
   },
   {
-    "model": "films.genre",
+    "model": "search_results.genre",
     "pk": 9,
     "fields": {
       "genre_name": "western",

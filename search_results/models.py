@@ -35,4 +35,3 @@ class Films(models.Model):
     
     def __str__(self):
         return self.film_friendly_title
-    

@@ -8,14 +8,19 @@ from django.views.generic import TemplateView
 from .import models as carousel_models
 from django.shortcuts  import render
 
-from films import models as genre_models
-from films import models as film_models
+from django.contrib import messages
+ 
 
+from search_results import models as genre_models
+from search_results import models as film_models
 
 # Create your views here.
 
 class HomePageView(TemplateView):
     template_name = 'home/index.html'
+
+
+
 
     def get(self,request):
         carousel = models.FrontPageCarousel.objects.all()
@@ -23,7 +28,7 @@ class HomePageView(TemplateView):
         genre = film_models.Genre.objects.all()
         
         
-        context ={
+        context = {
             'carousel':carousel,
             'articles':articles,
             'genre':genre

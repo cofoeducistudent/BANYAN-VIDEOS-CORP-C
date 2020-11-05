@@ -15,6 +15,12 @@
     <link rel="stylesheet" href="{% static 'home/css/main.css' %}">
     {% endblock %}
 
+    {% block fonts %}
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+    {% endblock fonts %}
+
     {% block core-js %}
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -26,13 +32,12 @@
         integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
         crossorigin="anonymous"></script>
 
+    <script src="https://kit.fontawesome.com/7d102b88bf.js"></script>
+
     <script src="{% static 'home/js/main.js' %}"></script>
     {% endblock core-js %}
 
 </head>
-
-
-
 
 <body>
 
@@ -48,19 +53,21 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                    <a class="navbar-brand" href="{% url 'home' %}">BANYAN-VIDEOS-CORP</a>
+                    <a class="navbar-brand" href="{% url 'home' %}"><span class="brand">BANYAN-VIDEOS-CORP</span></a>
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Home<span class="sr-only"></span></a>
+                            <a class="nav-link" href="{% url 'home' %}">Home<span class="sr-only"></span></a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Login/Register<span class="sr-only"></span></a>
+                            <a class="nav-link" href="{% url 'login_register' %}">Login/Register<span class="sr-only"></span></a>
                         </li>
 
-
-
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'search_results' %}">Search Results<span
+                                    class="sr-only"></span></a>
+                        </li>
 
                         <li class="nav-item">
                             <a class="nav-link" href="#">About<span class="sr-only"></span></a>
@@ -78,21 +85,49 @@
                             <a class="nav-link" href="#">Logout<span class="sr-only"></span></a>
                         </li>
 
+
+
+
+                        <!-- USER & SHOPPING CART ICONS -->
+
+                        <li class="nav-item">
+                            <a class="nav-link u_c" href="#"><span class="fas fa-user"></span><span
+                                    class="sr-only"></span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link u_c" href="#"><span class="fas fa-shopping-cart"></span><span
+                                    class="sr-only"></span></a>
+                        </li>
+
+
+
+
                     </ul>
+
+
+
 
                     <!-- SEARCH -->
                     <div class="row">
-                        <div class="col-12 d-lg-none ">
+                        <div class="col-12 d-lg-none">
 
-                            <form class="form-inline my-2 my-lg-0">
-                                <input class="form-control mr-sm-2" type="search" placeholder="Search"
-                                    aria-label="Search">
-                                <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+                            <form action="{% url 'search_results' %}" method="POST" class="form-inline my-2 my-lg-0">
+
+                                {% csrf_token %}
+
+                                <input class="form-control mr-sm-2 mx-auto" type="search" name="search_string"
+                                    placeholder="Search" aria-label="Search">
+
+                                <button class="btn   btn-success my-2 my-sm-0" type="submit">Search</button>
+
                             </form>
 
                         </div>
                     </div>
                     <!-- // -->
+
+
+
 
                 </div>
             </nav>
@@ -100,49 +135,67 @@
         </div>
     </div>
 
+
+
+
     <!-- LARGE SEARCH -->
+    <div class="row  large-search-bar">
+        <!-- <div class="d-none d-sm-block"> -->
 
-    <div class="row container-fluid my-2  ">
-        <div class="col-12 mx-auto ">
+        <form action="{% url 'search_results' %}" method="POST" class="form-inline my-2 my-lg-0 ">
 
-            <form class="form-inline my-2 my-lg-0 ">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+            <div class="row container-fluid d-none  d-lg-block">
 
-        </div>
+                {% csrf_token %}
+
+                <div class="col-block my-2 mx-5">
+
+                    <input class="form-control mr-sm-2" type="search" name="search_string" placeholder="Search"
+                        aria-label="Search">
+
+                </div>
+
+
+                
+                <!-- // -->
+
+                <div class="col-block text-center mx-5">
+
+                    <button class="btn btn-lg btn-success mx-auto" type="submit">Search</button>
+
+                </div>
+
+            </div>
+
+        </form>
+
+        <!-- </div> -->
+
     </div>
+
     <hr>
     <!-- // -->
 
-
     <!-- BANNER -->
 
-    <div class="row my-5 keep-insideBSol">
+    <div class="row my-2 keep-insideBSol">
         <div class="col-12 text-center">
+
             <h1>
                 <div id="advert">
 
             </h1>
-
         </div>
-
     </div>
 
-    
-
-
-
-
-
     {% block main-content %}
+
+
+
+
     {% endblock main-content %}
 
-
     {% block post-load-js %}
-
-
-
     {% endblock post-load-js %}
 
     <script>
@@ -150,7 +203,6 @@
         bannerRotor()
 
     </script>
-
 
 </body>
 

@@ -24,5 +24,12 @@ urlpatterns = [
     
     path('', include('home.urls')),
     
+    path('search_results/', include('search_results.urls')),
+    
+    path('login_register/', include('login_register.urls')),
+    
+    # path('about/', include('about.urls')),
+    
+    # path('members/', include('members.urls')),
     
 ]

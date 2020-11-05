@@ -37,4 +37,3 @@ class FilmsAdmin(admin.ModelAdmin):
 
 admin.site.register(Genre, GenreAdmin)
 admin.site.register(Films, FilmsAdmin)
-

@@ -45,7 +45,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'home',
-    'films',
+    'search_results',
+    # 'about',
+    # 'logout',
+    # 'members',
+    'login_register',
+
+
 ]
 
 MIDDLEWARE = [

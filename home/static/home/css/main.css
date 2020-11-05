@@ -1,7 +1,19 @@
 :root {
+    /* DEFINE CSS VARIBLES */
+    --wallpaper:#ffffff;
+    --ink:#000000;
+    --discount-colour:#202937;
+
+    
     --theme-bgc: #202937;
-    --theme-fgc: #ffff;
+    --theme-fgc:#ffffff;
+    
+    --theme-c1: #EFC055;
+    /* FONTS */
+    font-family: 'Roboto', sans-serif;
 }
+
+/* DEFAULT  SETUP CLEAR  MARGIN,PADDING,BORDER */
 
 html {
     margin: 0px;
@@ -10,8 +22,8 @@ html {
 }
 
 body {
-    background-color: rgb(255, 253, 253);
-    color: black;
+    background-color: var(--wallpaper);
+    color: var(--theme-bgc)
 }
 
 /* Code from Stackoverflow - Philip Feldmann */
@@ -26,17 +38,30 @@ body {
     word-wrap: break-word;
 }
 
+
+/* WALLPAPER */
+
+.wallpaper{
+
+background-color: var(--wallpaper);
+
+}
+
+
+/* BRAND LOGO */
+
+.brand {
+    color: var(--theme-c1) !important;
+    background-color: var(--theme-bgc) !important;
+}
+
 /* NAVBAR */
 
-button, span, navbar-toggler-icon {
-    background-color: var(--theme-bgc) !important;
-    color: orange !important;
+.navbar {
+    opacity: .99 !important;
 }
 
-span, navbar-toggler-icon {
-    background-color: var(--theme-bgc) !important;
-    color: var(--theme-fgc) !important;
-}
+ 
 
 .custom-nav-color, span {
     background-color: var(--theme-bgc) !important;
@@ -48,18 +73,68 @@ span, navbar-toggler-icon {
     color: #ffffff !important;
 }
 
-/* .c-image-size{
+ 
 
-max-height: 80vh;
-width: auto;
+li, nav-link, :hover{
 
-} */
+    
+    color: var(--theme-c1) !important;
+
+}
+
+
+/* BURGER BUTTON */
+
+button, span, nav-bar-toggler-icon {
+    background-color: var(--theme-c1) !important;
+}
+
+
+
+
+
+/* BUTTONS */
+.btn, btn-success{
+
+    color: var(--ink) !important;
+    background-color: var(--theme-c1) !important;
+
+}
+
+.btn, btn-success{
+
+    color: var(--ink) !important;
+    background-color: var(--theme-c1) !important;
+
+}
+
+.btn, btn-warning{
+
+    color: var(--ink) !important;
+    background-color: var(--theme-c1) !important;
+}
+
+.go-back-button {
+
+box-shadow: 3px 3px var(--theme-bgc) !important;
+
+}
+
+.add-to-cart-button{
+
+    box-shadow: 3px 3px var(--theme-bgc) !important;
+
+}
+
+
+
+
 
 /* ARTICLE TITLE */
 
 .article-title {
-    background-color: #000;
-    color: #ffff;
+    background-color: var(--wallpaper);
+    color: var(--ink);
 }
 
 /* GENRE */
@@ -77,49 +152,139 @@ width: auto;
     color: var(--theme-bgc);
 }
 
+
+
+
 /* SECTION STUFF */
 
 .section-title {
+    
     font-size: 1.5rem;
-    color: var(--theme-bgc);
-    background-color: var(--theme-fgc);
+    color: var(--ink);
+    background-color: var(--wallpaper)
 }
 
 .section-content {
+
+  
     font-size: 1rem;
-    color: var(--theme-bgc);
-    background-color: var(--theme-fgc);
+    color: var(--ink);
+    background-color: var(--wallpaper);
 }
 
-.article_image_size {
-    height: 200px;
-    width: auto;
+.section-tiny-text {
+    font-size: .75rem;
+    color: var(--ink);
+    background-color: var(--wallpaper);
 }
+
+ 
+
+
+
 
 /* BANNER ADVERT ROTOR */
 
 #advert {
     color: var(--theme-fgc);
     background-color: var(--theme-bgc);
-    height: 100px;
-    width: 90%;
+    height: 60px;
+    width: 100%;
     margin: auto;
 }
 
 #advert, h1 {
-
-    padding-top: 10px;
-  
-
-    font-size: 1.5rem;
+    padding-top: 5px;
+    font-size: 1rem;
     width: 90%;
     margin: auto;
 }
 
-
-.custom-alert{
-
+.custom-alert {
     background-color: var(--theme-bgc) !important;
     color: var(--theme-fgc) !important;
+}
+
+
+
+
+
+
+
+/* LARGE SEARCH STUFF */
+
+.large-search-bar {
+    margin-top: 80px !important;
+    width: 33%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* RESULTS CARD STUFF */
+
+.card-text {
+    height: 100px;
+    max-height: 100px !important;
+    overflow: hidden;
+    color: var(--theme-bgc);
+    background-color: var(--theme-fgc);
+}
+
+ 
+
+
+/* CAROUSEL SIZE */
+
+.c-image-size {
+    height: 550px;
+    width: auto;
+}
+
+/* GENRE - LIST */
+
+.genre-items :hover {
+    color: var(--theme-c1) !important;
+    background-color: #404c5f !important;
+}
+
+
+
+
+
+
+
+/* SUSER & SHOPPING CART ICONS */
+.fa-user {
+
+    color: var(--theme-fgc) !important;
+    background-color: var(--theme-bgc) !important;
 
 }
+.fa-shopping-cart{
+
+    color: var(--theme-fgc) !important;
+    background-color: var(--theme-bgc) !important;
+
+}
+
+
+/* DISCOUNTED PRODUCTS */
+
+.discounted-product {
+
+   
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    margin-bottom: 10px;
+    
+    width: 25%;
+    border-radius: 10px;
+
+    background-color: var(--discount-colour);
+    color: var(--wallpaper)
+
+}
+
+ 
