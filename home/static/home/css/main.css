@@ -4,7 +4,6 @@
     --ink:#000000;
     --discount-colour:#202937;
 
-    
     --theme-bgc: #202937;
     --theme-fgc:#ffffff;
     
@@ -38,7 +37,6 @@ body {
     word-wrap: break-word;
 }
 
-
 /* WALLPAPER */
 
 .wallpaper{
@@ -46,7 +44,6 @@ body {
 background-color: var(--wallpaper);
 
 }
-
 
 /* BRAND LOGO */
 
@@ -61,8 +58,6 @@ background-color: var(--wallpaper);
     opacity: .99 !important;
 }
 
- 
-
 .custom-nav-color, span {
     background-color: var(--theme-bgc) !important;
     color: var(--theme-fgc) !important;
@@ -73,25 +68,17 @@ background-color: var(--wallpaper);
     color: #ffffff !important;
 }
 
- 
-
 li, nav-link, :hover{
 
-    
     color: var(--theme-c1) !important;
 
 }
-
 
 /* BURGER BUTTON */
 
 button, span, nav-bar-toggler-icon {
     background-color: var(--theme-c1) !important;
 }
-
-
-
-
 
 /* BUTTONS */
 .btn, btn-success{
@@ -126,10 +113,6 @@ box-shadow: 3px 3px var(--theme-bgc) !important;
 
 }
 
-
-
-
-
 /* ARTICLE TITLE */
 
 .article-title {
@@ -152,9 +135,6 @@ box-shadow: 3px 3px var(--theme-bgc) !important;
     color: var(--theme-bgc);
 }
 
-
-
-
 /* SECTION STUFF */
 
 .section-title {
@@ -166,7 +146,6 @@ box-shadow: 3px 3px var(--theme-bgc) !important;
 
 .section-content {
 
-  
     font-size: 1rem;
     color: var(--ink);
     background-color: var(--wallpaper);
@@ -177,11 +156,6 @@ box-shadow: 3px 3px var(--theme-bgc) !important;
     color: var(--ink);
     background-color: var(--wallpaper);
 }
-
- 
-
-
-
 
 /* BANNER ADVERT ROTOR */
 
@@ -205,12 +179,6 @@ box-shadow: 3px 3px var(--theme-bgc) !important;
     color: var(--theme-fgc) !important;
 }
 
-
-
-
-
-
-
 /* LARGE SEARCH STUFF */
 
 .large-search-bar {
@@ -230,9 +198,6 @@ box-shadow: 3px 3px var(--theme-bgc) !important;
     background-color: var(--theme-fgc);
 }
 
- 
-
-
 /* CAROUSEL SIZE */
 
 .c-image-size {
@@ -246,12 +211,6 @@ box-shadow: 3px 3px var(--theme-bgc) !important;
     color: var(--theme-c1) !important;
     background-color: #404c5f !important;
 }
-
-
-
-
-
-
 
 /* SUSER & SHOPPING CART ICONS */
 .fa-user {
@@ -267,19 +226,16 @@ box-shadow: 3px 3px var(--theme-bgc) !important;
 
 }
 
-
 /* DISCOUNTED PRODUCTS */
 
 .discounted-product {
-
-   
 
     padding-top: 10px;
     padding-bottom: 10px;
 
     margin-bottom: 10px;
     
-    width: 25%;
+    width: 5%;
     border-radius: 10px;
 
     background-color: var(--discount-colour);
@@ -287,4 +243,8 @@ box-shadow: 3px 3px var(--theme-bgc) !important;
 
 }
 
- 
+.discounted-product, h1 {
+
+    font-size: .75rem;
+
+}

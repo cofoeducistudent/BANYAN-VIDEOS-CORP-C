@@ -18,7 +18,7 @@ class Genre(models.Model):
     
 class Films(models.Model):
     class Meta:
-        verbose_name = "Films"
+        verbose_name_plural = "Films"
     
     film_sku=models.CharField(max_length=100,null=True,blank=True)
     film_genre=models.ForeignKey(Genre, default=1, on_delete=models.SET_DEFAULT)
