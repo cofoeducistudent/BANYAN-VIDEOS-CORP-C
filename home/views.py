@@ -1,3 +1,4 @@
+from django.contrib.auth import authenticate, login, logout, get_user_model
 
 from home import models
 from django import template
