@@ -116,7 +116,7 @@ LOGIN_REDIRECT_URL ='/'
 
 WSGI_APPLICATION = '_banyanvideos_root.wsgi.application'
 
-DISABLE_COLLECTSTATIC=1
+DISABLE_COLLECTSTATIC = 1
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
