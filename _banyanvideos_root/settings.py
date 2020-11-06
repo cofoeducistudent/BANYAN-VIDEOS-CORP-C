@@ -17,7 +17,7 @@ load_dotenv(verbose=True)
 import os
 
 
-
+DISABLE_COLLECTSTATIC = 1
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -47,12 +47,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     
     # The following apps are required for allauth:
- 
     'django.contrib.sites',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    
     'crispy_forms',
     
     'home',
@@ -178,7 +176,7 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
-DISABLE_COLLECTSTATIC = 1
+
 
 
 
