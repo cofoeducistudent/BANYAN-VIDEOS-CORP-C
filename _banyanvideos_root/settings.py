@@ -10,14 +10,18 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
+import os
 from pathlib import Path
+import dj_database_url
+from os.path import join,dirname
 
 from dotenv import load_dotenv
 load_dotenv(verbose=True)
-import os
 
 
-DISABLE_COLLECTSTATIC = 1
+
+
+DISABLE_COLLECTSTATIC=1
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -81,9 +85,8 @@ ROOT_URLCONF = '_banyanvideos_root.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [str(os.path.join(BASE_DIR, 'templates'))],
         'APP_DIRS': True,
-        
         
         'OPTIONS': {
             'context_processors': [
@@ -95,6 +98,9 @@ TEMPLATES = [
         },
     },
 ]
+
+
+WSGI_APPLICATION = 'my_app.wsgi.application'
 
 AUTHENTICATION_BACKENDS = [
    
@@ -132,18 +138,43 @@ WSGI_APPLICATION = '_banyanvideos_root.wsgi.application'
 
 
 
+
+
+
+
+
+
+
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    
+    'default': dj_database_url.parse('postgres://khweztnfpjqgir:696bbd937f6988e34e46341f798c0865b74178b4f06995200c1970386f95ce86@ec2-54-247-94-127.eu-west-1.compute.amazonaws.com:5432/ddt1ven83jkqfs')
+     
 }
-
-
  
+import dj_database_url
+
+db_from_env = dj_database_url.config(conn_max_age=600)
+
+DATABASES['default'].update(db_from_env)
+
+
+
+
+
+
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -199,3 +230,15 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
+
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+
+MEDIA_URL ='/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+
+CRISPY_TEMPLATE_PACK ='bootstrap4'
