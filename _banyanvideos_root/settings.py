@@ -149,18 +149,20 @@ WSGI_APPLICATION = '_banyanvideos_root.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
 DATABASES = {
-    
-    'default': dj_database_url.parse('postgres://khweztnfpjqgir:696bbd937f6988e34e46341f798c0865b74178b4f06995200c1970386f95ce86@ec2-54-247-94-127.eu-west-1.compute.amazonaws.com:5432/ddt1ven83jkqfs')
-     
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
+
+
+
+# DATABASES = {
+    
+#     'default': dj_database_url.parse('postgres://khweztnfpjqgir:696bbd937f6988e34e46341f798c0865b74178b4f06995200c1970386f95ce86@ec2-54-247-94-127.eu-west-1.compute.amazonaws.com:5432/ddt1ven83jkqfs')
+     
+# }
  
 import dj_database_url
 
