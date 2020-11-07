@@ -101,7 +101,6 @@ TEMPLATES = [
     },
 ]
 
-
 WSGI_APPLICATION = 'my_app.wsgi.application'
 
 AUTHENTICATION_BACKENDS = [
