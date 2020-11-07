@@ -1,6 +1,6 @@
 [
     {
-        "model": "films.films",
+        "model": "search_results.films",
         "pk": 1,
 
         "fields": {
@@ -19,7 +19,7 @@
     },
     
     {
-        "model": "films.films",
+        "model": "search_results.films",
         "pk": 2,
 
         "fields": {
@@ -38,7 +38,7 @@
     },
 
     {
-        "model": "films.films",
+        "model": "search_results.films",
         "pk": 3,
 
         "fields": {
@@ -58,7 +58,7 @@
 
 
     {
-        "model": "films.films",
+        "model": "search_results.films",
         "pk": 4,
 
         "fields": {
@@ -77,7 +77,7 @@
     },
 
     {
-        "model": "films.films",
+        "model": "search_results.films",
         "pk": 5,
 
         "fields": {
@@ -96,7 +96,7 @@
     },
 
     {
-        "model": "films.films",
+        "model": "search_results.films",
         "pk": 6,
 
         "fields": {
@@ -115,7 +115,7 @@
     },
 
     {
-        "model": "films.films",
+        "model": "search_results.films",
         "pk": 7,
 
         "fields": {
@@ -134,7 +134,7 @@
     },
 
     {
-        "model": "films.films",
+        "model": "search_results.films",
         "pk": 8,
 
         "fields": {
@@ -152,7 +152,7 @@
     },
 
     {
-        "model": "films.films",
+        "model": "search_results.films",
         "pk": 9,
         "fields": {
         "film_sku": "103432",
@@ -170,7 +170,7 @@
     },
 
     {
-        "model": "films.films",
+        "model": "search_results.films",
         "pk": 10,
         "fields": {
         "film_sku": "133776",
@@ -188,7 +188,7 @@
     },
 
     {
-        "model": "films.films",
+        "model": "search_results.films",
         "pk": 11,
         "fields": {
         "film_sku": "132446",
@@ -207,7 +207,7 @@
 
 
     {
-        "model": "films.films",
+        "model": "search_results.films",
         "pk": 12,
         "fields": {
         "film_sku": "131116",
@@ -225,7 +225,7 @@
     },
 
     {
-        "model": "films.films",
+        "model": "search_results.films",
         "pk": 13,
         "fields": {
         "film_sku": "112446",
@@ -244,7 +244,7 @@
 
 
     {
-        "model": "films.films",
+        "model": "search_results.films",
         "pk": 14,
         "fields": {
         "film_sku": "133446",
@@ -262,7 +262,7 @@
     },
 
     {
-        "model": "films.films",
+        "model": "search_results.films",
         "pk": 15,
         "fields": {
         "film_sku": "133336",
@@ -280,7 +280,7 @@
     },
 
     {
-        "model": "films.films",
+        "model": "search_results.films",
         "pk": 16,
         "fields": {
         "film_sku": "145446",
@@ -298,7 +298,7 @@
     },
 
     {
-        "model": "films.films",
+        "model": "search_results.films",
         "pk": 17,
         "fields": {
         "film_sku": "133211",
@@ -316,7 +316,7 @@
     },
 
     {
-        "model": "films.films",
+        "model": "search_results.films",
         "pk": 18,
         "fields": {
         "film_sku": "133451",
@@ -334,7 +334,7 @@
     },
 
     {
-        "model": "films.films",
+        "model": "search_results.films",
         "pk": 19,
         "fields": {
         "film_sku": "103446",
@@ -353,7 +353,7 @@
 
 
     {
-        "model": "films.films",
+        "model": "search_results.films",
         "pk": 20,
         "fields": {
         "film_sku": "133466",
@@ -371,7 +371,7 @@
     },
 
     {
-        "model": "films.films",
+        "model": "search_results.films",
         "pk": 21,
         "fields": {
         "film_sku": "136746",
@@ -389,7 +389,7 @@
     },
 
     {
-        "model": "films.films",
+        "model": "search_results.films",
         "pk": 22,
         "fields": {
         "film_sku": "143446",
@@ -407,7 +407,7 @@
     },
 
     {
-        "model": "films.films",
+        "model": "search_results.films",
         "pk": 23,
         "fields": {
         "film_sku": "134446",
