@@ -248,6 +248,11 @@ button, span, nav-bar-toggler-icon {
     font-size: .75rem;
 }
 
+
+
+
+
+
 /* FOOTER BOX */
 
 .footer-box {
@@ -257,6 +262,7 @@ button, span, nav-bar-toggler-icon {
     color: var(--banner-fgnd);
     background-color: var(--theme-bgc);
     opacity: .80;
+    margin-left: 0px;
 }
 
 .sm-icons {
