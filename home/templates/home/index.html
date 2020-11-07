@@ -4,50 +4,11 @@
 
 <hr>
 
-<div class="row container-fluid">
+<div class="row container-fluid mx-auto">
+ 
+    <!-- LEFT-HAND CAROUSEL -->
 
-
-
-
-
-
-
-
-
-    <div class="d-block col-md-6   text-center">
-
-        <!-- LEFT-SIDE GENRE LIST -->
-
-        <div class="row my-2">
-            <div class="col-12 genre-items ">
-
-                {% for items in genre %}
-
-                <div class="alert alert-dark custom-alert " role="alert">
-
-                    <a class="text-decoration-none"
-                        href="{% url 'search_results' %}?sel_genre={{ items.genre_name }} ">{{ items.genre_friendly_name }}</a>
-
-                </div>
-
-                {% endfor %}
-
-            </div>
-        </div>
-
-
-        <hr>
-
-    </div>
-
-
-
-
-
-
-    <!-- RIGHT-HAND CAROUSEL -->
-    <!-- <div class="row container-fluid"> -->
-    <div class="col-md-6 mx-auto">
+    <div class="col-md-6 px-3">
 
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 
@@ -97,33 +58,33 @@
             Banyan-Videos-Corp makes no claims with regards to ownership</h1>
 
         <hr>
+
     </div>
-    <!-- </div> -->
 
+    <!-- RIGHT-SIDE GENRE LIST -->
 
+    <div class="col-xs-12  col-md-6 genre-items py-2">
+        {% for items in genre %}
+        <div class="alert alert-dark custom-alert " role="alert">
+            <a class="text-decoration-none"
+                href="{% url 'search_results' %}?sel_genre={{ items.genre_name }} ">{{ items.genre_friendly_name }}</a>
+        </div>
+        {% endfor %}
 
-
-
-
-
-
-
-
+    </div>
+    <hr>
 
     <!-- LOWER THIRD -->
     <hr>
 
-
     <div class="row container-fluid">
-        <div class="col-12 px-3">
+        <div class="col-12 mx-auto">
 
             {% for items in articles  %}
 
-            <h1 class="section-title text-justify">{{ items.article_friendly_name }}</h1>
+            <h1 class="section-title">{{ items.article_friendly_name }}</h1>
 
-            <h1>
-                <image class="img-fluid" src="{{ items.article_image }}"></image>
-            </h1>
+            <image class="img-fluid " src="{{ items.article_image }}"></image>
 
             <h1 class="section-content text-justify">{{ items.article_content }}</h1>
 
@@ -131,17 +92,8 @@
 
             {% endfor %}
 
-            
-
         </div>
 
     </div>
 
-
-
-
-
-
-
-</div>
-{% endblock main-content %}
+    {% endblock main-content %}

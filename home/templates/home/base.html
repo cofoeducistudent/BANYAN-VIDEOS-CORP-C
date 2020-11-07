@@ -62,7 +62,8 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'login_register' %}">Login/Register<span class="sr-only"></span></a>
+                            <a class="nav-link" href="{% url 'login_register' %}">Login/Register<span
+                                    class="sr-only"></span></a>
                         </li>
 
                         <li class="nav-item">
@@ -109,17 +110,17 @@
 
 
                     <!-- SEARCH -->
-                    <div class="row">
-                        <div class="col-12 d-lg-none">
+                    <div class="row small-search">
+                        <div class="col-12 d-lg-none ">
 
-                            <form action="{% url 'search_results' %}" method="POST" class="form-inline my-2 my-lg-0">
+                            <form action="{% url 'search_results' %}" method="POST" class="form-inline my-2 ">
 
                                 {% csrf_token %}
 
                                 <input class="form-control mr-sm-2 mx-auto" type="search" name="search_string"
                                     placeholder="Search" aria-label="Search">
 
-                                <button class="btn   btn-success my-2 my-sm-0" type="submit">Search</button>
+                                <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
 
                             </form>
 
@@ -139,62 +140,80 @@
 
 
 
+
+
+
+
+
     <!-- LARGE SEARCH -->
     <div class="row  large-search-bar">
-        <!-- <div class="d-none d-sm-block"> -->
+        <div class="d-none d-sm-block">
 
-        <form action="{% url 'search_results' %}" method="POST" class="form-inline my-2 my-lg-0 ">
 
-            <div class="row container-fluid d-none  d-lg-block">
+            <form action="{% url 'search_results' %}" method="POST" class="form-inline my-2 my-lg-0 ">
 
                 {% csrf_token %}
 
-                <div class="col-block my-2 mx-5">
+                <div class="col-block my-2">
 
                     <input class="form-control mr-sm-2" type="search" name="search_string" placeholder="Search"
                         aria-label="Search">
 
-                </div>
-
-
-                
-                <!-- // -->
-
-                <div class="col-block text-center mx-5">
-
-                    <button class="btn btn-lg btn-success mx-auto" type="submit">Search</button>
+                    <button class="btn btn-md btn-success my-2" type="submit">Search</button>
 
                 </div>
 
-            </div>
 
-        </form>
 
-        <!-- </div> -->
+            </form>
+
+
+
+
+        </div>
 
     </div>
 
     <hr>
+
+
+
+
+
+
     <!-- // -->
 
     <!-- BANNER -->
 
     <div class="row my-2 keep-insideBSol">
-        <div class="col-12 text-center">
+        <div class="col-12 text-center mx-auto">
 
             <h1>
                 <div id="advert">
-
             </h1>
+
+
         </div>
     </div>
 
     {% block main-content %}
 
-
-
-
     {% endblock main-content %}
+
+
+
+    <div class="row fixed-bottom">
+        <div class="col-12 collapse footer-box">
+
+            <h1>&Copy; Copyright 2021 Banyan-Videos-Corp</h1>
+
+        </div>
+      
+    </div>
+
+
+
+
 
     {% block post-load-js %}
     {% endblock post-load-js %}
