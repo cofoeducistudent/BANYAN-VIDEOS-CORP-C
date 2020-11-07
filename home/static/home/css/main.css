@@ -53,7 +53,7 @@ body {
 /* NAVBAR */
 
 .navbar {
-    opacity: .99 !important;
+    opacity: .80 !important;
 }
 
 .custom-nav-color, span {
@@ -199,6 +199,13 @@ button, span, nav-bar-toggler-icon {
     background-color: var(--theme-fgc);
 }
 
+/* FOUND BADGE */
+
+.found-badge {
+    color: var(--ink) !important;
+    background-color: var(--discount-colour) !important;
+}
+
 /* CAROUSEL SIZE */
 
 .c-image-size {
@@ -244,7 +251,25 @@ button, span, nav-bar-toggler-icon {
 /* FOOTER BOX */
 
 .footer-box {
-    height: 50px;
-    max-height: 50px;
+    height: 70px;
+    max-height: 70px;
     width: 100%;
+    color: var(--banner-fgnd);
+    background-color: var(--theme-bgc);
+    opacity: .80;
+}
+
+.sm-icons {
+    font-size: 1.5rem;
+    background-color: var(--theme-bgc) !important;
+    color: var(--wallpaper) !important;
+    margin-bottom: 10px;
+}
+
+
+ 
+
+
+.footer-box {
+    color: #ffffff !important;
 }
