@@ -76,6 +76,15 @@ button, span, nav-bar-toggler-icon {
     background-color: var(--theme-c1) !important;
 }
 
+
+
+
+
+
+
+
+
+
 /* BUTTONS */
 
 .btn, btn-success {
@@ -100,6 +109,13 @@ button, span, nav-bar-toggler-icon {
 .add-to-cart-button {
     box-shadow: 3px 3px var(--theme-bgc) !important;
 }
+
+
+
+
+
+
+
 
 /* ARTICLE TITLE */
 
