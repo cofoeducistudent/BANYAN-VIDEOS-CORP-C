@@ -57,12 +57,15 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'crispy_forms',
     
+    # Apps for banyan-videos-corp
     'home',
     'search_results',
-    # 'about',
-    # 'logout',
-    # 'members',
+    'about',
+    'logout',
+    'members',
+    'shopping_cart',
     'login_register',
+    'contact',
 
 
 ]

@@ -15,6 +15,11 @@ from django.contrib import messages
 from search_results import models as genre_models
 from search_results import models as film_models
 
+
+from django.contrib  import sessions
+from django.contrib.auth.models import User
+
+
 # Create your views here.
 
 class HomePageView(TemplateView):
@@ -32,7 +37,7 @@ class HomePageView(TemplateView):
         context = {
             'carousel':carousel,
             'articles':articles,
-            'genre':genre
+            'genre':genre,
         }
         return render (request, 'home/index.html', context)
     

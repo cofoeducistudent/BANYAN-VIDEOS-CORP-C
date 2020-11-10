@@ -30,8 +30,14 @@ urlpatterns = [
     
     path('login_register/', include('login_register.urls')),
     
-    # path('about/', include('about.urls')),
+    path('logout/', include('logout.urls')),
     
-    # path('members/', include('members.urls')),
+    path('about/', include('about.urls')),
+    
+    path('shopping_cart/', include('shopping_cart.urls')),
+    
+    path('members/', include('members.urls')),
+    
+    path('contact/', include('contact.urls')),
     
 ]
