@@ -1,5 +1,9 @@
 from django.contrib.auth import authenticate, login, logout, get_user_model
 
+
+from django.contrib import sessions
+
+
 from home import models
 from django import template
 from django.db.models.base import Model
@@ -26,6 +30,10 @@ class HomePageView(TemplateView):
     template_name = 'home/index.html'
 
 
+   
+
+
+
 
 
     def get(self,request):
@@ -34,10 +42,28 @@ class HomePageView(TemplateView):
         genre = film_models.Genre.objects.all()
         
         
+        # CREATE A SESSION IF NOT EXISTING!!
+        if not request.session.exists(request.session.session_key):
+            request.session.create() 
+        session_key = request.session.session_key
+        if not request.user.is_authenticated: 
+            current_user = request.user.username
+        current_user = request.user.username
+        
+        
+        
+        
+        
+        
         context = {
             'carousel':carousel,
             'articles':articles,
             'genre':genre,
+            
+            'session_key':session_key,
+            'current_user':current_user,
+            
+            
         }
         return render (request, 'home/index.html', context)
     

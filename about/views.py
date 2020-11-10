@@ -14,6 +14,12 @@ class AboutView(TemplateView):
     
     def get(self, request):
         
+ 
+        
+        
+        
+        
+        
       
 
         return render (request, 'about/about.html')

@@ -71,8 +71,11 @@ li, nav-link, :hover {
 }
 
 /* BURGER BUTTON */
+button, navbar-toggler{
+    background-color: var(--theme-c1) !important;
+}
 
-button, span, nav-bar-toggler-icon {
+span, navbar-toggler-icon, bbut {
     background-color: var(--theme-c1) !important;
 }
 
@@ -288,10 +291,30 @@ button, span, nav-bar-toggler-icon {
     margin-bottom: 10px;
 }
 
-
- 
-
-
 .footer-box {
     color: #ffffff !important;
 }
+
+
+/* USER & SHOPPING CART */
+
+.fa-user{
+
+    color: var(--theme-c1) !important;
+
+}
+
+.fa-shopping-cart{
+
+    color: var(--theme-c1) !important;
+
+}
+
+.u-name {
+
+color: var(--theme-c1) !important;
+background-color: var(--theme-bgc) !important;
+
+}
+
+ 

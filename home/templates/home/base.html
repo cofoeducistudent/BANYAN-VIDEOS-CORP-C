@@ -50,7 +50,7 @@
                 <!-- BURGER BUTTON -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
                     aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon bbut"></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
@@ -90,14 +90,26 @@
 
 
 
-                        <!-- USER & SHOPPING CART ICONS -->
-
+                        <!-- CURRENT USER -->
                         <li class="nav-item">
-                            <a class="nav-link u_c" href="#"><span class="fas fa-user"></span><span
-                                    class="sr-only"></span></a>
+                            <a class="nav-link u_c   " href="#">
+                                
+                                <span class="fas fa-user" class="sr-only">|
+                                        
+                                    {% if current_user %}
+                                    <span class="u-name text-muted" >{{ current_user }}</span>
+                                    {% endif %}
+                                    
+                                </span>
+ 
+                            </a>
                         </li>
+
+
+
+                        <!-- SHOPPING CART -->
                         <li class="nav-item">
-                            <a class="nav-link u_c" href="#"><span class="fas fa-shopping-cart"></span><span
+                            <a class="nav-link u_c" href="{% url 'shopping_cart' %}"><span class="fas fa-shopping-cart"></span><span
                                     class="sr-only"></span></a>
                         </li>
 
@@ -136,8 +148,6 @@
 
         </div>
     </div>
-
-
 
 
 
@@ -239,6 +249,12 @@
     </div>
 
 
+<!-- SESSION_KEY FOR DEV TBR!!!!!! -->
+<div class="row container-fluid">
+    <div class="col-12">
+       <h1 class="section-small-text text-success">{{session_key}}</h1>
+    </div>
+</div>
 
 
 
