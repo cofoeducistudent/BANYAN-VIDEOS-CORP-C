@@ -21,5 +21,6 @@ class Logout(View):
 
         logout(request)
 
-        return HttpResponse('Ok')
+        
  
+        return render( request, 'logout/logout.html')
