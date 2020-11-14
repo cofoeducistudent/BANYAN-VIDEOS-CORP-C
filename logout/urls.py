@@ -1,11 +1,13 @@
+from logout.views import Logout
+import home
 from django.urls import path
-from .views import Logout
+from .import views
 
 
 urlpatterns = [
     
-    path('logout', Logout.as_view(), name="logout"),
-  
-  
+    
+    path('logout', Logout.as_view(), name='logout'),
+ 
   
               ]

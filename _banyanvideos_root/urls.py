@@ -29,6 +29,7 @@ urlpatterns = [
     path('search_results/', include('search_results.urls')),
     
     path('login_register/', include('login_register.urls')),
+   
     
     path('logout/', include('logout.urls')),
     
@@ -39,5 +40,9 @@ urlpatterns = [
     path('members/', include('members.urls')),
     
     path('contact/', include('contact.urls')),
+    
+    path('my_account/', include('my_account.urls')),
+    
+    
     
 ]

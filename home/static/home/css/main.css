@@ -142,7 +142,21 @@ span, navbar-toggler-icon, bbut {
     color: var(--theme-bgc);
 }
 
+
+
+
+
+
+
 /* SECTION STUFF */
+
+.section-title :hover{
+
+    color: var(--ink) !important;
+    background-color: var(--wallpaper) !important;
+
+}
+
 
 .section-title {
     font-size: 1.5rem;
@@ -161,6 +175,9 @@ span, navbar-toggler-icon, bbut {
     color: var(--ink);
     background-color: var(--wallpaper);
 }
+
+
+
 
 /* BANNER ADVERT ROTOR */
 

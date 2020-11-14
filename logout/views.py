@@ -1,17 +1,25 @@
-from django.http import request
-from django.shortcuts import render
-from django.views.generic   import  TemplateView
+from django.http.response import HttpResponse
+from my_account import views
+from django.http import request, HttpResponse
 
-# Create your views here.
+from django.contrib.auth import authenticate, login, logout, get_user_model
+from django.shortcuts   import render,redirect
+from django.http    import request
+
+from django.views.generic  import View
+ 
+ 
+ 
+ 
 
 
-class Logout(TemplateView):
-    template_name = 'logout/logout.html'
-    
-    
+
+
+ 
+class Logout(View):
     def get(self, request):
-        a=1
-        
-        
-        
-        return render(request, 'logout/logout.html')
+
+        logout(request)
+
+        return HttpResponse('Ok')
+ 
