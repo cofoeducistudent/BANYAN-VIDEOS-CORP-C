@@ -15,11 +15,30 @@ class Members(TemplateView):
     
     def get(self, request):
         
+    # CREATE A SESSION IF NOT EXISTING!!
+        if not request.session.exists(request.session.session_key):
+            request.session.create() 
+        session_key = request.session.session_key
+        if not request.user.is_authenticated: 
+            current_user = request.user.username
+        current_user = request.user.username
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        context = {
+            
+            'session_key':session_key,
+            'current_user':current_user,
+                
+        }
     
-    
-    
-        return  render(request, 'members/members.html')
+        return  render(request, 'members/members.html', context)
     
     

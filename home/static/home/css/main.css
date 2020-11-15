@@ -37,6 +37,9 @@ body {
     word-wrap: break-word;
 }
 
+
+
+
 /* WALLPAPER */
 
 .wallpaper {
@@ -49,6 +52,10 @@ body {
     color: var(--theme-c1) !important;
     background-color: var(--theme-bgc) !important;
 }
+
+
+
+
 
 /* NAVBAR */
 
@@ -69,6 +76,10 @@ body {
 li, nav-link, :hover {
     color: var(--theme-c1) !important;
 }
+
+
+
+
 
 /* BURGER BUTTON */
 button, navbar-toggler{
@@ -190,16 +201,21 @@ span, navbar-toggler-icon, bbut {
     /* width: 80%; */
     margin: auto;
     box-shadow: 3px 3px var(--theme-c1);
+
+
 }
 
 #advert {
     padding-top: 10px;
+    
+ 
     font-size: 2rem;
     width: 90%;
     margin: auto;
 }
 
 #advert h1 {
+
     font-size: 1.5rem;
     color: var(--banner-fgnd);
     background-color: var(--banner-bckg);
@@ -209,6 +225,10 @@ span, navbar-toggler-icon, bbut {
     background-color: var(--theme-bgc) !important;
     color: var(--theme-fgc) !important;
 }
+
+
+
+
 
 /* LARGE SEARCH STUFF */
 
