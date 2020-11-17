@@ -376,15 +376,7 @@ table, th, td, :hover {
 
 }
 
-
-/* .table-spacer{
-
-color: var(--ink);
-border: 2px;
-
-} */
-
-
+ 
 
 
 
@@ -411,7 +403,6 @@ span, .my-item, .fas .fa-shopping-cart {
 }
 
 
-
 .cart-pic {
 
 height: 50px;
@@ -429,4 +420,12 @@ h4, .cart-text {
     font-size: .5rem;
 }
 
+/* CART BUTTON  */
+
+.btn, span, .fas-cart-plus {
+
+    color: var(--ink) !important;
+    background-color: var(--theme-c1) !important;
+
+}
  
