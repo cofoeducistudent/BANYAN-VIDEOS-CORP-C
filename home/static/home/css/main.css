@@ -73,6 +73,7 @@ body {
     color: #ffffff !important;
 }
 
+
 li, nav-link, :hover {
     color: var(--theme-c1) !important;
 }
@@ -181,11 +182,15 @@ span, navbar-toggler-icon, bbut {
     background-color: var(--wallpaper);
 }
 
+
+
 .section-tiny-text {
     font-size: .75rem;
     color: var(--ink);
     background-color: var(--wallpaper);
 }
+
+ 
 
 
 
@@ -357,19 +362,55 @@ background-color: var(--theme-bgc) !important;
 
 /* TABLES */
 
-.table-spacer{
+table, th, td {
+
+    border: 1px solid black;
+
+}
+
+table, th, td, :hover {
+
+    /* border: 1px solid black; */
+
+    color: var(--ink) !important;
+
+}
+
+
+/* .table-spacer{
 
 color: var(--ink);
 border: 2px;
 
-}
+} */
+
+
+
+
+
+
+
+
+
 
 /* CART */
+
+span, .my-item, .fas .fa-shopping-cart {
+
+    
+    color: var(--ink) !important;
+    background-color: var(--theme-fgc) !important;
+
+}
+
+
 .cart-text {
 
     font-size: .5rem;
 
 }
+
+
 
 .cart-pic {
 
@@ -387,3 +428,5 @@ width: auto;
 h4, .cart-text {
     font-size: .5rem;
 }
+
+ 

@@ -33,9 +33,9 @@
 
 
 <div class="row container-fluid">
-    <div class="col-12 mx-3">
+    <div class="col-12 mx-3 ">
 
-        <h1 class="section-title text-center">SHOPPING CART!</h1>
+        <h1 class="section-title text-center"><span class="my-item fas fa-shopping-cart my-item"></span></h1>
 
 
 
@@ -49,9 +49,9 @@
 
                 <!-- LIST CONTENTS OF SHOPPING CART -->
                 <div class="row ">
-                    <div class="col-12 px-1">
+                    <div class="col-12 section-tiny-text" style="width:100%">
 
-                        <table class="section-tiny-text" style="width:100% ">
+                        <table >
 
                             <tr class="section-tiny-text">
                                 <th class="table-spacer">DELETE</th>
@@ -60,11 +60,11 @@
                                 <th class="table-spacer">SKU</th>
                                 <th class="table-spacer">-</th>
                                 <th class="table-spacer">TITLE</th>
-                                <th class="table-spacer">DESCRIPTION</th>
+                                <th class="table-spacer" style="width:33%" >DESCRIPTION</th>
                                 <th class="table-spacer">IMAGE</th>
                                 <th class="table-spacer">PRICE</th>
-                                <th class="table-spacer">MEMBER DISC % - PER ITEM</th>
-                                <th class="table-spacer">TOTAL</th>
+                                <th class="table-spacer">M-DSC %</th>
+                                <th class="table-spacer">SUB TOT</th>
                             </tr>
 
 
@@ -138,10 +138,16 @@
                                 <td>
                                     <h2 class="cart-items cart-text"> -% {{ items.cart_film_product_discount }}</h2>
                                 </td>
+
+
+
                                 <td>
                                     <!-- Product price total with discount -->
-                                    <h2 class="cart-items">{{ items.cart_price_paid_total }}</h2>
+                                    <h2 class="cart-items cart-text">{{ items.cart_price_paid }}</h2>
                                 </td>
+
+
+
                             </tr>
                             {% endfor %}
                         </table>

@@ -17,7 +17,7 @@ class ShoppingCartModelAdmin(admin.ModelAdmin):
                     'cart_film_title',
                     'cart_film_friendly_title',
                     'cart_film_box_cover_url',
-                    'cart_film_description',
+                    # 'cart_film_description',
                     'cart_film_price',
                     'cart_film_product_discount',
                     'cart_price_paid',
