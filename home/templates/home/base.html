@@ -214,11 +214,14 @@
         </div>
     </div>
 
+
+    {% for message in messages %}
+    {{ message}}
+    {% endfor %}
+
+
     {% block main-content %}
-
     {% endblock main-content %}
-
-
 
 
 <!-- SPACER -->

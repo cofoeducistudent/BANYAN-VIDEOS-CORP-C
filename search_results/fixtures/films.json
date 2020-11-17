@@ -415,7 +415,7 @@
         "film_title": "halloween",
         "film_friendly_title": "Halloween",
         "film_box_cover_url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimagesvc.timeincapp.com%2Fv3%2Ffan%2Fimage%3Furl%3Dhttps%3A%2F%2F1428elm.com%2Fwp-content%2Fblogs.dir%2F304%2Ffiles%2F2018%2F04%2Fhalloween-poster.jpg%26c%3Dsc%26w%3D998%26h%3D1500&f=1&nofb=1",
-        "film_description":"",
+        "film_description":"some description",
         "film_price": 9.99,
         "film_product_discount": 0.00,
         "film_stock_available": "True",

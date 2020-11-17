@@ -67,6 +67,7 @@ INSTALLED_APPS = [
     'login_register',
     'contact',
     'my_account',
+    'delete_from_shopping_cart',
 
 ]
 

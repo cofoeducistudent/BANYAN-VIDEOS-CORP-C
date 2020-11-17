@@ -37,19 +37,13 @@
 <div class="row  container-fluid  wallpaper">
     <div class="col-12 mx-auto">
 
-
-
-
         <div class="row ">
 
             {%  for items in results_collection  %}
 
             <div class="col-md-6 mx-auto my-5  ">
 
-
-
                 <div class="card mx-auto">
-
 
                     <!-- FORM -->
                     <form action="{% url 'shopping_cart' %}" method="POST">
@@ -57,53 +51,37 @@
 
                         <img class="card-img-top img-fluid" src="{{items.film_box_cover_url }}"
                             alt="{{items.film_friendly_name}}">
-                        <input type="hidden" name="film_box_cover_url" value={{ items.film_box_cover_url }}></input>
-
 
                         <div class="card-body">
 
- 
-
-                            <h5 class="section-tiny-text text-muted">SKU:{{ items.film_sku }}</h5>
-                            <input type="hidden" name="cart_film_sku" value={{ items.film_sku }}></input>
-
-                            <input type="hidden" name="cart_film_title" value={{ items.film_title}}></input>
+                            <h5   class="section-tiny-text text-muted">SKU:{{ items.film_sku }}</h5>
 
                             <h5 class="card-title">{{ items.film_friendly_title }}</h5>
-                            <input type="hidden" name="cart_film_friendly_title" value={{ items.film_friendly_title }}></input>
-
 
                             <p class="card-text  section-tiny-text text-justify">{{  items.film_description }}</p>
-                            <input type="hidden" name="cart_film_description" value={{ items.film_description }}></input>
+
 
                             <hr>
-
 
                             <div class="row section-title">
                                 <div class="col-12 text-center">
 
                                     £ {{ items.film_price }}
-                                    <input type="hidden" name="cart_film_price" value={{ items.film_price }}></input>
 
                                 </div>
                             </div>
 
-
-
                             <div class="row">
                                 <div class="col-12 text-center">
 
-                                    <input type="hidden" name="cart_film_product_discount" value={{ items.film_product_discount }}></input>
-                                    
                                     <!-- SHOW DISCOUNT -->
                                     {% if items.film_product_discount  %}
-                                    
 
                                     <div class="row">
                                         <div class="col-8  discounted-product mx-auto">
                                             <h1>
                                                 MEMBERS GET: - {{ items.film_product_discount }} % DISCOUNT!
-                                           
+
                                             </h1>
                                         </div>
                                     </div>
@@ -126,26 +104,22 @@
                             <div class="row my-2">
                                 <div class="col-12 text-center">
 
-                                    <!-- <a href="#" class="btn btn-lg btn-warning add-to-cart-button">ADD TO CART <span
-                                            class="fas fa-cart-plus"></span></a> -->
 
 
+                                    <input type="hidden" name="sku" value={{ items.film_sku }}
 
+
+                                    <!-- ADD CART BUTTON -->
                                     <button type="submit" class="btn btn-lg bt add-to-cart-button">
-
                                         <span class="fas fa-cart-plus"></span>
                                         ADD TO CART
-
                                     </button>
 
                                 </div>
                             </div>
 
-
                     </form>
                     <!-- /// -->
-
-
 
                 </div>
 
@@ -153,19 +127,11 @@
 
         </div>
 
-
-
         {% endfor %}
 
         <!-- // -->
 
     </div>
-
-
-
-
-
-
 
 </div>
 

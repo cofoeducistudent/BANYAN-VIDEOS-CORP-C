@@ -354,4 +354,36 @@ background-color: var(--theme-bgc) !important;
 
 }
 
- 
+
+/* TABLES */
+
+.table-spacer{
+
+color: var(--ink);
+border: 2px;
+
+}
+
+/* CART */
+.cart-text {
+
+    font-size: .5rem;
+
+}
+
+.cart-pic {
+
+height: 50px;
+width: auto;
+
+}
+
+.cart-items {
+    font-size: 1rem;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+h4, .cart-text {
+    font-size: .5rem;
+}

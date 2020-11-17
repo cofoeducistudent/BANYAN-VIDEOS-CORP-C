@@ -4,33 +4,176 @@
 
 {% block main-content %}
 
- 
+<!-- BACK BUTTON -->
+<div class="row my-2">
+    <div class="col-12 text-center">
 
+        <button class="btn btn-lg btn success go-back-button" onclick="goBack()">Go Back</button>
+
+        <script>
+            function goBack() {
+                window.history.back();
+            }
+        </script>
+
+    </div>
+</div>
+
+<!-- ALERT -->
 <div class="row container-fluid">
-<div class="col-12 mx-3">
-
-    <h1 class="section-title text-center">SHOPPING CART!</h1>
-    
-
-
-
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-          <h1 class="display-4">Fluid jumbotron</h1>
-          <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+    <div class="col-12 mx-2">
+        <div class="alert alert-warning" role="alert">
+            Please see the contents of your shopping cart below
         </div>
     </div>
-
-
-
-
-
-
-    
-
-</div>
 </div>
 
 
 
-{% endblock main-content %}
+
+
+<div class="row container-fluid">
+    <div class="col-12 mx-3">
+
+        <h1 class="section-title text-center">SHOPPING CART!</h1>
+
+
+
+
+
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="section-title-text">THE FOLLOWING ITEMS ARE IN YOUR CART</h1>
+                <!-- <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>-->
+
+
+                <!-- LIST CONTENTS OF SHOPPING CART -->
+                <div class="row ">
+                    <div class="col-12 px-1">
+
+                        <table class="section-tiny-text" style="width:100% ">
+
+                            <tr class="section-tiny-text">
+                                <th class="table-spacer">DELETE</th>
+                                <th class="table-spacer">QTY</th>
+                                <th class="table-spacer">|</th>
+                                <th class="table-spacer">SKU</th>
+                                <th class="table-spacer">-</th>
+                                <th class="table-spacer">TITLE</th>
+                                <th class="table-spacer">DESCRIPTION</th>
+                                <th class="table-spacer">IMAGE</th>
+                                <th class="table-spacer">PRICE</th>
+                                <th class="table-spacer">MEMBER DISC % - PER ITEM</th>
+                                <th class="table-spacer">TOTAL</th>
+                            </tr>
+
+
+
+
+                            {% for items in SCM %}
+                            <h1 class="section-tiny-text">{{ items.product_session }}</h1>
+                            <tr>
+
+                                <td class="section-tiny-text">
+                                    <form action="{% url 'delete_from_shopping_cart' %}" method="POST">
+                                        {% csrf_token %}
+                                        <h2 class="cart-items cart-text"><input type="submit" value="Delete"></h2>
+                                        <input type=hidden name="dsku" value="{{ items.pk }}">
+                                    </form>
+                                </td>
+
+                                <td>
+                                    <h2 class="cart-items cart-text">{{ items.cart_film_quantity }}</h2>
+                                </td>
+
+
+
+                                <td>
+                                    <h2 class="cart-items cart-text">{{ 'X' }}</h2>
+                                </td>
+
+
+
+
+                                <td>
+                                    <h2 class="cart-items cart-text">{{ items.cart_film_sku }}</h2>
+                                </td>
+
+
+
+                                <td>
+                                    <!-- <h2 class="cart-items cart-text">{{ items.product_name }}</h2> -->
+                                </td>
+
+
+
+                                <td>
+                                    <h2 class="cart-items cart-text">{{ items.cart_film_friendly_title }}</h2>
+                                </td>
+
+
+
+                                <td>
+                                    <h2 class="cart-items cart-text">{{ items.cart_film_description }}</h2>
+                                </td>
+
+
+
+
+                                <td>
+                                    <h2 class="cart-items cart-text">
+                                        <image class="cart-pic" src="{{ items.cart_film_box_cover_url }}"></image>
+                                    </h2>
+                                </td>
+
+
+
+                                <td>
+                                    <h2 class="cart-items cart-text">{{ items.cart_film_price }}</h2>
+                                </td>
+
+
+
+
+                                <td>
+                                    <h2 class="cart-items cart-text"> -% {{ items.cart_film_product_discount }}</h2>
+                                </td>
+                                <td>
+                                    <!-- Product price total with discount -->
+                                    <h2 class="cart-items">{{ items.cart_price_paid_total }}</h2>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        </table>
+
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+
+
+
+        {% endblock main-content %}

@@ -52,6 +52,11 @@ class SearchResults(TemplateView):
 
             all_films = film_models.Films.objects.all()
         
+        
+        
+         
+        
+        
             s_string = request.POST['search_string']
         
             for item in all_films:
@@ -60,12 +65,19 @@ class SearchResults(TemplateView):
 
             total_items_found = len(results_collection)
      
+     
+ 
+     
+     
             context = {
             
             'results_collection': results_collection,
             'total_items_found': total_items_found,
                
             }
+            
+            
+            
     
             return render(request, self.template_name, context)
 

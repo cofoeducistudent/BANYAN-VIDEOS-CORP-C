@@ -43,6 +43,6 @@ urlpatterns = [
     
     path('my_account/', include('my_account.urls')),
     
-    
+    path('delete_from_shopping_cart/', include('delete_from_shopping_cart.urls')),
     
 ]

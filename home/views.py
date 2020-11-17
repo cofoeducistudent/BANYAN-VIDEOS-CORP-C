@@ -1,6 +1,7 @@
 from django.contrib.auth import authenticate, login, logout, get_user_model
 from django.contrib import sessions
 
+from django.contrib import   messages
 
 from home import models
 from django import template
@@ -28,8 +29,7 @@ class HomePageView(TemplateView):
     template_name = 'home/index.html'
 
 
-   
-
+  
 
 
 
@@ -61,6 +61,7 @@ class HomePageView(TemplateView):
             'session_key':session_key,
             'current_user':current_user,
             
+         
             
         }
         return render (request, 'home/index.html', context)
