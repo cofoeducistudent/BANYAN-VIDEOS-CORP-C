@@ -33,6 +33,7 @@ class ShoppingCart(TemplateView):
         current_user = request.user
         if not request.user.is_authenticated: 
             current_user = request.user
+            
         if request.user.is_authenticated:
             current_user = request.user
         
@@ -90,7 +91,7 @@ class ShoppingCart(TemplateView):
         current_user = request.user
         if not request.user.is_authenticated:
             current_user = request.user
-        current_user = request.user
+        # current_user = request.user
 
  
        
@@ -112,23 +113,26 @@ class ShoppingCart(TemplateView):
                  
                 item_price = film_wad[0].film_price
                 item_discount = film_wad[0].film_product_discount
+                price_paid = (film_wad[0].film_price * selected_quantity)
                 
                 
-                
-                
-                price_paid = film_wad[0].film_price
                 
                 if request.user.is_authenticated:
-                    price_paid = (item_price) - (((item_price * item_discount)/100)* selected_quantity )
-                    price_paid = round(price_paid, 2)
+                    price_paid_member = (item_price) - (((item_price * item_discount)/100)* selected_quantity )
+                    price_paid = (price_paid_member * selected_quantity)
 
+
+
+                price_paid = round(price_paid,2)
+                
+            
                 
         # ASSEMBLED FILM ITEM
         b = ShoppingCartModel(
 
         cart_owner = request.user,
         cart_session = session_key,
-        cart_film_quantity= selected_quantity,
+        cart_film_quantity = selected_quantity,
 
         cart_price_paid = price_paid,
 

@@ -4,7 +4,7 @@
 
 {% block main-content %}
 
- 
+
 
 <div class="row container-fluid">
 <div class="col-12 mx-3">
@@ -29,8 +29,21 @@
     
 
 </div>
+
+
+
+
+
 </div>
 
+ <!-- BACK BUTTON -->
+ <div class="row my-2">
+  <div class="col-12 text-center">
 
+      <a href="{% url 'shopping_cart' %}"><button class="btn btn-lg btn success go-back-button" onclick="goBack()">Go Back</button></a>
+
+ 
+  </div>
+</div>
 
 {% endblock main-content %}

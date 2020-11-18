@@ -51,6 +51,7 @@
                 <div class="row ">
                     <div class="col-12 section-tiny-text"  style="width:100%" >
 
+                        {% if basket_item_count  %}
                         <table >
 
                             <tr class="section-tiny-text">
@@ -71,6 +72,9 @@
 
 
                             {% for items in SCM %}
+
+                            
+
                             <h1 class="section-tiny-text">{{ items.product_session }}</h1>
                             <tr>
 
@@ -151,9 +155,10 @@
 
 
                             </tr>
+                           
                             {% endfor %}
                         </table>
-
+                        {% endif %}
 
 
 
