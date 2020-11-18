@@ -47,12 +47,35 @@ class ShoppingCart(TemplateView):
         
         basket_item_count = SCM.count
         
+        
+        
+        # WORKOUT BILL FOR CUSTOMER
+        total_to_pay = 0
+        for line_items in SCM:
+            total_to_pay = total_to_pay + line_items.cart_price_paid
+        shipping_charge = 0
+        if total_to_pay <30:
+            shipping_charge = round((total_to_pay * 10 )/100,2)
+        final_bill=round((total_to_pay+shipping_charge),2)
+        
+        # print('------')
+        # print(total_to_pay)
+        # print(shipping_charge)
+        # print(final_bill)
+        # print('------')
+        
+        
+        
         context = {
 
             'session_key': session_key,
             'current_user': current_user,
             
             'basket_item_count':basket_item_count,
+            'total_to_pay':total_to_pay,
+            'shipping_charge':shipping_charge,
+            'final_bill':final_bill,
+            
             
             'SCM': SCM,
             
@@ -166,6 +189,22 @@ class ShoppingCart(TemplateView):
         basket_item_count = SCM.count
         
         
+        
+        # WORKOUT BILL FOR CUSTOMER
+        total_to_pay = 0
+        for line_items in SCM:
+            total_to_pay = total_to_pay + line_items.cart_price_paid
+        shipping_charge = 0
+        if total_to_pay <30:
+            shipping_charge = round((total_to_pay * 10 )/100,2)
+        final_bill=round((total_to_pay+shipping_charge),2)
+        
+        
+        
+        
+        
+        
+        
         # DELETE ALL SHOPPING CART WITH SPECIFIC OWNER
         # my_object = ShoppingCartModel.objects.filter(cart_film_quantity = 1)
         # my_object.delete()
@@ -175,7 +214,13 @@ class ShoppingCart(TemplateView):
             'session_key': session_key,
             'current_user': current_user,
             
+           
             'basket_item_count':basket_item_count,
+            'total_to_pay':total_to_pay,
+            'shipping_charge':shipping_charge,
+            'final_bill':final_bill,
+            
+            
             
             'SCM': SCM,
 

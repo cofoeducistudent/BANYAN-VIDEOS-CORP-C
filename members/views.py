@@ -1,9 +1,10 @@
 from django.http import request
 from django.contrib.auth import authenticate, login, logout, get_user_model
 from django.contrib import sessions
+from django.urls    import  reverse
 
+from django.shortcuts import render,redirect
 
-from django.shortcuts import render
 from django.views.generic   import TemplateView
 
 from shopping_cart.models  import ShoppingCartModel
@@ -18,6 +19,8 @@ class Members(TemplateView):
     
     def get(self, request):
         
+  
+        
     # CREATE A SESSION IF NOT EXISTING!!
         if not request.session.exists(request.session.session_key):
             request.session.create() 
@@ -26,6 +29,9 @@ class Members(TemplateView):
         current_user = request.user
         if not request.user.is_authenticated: 
             current_user = request.user
+             
+            
+            
         if request.user.is_authenticated:
             current_user = request.user
         

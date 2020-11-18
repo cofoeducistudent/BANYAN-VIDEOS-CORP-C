@@ -202,7 +202,7 @@ span, navbar-toggler-icon, bbut {
     /* background-color: var(--theme-bgc); */
     color: var(--ink);
     background-color: var(--banner-bckg);
-    height: 100px;
+    height: 60px;
     /* width: 80%; */
     margin: auto;
     box-shadow: 3px 3px var(--theme-c1);
@@ -214,14 +214,14 @@ span, navbar-toggler-icon, bbut {
     padding-top: 10px;
     
  
-    font-size: 2rem;
+    font-size: 1rem;
     width: 90%;
     margin: auto;
 }
 
 #advert h1 {
 
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: var(--banner-fgnd);
     background-color: var(--banner-bckg);
 }
@@ -364,7 +364,7 @@ background-color: var(--theme-bgc) !important;
 
 table, th, td {
 
-    border: 1px solid black;
+    border: .5px solid var(--ink);
 
 }
 
@@ -376,7 +376,11 @@ table, th, td, :hover {
 
 }
 
- 
+th, .table-spacer{
+
+    width: auto;
+
+}
 
 
 
@@ -429,3 +433,17 @@ h4, .cart-text {
 
 }
  
+/* COST BLOCK STUFF */
+h3, .cost-block{
+
+font-size: x-large;
+
+}
+
+.fb-high-light{
+
+    background-color: var(--theme-c1);
+    color: var(--ink);
+    padding: 10px 10px 10px 10px;
+   
+}

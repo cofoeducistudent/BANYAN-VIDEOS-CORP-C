@@ -23,7 +23,10 @@
 <div class="row container-fluid">
     <div class="col-12 mx-2">
         <div class="alert alert-warning" role="alert">
-            Below are the contents of your shopping cart
+           <p>Below are the contents of your shopping cart</p>
+           <p>* Please note ' % Discounts' are applied to members only!</p>
+           <p>* The subtotal includes 'discount%  X quantity per line item'</p>
+           <p>* ~ Shipping Charges 10% applicable to orders < £30.00 ~ </p>
         </div>
     </div>
 </div>
@@ -38,33 +41,47 @@
         <h1 class="section-title text-center"><span class="my-item fas fa-shopping-cart my-item"></span></h1>
 
 
+        <!-- COSTINGS BLOCK! -->
+        <div class="row">
+            <div class="col-12 cost-block">
 
+                <h3 class="text-muted">TOTAL LINE ITEMS: ( {{ basket_item_count }} )</h3>
+                <h3 class="text-muted">COST: £ {{ total_to_pay }}</h3>
+                <h3 class="text-muted">SHIPPING CHARGE: £ {{ shipping_charge }}</h3>
+                <hr>
+                <h3 class="fb-high-light"><b>YOU PAY: £ {{ final_bill }}</b></h3>
+
+            </div>
+        </div>
 
 
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
+
+
+
                 <h1 class="section-title-text">THE FOLLOWING ITEMS ARE IN YOUR CART</h1>
                 <!-- <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>-->
 
 
                 <!-- LIST CONTENTS OF SHOPPING CART -->
                 <div class="row ">
-                    <div class="col-12 section-tiny-text"  style="width:100%" >
+                    <div class="col-12 section-tiny-text text-center"  style="width:100%" >
 
                         {% if basket_item_count  %}
-                        <table >
+                        <table>
 
                             <tr class="section-tiny-text">
                                 <th class="table-spacer">DELETE</th>
                                 <th class="table-spacer">QTY</th>
-                                <th class="table-spacer">|</th>
+                                <th class="table-spacer">-</th>
                                 <th class="table-spacer">SKU</th>
                                 <th class="table-spacer">-</th>
                                 <th class="table-spacer">TITLE</th>
                                 <th class="table-spacer d-none d-md-block" style="width:33%" >DESC</th>
                                 <th class="table-spacer d-none d-md-block">IMAGE</th>
                                 <th class="table-spacer">PRICE</th>
-                                <th class="table-spacer">M-DSC %</th>
+                                <th class="table-spacer">DSC % / ITEM</th>
                                 <th class="table-spacer">SUB TOT</th>
                             </tr>
 
@@ -119,18 +136,20 @@
 
 
 
-                                <td class="d-none d-md-block">
+
+
+                                <td class="d-none d-md-block text-justify" style='border:single'>
                                     <h2 class="cart-items cart-text">{{ items.cart_film_description }}</h2>
                                 </td>
 
-
-
-
-                                <td class="d-none d-md-block">
+                                <td class="d-none d-md-block" style='border:single'>
                                     <h2 class="cart-items cart-text ">
                                         <image class="cart-pic" src="{{ items.cart_film_box_cover_url }}"></image>
                                     </h2>
                                 </td>
+
+
+
 
 
 
@@ -158,6 +177,7 @@
                            
                             {% endfor %}
                         </table>
+                        <hr>
                         {% endif %}
 
 

@@ -1,48 +1,25 @@
 {% extends 'home/base.html' %}
 {% load static %}
 
-
 {% block main-content %}
 
-
-
+<!-- MESSAGE WHAT WAS DELETED -->
 <div class="row container-fluid">
-<div class="col-12 mx-3">
+  <div class="col-12 mx-3">
 
     <h1 class="section-title text-center">DELETED FROM SHOPPING CART!</h1>
-    
 
-
-
-    <!-- <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-          <h1 class="display-4">The Following Item Has been deleted</h1>
-          <p class="lead">{{ deleted_Item }}</p>
-        </div>
-    </div> -->
-
-
-
-
-
-
-    
+  </div>
 
 </div>
 
-
-
-
-
-</div>
-
- <!-- BACK BUTTON -->
- <div class="row my-2">
+<!-- BACK BUTTON -->
+<div class="row my-2">
   <div class="col-12 text-center">
 
-      <a href="{% url 'shopping_cart' %}"><button class="btn btn-lg btn success go-back-button" onclick="goBack()">Go Back</button></a>
+    <a href="{% url 'shopping_cart' %}"><button class="btn btn-lg btn success go-back-button" onclick="goBack()">Go
+        Back</button></a>
 
- 
   </div>
 </div>
 

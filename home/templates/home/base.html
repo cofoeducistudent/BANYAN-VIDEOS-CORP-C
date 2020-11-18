@@ -53,6 +53,10 @@
                     <span class="navbar-toggler-icon bbut"></span>
                 </button>
 
+
+
+
+
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                     <a class="navbar-brand" href="{% url 'home' %}"><span class="brand">BANYAN-VIDEOS-CORP</span></a>
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
@@ -60,7 +64,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'home' %}">Home<span class="sr-only"></span></a>
                         </li>
- 
+
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'login_register' %}">Sign In<span
                                     class="sr-only"></span></a>
@@ -68,15 +72,13 @@
 
 
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'my_account' %}">Account<span
-                                    class="sr-only"></span></a>
+                            <a class="nav-link" href="{% url 'my_account' %}">Account<span class="sr-only"></span></a>
                         </li>
 
 
 
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'shopping_cart' %}">Cart<span
-                                    class="sr-only"></span></a>
+                            <a class="nav-link" href="{% url 'shopping_cart' %}">Cart<span class="sr-only"></span></a>
                         </li>
 
                         <li class="nav-item">
@@ -97,33 +99,36 @@
 
 
 
-
-                        <!-- CURRENT USER -->
-                        <li class="nav-item">
-                            <a class="nav-link u_c   " href="#">
-                                
-                                <span class="fas fa-user" class="sr-only">|
-                                        
-                                    {% if current_user %}
-                                    <span class="u-name text-muted" >{{ current_user }}</span>
-                                    {% endif %}
-                                    
-                                </span>
  
-                            </a>
-                        </li>
+
+                            <!-- CURRENT USER -->
+                            <li class="nav-item">
+                                <a class="nav-link u_c   " href="{% url 'my_account' %}">
+
+                                    <span class="fas fa-user" class="sr-only">|
+
+                                        {% if current_user %}
+
+                                        
+                                            <span class="u-name text-muted">{{ current_user }}</span>
+                                     
+                                        
+                                        {% endif %}
+
+                                    </span>
+
+                                </a>
+                            </li>
 
 
+                            <!-- SHOPPING CART -->
+                            <li class="nav-item">
+                                <a class="nav-link u_c" href="{% url 'shopping_cart' %}"><span
+                                        class="fas fa-shopping-cart"></span><span class="sr-only"> </span>
+                                    {{basket_item_count}} </a>
+                            </li>
 
-                        <!-- SHOPPING CART -->
-                        <li class="nav-item">
-                            <a class="nav-link u_c" href="{% url 'shopping_cart' %}"><span class="fas fa-shopping-cart"></span><span
-                                    class="sr-only"> </span> {{basket_item_count}} </a>
-
-                                    
-                        </li>
-
-
+ 
 
 
                     </ul>
@@ -179,6 +184,8 @@
                     <input class="form-control mr-sm-2" type="search" name="search_string" placeholder="Search"
                         aria-label="Search">
 
+
+
                     <button class="btn btn-md btn-success my-2" type="submit">Search</button>
 
                 </div>
@@ -219,22 +226,22 @@
 
 
 
-<div class="row container-fluid mx-auto">
-    <div class="col-12 text-center mx-auto">
+    <div class="row container-fluid mx-auto">
+        <div class="col-12 text-center mx-auto">
 
 
-        {% for message in messages %}
+            {% for message in messages %}
 
-        <div class="alert alert-danger" role="alert">
-            <p>{{ message }}</p>
+            <div class="alert alert-danger" role="alert">
+                <p>{{ message }}</p>
+            </div>
+
+            {% endfor %}
+
+
+
         </div>
-      
-        {% endfor %}
-
-
-
     </div>
-</div>
 
 
 
@@ -248,13 +255,13 @@
     {% endblock main-content %}
 
 
-<!-- SPACER -->
-<div class="row container-fluid my-5">
-<div class="col-12">
+    <!-- SPACER -->
+    <div class="row container-fluid my-5">
+        <div class="col-12">
 
 
-</div>
-</div>
+        </div>
+    </div>
 
 
 
@@ -271,11 +278,16 @@
         <div class="row mx-auto ">
             <div class="col-12  text-center">
 
-               <a href="https://en-gb.facebook.com" target="_blank"><span class="fa fa-facebook-official sm-icons" aria-hidden="true"></span></a>
-               <a href="https://www.youtube.com/" target="_blank"><span class="fa fa-youtube-square sm-icons" aria-hidden="true"></span></a>
-                <a href="https://www.instagram.com/" target="_blank"><span class="fa fa-instagram sm-icons" aria-hidden="true"></span></a>
-                <a href="https://www.linkedin.com/" target="_blank"><span class="fa fa-linkedin-square sm-icons" aria-hidden="true"></span></a>
-                <a href="https://www.imdb.com/" target="_blank"><span class="fa fa-imdb sm-icons" aria-hidden="true"></span></a>
+                <a href="https://en-gb.facebook.com" target="_blank"><span class="fa fa-facebook-official sm-icons"
+                        aria-hidden="true"></span></a>
+                <a href="https://www.youtube.com/" target="_blank"><span class="fa fa-youtube-square sm-icons"
+                        aria-hidden="true"></span></a>
+                <a href="https://www.instagram.com/" target="_blank"><span class="fa fa-instagram sm-icons"
+                        aria-hidden="true"></span></a>
+                <a href="https://www.linkedin.com/" target="_blank"><span class="fa fa-linkedin-square sm-icons"
+                        aria-hidden="true"></span></a>
+                <a href="https://www.imdb.com/" target="_blank"><span class="fa fa-imdb sm-icons"
+                        aria-hidden="true"></span></a>
 
             </div>
         </div>
@@ -284,12 +296,12 @@
     </div>
 
 
-<!-- SESSION_KEY FOR DEV TBR!!!!!! -->
-<div class="row container-fluid">
-    <div class="col-12">
-       <h1 class="section-small-text text-success">{{session_key}}</h1>
+    <!-- SESSION_KEY FOR DEV TBR!!!!!! -->
+    <div class="row container-fluid">
+        <div class="col-12">
+            <h1 class="section-small-text text-success">{{session_key}}</h1>
+        </div>
     </div>
-</div>
 
 
 
