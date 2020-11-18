@@ -54,9 +54,24 @@ class SearchResults(TemplateView):
 
             total_items_found = len(results_collection)
         
+        
+        
+        
+            SCM = ShoppingCartModel.objects.filter(cart_owner=current_user)
+            basket_item_count = SCM.count
+
+        
+        
+        
+        
+        
             context = {
                 'total_items_found': total_items_found,
-                'results_collection': results_collection
+                'results_collection': results_collection,
+            
+                'basket_item_count':basket_item_count,
+                'current_user':current_user,
+                'SCM':SCM,
         
             }
             return render(request, self.template_name, context)
@@ -117,6 +132,9 @@ class SearchResults(TemplateView):
             'total_items_found': total_items_found,
             
             'basket_item_count':basket_item_count,
+            
+            'current_user':current_user,
+            
             
             'SCM':SCM,
                

@@ -447,3 +447,31 @@ font-size: x-large;
     padding: 10px 10px 10px 10px;
    
 }
+
+
+
+/* PAYMENT BLOCK */
+
+.payment-block {
+
+background-color: var(--wallpaper);
+color: var(--ink);
+
+                
+
+}
+
+
+/* PAYMENT BUTTON */
+
+.payment-button{
+ 
+box-shadow: 3px 3px var(--discount-colour);
+
+}
+
+.pay-selector { 
+
+list-style: none;
+
+}

@@ -23,10 +23,10 @@
 <div class="row container-fluid">
     <div class="col-12 mx-2">
         <div class="alert alert-warning" role="alert">
-           <p>Below are the contents of your shopping cart</p>
-           <p>* Please note ' % Discounts' are applied to members only!</p>
-           <p>* The subtotal includes 'discount%  X quantity per line item'</p>
-           <p>* ~ Shipping Charges 10% applicable to orders < £30.00 ~ </p>
+            <p>Below are the contents of your shopping cart</p>
+            <p>* Please note ' % Discounts' are applied to members only!</p>
+            <p>* The subtotal includes 'discount% X quantity per line item'</p>
+            <p>* ~ Shipping Charges 10% applicable to orders < £30.00 ~ </p>
         </div>
     </div>
 </div>
@@ -54,6 +54,34 @@
             </div>
         </div>
 
+        <hr>
+
+        <!-- PAYMENT HERE! -->
+        <div class="row">
+            <div class="col-12 payment-block">
+
+
+
+                <form action="#" method="POST">
+                    {% csrf_token %}
+
+                    <ul>
+
+                        <li class="pay-selector"> <button class="btn btn-lg btn-danger my-2   payment-button" name=""
+                                type="submit"><span class="fab fa-cc-stripe"></span> STRIPE!</button> </li>
+
+                        <li class="pay-selector"> <button class="btn btn-lg btn-danger my-2   payment-button" name=""
+                                type="submit"><span class="fab fa-cc-paypal"></span> PAYPAL!</button> </li>
+
+                    </ul>
+
+                </form>
+
+                <hr>
+
+            </div>
+        </div>
+
 
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
@@ -66,7 +94,7 @@
 
                 <!-- LIST CONTENTS OF SHOPPING CART -->
                 <div class="row ">
-                    <div class="col-12 section-tiny-text text-center"  style="width:100%" >
+                    <div class="col-12 section-tiny-text text-center" style="width:100%">
 
                         {% if basket_item_count  %}
                         <table>
@@ -78,7 +106,7 @@
                                 <th class="table-spacer">SKU</th>
                                 <th class="table-spacer">-</th>
                                 <th class="table-spacer">TITLE</th>
-                                <th class="table-spacer d-none d-md-block" style="width:33%" >DESC</th>
+                                <th class="table-spacer d-none d-md-block" style="width:33%">DESC</th>
                                 <th class="table-spacer d-none d-md-block">IMAGE</th>
                                 <th class="table-spacer">PRICE</th>
                                 <th class="table-spacer">DSC % / ITEM</th>
@@ -90,7 +118,7 @@
 
                             {% for items in SCM %}
 
-                            
+
 
                             <h1 class="section-tiny-text">{{ items.product_session }}</h1>
                             <tr>
@@ -98,8 +126,8 @@
                                 <td class="section-tiny-text">
                                     <form action="{% url 'delete_from_shopping_cart' %}" method="POST">
                                         {% csrf_token %}
-                                        
-                                        <h2 class="cart-items cart-text"><input type="submit"value="DELETE"></h2>
+
+                                        <h2 class="cart-items cart-text"><input type="submit" value="DELETE"></h2>
 
                                         <input type=hidden name="dsku" value="{{ items.pk }}">
                                     </form>
@@ -117,11 +145,11 @@
 
 
 
-                                 
-                                <td  >
+
+                                <td>
                                     <h2 class="cart-items cart-text">{{ items.cart_film_sku }}</h2>
                                 </td>
-                                 
+
 
 
                                 <td>
@@ -174,7 +202,7 @@
 
 
                             </tr>
-                           
+
                             {% endfor %}
                         </table>
                         <hr>
