@@ -1,3 +1,5 @@
+from search_results.views import SearchResults
+from my_account import views
 from django.contrib.auth import authenticate, login, logout, get_user_model
 from django.contrib import sessions
 from django.core.checks import messages
@@ -8,7 +10,7 @@ from django.http import request
 from django.contrib.auth import authenticate, login, logout, get_user_model
 from django.contrib import sessions
 
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.views.generic import TemplateView
 
 from .models import ShoppingCartModel
@@ -19,30 +21,60 @@ from search_results.models import Films as film_models
 class ShoppingCart(TemplateView):
     template_name = 'shopping_cart/shopping_cart.html'
 
+
+
     def get(self, request):
         
         # CREATE A SESSION IF NOT EXISTING!!
         if not request.session.exists(request.session.session_key):
             request.session.create()
         session_key = request.session.session_key
-        if not request.user.is_authenticated:
-            current_user = request.user.username
-        current_user = request.user.username
+        
+        current_user = request.user
+        if not request.user.is_authenticated: 
+            current_user = request.user
+        if request.user.is_authenticated:
+            current_user = request.user
+        
+        
+        
+        
+        
+        
         
         SCM = ShoppingCartModel.objects.filter(cart_owner=current_user)
+        
+        basket_item_count = SCM.count
         
         context = {
 
             'session_key': session_key,
             'current_user': current_user,
             
+            'basket_item_count':basket_item_count,
+            
             'SCM': SCM,
+            
+            
 
         }
 
         return render(request, 'shopping_cart/shopping_cart.html', context)
  
         
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -54,14 +86,17 @@ class ShoppingCart(TemplateView):
         if not request.session.exists(request.session.session_key):
             request.session.create()
         session_key = request.session.session_key
+        
+        current_user = request.user
         if not request.user.is_authenticated:
-            current_user = request.user.username
-        current_user = request.user.username
+            current_user = request.user
+        current_user = request.user
 
+ 
+       
         selected_quantity = int(request.POST['quantity'])
         selected_sku = request.POST['sku']
         
-    
         
         price_paid = 0
         film_wad=[]
@@ -86,13 +121,12 @@ class ShoppingCart(TemplateView):
                 if request.user.is_authenticated:
                     price_paid = (item_price) - (((item_price * item_discount)/100)* selected_quantity )
                     price_paid = round(price_paid, 2)
-                    print('----')
-                    print(price_paid)
+
                 
         # ASSEMBLED FILM ITEM
         b = ShoppingCartModel(
 
-        cart_owner = current_user,
+        cart_owner = request.user,
         cart_session = session_key,
         cart_film_quantity= selected_quantity,
 
@@ -125,6 +159,9 @@ class ShoppingCart(TemplateView):
 
         SCM = ShoppingCartModel.objects.filter(cart_owner=current_user)
 
+        basket_item_count = SCM.count
+        
+        
         # DELETE ALL SHOPPING CART WITH SPECIFIC OWNER
         # my_object = ShoppingCartModel.objects.filter(cart_film_quantity = 1)
         # my_object.delete()
@@ -133,6 +170,8 @@ class ShoppingCart(TemplateView):
 
             'session_key': session_key,
             'current_user': current_user,
+            
+            'basket_item_count':basket_item_count,
             
             'SCM': SCM,
 

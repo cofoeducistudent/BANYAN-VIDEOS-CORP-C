@@ -42,7 +42,7 @@
         "pk": 3,
 
         "fields": {
-        "film_sku": "133446",
+        "film_sku": "133406",
         "film_genre": "8",
         "film_title": "starwars",
         "film_friendly_title": "Star Wars",
@@ -191,7 +191,7 @@
         "model": "search_results.films",
         "pk": 11,
         "fields": {
-        "film_sku": "132446",
+        "film_sku": "132436",
         "film_genre": "2",
         "film_title": "paper_moon",
         "film_friendly_title": "Paper Moon",
@@ -247,7 +247,7 @@
         "model": "search_results.films",
         "pk": 14,
         "fields": {
-        "film_sku": "133446",
+        "film_sku": "139446",
         "film_genre": "4",
         "film_title": "pride_and_prejudice",
         "film_friendly_title": "Pride & Prejudice",
@@ -337,7 +337,7 @@
         "model": "search_results.films",
         "pk": 19,
         "fields": {
-        "film_sku": "103446",
+        "film_sku": "103406",
         "film_genre": "5",
         "film_title": "the_thing",
         "film_friendly_title": "The Thing",
@@ -356,7 +356,7 @@
         "model": "search_results.films",
         "pk": 20,
         "fields": {
-        "film_sku": "133466",
+        "film_sku": "138466",
         "film_genre": "8",
         "film_title": "the_day_the_earth_stood_still",
         "film_friendly_title": "The Day The Earth Stood Still",
@@ -392,7 +392,7 @@
         "model": "search_results.films",
         "pk": 22,
         "fields": {
-        "film_sku": "143446",
+        "film_sku": "143476",
         "film_genre": "1",
         "film_title": "king_kong",
         "film_friendly_title": "King Kong",
@@ -410,7 +410,7 @@
         "model": "search_results.films",
         "pk": 23,
         "fields": {
-        "film_sku": "134446",
+        "film_sku": "134286",
         "film_genre": "5",
         "film_title": "halloween",
         "film_friendly_title": "Halloween",

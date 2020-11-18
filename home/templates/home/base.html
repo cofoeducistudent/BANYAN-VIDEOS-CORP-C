@@ -118,7 +118,9 @@
                         <!-- SHOPPING CART -->
                         <li class="nav-item">
                             <a class="nav-link u_c" href="{% url 'shopping_cart' %}"><span class="fas fa-shopping-cart"></span><span
-                                    class="sr-only"></span></a>
+                                    class="sr-only"> </span> {{basket_item_count}} </a>
+
+                                    
                         </li>
 
 
@@ -215,9 +217,31 @@
     </div>
 
 
-    {% for message in messages %}
-    {{ message}}
-    {% endfor %}
+
+
+<div class="row container-fluid mx-auto">
+    <div class="col-12 text-center mx-auto">
+
+
+        {% for message in messages %}
+
+        <div class="alert alert-danger" role="alert">
+            <p>{{ message }}</p>
+        </div>
+      
+        {% endfor %}
+
+
+
+    </div>
+</div>
+
+
+
+
+
+
+
 
 
     {% block main-content %}

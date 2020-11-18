@@ -1,5 +1,6 @@
 from django.contrib.auth import authenticate, login, logout, get_user_model
 from django.contrib import sessions
+from django.template import context
 
 
 from home import views
@@ -12,6 +13,7 @@ from .import models as film_models
 
 from django.contrib import messages
 
+from shopping_cart.models  import ShoppingCartModel
 
 # Create your views here.
 
@@ -26,6 +28,21 @@ class SearchResults(TemplateView):
         """
     
         def get(self, request):
+            
+            
+        # CREATE A SESSION IF NOT EXISTING!!
+            if not request.session.exists(request.session.session_key):
+                request.session.create()
+            session_key = request.session.session_key
+        
+            current_user = request.user
+            if not request.user.is_authenticated: 
+                current_user = request.user
+            if request.user.is_authenticated:
+                current_user = request.user.username         
+            
+            
+            
             results_collection = []
        
             all_films = film_models.Films.objects.all()
@@ -44,10 +61,28 @@ class SearchResults(TemplateView):
             }
             return render(request, self.template_name, context)
 
+
+
+
         """
         USE SERACH BOX
         """
         def post(self, request):
+            
+            # CREATE A SESSION IF NOT EXISTING!!
+            if not request.session.exists(request.session.session_key):
+                request.session.create()
+            session_key = request.session.session_key
+        
+            current_user = "Anonymous"
+            if not request.user.is_authenticated: 
+                current_user = "Anonymous"
+            if request.user.is_authenticated:
+                current_user = request.user         
+            
+            
+            
+            
             results_collection = []
 
             all_films = film_models.Films.objects.all()
@@ -62,17 +97,28 @@ class SearchResults(TemplateView):
             for item in all_films:
                 if s_string.upper()  in (item.film_friendly_title).upper():
                     results_collection.append(item)
-
             total_items_found = len(results_collection)
      
      
  
+     
+            SCM = ShoppingCartModel.objects.filter(cart_owner=current_user)
+            basket_item_count = SCM.count
+
+     
+     
+     
+     
      
      
             context = {
             
             'results_collection': results_collection,
             'total_items_found': total_items_found,
+            
+            'basket_item_count':basket_item_count,
+            
+            'SCM':SCM,
                
             }
             
