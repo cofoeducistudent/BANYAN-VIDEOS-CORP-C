@@ -5,12 +5,9 @@
     --discount-colour: #202937;
     --banner-bckg: #000000;
     --banner-fgnd: #ffffff;
-    
     /* --theme-bgc: #202937; */
-    --theme-bgc:#000000;
-
+    --theme-bgc: #000000;
     --theme-fgc: #ffffff;
-    
     --theme-c1: #EFC055;
     --theme-c2: #f80303;
     --theme-c3: #636677;
@@ -29,7 +26,6 @@ html {
 body {
     background-color: var(--wallpaper);
     color: var(--theme-bgc);
-    
 }
 
 /* Code from Stackoverflow - Philip Feldmann */
@@ -44,9 +40,6 @@ body {
     word-wrap: break-word;
 }
 
-
-
-
 /* WALLPAPER */
 
 .wallpaper {
@@ -59,10 +52,6 @@ body {
     color: var(--theme-c1) !important;
     background-color: var(--theme-bgc) !important;
 }
-
-
-
-
 
 /* NAVBAR */
 
@@ -80,34 +69,20 @@ body {
     color: #ffffff !important;
 }
 
-
 li, nav-link, :hover {
-
     color: var(--theme-c1) !important;
     transition: .5s;
 }
 
-
-
-
-
 /* BURGER BUTTON */
-button, navbar-toggler{
+
+button, navbar-toggler {
     background-color: var(--theme-c1) !important;
 }
 
 span, navbar-toggler-icon, bbut {
     background-color: var(--theme-c1) !important;
 }
-
-
-
-
-
-
-
-
-
 
 /* BUTTONS */
 
@@ -134,23 +109,12 @@ span, navbar-toggler-icon, bbut {
     box-shadow: 3px 3px var(--theme-bgc) !important;
 }
 
-
-
-
-
-
-
-
 /* ARTICLE TITLE */
 
 .article-title {
     background-color: var(--wallpaper);
     color: var(--ink);
 }
-
-
-
-
 
 /* GENRE */
 
@@ -167,26 +131,12 @@ span, navbar-toggler-icon, bbut {
     color: var(--theme-bgc);
 }
 
-
-
-
-
-
-
 /* SECTION FONT STUFF */
 
- 
-
 .section-title :hover {
-
     color: var(--ink) !important;
     background-color: var(--wallpaper) !important;
-
-    
-   
-
 }
-
 
 .section-title {
     font-size: 1.5rem;
@@ -200,18 +150,11 @@ span, navbar-toggler-icon, bbut {
     background-color: var(--wallpaper);
 }
 
-
-
 .section-tiny-text {
     font-size: .75rem;
     color: var(--ink);
     background-color: var(--wallpaper);
 }
-
- 
-
-
-
 
 /* BANNER ADVERT ROTOR */
 
@@ -224,23 +167,17 @@ span, navbar-toggler-icon, bbut {
     /* width: 80%; */
     margin: auto;
     box-shadow: 3px 3px var(--theme-c1);
-    
-
 }
 
 #advert {
     padding-top: 10px;
-    
-     
     font-size: 1rem;
     width: 90%;
     margin: auto;
 }
 
 #advert h1 {
-
     font-size: 1rem;
- 
     color: var(--theme-c2);
     background-color: var(--banner-bckg);
 }
@@ -248,16 +185,8 @@ span, navbar-toggler-icon, bbut {
 .custom-alert {
     background-color: var(--theme-bgc) !important;
     color: var(--theme-fgc) !important;
-
     transition: .5s;
 }
-
-
-
-
-
-
-
 
 /* LARGE SEARCH STUFF */
 
@@ -296,19 +225,14 @@ span, navbar-toggler-icon, bbut {
 .c-image-size {
     height: 550px;
     width: auto;
-    
-    box-shadow: 5px 5px  #d1c3c3;
-    
-    
+    box-shadow: 5px 5px #d1c3c3;
 }
 
 /* GENRE - LIST */
 
 .genre-items :hover {
     color: var(--theme-c1) !important;
-    background-color:var(--theme-c3) !important;
-
-    
+    background-color: var(--theme-c3) !important;
 }
 
 /* SUSER & SHOPPING CART ICONS */
@@ -339,32 +263,17 @@ span, navbar-toggler-icon, bbut {
     font-size: .75rem;
 }
 
-
-
-
-
-
 /* FOOTER BOX */
 
 .footer-box {
-
     height: 80px;
     max-height: 80px;
-
     width: 100%;
     color: var(--banner-fgnd);
     background-color: var(--theme-bgc);
-
     opacity: .80;
     margin-left: 0px;
-
 }
-
- 
- 
-
-
-
 
 .sm-icons {
     font-size: 1.5rem;
@@ -377,89 +286,50 @@ span, navbar-toggler-icon, bbut {
     color: #ffffff !important;
 }
 
-
-
-
-
-
-
-
 /* USER & SHOPPING CART */
 
-.fa-user{
-
+.fa-user {
     color: var(--theme-c1) !important;
-
 }
 
-.fa-shopping-cart{
-
+.fa-shopping-cart {
     color: var(--theme-c1) !important;
-
 }
 
 .u-name {
-
-color: var(--theme-c1) !important;
-background-color: var(--theme-bgc) !important;
-
+    color: var(--theme-c1) !important;
+    background-color: var(--theme-bgc) !important;
 }
-
 
 /* TABLES */
 
 table, th, td {
-
     border: .5px solid var(--ink);
-
 }
 
 table, th, td, :hover {
-
     /* border: 1px solid black; */
-
     color: var(--ink) !important;
-
 }
 
-th, .table-spacer{
-
+th, .table-spacer {
     width: auto;
-
 }
-
-
-
-
- 
-
-
-
-
 
 /* CART */
 
 span, .my-item, .fas .fa-shopping-cart {
-
-    
     color: var(--ink) !important;
     background-color: var(--theme-fgc) !important;
-
 }
-
 
 .cart-text {
-
     font-size: .5rem;
-
 }
 
-
 .cart-pic {
-
-height: 50px;
-width: auto;
-
+    height: 50px;
+    width: auto;
 }
 
 .cart-items {
@@ -472,63 +342,48 @@ h4, .cart-text {
     font-size: .5rem;
 }
 
-
-
-
 /* CART BUTTON  */
 
 .btn, span, .fas-cart-plus {
-
     color: var(--ink) !important;
     background-color: var(--theme-c1) !important;
-
 }
- 
-
-
-
-
-
 
 /* COST BLOCK STUFF */
-h3, .cost-block{
 
-font-size: x-large;
-
+h3, .cost-block {
+    font-size: x-large;
 }
 
-.fb-high-light{
-    
+.fb-high-light {
     background-color: var(--theme-c1);
     color: var(--ink);
     padding: 10px 10px 10px 10px;
-   
 }
-
-
 
 /* PAYMENT BLOCK */
 
 .payment-block {
-
-background-color: var(--wallpaper);
-color: var(--ink);
-
-                
-
+    background-color: var(--wallpaper);
+    color: var(--ink);
 }
-
 
 /* PAYMENT BUTTON */
 
-.payment-button{
- 
-box-shadow: 3px 3px var(--discount-colour);
-
+.payment-button {
+    box-shadow: 3px 3px var(--discount-colour);
 }
 
-.pay-selector { 
+.pay-selector {
+    list-style: none;
+}
 
-list-style: none;
+/* FAS-VIDEO ICON ON HEADER NAV BAR */
 
+.header-icon {
+
+    list-style: none;
+    color: var(--theme-c1) !important;
+    background-color: var(--theme-bgc) !important;
+    /* font-size: 2rem !important; */
 }

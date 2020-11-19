@@ -50,15 +50,37 @@
                 <!-- BURGER BUTTON -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
                     aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon bbut"></span>
+                    <span class="navbar-toggler-icon bbut">
+
+                        <!-- BRAND ICONS/IMAGES -->
+                        <div class="row">
+                            <div class="col-12">
+                                <span class="fas fa-video"></span>
+                            </div>
+                        </div>
+
+                    </span>
                 </button>
 
 
 
+                <!-- SECONDARY USERNAME & CART STATUS IN NAVBAR!!!! -->
 
+                {% if current_user %}
+                <a class="nav-link col-xs-12 d-lg-none" href="{% url 'my_account' %}">
+                    <span class="fas fa-user" class="sr-only">|
+                        <span class="u-name text-muted">{{ current_user }}</span>
+                    </span>
+                </a>
+                <a class="nav-link col-xs-12 d-lg-none" href="{% url 'shopping_cart' %}">
+                    <span class="fas fa-shopping-cart"></span><span class="sr-only"></span>
+                    {{basket_item_count}}
+                </a>
+                {% endif %}
 
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                     <a class="navbar-brand" href="{% url 'home' %}"><span class="brand">BANYAN-VIDEOS-CORP</span></a>
+
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
 
                         <li class="nav-item">
@@ -70,12 +92,9 @@
                                     class="sr-only"></span></a>
                         </li>
 
-
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'my_account' %}">Account<span class="sr-only"></span></a>
                         </li>
-
-
 
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'shopping_cart' %}">Cart<span class="sr-only"></span></a>
@@ -97,10 +116,6 @@
                             <a class="nav-link" href="{% url 'logout' %}">Logout<span class="sr-only"></span></a>
                         </li>
 
-
-
-
-
                         <!-- CURRENT USER -->
                         <li class="nav-item">
                             <a class="nav-link u_c   " href="{% url 'my_account' %}">
@@ -109,9 +124,7 @@
 
                                     {% if current_user %}
 
-
                                     <span class="u-name text-muted">{{ current_user }}</span>
-
 
                                     {% endif %}
 
@@ -120,7 +133,6 @@
                             </a>
                         </li>
 
-
                         <!-- SHOPPING CART -->
                         <li class="nav-item">
                             <a class="nav-link u_c" href="{% url 'shopping_cart' %}"><span
@@ -128,13 +140,7 @@
                                 {{basket_item_count}} </a>
                         </li>
 
-
-
-
                     </ul>
-
-
-
 
                     <!-- SEARCH -->
                     <div class="row small-search">
@@ -155,56 +161,29 @@
                     </div>
                     <!-- // -->
 
-
-
-
                 </div>
             </nav>
 
         </div>
     </div>
 
-
-
-
-
-
-
     <!-- LARGE SEARCH -->
     <div class="row  large-search-bar">
         <div class="d-none d-sm-block">
 
-
             <form action="{% url 'search_results' %}" method="POST" class="form-inline my-1 my-lg-0 ">
                 {% csrf_token %}
 
-
-
-
                 <input class="form-control mr-lg-2 my-1" type="search" name="search_string" placeholder="Search"
                     aria-label="Search">
-
-
-
-
 
                 <button class="btn btn-md btn-success mx-auto" type="submit">Search</button>
 
             </form>
 
-
-
-
         </div>
 
     </div>
-
-
-
-
-
-
-
 
     <!-- // -->
 
@@ -217,16 +196,11 @@
                 <div id="advert">
             </h1>
 
-
         </div>
     </div>
 
-
-
-
     <div class="row container-fluid mx-auto">
         <div class="col-12 text-center mx-auto">
-
 
             {% for message in messages %}
 
@@ -236,32 +210,18 @@
 
             {% endfor %}
 
-
-
         </div>
     </div>
 
-
-
-
-
-
-
-
-
     {% block main-content %}
     {% endblock main-content %}
-
 
     <!-- SPACER -->
     <div class="row container-fluid my-5">
         <div class="col-12">
 
-
         </div>
     </div>
-
-
 
     <!-- FOOTER -->
     <div class="row  fixed-bottom container-fluid footer-box">
@@ -290,9 +250,7 @@
             </div>
         </div>
 
-
     </div>
-
 
     <!-- SESSION_KEY FOR DEV TBR!!!!!! -->
     <div class="row container-fluid">
@@ -300,8 +258,6 @@
             <h1 class="section-small-text text-success">{{session_key}}</h1>
         </div>
     </div>
-
-
 
     {% block post-load-js %}
     {% endblock post-load-js %}
