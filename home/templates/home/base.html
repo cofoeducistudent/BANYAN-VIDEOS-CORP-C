@@ -99,36 +99,36 @@
 
 
 
- 
-
-                            <!-- CURRENT USER -->
-                            <li class="nav-item">
-                                <a class="nav-link u_c   " href="{% url 'my_account' %}">
-
-                                    <span class="fas fa-user" class="sr-only">|
-
-                                        {% if current_user %}
-
-                                        
-                                            <span class="u-name text-muted">{{ current_user }}</span>
-                                     
-                                        
-                                        {% endif %}
-
-                                    </span>
-
-                                </a>
-                            </li>
 
 
-                            <!-- SHOPPING CART -->
-                            <li class="nav-item">
-                                <a class="nav-link u_c" href="{% url 'shopping_cart' %}"><span
-                                        class="fas fa-shopping-cart"></span><span class="sr-only"> </span>
-                                    {{basket_item_count}} </a>
-                            </li>
+                        <!-- CURRENT USER -->
+                        <li class="nav-item">
+                            <a class="nav-link u_c   " href="{% url 'my_account' %}">
 
- 
+                                <span class="fas fa-user" class="sr-only">|
+
+                                    {% if current_user %}
+
+
+                                    <span class="u-name text-muted">{{ current_user }}</span>
+
+
+                                    {% endif %}
+
+                                </span>
+
+                            </a>
+                        </li>
+
+
+                        <!-- SHOPPING CART -->
+                        <li class="nav-item">
+                            <a class="nav-link u_c" href="{% url 'shopping_cart' %}"><span
+                                    class="fas fa-shopping-cart"></span><span class="sr-only"> </span>
+                                {{basket_item_count}} </a>
+                        </li>
+
+
 
 
                     </ul>
@@ -272,10 +272,10 @@
     <!-- FOOTER -->
     <div class="row  fixed-bottom container-fluid footer-box">
 
-        <div class="col-12 my-2 text-center">
+        <div class="col-12 my-1 text-center">
 
             <h1 class="section-small-text">&copy; Copyright 2021 Banyan-Videos-Corp</h1>
-
+            <h1 class="section-small-text">1215 Ocean Industrial Estate, Bckton, London, E63NS </h1>
         </div>
 
         <!-- SOCIAL MEDIA ICONS  -->

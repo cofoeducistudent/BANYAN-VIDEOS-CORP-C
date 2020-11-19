@@ -5,9 +5,15 @@
     --discount-colour: #202937;
     --banner-bckg: #000000;
     --banner-fgnd: #ffffff;
-    --theme-bgc: #202937;
+    
+    /* --theme-bgc: #202937; */
+    --theme-bgc:#000000;
+
     --theme-fgc: #ffffff;
+    
     --theme-c1: #EFC055;
+    --theme-c2: #f80303;
+    --theme-c3: #636677;
     /* FONTS */
     font-family: 'Roboto', sans-serif;
 }
@@ -22,7 +28,8 @@ html {
 
 body {
     background-color: var(--wallpaper);
-    color: var(--theme-bgc)
+    color: var(--theme-bgc);
+    
 }
 
 /* Code from Stackoverflow - Philip Feldmann */
@@ -75,7 +82,9 @@ body {
 
 
 li, nav-link, :hover {
+
     color: var(--theme-c1) !important;
+    transition: .5s;
 }
 
 
@@ -139,6 +148,10 @@ span, navbar-toggler-icon, bbut {
     color: var(--ink);
 }
 
+
+
+
+
 /* GENRE */
 
 .genre-box {
@@ -160,12 +173,17 @@ span, navbar-toggler-icon, bbut {
 
 
 
-/* SECTION STUFF */
+/* SECTION FONT STUFF */
 
-.section-title :hover{
+ 
+
+.section-title :hover {
 
     color: var(--ink) !important;
     background-color: var(--wallpaper) !important;
+
+    
+   
 
 }
 
@@ -206,14 +224,14 @@ span, navbar-toggler-icon, bbut {
     /* width: 80%; */
     margin: auto;
     box-shadow: 3px 3px var(--theme-c1);
-
+    
 
 }
 
 #advert {
     padding-top: 10px;
     
- 
+     
     font-size: 1rem;
     width: 90%;
     margin: auto;
@@ -222,14 +240,20 @@ span, navbar-toggler-icon, bbut {
 #advert h1 {
 
     font-size: 1rem;
-    color: var(--banner-fgnd);
+ 
+    color: var(--theme-c2);
     background-color: var(--banner-bckg);
 }
 
 .custom-alert {
     background-color: var(--theme-bgc) !important;
     color: var(--theme-fgc) !important;
+
+    transition: .5s;
 }
+
+
+
 
 
 
@@ -272,13 +296,19 @@ span, navbar-toggler-icon, bbut {
 .c-image-size {
     height: 550px;
     width: auto;
+    
+    box-shadow: 5px 5px  #d1c3c3;
+    
+    
 }
 
 /* GENRE - LIST */
 
 .genre-items :hover {
     color: var(--theme-c1) !important;
-    background-color: #404c5f !important;
+    background-color:var(--theme-c3) !important;
+
+    
 }
 
 /* SUSER & SHOPPING CART ICONS */
@@ -317,14 +347,24 @@ span, navbar-toggler-icon, bbut {
 /* FOOTER BOX */
 
 .footer-box {
-    height: 70px;
-    max-height: 70px;
+
+    height: 80px;
+    max-height: 80px;
+
     width: 100%;
     color: var(--banner-fgnd);
     background-color: var(--theme-bgc);
+
     opacity: .80;
     margin-left: 0px;
+
 }
+
+ 
+ 
+
+
+
 
 .sm-icons {
     font-size: 1.5rem;
@@ -336,6 +376,12 @@ span, navbar-toggler-icon, bbut {
 .footer-box {
     color: #ffffff !important;
 }
+
+
+
+
+
+
 
 
 /* USER & SHOPPING CART */
@@ -385,6 +431,8 @@ th, .table-spacer{
 
 
 
+ 
+
 
 
 
@@ -424,6 +472,9 @@ h4, .cart-text {
     font-size: .5rem;
 }
 
+
+
+
 /* CART BUTTON  */
 
 .btn, span, .fas-cart-plus {
@@ -433,6 +484,12 @@ h4, .cart-text {
 
 }
  
+
+
+
+
+
+
 /* COST BLOCK STUFF */
 h3, .cost-block{
 

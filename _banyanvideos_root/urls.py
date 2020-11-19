@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+ 
 
 
 urlpatterns = [
@@ -29,6 +30,8 @@ urlpatterns = [
     path('search_results/', include('search_results.urls')),
     
     path('login_register/', include('login_register.urls')),
+    
+    
    
     
     path('logout/', include('logout.urls')),
