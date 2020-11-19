@@ -72,11 +72,13 @@
                         <span class="u-name text-muted">{{ current_user }}</span>
                     </span>
                 </a>
+                {% endif %}
+
                 <a class="nav-link col-xs-12 d-lg-none" href="{% url 'shopping_cart' %}">
                     <span class="fas fa-shopping-cart"></span><span class="sr-only"></span>
-                    {{basket_item_count}}
+                    {{ basket_item_count }}
                 </a>
-                {% endif %}
+                
 
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                     <a class="navbar-brand" href="{% url 'home' %}"><span class="brand">BANYAN-VIDEOS-CORP</span></a>
