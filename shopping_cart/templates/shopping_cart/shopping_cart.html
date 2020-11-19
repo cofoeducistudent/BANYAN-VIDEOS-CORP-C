@@ -27,7 +27,7 @@
     <div class="col-12 mx-2">
         <div class="alert alert-warning" role="alert">
             <p>Below are the contents of your shopping cart</p>
-            <p><strong>* Please note  % Discounts are applied to members only!</strong></p>
+            <p><strong>* Please note % Discounts are applied to members only!</strong></p>
             <p><strong>* The subtotal includes (discount x quantity) per line item</strong></p>
             <p>* ~ Shipping Charges 10% applicable to orders < £30.00 ~ </p>
         </div>
@@ -48,9 +48,9 @@
         <div class="row">
             <div class="col-12 cost-block">
 
-                <h3 class="text-muted">TOTAL LINE ITEMS: ( {{ basket_item_count }} )</h3>
+                <h3 class="text-muted">LINE ITEMS: ( {{ basket_item_count }} )</h3>
                 <h3 class="text-muted">COST: £ {{ total_to_pay }}</h3>
-                <h3 class="text-muted">SHIPPING CHARGE: £ {{ shipping_charge }}</h3>
+                <h3 class="text-muted">SHIPPING: £ {{ shipping_charge }}</h3>
                 <hr>
 
                 <h3 class="fb-high-light text-danger"><b>YOU PAY: £ {{ final_bill }}</b></h3>
@@ -87,33 +87,35 @@
         </div>
 
 
+
+      <!-- JUMBOTRON -->
         <div class="jumbotron jumbotron-fluid">
-            <div class="container">
+            <div class="container-fluid">
 
 
 
-                <h1 class="section-title-text"><strong>THE FOLLOWING ITEMS ARE IN YOUR CART</strong></h1>
-                <!-- <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>-->
-
+                <h1 class="section-title-text text-center"><strong>THE FOLLOWING ITEMS ARE IN YOUR CART</strong></h1>
+               
 
                 <!-- LIST CONTENTS OF SHOPPING CART -->
                 <div class="row mx-auto">
                     <div class="col-12 section-tiny-text text-center keep-insideBSol" style="width:100%">
 
                         {% if basket_item_count  %}
-                        <table>
+                        <table class="">
 
                             <tr class="section-tiny-text">
                                 <th class="table-spacer">DELETE</th>
                                 <th class="table-spacer">QTY</th>
-                                <th class="table-spacer">SKU</th>
+                                <th class="table-spacer d-none d-md-block">SKU</th>
                                 <th class="table-spacer d-none ">-</th>
                                 <th class="table-spacer">TITLE</th>
                                 <th class="table-spacer d-none d-md-block" style="width:33%">DESC</th>
                                 <th class="table-spacer d-none d-md-block">IMAGE</th>
                                 <th class="table-spacer">PRICE</th>
-                                <th class="table-spacer">DSC % / ITEM</th>
-                                <th class="table-spacer">SUB TOT</th>
+
+                                <th class="table-spacer d-none d-sm-block">DSC %</th>
+                                <th class="table-spacer ">TOT</th>
                             </tr>
 
 
@@ -130,7 +132,8 @@
                                     <form action="{% url 'delete_from_shopping_cart' %}" method="POST">
                                         {% csrf_token %}
 
-                                        <h2 class="cart-items cart-text"><input type="submit" value="DELETE"></h2>
+                                        <h2 class="cart-items cart-text"><input type="submit" value="DELETE">
+                                        </h2>
 
                                         <input type=hidden name="dsku" value="{{ items.pk }}">
                                     </form>
@@ -145,18 +148,18 @@
 
 
                                 <!-- <td class="d-none ">
-                                    <h2 class="cart-items cart-text ">{{ 'X' }}</h2>
-                                </td> -->
+                                <h2 class="cart-items cart-text ">{{ 'X' }}</h2>
+                            </td> -->
 
 
 
 
-                                <td>
+                                <td class="d-none d-md-block">
                                     <h2 class="cart-items cart-text">{{ items.cart_film_sku }}</h2>
                                 </td>
 
 
- 
+
 
 
                                 <td>
@@ -173,7 +176,8 @@
 
                                 <td class="d-none d-md-block" style='border:single'>
                                     <h2 class="cart-items cart-text ">
-                                        <image class="cart-pic" src="{{ items.cart_film_box_cover_url }}"></image>
+                                        <image class="cart-pic" src="{{ items.cart_film_box_cover_url }}">
+                                        </image>
                                     </h2>
                                 </td>
 
@@ -189,13 +193,13 @@
 
 
 
-                                <td>
-                                    <h2 class="cart-items cart-text"> -% {{ items.cart_film_product_discount }}</h2>
+                                <td class="d-none d-sm-block">
+                                    <h2 class="cart-items cart-text"> -% {{ items.cart_film_product_discount }}
+                                    </h2>
                                 </td>
 
 
-
-                                <td>
+                                <td class="">
                                     <!-- Product price total with discount -->
                                     <h2 class="cart-items cart-text"><b>{{ items.cart_price_paid }}</b></h2>
                                 </td>
@@ -211,31 +215,22 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-                        </table>
-
                     </div>
                 </div>
-
-
-
-
-
-
 
 
             </div>
         </div>
 
+        <!-- // JUMBOTRON END -->
+
+ 
+
+
+
 
 
         {% endblock main-content %}
+
+    </div>
+</div>
