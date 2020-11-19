@@ -39,7 +39,7 @@ class Contact(TemplateView):
         
         SCM = ShoppingCartModel.objects.filter(cart_owner=current_user)
         basket_item_count = SCM.count
-        print(basket_item_count)
+        
         
         
         
