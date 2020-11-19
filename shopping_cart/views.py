@@ -43,7 +43,7 @@ class ShoppingCart(TemplateView):
         
         
         
-        SCM = ShoppingCartModel.objects.filter(cart_owner=current_user)
+        SCM = ShoppingCartModel.objects.filter(cart_owner = current_user).filter(cart_session = session_key)
         
         basket_item_count = SCM.count
         
@@ -58,12 +58,7 @@ class ShoppingCart(TemplateView):
             shipping_charge = round((total_to_pay * 10 )/100,2)
         final_bill=round((total_to_pay+shipping_charge),2)
         
-        # print('------')
-        # print(total_to_pay)
-        # print(shipping_charge)
-        # print(final_bill)
-        # print('------')
-        
+ 
         
         
         context = {
@@ -155,6 +150,7 @@ class ShoppingCart(TemplateView):
 
         cart_owner = request.user,
         cart_session = session_key,
+        
         cart_film_quantity = selected_quantity,
 
         cart_price_paid = price_paid,
@@ -183,8 +179,11 @@ class ShoppingCart(TemplateView):
         )
 
         b.save()
+        
+        
+        
 
-        SCM = ShoppingCartModel.objects.filter(cart_owner=current_user)
+        SCM = ShoppingCartModel.objects.filter(cart_owner = current_user).filter(cart_session = session_key)
 
         basket_item_count = SCM.count
         

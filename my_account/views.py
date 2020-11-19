@@ -31,7 +31,7 @@ class MyAccount(TemplateView):
 
 
 
-        SCM = ShoppingCartModel.objects.filter(cart_owner = current_user )
+        SCM = ShoppingCartModel.objects.filter(cart_owner = current_user).filter(cart_session = session_key)
         basket_item_count = SCM.count
 
 

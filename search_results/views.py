@@ -52,7 +52,7 @@ class SearchResults(TemplateView):
 
             total_items_found = len(results_collection)
 
-            SCM = ShoppingCartModel.objects.filter(cart_owner=current_user)
+            SCM = ShoppingCartModel.objects.filter(cart_owner = current_user).filter(cart_session = session_key)
             basket_item_count = SCM.count
 
       
@@ -110,7 +110,7 @@ class SearchResults(TemplateView):
                     results_collection.append(item)
             total_items_found = len(results_collection)
 
-            SCM = ShoppingCartModel.objects.filter(cart_owner=current_user)
+            SCM = ShoppingCartModel.objects.filter(cart_owner = current_user).filter(cart_session = session_key)
             basket_item_count = SCM.count
             
  

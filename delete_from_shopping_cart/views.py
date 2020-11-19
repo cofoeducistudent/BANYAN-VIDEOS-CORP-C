@@ -20,6 +20,10 @@ class DeleteFromShoppingCart(TemplateView):
             dsku = THE pk of the shopping cart item
             """
         
+            if not request.session.exists(request.session.session_key):
+                request.session.create() 
+            session_key = request.session.session_key
+        
             current_user = request.user
             if not request.user.is_authenticated: 
                 current_user = request.user
@@ -43,14 +47,14 @@ class DeleteFromShoppingCart(TemplateView):
     
                 ShoppingCartModel.objects.filter(pk=delete_this).delete()
  
-                SCM = ShoppingCartModel.objects.filter(cart_owner = current_user)
+                SCM = ShoppingCartModel.objects.filter(cart_owner = current_user).filter(cart_session = session_key)
                 basket_item_count = SCM.count
     
             except:  
            
                 ShoppingCartModel.objects.filter(pk=delete_this).delete()
  
-                SCM = ShoppingCartModel.objects.filter(cart_owner = current_user)
+                SCM = ShoppingCartModel.objects.filter(cart_owner = current_user).filter(cart_session = session_key)
                 basket_item_count = SCM.count
            
            
@@ -75,6 +79,10 @@ class DeleteFromShoppingCart(TemplateView):
     
     def get(self, request):
         
+            if not request.session.exists(request.session.session_key):
+                request.session.create() 
+            session_key = request.session.session_key
+        
             current_user = request.user
             if not request.user.is_authenticated: 
                 current_user = request.user
@@ -83,7 +91,7 @@ class DeleteFromShoppingCart(TemplateView):
         
  
                 
-            SCM = ShoppingCartModel.objects.filter(cart_owner = current_user)
+            SCM = ShoppingCartModel.objects.filter(cart_owner = current_user).filter(cart_session = session_key)
             basket_item_count = SCM.count
     
            

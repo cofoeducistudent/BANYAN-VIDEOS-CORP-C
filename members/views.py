@@ -30,8 +30,6 @@ class Members(TemplateView):
         if not request.user.is_authenticated: 
             current_user = request.user
              
-            
-            
         if request.user.is_authenticated:
             current_user = request.user
         
@@ -41,7 +39,7 @@ class Members(TemplateView):
         
         
         
-        SCM = ShoppingCartModel.objects.filter(cart_owner=current_user)
+        SCM = ShoppingCartModel.objects.filter(cart_owner = current_user).filter(cart_session = session_key)
         basket_item_count = SCM.count
         
         
