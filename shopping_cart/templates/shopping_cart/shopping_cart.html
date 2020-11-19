@@ -92,13 +92,13 @@
 
 
 
-                <h1 class="section-title-text">THE FOLLOWING ITEMS ARE IN YOUR CART</h1>
+                <h1 class="section-title-text"><strong>THE FOLLOWING ITEMS ARE IN YOUR CART</strong></h1>
                 <!-- <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>-->
 
 
                 <!-- LIST CONTENTS OF SHOPPING CART -->
                 <div class="row mx-auto">
-                    <div class="col-12 section-tiny-text text-center" style="width:100%">
+                    <div class="col-12 section-tiny-text text-center keep-insideBSol" style="width:100%">
 
                         {% if basket_item_count  %}
                         <table>
@@ -106,9 +106,8 @@
                             <tr class="section-tiny-text">
                                 <th class="table-spacer">DELETE</th>
                                 <th class="table-spacer">QTY</th>
-                                <th class="table-spacer">-</th>
                                 <th class="table-spacer">SKU</th>
-                                <th class="table-spacer">-</th>
+                                <th class="table-spacer d-none ">-</th>
                                 <th class="table-spacer">TITLE</th>
                                 <th class="table-spacer d-none d-md-block" style="width:33%">DESC</th>
                                 <th class="table-spacer d-none d-md-block">IMAGE</th>
@@ -137,15 +136,17 @@
                                     </form>
                                 </td>
 
+
+
                                 <td>
                                     <h2 class="cart-items cart-text">{{ items.cart_film_quantity }}</h2>
                                 </td>
 
 
 
-                                <td>
-                                    <h2 class="cart-items cart-text">{{ 'X' }}</h2>
-                                </td>
+                                <!-- <td class="d-none ">
+                                    <h2 class="cart-items cart-text ">{{ 'X' }}</h2>
+                                </td> -->
 
 
 
@@ -155,11 +156,7 @@
                                 </td>
 
 
-
-                                <td>
-                                    <!-- <h2 class="cart-items cart-text">{{ items.product_name }}</h2> -->
-                                </td>
-
+ 
 
 
                                 <td>
