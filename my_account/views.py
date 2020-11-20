@@ -24,7 +24,7 @@ class MyAccount(TemplateView):
         
         current_user = request.user
         if not request.user.is_authenticated: 
-            current_user = request.user
+            return redirect("login_register")
         if request.user.is_authenticated:
             current_user = request.user
         
