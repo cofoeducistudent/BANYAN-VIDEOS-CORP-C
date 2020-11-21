@@ -11,6 +11,6 @@ urlpatterns = [
     
     path ('', HomePageView.as_view(), name = 'home'),  
     
-    # path('login', ('account/login'), name = 'login'),
+
              
                ]

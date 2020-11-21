@@ -116,10 +116,12 @@ TEMPLATES = [
         
         'OPTIONS': {
             'context_processors': [
+                
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request', # required by allauth
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.request',
             ],
         },
     },
@@ -146,7 +148,7 @@ ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
 
 ACCOUNT_USERNAME_MIN_LENGTH = 4
 
-LOGIN_URL = '/accounts/login/'
+LOGIN_URL = '/account/login/'
 
 LOGIN_REDIRECT_URL ='/'
 
