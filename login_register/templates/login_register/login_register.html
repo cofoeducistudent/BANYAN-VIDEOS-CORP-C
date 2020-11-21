@@ -1,41 +1,67 @@
 {% extends 'home/base.html' %}
 {% load static %}
 
+{% load crispy_forms_tags %}
+{% crispy form form.helper %}
+
 
 {% block post-title %} login-register-page {% endblock post-title %}
 
 
 {% block main-content %}
 
- 
+
 <div class="row container-fluid mx-auto">
-<div class="col-12">
+  <div class="col-12">
 
 
 
     <div class="jumbotron">
-        <h1 class="display-4">LOGIN</h1>
-        <p class="lead">Log in to your account here if registered. If not Please register below</p>
-        <hr class="my-4">
-       
-        <a class="btn btn-primary btn-lg" href="#" role="button">Login</a>
-      </div>
+      <h1 class="display-4">LOGIN</h1>
+      <p class="lead">Log in to your account here if registered. If not Please register below</p>
+      <hr class="my-4">
+
+      <form action="" method="POST">
+        {% csrf_token %}
 
 
-      <div class="jumbotron">
-        <h1 class="display-4">REGISTER</h1>
-        <p class="lead">Register Here!</p>
-        <hr class="my-4">
-       
-        <a class="btn btn-primary btn-lg" href="#" role="button">Register</a>
-      </div>
+        <!-- LOGIN FORM!! -->
+        <div class="row container-fluid">
+          <div class="col-12">
+
+  
+
+            {{ LIF | crispy }}
+            
 
 
-</div>
+            <button  type="submit" class="btn btn-primary btn-lg" href="#" role="button">Login</button>
+          </div>
+        </div>
+
+
+
+      </form>
+
+
+
+  
+    </div>
+
+
+    <div class="jumbotron">
+      <h1 class="display-4">REGISTER</h1>
+      <p class="lead">Register Here!</p>
+      <hr class="my-4">
+
+      <a class="btn btn-primary btn-lg" href="#" role="button">Register</a>
+    </div>
+
+
+  </div>
 </div>
 
 
 
 
 {% endblock main-content %}
-

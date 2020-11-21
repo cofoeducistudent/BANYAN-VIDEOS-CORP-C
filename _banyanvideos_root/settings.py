@@ -49,15 +49,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    
-    # The following apps are required for allauth:
-    'django.contrib.sites',
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
-    'crispy_forms',
-    
-    # Apps for banyan-videos-corp
+  
+      # Apps for banyan-videos-corp
     'home',
     'search_results',
     'about',
@@ -68,6 +61,16 @@ INSTALLED_APPS = [
     'contact',
     'my_account',
     'delete_from_shopping_cart',
+  
+    
+    # The following apps are required for allauth:
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'crispy_forms',
+    
+
 
 ]
 
@@ -88,10 +91,27 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 ROOT_URLCONF = '_banyanvideos_root.urls'
 
+
+
+AUTHENTICATION_BACKENDS = [
+   
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by e-mail
+    'allauth.account.auth_backends.AuthenticationBackend',
+    
+]
+
+
+
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [str(os.path.join(BASE_DIR, 'templates'))],
+        
+        'DIRS': [str(os.path.join(BASE_DIR, 'templates')), str(os.path.join(BASE_DIR, 'templates', 'accounts'))  ],
+        
         'APP_DIRS': True,
         
         'OPTIONS': {
@@ -107,15 +127,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'my_app.wsgi.application'
 
-AUTHENTICATION_BACKENDS = [
-   
-    # Needed to login by username in Django admin, regardless of `allauth`
-    'django.contrib.auth.backends.ModelBackend',
-
-    # `allauth` specific authentication methods, such as login by e-mail
-    'allauth.account.auth_backends.AuthenticationBackend',
-    
-]
 
 
 

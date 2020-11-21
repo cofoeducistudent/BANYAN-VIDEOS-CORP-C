@@ -21,7 +21,7 @@ from django.urls import path, include
 
 urlpatterns = [
     
-    path('accounts/', include('allauth.urls')),
+   
     
     path('admin/', admin.site.urls),
     
@@ -30,9 +30,17 @@ urlpatterns = [
     path('search_results/', include('search_results.urls')),
     
     path('login_register/', include('login_register.urls')),
-    
-    
    
+   
+   
+   
+
+   
+   
+    
+    
+    
+    
     
     path('logout/', include('logout.urls')),
     
@@ -47,5 +55,13 @@ urlpatterns = [
     path('my_account/', include('my_account.urls')),
     
     path('delete_from_shopping_cart/', include('delete_from_shopping_cart.urls')),
+    
+    
+    
+    path('accounts/', include('allauth.urls')), # added for allauth
+    
+    
+    # path('login/', include('allauth.urls')),
+    
     
 ]

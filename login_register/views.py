@@ -11,7 +11,12 @@ from django.contrib.auth.models  import User
 from django.views.generic import TemplateView
 from shopping_cart.models  import ShoppingCartModel
 
- 
+
+
+from .forms import  LoginForm
+
+from crispy_forms.helper    import FormHelper
+
 # Create your views here.
 
 
@@ -24,7 +29,7 @@ class LoginRegister(TemplateView):
     
     def get(self, request):
     
-    
+        LIF = LoginForm()
    
     # CREATE A SESSION IF NOT EXISTING!!
         if not request.session.exists(request.session.session_key):
@@ -39,6 +44,14 @@ class LoginRegister(TemplateView):
         
 
        
+       
+       
+        
+        
+        
+        
+        
+        
         
         
         
@@ -50,9 +63,11 @@ class LoginRegister(TemplateView):
             
             'session_key':session_key,
             'current_user':current_user,
-            
+        
             'basket_item_count':basket_item_count,
+        
             'SCM':SCM,
+            'LIF':LIF,
         }   
         
         return render(request, 'login_register/login_register.html', context)
