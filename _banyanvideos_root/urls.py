@@ -18,11 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls import url
  
- 
-
 urlpatterns = [
-    
-   
     
     path('admin/', admin.site.urls),
     
@@ -32,17 +28,6 @@ urlpatterns = [
     
     path('login_register/', include('login_register.urls')),
    
-   
-   
-   
-
-   
-   
-    
-    
-    
-    
-    
     path('logout/', include('logout.urls')),
     
     path('about/', include('about.urls')),
@@ -57,14 +42,10 @@ urlpatterns = [
     
     path('delete_from_shopping_cart/', include('delete_from_shopping_cart.urls')),
     
-    
-    
     path('account/', include('allauth.urls')), # added for allauth
-    
     
     # path('account/login/', include('allauth.urls')),
     # path('account/register/', include('allauth.urls')),
-    
     
     # path('login_register/', include('allauth.urls')),
     

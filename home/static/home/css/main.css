@@ -9,6 +9,7 @@
     --theme-bgc: #000000;
     --theme-fgc: #ffffff;
     --theme-c1: #EFC055;
+    /* --theme-c1:#ffff; */
     --theme-c2: #f80303;
     --theme-c3: #636677;
     /* FONTS */
@@ -21,6 +22,8 @@ html {
     margin: 0px;
     padding: 0px;
     border: 0px;
+    /* color: var(--ink);
+    background-color: var(--wallpaper); */
 }
 
 body {
@@ -387,3 +390,16 @@ h3, .cost-block {
     background-color: var(--theme-bgc) !important;
     /* font-size: 2rem !important; */
 }
+
+
+
+/* REMOVE ASTERIX ON REQUIRED FILED REF# CRISPY FORMS LOGIN */
+.asteriskField {
+    display: none;
+}
+
+
+ a, :link {
+
+    color: var(--ink);
+ }
