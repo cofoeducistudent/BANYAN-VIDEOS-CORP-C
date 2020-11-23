@@ -2,6 +2,7 @@ from django.shortcuts import redirect, render
 from django.views.generic   import TemplateView
 
 from shopping_cart.models   import  ShoppingCartModel
+from shopping_cart  import models
 
 from  .forms import ShippingForm
 
@@ -30,7 +31,16 @@ class Checkout(TemplateView):
         
  
         SCM = ShoppingCartModel.objects.filter(cart_owner = current_user).filter(cart_session = session_key)
-        basket_item_count = SCM.count
+        
+        """
+        EXIT PAYMENT IF NOTHING IN BASKET!
+        """
+        basket_item_count = 0
+        for items in SCM:
+            basket_item_count = basket_item_count+1
+        if basket_item_count < 1 :
+            return redirect('shopping_cart')
+     
         
         
         SF = ShippingForm()
@@ -87,8 +97,14 @@ class Checkout(TemplateView):
         basket_item_count = SCM.count
         
         
-        if not basket_item_count:
-            return redirect('/')
+        """
+        EXIT PAYMENT IF NOTHING IN BASKET!
+        """
+        basket_item_count = 0
+        for items in SCM:
+            basket_item_count = basket_item_count+1
+        if basket_item_count < 1 :
+            return redirect('shopping_cart')
         
         
         
