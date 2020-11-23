@@ -33,9 +33,21 @@ class Logout(View):
         
 
 
+        """
+        WIPE OUT CURRENT SEELCTIONS
+        """
+        SCM = ShoppingCartModel.objects.filter(cart_owner = current_user).filter(cart_session = session_key)
+        
+        
+        for line_items in SCM:
+            line_items.delete()
 
 
 
+
+        """
+        LOGOUT USER !
+        """
         logout(request)
 
  

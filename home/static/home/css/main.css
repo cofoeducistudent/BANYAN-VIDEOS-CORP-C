@@ -8,8 +8,12 @@
     /* --theme-bgc: #202937; */
     --theme-bgc: #000000;
     --theme-fgc: #ffffff;
-    --theme-c1: #EFC055;
-    /* --theme-c1:#ffff; */
+
+
+    /* --theme-c1: #EFC055; */
+    --theme-c1:rgb(243, 228, 164);
+
+
     --theme-c2: #f80303;
     --theme-c3: #636677;
     /* FONTS */

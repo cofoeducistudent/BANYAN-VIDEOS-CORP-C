@@ -1,0 +1,93 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% load crispy_forms_tags %}
+{% crispy example_form example_form.helper %}
+
+
+{% block post-title %} members-page {% endblock post-title %}
+
+
+
+
+
+
+
+{% block main-content %}
+
+<div class="row container-fluid">
+  <div class="col-12 mx-3 " >
+
+    <!-- <h1 class="section-title text-center">MEMBERS!</h1> -->
+
+    <div class="jumbotron jumbotron-fluid">
+
+      <div class="container-fluid">
+        <!-- <h1 class="display-4">CHECKOUT!</h1> -->
+
+        <table class="text-center px-2">
+
+          <th>
+            <tr>
+
+              <td class="">Title</td>
+              <td>Quantity</td>
+              <td>Price Paid( Inc Discounts )</td>
+
+            </tr>
+          </th>
+
+          {% for line_items in SCM %}
+
+          <tr>
+
+            <td>
+              <h1 class="text-dark section-content"> {{ line_items.cart_film_friendly_title }} </h1>
+            </td>
+
+            <td>
+              <h1 class="text-dark section-content"> {{ line_items.cart_film_quantity}} </h1>
+            </td>
+
+            <td>
+              <h1 class="text-dark section-content"> {{ line_items.cart_price_paid }} </h1>
+            </td>
+
+          </tr>
+
+          {% endfor %}
+
+        </table>
+
+
+
+       
+
+        <hr>
+
+      </div>
+    </div>
+
+
+    <h1 class="section-title my-5"> ~ SHIPPING FORM ~ </h1>
+
+
+    {{  SF | crispy }}
+
+ 
+  
+
+
+
+
+<button class="btn btn-lg btn-warning payment-button my-5">PAY NOW </button>
+
+
+  </div>
+</div>
+
+
+ 
+
+
+{% endblock main-content %}

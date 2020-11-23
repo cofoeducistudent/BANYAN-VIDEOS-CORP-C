@@ -8,7 +8,7 @@ from home import models as home_models
 
 class ShoppingCartModelAdmin(admin.ModelAdmin):
     list_display = (
-        
+                    'cart_purchase_date',
                     'cart_owner',
                     'cart_session',
                     'cart_film_quantity',

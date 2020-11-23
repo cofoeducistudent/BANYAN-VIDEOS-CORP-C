@@ -44,6 +44,8 @@ urlpatterns = [
     
     path('account/', include('allauth.urls')), # added for allauth
     
+    path('checkout/', include('checkout.urls')),
+    
     # path('account/login/', include('allauth.urls')),
     # path('account/register/', include('allauth.urls')),
     
