@@ -53,8 +53,9 @@
                 <h3 class="text-muted">SHIPPING: £ {{ shipping_charge }}</h3>
                 <hr>
 
-                <h3 class="fb-high-light text-danger"><b>TOTAL: £ {{ final_bill }}</b></h3>
+                <h3 class="fb-high-light bg-dark text-light"><b>TOTAL: £ {{ final_bill }}</b></h3>
 
+                <h3 class="section-tiny-text">Note: * Shipping costs are rounded to the nearest whole number </h3>
             </div>
         </div>
 
@@ -105,19 +106,21 @@
                         {% if basket_item_count  %}
                         <table class="">
 
-                            <tr class="section-tiny-text">
-                                <th class="table-spacer">DELETE</th>
-                                <th class="table-spacer">QTY</th>
-                                <th class="table-spacer d-none d-md-block">SKU</th>
-                                <th class="table-spacer d-none ">-</th>
-                                <th class="table-spacer">TITLE</th>
-                                <th class="table-spacer d-none d-md-block" style="width:33%">DESC</th>
-                                <th class="table-spacer d-none d-md-block">IMAGE</th>
-                                <th class="table-spacer">PRICE</th>
 
-                                <th class="table-spacer d-none d-sm-block">DSC %</th>
-                                <th class="table-spacer ">TOT</th>
+                            <tr class="section-tiny-text">
+                                <td class="table-spacer">DELETE</td>
+                                <td class="table-spacer">QTY</td>
+                                <td class="table-spacer d-none d-md-block">SKU</td>
+                                <td class="table-spacer d-none ">-</td>
+                                <td class="table-spacer">TITLE</td>
+                                <td class="table-spacer d-none d-md-block" style="width:33%">DESC</td>
+                                <td class="table-spacer d-none d-md-block">IMAGE</td>
+                                <td class="table-spacer">PRICE</td>
+
+                                <td class="table-spacer d-none d-sm-block">DSC %</td>
+                                <td class="table-spacer ">TOT</td>
                             </tr>
+
 
 
 

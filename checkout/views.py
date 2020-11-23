@@ -32,6 +32,18 @@ class Checkout(TemplateView):
  
         SCM = ShoppingCartModel.objects.filter(cart_owner = current_user).filter(cart_session = session_key)
         
+        
+        # WORKOUT BILL FOR CUSTOMER
+        total_to_pay = 0
+        for line_items in SCM:
+            total_to_pay = total_to_pay + line_items.cart_price_paid
+        shipping_charge = 0
+        if total_to_pay <30:
+            shipping_charge = round((total_to_pay * 10 )/100,2)
+        final_bill=round((total_to_pay+shipping_charge),2)
+        
+  
+        
         """
         EXIT PAYMENT IF NOTHING IN BASKET!
         """
@@ -43,9 +55,27 @@ class Checkout(TemplateView):
      
         
         
-        SF = ShippingForm()
+        """
+        PREPOULATE AND INSTANTIATE SHIPPING FORM!!!
+        """
+        sf_email='cofoedu@gmail.com'
+        if request.user.is_authenticated:
+            sf_email=request.user.email
         
-  
+        
+        TID=str(current_user)+':'+str(session_key)
+        preload = {
+           
+           'sf_username':current_user,
+           'sf_email':sf_email,
+           'sf_transaction_id':TID
+           
+        }
+    
+        SF = ShippingForm(preload)
+        
+       
+       
   
   
   
@@ -56,7 +86,8 @@ class Checkout(TemplateView):
             
             'basket_item_count': basket_item_count,
             'current_user': current_user,
-            
+            'shipping_charge':shipping_charge,
+            'final_bill':final_bill,
             
             'SCM':SCM,
             'SF':SF,
@@ -96,6 +127,16 @@ class Checkout(TemplateView):
         SCM = ShoppingCartModel.objects.filter(cart_owner = current_user).filter(cart_session = session_key)
         basket_item_count = SCM.count
         
+        # WORKOUT BILL FOR CUSTOMER
+        total_to_pay = 0
+        for line_items in SCM:
+            total_to_pay = total_to_pay + line_items.cart_price_paid
+        shipping_charge = 0
+        if total_to_pay <30:
+            shipping_charge = round((total_to_pay * 10 )/100,2)
+        final_bill=round((total_to_pay+shipping_charge),2)
+        
+        
         
         """
         EXIT PAYMENT IF NOTHING IN BASKET!
@@ -108,17 +149,30 @@ class Checkout(TemplateView):
         
         
         
+        """
+        PREPOULATE AND INSTANTIATE SHIPPING FORM!!!
+        """
+        sf_email='cofoedu@gmail.com'
+        if request.user.is_authenticated:
+            sf_email=request.user.email
         
         
-        SF = ShippingForm()
+        TID=str(current_user)+':'+str(session_key)
+        preload = {
+           
+           'sf_username':current_user,
+           'sf_email':sf_email,
+           'sf_transaction_id':TID
+           
+        }
+    
+        SF = ShippingForm(preload)
  
-        TID=session_key
  
-        SF.sf_transaction_id = TID
+  
     
     
-    
-    
+        
     
     
     
@@ -126,7 +180,8 @@ class Checkout(TemplateView):
             'session_key':session_key,
             'basket_item_count': basket_item_count,
             'current_user': current_user,
-            
+            'shipping_charge':shipping_charge,
+            'final_bill':final_bill,
             
             'SCM':SCM,
             'SF':SF,

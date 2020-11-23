@@ -8,13 +8,10 @@
     /* --theme-bgc: #202937; */
     --theme-bgc: #000000;
     --theme-fgc: #ffffff;
-
-
     /* --theme-c1: #EFC055; */
-    --theme-c1:rgb(243, 231, 179);
-
-
-    --theme-c2: #f80303;
+    --theme-c1: rgb(245, 240, 219);
+    /* --theme-c2: #f80303; */
+    --theme-c2: rgb(245, 240, 219);
     --theme-c3: #636677;
     /* FONTS */
     font-family: 'Roboto', sans-serif;
@@ -388,22 +385,25 @@ h3, .cost-block {
 /* FAS-VIDEO ICON ON HEADER NAV BAR */
 
 .header-icon {
-
     list-style: none;
     color: var(--theme-c1) !important;
     background-color: var(--theme-bgc) !important;
     /* font-size: 2rem !important; */
 }
 
-
-
 /* REMOVE ASTERIX ON REQUIRED FILED REF# CRISPY FORMS LOGIN */
+
 .asteriskField {
     display: none;
 }
 
-
- a, :link {
-
+a, :link {
     color: var(--ink);
- }
+}
+
+/* CHECKOUT IMAGE BOX SIZE */
+
+.checkout-image-box {
+    height: 50px;
+    width: auto;
+}

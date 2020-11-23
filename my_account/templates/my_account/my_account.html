@@ -2,36 +2,78 @@
 {% load static %}
 
 
+{% load crispy_forms_tags %}
+{% crispy example_form example_form.helper %}
+
+
+
 {% block post-title %} my_account-page {% endblock post-title %}
 
 
 {% block main-content %}
 
- 
+
 
 <div class="row container-fluid">
-<div class="col-12 mx-3">
+  <div class="col-12 mx-3">
 
-    <h1 class="section-title text-center">MY_ACCOUNT!</h1>
-    
+    <!-- <h1 class="section-title text-center">MY_ACCOUNT!</h1> -->
+
 
 
 
     <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-          <h1 class="display-4">Fluid jumbotron</h1>
-          <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-        </div>
+      <div class="container">
+        <h1 class="display-4">Hello, {{ current_user }}</h1>
+        <hr>
+
+
+
+
+        <p>Warning: If this is not you please logout, as you are breaking our terms of service as an unauthorised user!</p>
+
+        <p class="lead">Below is your Profile. Please ensure its completed</p>
+      </div>
+    </div>
+
+
+    <!-- FORM!! -->
+    <div class="row">
+      <div class="col-12 text-dark">
+
+
+        <form action="{% url 'my_account' %}" method="POST">
+          {% csrf_token %}
+
+          {{ UPF|crispy }}
+
+
+
+
+          <!-- SAVE PROFILE BUTTON -->
+          <div class="row my-5">
+            <div class="col-12 text-center">
+
+              <button type="submit" class="btn btn-lg btn-warning">SAVE PROFILE</button>
+
+            </div>
+          </div>
+
+
+        </form>
+
+
+
+
+
+      </div>
     </div>
 
 
 
 
 
-
-    
-
-</div>
+  </div>
 </div>
 
 

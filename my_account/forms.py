@@ -5,10 +5,7 @@ from django.contrib.auth import authenticate, login, logout, get_user_model
 
 class UserProfileForm(forms.Form):
  
-
-    # user_ID = forms.ForeignKey(User,on_delete=forms.CASCADE)
-
-    username = forms.CharField(max_length=254)
+    username = forms.CharField( max_length=254)
     first_name = forms.CharField( max_length=254)
     last_name = forms.CharField( max_length=254 )
 

@@ -16,7 +16,7 @@
 {% block main-content %}
 
 <div class="row container-fluid">
-  <div class="col-12 mx-3 " >
+  <div class="col-12 mx-3 ">
 
     <!-- <h1 class="section-title text-center">MEMBERS!</h1> -->
 
@@ -25,43 +25,65 @@
       <div class="container-fluid">
         <!-- <h1 class="display-4">CHECKOUT!</h1> -->
 
+        <h3>Line Items:({{ basket_item_count }})</h3>
+
         <table class="text-center px-2">
 
-          <th>
-            <tr>
 
-              <td class="">Title</td>
-              <td>Quantity</td>
-              <td>Price Paid( Inc Discounts )</td>
+          <tr>
 
-            </tr>
-          </th>
+            <td class="section-tiny-text px-2"><strong>Title</strong></td>
+            <td class="section-tiny-text px-2"><strong>Quantity</strong></td>
+            <td class="section-tiny-text px-2"><strong>Image</strong></td>
+            <td class="section-tiny-text px-2"><strong>Price Paid ( Inc Discounts )</strong></td>
+
+          </tr>
+
 
           {% for line_items in SCM %}
 
           <tr>
 
             <td>
-              <h1 class="text-dark section-content"> {{ line_items.cart_film_friendly_title }} </h1>
+              <h1 class="text-dark section-tiny-text px-2 bg-transparent"> {{ line_items.cart_film_friendly_title }}
+              </h1>
             </td>
 
             <td>
-              <h1 class="text-dark section-content"> {{ line_items.cart_film_quantity}} </h1>
+              <h1 class="text-dark section-tiny-text px-2 bg-transparent"> {{ line_items.cart_film_quantity}} </h1>
             </td>
 
+
             <td>
-              <h1 class="text-dark section-content"> {{ line_items.cart_price_paid }} </h1>
+              <image class="checkout-image-box bg-transparent" src="{{ line_items.cart_film_box_cover_url }}">
+            </td>
+
+
+
+
+            <td>
+              <h1 class="text-dark section-tiny-text px-2 bg-transparent"> {{ line_items.cart_price_paid }} </h1>
             </td>
 
           </tr>
+
+
+
 
           {% endfor %}
 
         </table>
 
+        <hr>
+        <td>
+          <h1 class="text-dark section-content px-2 text-muted bg-transparent"> £ {{ shipping_charge }} </h1>
+        </td>
 
 
-       
+        <hr>
+
+        <h1 class="section-title bg-transparent text-dark "><strong>TOTAL £ {{ final_bill }} ( Incl Postage )</strong>
+        </h1>
 
         <hr>
 
@@ -69,25 +91,49 @@
     </div>
 
 
-    <h1 class="section-title my-5"> ~ SHIPPING FORM ~ </h1>
+    <h1 class="section-title "> ~ SHIPPING FORM ~ </h1>
 
-
-    {{  SF | crispy }}
-
- 
-  
+    <p class="my-5"> Please ensure you complete the following shipping form!</p>
 
 
 
 
-<button class="btn btn-lg btn-warning payment-button my-5">PAY NOW </button>
+
+
+    <form action="">
+
+      {% csrf_token %}
+
+
+      
+      {{  SF | crispy }}
+
+      <!-- // -->
+
+      <div class="row">
+        <div class="col-12 text-center">
+
+          <h1 class="text-muted"> * Please ensure that your mailing address is correct. We shall only ship items to the
+            adress on this form!</h1>
+
+          <button class="btn btn-lg btn-warning payment-button my-5 text-center">PAY NOW</button>
+
+        </div>
+      </div>
+
+
+
+    </form>
+
+
+
 
 
   </div>
 </div>
 
 
- 
+
 
 
 {% endblock main-content %}

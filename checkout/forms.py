@@ -11,4 +11,4 @@ class ShippingForm(forms.Form):
     sf_addres_line2 = forms.CharField(label='Address Line 2', max_length=128)
     sf_postcode = forms.CharField(label='Postcode', max_length=128)
 
-    sf_transaction_id = forms.CharField(label='Transaction Id',max_length=128)
+    sf_transaction_id = forms.CharField(label='Transaction ID',max_length=128)
