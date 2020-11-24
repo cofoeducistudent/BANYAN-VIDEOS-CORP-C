@@ -6,6 +6,7 @@ from shopping_cart  import models
 
 from  .forms import ShippingForm
 
+from my_account import models as UPD
 
 # Create your views here.
 
@@ -15,6 +16,10 @@ class Checkout(TemplateView):
     template_name = 'checkout/checkout.html'
     
     
+    
+    """
+    GET CLASSS
+    """
     def get(self, request):
         
         # CREATE A SESSION IF NOT EXISTING!!
@@ -75,6 +80,38 @@ class Checkout(TemplateView):
         SF = ShippingForm(preload)
         
        
+        """
+        POPULATER IF A PROFILE ALREADY EXISTS FOR USER
+        """
+        userprofile = UPD.UserProfile.objects.filter(up_username = current_user)
+        
+        if userprofile:
+        
+            TID=str(current_user)+':'+str(session_key)
+            
+            preload = {
+           
+           'sf_username':current_user,
+           'sf_email':sf_email,
+           'sf_transaction_id':TID,
+           
+           'sf_address_line1':userprofile[0].up_address_line1,
+           'sf_address_line2':userprofile[0].up_address_line2,
+           'sf_address_line3':userprofile[0].up_address_line3,
+           'sf_post_code':userprofile[0].up_post_code,
+           'sf_country':userprofile[0].up_country,
+           
+            }    
+            
+        SF = ShippingForm(preload)
+       
+       
+       
+       
+       
+       
+       
+       
        
   
   
@@ -108,7 +145,9 @@ class Checkout(TemplateView):
     
     
     
-    
+    """
+    GET CLASS
+    """
     def post(self, request):
         
         # CREATE A SESSION IF NOT EXISTING!!
@@ -169,7 +208,36 @@ class Checkout(TemplateView):
         SF = ShippingForm(preload)
  
  
-  
+
+        
+        """
+        POPULATER IF A PROFILE ALREADY EXISTS FOR USER
+        """
+        userprofile = UPD.UserProfile.objects.filter(up_username = current_user)
+        
+        if userprofile:
+        
+            TID=str(current_user)+':'+str(session_key)
+            
+            preload = {
+           
+           'sf_username':current_user,
+           'sf_email':sf_email,
+           'sf_transaction_id':TID,
+           
+           'sf_address_line1':userprofile[0].up_address_line1,
+           'sf_address_line2':userprofile[0].up_address_line2,
+           'sf_address_line3':userprofile[0].up_address_line3,
+           
+           'sf_post_code':userprofile[0].up_post_code,
+           'sf_country':userprofile[0].up_country,
+           
+            }    
+            
+        SF = ShippingForm(preload)
+    
+    
+    
     
     
         
