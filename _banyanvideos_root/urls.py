@@ -46,9 +46,8 @@ urlpatterns = [
     
     path('checkout/', include('checkout.urls')),
     
-    # path('account/login/', include('allauth.urls')),
-    # path('account/register/', include('allauth.urls')),
+    path('login_success/', include('login_success.urls')),
     
-    # path('login_register/', include('allauth.urls')),
+  
     
 ]

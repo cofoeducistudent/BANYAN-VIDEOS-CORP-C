@@ -79,6 +79,7 @@ INSTALLED_APPS = [
     'crispy_forms',
   
     'checkout',
+    'login_success',
 
 
 ]
@@ -160,7 +161,7 @@ ACCOUNT_USERNAME_MIN_LENGTH = 4
 
 LOGIN_URL = '/account/login/'
 
-LOGIN_REDIRECT_URL ='/'
+LOGIN_REDIRECT_URL ='login_success'
 
 WSGI_APPLICATION = '_banyanvideos_root.wsgi.application'
 
