@@ -67,14 +67,14 @@
                 <!-- SECONDARY USERNAME & CART STATUS IN NAVBAR!!!! -->
 
                 {% if current_user %}
-                <a class="nav-link col-xs-12 d-lg-none" href="{% url 'my_account' %}">
+                <a class="nav-link nav-item col-xs-12 d-lg-none" href="{% url 'my_account' %}">
                     <span class="fas fa-user" class="sr-only">|
                         <span class="u-name text-muted">{{ current_user }}</span>
                     </span>
                 </a>
                 {% endif %}
 
-                <a class="nav-link col-xs-12 d-lg-none" href="{% url 'shopping_cart' %}">
+                <a class="nav-link nav-item col-xs-12 d-lg-none" href="{% url 'shopping_cart' %}">
                     <span class="fas fa-shopping-cart"></span><span class="sr-only"></span>
                     {{ basket_item_count }}
                 </a>
