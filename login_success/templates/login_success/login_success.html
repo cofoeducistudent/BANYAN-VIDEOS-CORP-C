@@ -1,22 +1,14 @@
 {% extends 'home/base.html' %}
 {% load static %}
 
-
 {% block post-title %} login_success-page {% endblock post-title %}
 
-
-
 {% block main-content %}
-
-
 
 <div class="row container-fluid">
   <div class="col-12 mx-3">
 
     <!-- <h1 class="section-title text-center">ABOUT PAGE!</h1> -->
-
-
-
 
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
@@ -24,7 +16,8 @@
 
         <p class="lead">You have successfully logged in
 
- 
+        <p>Welcome {{ current_user }} Members are eligable for discounts on items where marked. You can save a lot of
+          money</p>
 
         </p>
 
@@ -33,13 +26,41 @@
       </div>
     </div>
 
+    <!-- ADMIN LOGIN MESSAGES -->
+    <div class="row">
+      <div class="col-12">
 
- 
+        {% for messages in ALM %}
 
+        {% if messages.messages_visible %}
+
+        <div class="row my-5">
+          <div class="col-12">
+
+            <div class="card">
+              <div class="card-header">
+                {{ messages.message_date }}
+              </div>
+              <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                  <p>{{ messages.message_title }}</p>
+                  <p>{{ messages.message_content }}</p>
+                  <footer class="blockquote-footer">Banyan-Videos-Corp Admin </footer>
+                </blockquote>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        {% endif %}
+
+        {% endfor %}
+
+      </div>
+    </div>
 
   </div>
 </div>
-
-
 
 {% endblock main-content %}
