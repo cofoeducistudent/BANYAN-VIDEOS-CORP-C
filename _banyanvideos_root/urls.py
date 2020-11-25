@@ -48,6 +48,6 @@ urlpatterns = [
     
     path('login_success/', include('login_success.urls')),
     
-  
+    path('charge/', include('charge.urls')),
     
 ]

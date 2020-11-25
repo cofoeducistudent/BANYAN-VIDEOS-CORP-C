@@ -80,6 +80,7 @@ INSTALLED_APPS = [
   
     'checkout',
     'login_success',
+    'charge',
 
 
 ]

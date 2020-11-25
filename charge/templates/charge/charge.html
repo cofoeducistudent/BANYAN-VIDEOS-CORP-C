@@ -1,0 +1,38 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+
+{% block post-title %} charge-page {% endblock post-title %}
+
+
+{% block main-content %}
+
+ 
+
+<div class="row container-fluid">
+<div class="col-12 mx-3">
+
+    <!-- <h1 class="section-title text-center">CONTACT PAGE!</h1> -->
+    
+ 
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">CHARGE!</h1>
+          <p class="lead">
+
+          
+            <h2>Thanks, you paid <strong> £ {{ final_bill }}</strong>!</h2>
+
+
+          </p>
+        </div>
+    </div>
+
+ 
+
+</div>
+</div>
+
+
+
+{% endblock main-content %}

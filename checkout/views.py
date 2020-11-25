@@ -1,3 +1,4 @@
+from _banyanvideos_root.settings import STRIPE_PUBLIC_KEY
 from django.shortcuts import redirect, render
 from django.views.generic   import TemplateView
 
@@ -7,8 +8,22 @@ from shopping_cart  import models
 from  .forms import ShippingForm
 
 from my_account import models as UPD
+from django.conf    import  settings # get access to settings variables
 
-# Create your views here.
+
+
+#------
+# import jsonify
+# import json
+
+import os
+import stripe
+# This is your real test secret API key.
+# stripe.api_key = STRIPE_PRIVATE_KEY
+#------
+
+
+#Create Your Views
 
 
 
@@ -146,7 +161,7 @@ class Checkout(TemplateView):
     
     
     """
-    GET CLASS
+    POST CLASS
     """
     def post(self, request):
         
@@ -163,8 +178,24 @@ class Checkout(TemplateView):
             current_user = request.user
         
  
+ 
+ 
         SCM = ShoppingCartModel.objects.filter(cart_owner = current_user).filter(cart_session = session_key)
         basket_item_count = SCM.count
+        
+        """
+        EXIT PAYMENT IF NOTHING IN BASKET!
+        """
+        basket_item_count = 0
+        for items in SCM:
+            basket_item_count = basket_item_count+1
+        if basket_item_count < 1 :
+            return redirect('shopping_cart')
+        
+        
+        
+        
+        
         
         # WORKOUT BILL FOR CUSTOMER
         total_to_pay = 0
@@ -176,16 +207,8 @@ class Checkout(TemplateView):
         final_bill=round((total_to_pay+shipping_charge),2)
         
         
-        
-        """
-        EXIT PAYMENT IF NOTHING IN BASKET!
-        """
-        basket_item_count = 0
-        for items in SCM:
-            basket_item_count = basket_item_count+1
-        if basket_item_count < 1 :
-            return redirect('shopping_cart')
-        
+        final_bill_in_stripe_format=(final_bill * 100)
+
         
         
         """
@@ -240,6 +263,36 @@ class Checkout(TemplateView):
     
     
     
+    
+    
+    
+        stripe_key = STRIPE_PUBLIC_KEY
+        # print(stripe_key)
+    
+    
+        # try:
+        #     # data = json.loads('banyan-videos-corp-items')
+        #     data = 'banyan-videos-corp-merchandise'
+        #     intent = stripe.PaymentIntent.create(
+        #         # amount=calculate_order_amount(data['items']),
+        #         amount = final_bill,
+        #         currency='gbp'
+        #     )
+            
+        #     return jsonify({
+        #     'clientSecret': intent['client_secret']
+        #     })
+            
+        # except Exception as e:
+        #     return jsonify(error=str(e)), 403
+        #     # return
+    
+    
+    
+    
+    
+    
+    
         
     
     
@@ -251,9 +304,12 @@ class Checkout(TemplateView):
             'shipping_charge':shipping_charge,
             'final_bill':final_bill,
             
+            'final_bill_in_stripe_format':final_bill_in_stripe_format,
+            
             'SCM':SCM,
             'SF':SF,
             
+            'stripe_key':stripe_key
         }
  
         return render(request, self.template_name, context)

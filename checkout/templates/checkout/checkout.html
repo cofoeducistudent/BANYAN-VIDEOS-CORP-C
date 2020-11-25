@@ -74,7 +74,8 @@
 
         </table>
 
-        <h1 class="text-tiny-text my-2 text-muted">* Membership discounts are included in the priced paid per line item</h1>
+        <h1 class="text-tiny-text my-2 text-muted">* Membership discounts are included in the priced paid per line item
+        </h1>
 
 
         <hr>
@@ -103,12 +104,12 @@
 
 
 
-    <form action="">
-
+    <form action="{% url 'charge' %}" method="POST">
       {% csrf_token %}
+     
 
 
-      
+
       {{  SF | crispy }}
 
       <!-- // -->
@@ -119,7 +120,43 @@
           <h1 class="text-muted"> * Please ensure that your mailing address is correct. We shall only ship items to the
             adress on this form!</h1>
 
-          <button class="btn btn-lg btn-warning payment-button my-5 text-center">PAY NOW</button>
+
+
+
+
+
+          <!-- STRIPE STUFF!!!! -->
+
+          <div class="row my-5">
+            <div class="col-12">
+ 
+               
+
+                <script src="https://checkout.stripe.com/checkout.js" 
+                
+                
+                class="stripe-button"
+                data-key="{{ stripe_key }}"
+                data-description="A Banyan-Videos-Charge"
+                data-amount={{ final_bill_in_stripe_format }}
+                data-locale="auto">
+                
+                </script>
+ 
+
+
+
+
+            </div>
+          </div>
+
+
+
+
+
+
+          <!-- <button class="btn btn-lg btn-warning payment-button my-5 text-center">PAY NOW</button> -->
+
 
         </div>
       </div>
