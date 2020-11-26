@@ -107,6 +107,7 @@ class MyAccount(TemplateView):
     POST CLASS
     """
 
+
     def post(self, request):
         # CREATE A SESSION IF NOT EXISTING!!
         if not request.session.exists(request.session.session_key):
