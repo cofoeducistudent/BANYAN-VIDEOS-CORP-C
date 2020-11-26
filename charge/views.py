@@ -57,8 +57,11 @@ class Charge(TemplateView):
 
         final_bill_in_stripe_format = int(final_bill * 100)
 
+
+
+
         #  DELETE ITEM...TEMPORARY..REMOVE LATER!!!!!
-        UserPurchaseHistory.objects.filter(pk=1).delete()
+        # UserPurchaseHistory.objects.filter(pk=1).delete()
 
 
 
@@ -79,6 +82,19 @@ class Charge(TemplateView):
                     description='A Banyan-Videos-Corp charge',
                     source=request.POST['stripeToken']
                 )
+               
+               
+            # RUN EMAIL HERE!   
+             
+            """
+            DELETE ITEMS IN CART!!
+            """
+            for items in SCM:
+                SCM.filter(cart_owner=current_user).filter(
+                    cart_session=session_key).delete()   
+                
+                
+                
 
         except Exception as e:
             messages.info(
@@ -151,7 +167,6 @@ class Charge(TemplateView):
             'SCM': SCM,
             # 'SF':SF,
 
-
         }
-
+        
         return render(request, 'charge/charge.html', context)
