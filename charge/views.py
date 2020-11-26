@@ -118,7 +118,7 @@ class Charge(TemplateView):
                     ph_cart_film_title=items.cart_film_title,
                     ph_cart_film_friendly_title=items.cart_film_friendly_title,
                     ph_cart_film_box_cover_url=items.cart_film_box_cover_url,
-                    ph_cart_film_description=items.cart_film_price,
+                    ph_cart_film_description=items.cart_film_description,
                     ph_cart_film_price=items.cart_film_price,
                     ph_cart_film_product_discount=items.cart_film_product_discount,
 

@@ -15,6 +15,10 @@ from .forms import UserProfileForm
 
 from . import models as UPAD
 
+
+from .models import UserPurchaseHistory as PH
+
+
 # Create your views here.
 
 
@@ -79,6 +83,12 @@ class MyAccount(TemplateView):
 
             UPF = UserProfileForm(preload)
 
+ 
+
+        purchase_history = PH.objects.filter(ph_cart_owner = current_user)
+ 
+  
+
         context = {
 
             'session_key': session_key,
@@ -87,6 +97,7 @@ class MyAccount(TemplateView):
 
             'SCM': SCM,
             'UPF': UPF,
+            'purchase_history':purchase_history,
 
         }
 
@@ -152,6 +163,21 @@ class MyAccount(TemplateView):
 
         UPF = UserProfileForm(preload)
 
+
+
+
+
+
+
+        purchase_history = PH.objects.filter(ph_cart_owner = current_user)
+ 
+        print('----')
+        print(purchase_history)
+        print('----')
+
+
+
+
         context = {
 
             'session_key': session_key,
@@ -160,7 +186,7 @@ class MyAccount(TemplateView):
 
             'SCM': SCM,
             'UPF': UPF,
-
+            'PH':PH,
         }
 
         return render(request, 'my_account/my_account.html', context)
