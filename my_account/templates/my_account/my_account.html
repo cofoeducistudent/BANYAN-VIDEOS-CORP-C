@@ -77,18 +77,18 @@
 
           <td class="section-tiny-text px-2">Qty</td>
           <td class="section-tiny-text px-2">Price Paid</td>
-          <td class="section-tiny-text px-2">Genre</td>
+          <td class="section-tiny-text px-2 d-none d-lg-block">Genre</td>
           <td class="section-tiny-text px-2">Sku</td>
           <td class="section-tiny-text px-2">Title</td>
 
-          <td class="section-tiny-text px-2 d-none d-lg-block">Image</td>
+          <td class="section-tiny-text px-2">Image</td>
 
 
 
           <td class="section-tiny-text px-2 d-none d-lg-block">Description</td>
 
 
-          <td class="section-tiny-text px-2 ">Unit Price</td>
+          <td class="section-tiny-text px-2 d-none d-lg-block">Unit Price</td>
           <td class="section-tiny-text px-2">Member Discount </td>
         </tr>
 
@@ -101,17 +101,17 @@
 
           <td class="section-tiny-text px-2">{{ entry.ph_cart_film_quantity }}</td>
           <td class="section-tiny-text px-2">{{ entry.ph_cart_price_paid}}</td>
-          <td class="section-tiny-text px-2">{{ entry.ph_cart_film_genre }}</td>
+          <td class="section-tiny-text px-2 d-none d-lg-block">{{ entry.ph_cart_film_genre }}</td>
           <td class="section-tiny-text px-2">{{ entry.ph_cart_film_sku }}</td>
           <td class="section-tiny-text px-2">{{ entry.ph_cart_film_friendly_title}}</td>
           
-          <td class="section-tiny-text px-2 d-none d-lg-block">
+          <td class="section-tiny-text px-2">
             <image class="cart-pic" src="{{ entry.ph_cart_film_box_cover_url }}"></image>
           </td>
 
           <td class="section-tiny-text px-2 d-none d-lg-block">{{ entry.ph_cart_film_description}}</td>
 
-          <td class="section-tiny-text px-2">{{ entry.ph_cart_film_price}}</td>
+          <td class="section-tiny-text px-2 d-none d-lg-block">{{ entry.ph_cart_film_price}}</td>
           <td class="section-tiny-text px-2">{{ entry.ph_cart_film_product_discount}}</td>
 
         </tr>
