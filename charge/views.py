@@ -146,9 +146,10 @@ class Charge(TemplateView):
             """
             SALE COMPLETE ......THIS USER IS ANONYMOUS, THEREFORE DELETE ITEMS IN CART!!
             """
-            for items in SCM:
-                SCM.filter(cart_owner=current_user).filter(
-                    cart_session=session_key).delete()
+            if not request.user.is_authenticated:
+                for items in SCM:
+                    SCM.filter(cart_owner=current_user).filter(
+                        cart_session=session_key).delete()
 
 
 
@@ -168,21 +169,22 @@ class Charge(TemplateView):
 
 
 
+        else:
 
-
-        """
-        ///////////////////////////////// LOGGED IN USER PROCESSING /////////
-        """
-
+            """
+            ///////////////////////////////// LOGGED IN USER PROCESSING /////////
+            """
+        
+            
         if request.user.is_authenticated:
             """
-            IF AN LOGGED IN USER
+            IF A LOGGED IN USER
             SAVE .....CONTENTS OF CART TO PURCHASE HISTORY!!
             """
-
-            # items_bought=[]
+            messages.info(request,'WANNABE!!')
+ 
             dtd = str(date.today())
-            print(dtd)
+           
 
             SCM = ShoppingCartModel.objects.filter(
                 cart_owner=current_user).filter(cart_session=session_key)
