@@ -145,7 +145,7 @@ class ShoppingCart(TemplateView):
                 price_paid = round(price_paid,2)
                 
             
-        tdate = str(date)  
+   
            
                 
         # ASSEMBLED FILM ITEM
@@ -181,7 +181,7 @@ class ShoppingCart(TemplateView):
         
         cart_film_clip_link = film_wad[0].film_clip_link,
         
-        cart_purchase_date = tdate,
+      
 
         )
 
@@ -206,10 +206,7 @@ class ShoppingCart(TemplateView):
         final_bill=round((total_to_pay+shipping_charge),2)
         
         
-        
-        
-        
-        
+
         
         # DELETE ALL SHOPPING CART WITH SPECIFIC OWNER
         # my_object = ShoppingCartModel.objects.filter(cart_film_quantity = 1)
@@ -220,13 +217,10 @@ class ShoppingCart(TemplateView):
             'session_key': session_key,
             'current_user': current_user,
             
-           
             'basket_item_count':basket_item_count,
             'total_to_pay':total_to_pay,
             'shipping_charge':shipping_charge,
             'final_bill':final_bill,
-            
-            
             
             'SCM': SCM,
 
