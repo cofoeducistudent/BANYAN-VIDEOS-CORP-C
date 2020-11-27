@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import date, datetime
 from django.db import models
 from django.contrib import sessions
 
@@ -37,7 +37,7 @@ class ShoppingCartModel(models.Model):
     cart_film_global_sale = models.BooleanField(default=True)
     cart_film_clip_link = models.URLField(max_length=254, null=True, blank=True)
     
-    cart_purchase_date = models.DateTimeField(datetime.now, default=datetime.now)
+    cart_purchase_date = models.CharField(max_length=128, null=True, blank=True)
     
     def __str__(self):
         return self.cart_film_friendly_title

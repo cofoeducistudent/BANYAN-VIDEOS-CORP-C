@@ -9,9 +9,12 @@ from django.views.generic import TemplateView
 from shopping_cart.models import ShoppingCartModel
 
 from my_account.models import UserPurchaseHistory
-
-
 import stripe
+
+
+from django.core.mail   import send_mail
+
+
 
 # Create your views here.
 
@@ -84,22 +87,46 @@ class Charge(TemplateView):
                 )
                
                
-            # RUN EMAIL HERE!   
-             
+            """
+            SEND OUT EMAIL
+            """
+            SCM = ShoppingCartModel.objects.filter(
+            cart_owner=current_user).filter(cart_session=session_key) 
+            basket_item_count = SCM.count
+            
+            message_body=""
+            for items in SCM:
+                # IIB.append( items.cart_film_quantity+" x "+ items.cart_film_friendly_title+":"+items.cart_film_sku)
+                p1=items.cart_film_quantity
+                p2=items.cart_film_friendly_title
+                p3=items.cart_film_sku
+                
+                squashed = str(p1)+" x " +str(p2)+" : "+str(p3)
+                
+                message_body = message_body + squashed +chr(13)
+
+            send_mail('SALES ORDER!',message_body,'cofoedu_banyan@hotmail.com',['cofoedu@gmail.com'],fail_silently = False)
+ 
+ 
             """
             DELETE ITEMS IN CART!!
             """
             for items in SCM:
                 SCM.filter(cart_owner=current_user).filter(
-                    cart_session=session_key).delete()   
-                
-                
-                
-
+                    cart_session=session_key).delete()
+            
+ 
+ 
         except Exception as e:
             messages.info(
-                request, 'This Transcation request Failed! Please ensure you are not repeating the Transaction! ')
+                request, 'This Transcation request Failed! Please ensure you are not repeating the Transaction! / '+ str(e) )
             redirect('home')
+
+
+
+
+
+
 
 
 
@@ -107,6 +134,7 @@ class Charge(TemplateView):
 
         if request.user.is_authenticated:
             """
+            IF AN LOGGED IN USER
             TRANSFER TO PURCHASE HISTORY!!
             """
 
@@ -141,7 +169,30 @@ class Charge(TemplateView):
                 )
 
                 b.save()
+                
+                
+                
+            """
+            SEND OUT EMAIL
+            """
+            SCM = ShoppingCartModel.objects.filter(
+            cart_owner=current_user).filter(cart_session=session_key) 
+            basket_item_count = SCM.count
+            
+            message_body=""
+            for items in SCM:
+                # IIB.append( items.cart_film_quantity+" x "+ items.cart_film_friendly_title+":"+items.cart_film_sku)
+                p1=items.cart_film_quantity
+                p2=items.cart_film_friendly_title
+                p3=items.cart_film_sku
+                
+                squashed = str(p1)+" x " +str(p2)+" : "+str(p3)
+                
+                message_body = message_body + squashed +chr(13)
 
+            send_mail('SALES ORDER!',message_body,'cofoedu_banyan@hotmail.com',['cofoedu@gmail.com'],fail_silently = False)
+  
+ 
             """
             DELETE ITEMS IN CART!!
             """
