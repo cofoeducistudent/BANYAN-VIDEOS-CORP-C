@@ -191,7 +191,7 @@ DATABASES = {
 # CHECK If IN PRODUCTION
 PRODUCTION = os.getenv("PRODUCTION")
 if PRODUCTION == True:
-    print('Running PRODUCTION MODE!!!')
+     
     DBKEY = os.getenv("DBKEY")
 
     DATABASES = {

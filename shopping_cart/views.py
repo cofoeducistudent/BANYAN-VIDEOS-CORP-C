@@ -1,3 +1,4 @@
+from datetime import date
 from search_results.views import SearchResults
 from my_account import views
 from django.contrib.auth import authenticate, login, logout, get_user_model
@@ -148,8 +149,10 @@ class ShoppingCart(TemplateView):
         # ASSEMBLED FILM ITEM
         b = ShoppingCartModel(
 
+    
         cart_owner = request.user,
         cart_session = session_key,
+        
         
         cart_film_quantity = selected_quantity,
 
@@ -175,6 +178,8 @@ class ShoppingCart(TemplateView):
         cart_film_global_sale = film_wad[0].film_global_sale,
         
         cart_film_clip_link = film_wad[0].film_clip_link,
+        
+        cart_purchase_date =str( date.today ),
 
         )
 
