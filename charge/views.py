@@ -23,6 +23,30 @@ class Charge(TemplateView):
     template_name = 'charge/charge.html'
 
     def post(self, request):
+        
+        
+        """
+        GRAB COMPLETED FORM DETAILS
+        FOR CREATING CONF-EMAIL BODY LATER
+        
+        """
+        customer_details=chr(13)
+        customer_details = customer_details+ "<< RECIEPT ORDER >>"+chr(13)
+        customer_details = customer_details +"TRANSACTION_ID"+ request.POST['sf_transaction_id']+chr(13)
+        customer_details = customer_details+"--------------"+chr(13)
+        customer_details = customer_details + request.POST['sf_username']+chr(13)
+        customer_details = customer_details + request.POST['sf_email']+chr(13)
+        customer_details = customer_details+"--------------"+chr(13)
+        customer_details = customer_details + request.POST['sf_address_line1']+chr(13)
+        customer_details = customer_details + request.POST['sf_address_line2']+chr(13)
+        customer_details = customer_details + request.POST['sf_address_line3']+chr(13)
+        customer_details = customer_details + request.POST['sf_post_code']+chr(13)
+        customer_details = customer_details + request.POST['sf_country']+chr(13)
+        customer_details = customer_details+"--------------"+chr(13)
+  
+        
+        
+        
 
         # CREATE A SESSION IF NOT EXISTING!!
         if not request.session.exists(request.session.session_key):
@@ -95,6 +119,9 @@ class Charge(TemplateView):
             basket_item_count = SCM.count
             
             message_body=""
+            message_body = message_body + customer_details+chr(13)
+            
+            
             for items in SCM:
                 # IIB.append( items.cart_film_quantity+" x "+ items.cart_film_friendly_title+":"+items.cart_film_sku)
                 p1=items.cart_film_quantity
@@ -104,8 +131,11 @@ class Charge(TemplateView):
                 squashed = str(p1)+" x " +str(p2)+" : "+str(p3)
                 
                 message_body = message_body + squashed +chr(13)
+                
+            message_body = message_body +"£ "+ str(final_bill)+chr(13) +chr(13)
 
-            send_mail('SALES ORDER!',message_body,'cofoedu_banyan@hotmail.com',['cofoedu@gmail.com'],fail_silently = False)
+
+            send_mail('BANYAN-VIDEOS-SALES ORDER!',message_body,'cofoedu_banyan@hotmail.com',['cofoedu@gmail.com'],fail_silently = False)
  
  
             """
@@ -135,7 +165,7 @@ class Charge(TemplateView):
         if request.user.is_authenticated:
             """
             IF AN LOGGED IN USER
-            TRANSFER TO PURCHASE HISTORY!!
+            TRANSFER CONTENTS OF CART TO PURCHASE HISTORY!!
             """
 
             # items_bought=[]
@@ -173,13 +203,15 @@ class Charge(TemplateView):
                 
                 
             """
-            SEND OUT EMAIL
+            SEND OUT CONFIRMATION EMAIL TO SALES
             """
             SCM = ShoppingCartModel.objects.filter(
             cart_owner=current_user).filter(cart_session=session_key) 
             basket_item_count = SCM.count
             
             message_body=""
+            message_body = message_body + customer_details + chr(13)
+            
             for items in SCM:
                 # IIB.append( items.cart_film_quantity+" x "+ items.cart_film_friendly_title+":"+items.cart_film_sku)
                 p1=items.cart_film_quantity
@@ -189,8 +221,11 @@ class Charge(TemplateView):
                 squashed = str(p1)+" x " +str(p2)+" : "+str(p3)
                 
                 message_body = message_body + squashed +chr(13)
+                
+            message_body = message_body +"£ "+ str(final_bill)+chr(13)+chr(13)
+                
 
-            send_mail('SALES ORDER!',message_body,'cofoedu_banyan@hotmail.com',['cofoedu@gmail.com'],fail_silently = False)
+            send_mail('BANYAN-VIDEOS-SALES ORDER!',message_body,'cofoedu_banyan@hotmail.com',['cofoedu@gmail.com'],fail_silently = False)
   
  
             """
@@ -216,8 +251,7 @@ class Charge(TemplateView):
             'final_bill_in_stripe_format': final_bill_in_stripe_format,
 
             'SCM': SCM,
-            # 'SF':SF,
-
+      
         }
         
         return render(request, 'charge/charge.html', context)

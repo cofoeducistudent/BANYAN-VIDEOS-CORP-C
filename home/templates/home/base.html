@@ -40,7 +40,6 @@
     <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
     <script src="https://js.stripe.com/v3/"></script>
 
-
     {% endblock core-js %}
 
 </head>
@@ -67,8 +66,6 @@
                     </span>
                 </button>
 
-
-
                 <!-- SECONDARY USERNAME & CART STATUS IN NAVBAR!!!! -->
 
                 {% if current_user %}
@@ -84,7 +81,6 @@
                     {{ basket_item_count }}
                 </a>
 
-
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                     <a class="navbar-brand" href="{% url 'home' %}"><span class="brand">BANYAN-VIDEOS-CORP</span></a>
 
@@ -94,15 +90,10 @@
                             <a class="nav-link" href="{% url 'home' %}">Home<span class="sr-only"></span></a>
                         </li>
 
-
-
-
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'login_register' %}">LogIn/SignUp<span
                                     class="sr-only"></span></a>
                         </li>
-
- 
 
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'my_account' %}">Account<span class="sr-only"></span></a>
@@ -128,15 +119,11 @@
                             <a class="nav-link" href="{% url 'logout' %}">Logout<span class="sr-only"></span></a>
                         </li>
 
-
-
-
-
                         <!-- CURRENT USER -->
                         <li class="nav-item">
                             <a class="nav-link u_c   " href="{% url 'my_account' %}">
 
-                                <span class="fas fa-user" class="sr-only"> 
+                                <span class="fas fa-user" class="sr-only">
 
                                     {% if current_user %}
 
@@ -183,9 +170,6 @@
         </div>
     </div>
 
-
-
-
     <!-- LARGE SEARCH -->
     <div class="row  large-search-bar">
         <div class="d-none d-sm-block">
@@ -217,22 +201,6 @@
 
         </div>
     </div>
-
-
-    <!-- SESSION_KEY FOR DEV TBR!!!!!! -->
-    <div class="row container-fluid">
-        <div class="col-12 text-center">
-            <h1 class="section-small-text text-success">>> {{session_key}} <<</h1>
-        </div>
-    </div>
-
-
-
-
-
-
-
-
 
     <div class="row container-fluid mx-auto">
         <div class="col-12 text-center mx-auto">
@@ -286,7 +254,6 @@
         </div>
 
     </div>
-
 
     {% block post-load-js %}
     {% endblock post-load-js %}
