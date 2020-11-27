@@ -145,6 +145,7 @@ class ShoppingCart(TemplateView):
                 price_paid = round(price_paid,2)
                 
             
+        tdate = str(date.today)    
                 
         # ASSEMBLED FILM ITEM
         b = ShoppingCartModel(
@@ -179,7 +180,7 @@ class ShoppingCart(TemplateView):
         
         cart_film_clip_link = film_wad[0].film_clip_link,
         
-        cart_purchase_date =str( date.today ),
+        cart_purchase_date = tdate,
 
         )
 
