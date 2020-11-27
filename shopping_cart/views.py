@@ -145,7 +145,8 @@ class ShoppingCart(TemplateView):
                 price_paid = round(price_paid,2)
                 
             
-        tdate = str(date.today)    
+        tdate = str(date.day)    
+           
                 
         # ASSEMBLED FILM ITEM
         b = ShoppingCartModel(
