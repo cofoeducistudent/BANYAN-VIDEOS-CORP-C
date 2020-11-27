@@ -11,10 +11,7 @@ from shopping_cart.models import ShoppingCartModel
 from my_account.models import UserPurchaseHistory
 import stripe
 
-
-from django.core.mail   import send_mail
-
-
+from django.core.mail import send_mail
 
 # Create your views here.
 
@@ -23,30 +20,31 @@ class Charge(TemplateView):
     template_name = 'charge/charge.html'
 
     def post(self, request):
-        
-        
         """
         GRAB COMPLETED FORM DETAILS
         FOR CREATING CONF-EMAIL BODY LATER
-        
+
         """
-        customer_details=chr(13)
-        customer_details = customer_details+ "<< RECIEPT ORDER >>"+chr(13)
-        customer_details = customer_details +"TRANSACTION_ID"+ request.POST['sf_transaction_id']+chr(13)
+        customer_details = chr(13)
+        customer_details = customer_details + "<< RECIEPT ORDER >>"+chr(13)
+        customer_details = customer_details + "TRANSACTION_ID" + \
+            request.POST['sf_transaction_id']+chr(13)
         customer_details = customer_details+"--------------"+chr(13)
-        customer_details = customer_details + request.POST['sf_username']+chr(13)
+        customer_details = customer_details + \
+            request.POST['sf_username']+chr(13)
         customer_details = customer_details + request.POST['sf_email']+chr(13)
         customer_details = customer_details+"--------------"+chr(13)
-        customer_details = customer_details + request.POST['sf_address_line1']+chr(13)
-        customer_details = customer_details + request.POST['sf_address_line2']+chr(13)
-        customer_details = customer_details + request.POST['sf_address_line3']+chr(13)
-        customer_details = customer_details + request.POST['sf_post_code']+chr(13)
-        customer_details = customer_details + request.POST['sf_country']+chr(13)
+        customer_details = customer_details + \
+            request.POST['sf_address_line1']+chr(13)
+        customer_details = customer_details + \
+            request.POST['sf_address_line2']+chr(13)
+        customer_details = customer_details + \
+            request.POST['sf_address_line3']+chr(13)
+        customer_details = customer_details + \
+            request.POST['sf_post_code']+chr(13)
+        customer_details = customer_details + \
+            request.POST['sf_country']+chr(13)
         customer_details = customer_details+"--------------"+chr(13)
-  
-        
-        
-        
 
         # CREATE A SESSION IF NOT EXISTING!!
         if not request.session.exists(request.session.session_key):
@@ -84,15 +82,8 @@ class Charge(TemplateView):
 
         final_bill_in_stripe_format = int(final_bill * 100)
 
-
-
-
         #  DELETE ITEM...TEMPORARY..REMOVE LATER!!!!!
         # UserPurchaseHistory.objects.filter(pk=1).delete()
-
-
-
-
 
         """
         GO AND MAKE A CHARGE TO STRIPE USING RECEIVED TOKEN !!!
@@ -109,58 +100,43 @@ class Charge(TemplateView):
                     description='A Banyan-Videos-Corp charge',
                     source=request.POST['stripeToken']
                 )
-               
-               
+
             """
             SEND OUT EMAIL
             """
             SCM = ShoppingCartModel.objects.filter(
-            cart_owner=current_user).filter(cart_session=session_key) 
+                cart_owner=current_user).filter(cart_session=session_key)
             basket_item_count = SCM.count
-            
-            message_body=""
+
+            message_body = ""
             message_body = message_body + customer_details+chr(13)
-            
-            
+
             for items in SCM:
-                # IIB.append( items.cart_film_quantity+" x "+ items.cart_film_friendly_title+":"+items.cart_film_sku)
-                p1=items.cart_film_quantity
-                p2=items.cart_film_friendly_title
-                p3=items.cart_film_sku
-                
-                squashed = str(p1)+" x " +str(p2)+" : "+str(p3)
-                
-                message_body = message_body + squashed +chr(13)
-                
-            message_body = message_body +"£ "+ str(final_bill)+chr(13) +chr(13)
+                p1 = items.cart_film_quantity
+                p2 = items.cart_film_friendly_title
+                p3 = items.cart_film_sku
 
+                squashed = str(p1)+" x " + str(p2)+" : "+str(p3)
 
-            send_mail('BANYAN-VIDEOS-SALES ORDER!',message_body,'cofoedu_banyan@hotmail.com',['cofoedu@gmail.com'],fail_silently = False)
- 
- 
+                message_body = message_body + squashed + chr(13)
+
+            message_body = message_body + "£ " + \
+                str(final_bill)+chr(13) + chr(13)
+
+            send_mail('BANYAN-VIDEOS-SALES ORDER!', message_body,
+                      'cofoedu_banyan@hotmail.com', ['cofoedu@gmail.com'], fail_silently=False)
+
             """
             DELETE ITEMS IN CART!!
             """
             for items in SCM:
                 SCM.filter(cart_owner=current_user).filter(
                     cart_session=session_key).delete()
-            
- 
- 
+
         except Exception as e:
             messages.info(
-                request, 'This Transcation request Failed! Please ensure you are not repeating the Transaction! / '+ str(e) )
+                request, 'This Transcation request Failed! Please ensure you are not repeating the Transaction! / ' + str(e))
             redirect('home')
-
-
-
-
-
-
-
-
-
-
 
         if request.user.is_authenticated:
             """
@@ -199,47 +175,38 @@ class Charge(TemplateView):
                 )
 
                 b.save()
-                
-                
-                
+
             """
             SEND OUT CONFIRMATION EMAIL TO SALES
             """
             SCM = ShoppingCartModel.objects.filter(
-            cart_owner=current_user).filter(cart_session=session_key) 
+                cart_owner=current_user).filter(cart_session=session_key)
             basket_item_count = SCM.count
-            
-            message_body=""
-            message_body = message_body + customer_details + chr(13)
-            
-            for items in SCM:
-                # IIB.append( items.cart_film_quantity+" x "+ items.cart_film_friendly_title+":"+items.cart_film_sku)
-                p1=items.cart_film_quantity
-                p2=items.cart_film_friendly_title
-                p3=items.cart_film_sku
-                
-                squashed = str(p1)+" x " +str(p2)+" : "+str(p3)
-                
-                message_body = message_body + squashed +chr(13)
-                
-            message_body = message_body +"£ "+ str(final_bill)+chr(13)+chr(13)
-                
 
-            send_mail('BANYAN-VIDEOS-SALES ORDER!',message_body,'cofoedu_banyan@hotmail.com',['cofoedu@gmail.com'],fail_silently = False)
-  
- 
+            message_body = ""
+            message_body = message_body + customer_details + chr(13)
+
+            for items in SCM:
+                p1 = items.cart_film_quantity
+                p2 = items.cart_film_friendly_title
+                p3 = items.cart_film_sku
+
+                squashed = str(p1)+" x " + str(p2)+" : "+str(p3)
+
+                message_body = message_body + squashed + chr(13)
+
+            message_body = message_body + "£ " + \
+                str(final_bill)+chr(13)+chr(13)
+
+            send_mail('BANYAN-VIDEOS-SALES ORDER!', message_body,
+                      'cofoedu_banyan@hotmail.com', ['cofoedu@gmail.com'], fail_silently=False)
+
             """
             DELETE ITEMS IN CART!!
             """
             for items in SCM:
                 SCM.filter(cart_owner=current_user).filter(
                     cart_session=session_key).delete()
-
-
-
-
-
-
 
         context = {
 
@@ -251,7 +218,7 @@ class Charge(TemplateView):
             'final_bill_in_stripe_format': final_bill_in_stripe_format,
 
             'SCM': SCM,
-      
+
         }
-        
+
         return render(request, 'charge/charge.html', context)
