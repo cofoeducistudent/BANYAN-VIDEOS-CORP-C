@@ -244,6 +244,8 @@ class Charge(TemplateView):
                 SCM.filter(cart_owner=current_user).filter(
                     cart_session=session_key).delete()
 
+
+
         context = {
 
             'session_key': session_key,
