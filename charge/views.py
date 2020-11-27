@@ -25,15 +25,25 @@ class Charge(TemplateView):
         FOR CREATING CONF-EMAIL BODY LATER
 
         """
+        
+        
+        SALES_DEPT_EMAIL = 'cofoedu@gmail.com'
+        
+        
+        
+        
         customer_details = chr(13)
-        customer_details = customer_details + "<< RECIEPT ORDER >>"+chr(13)
+        
+        customer_details = customer_details + "<< BANYAN-VIDEOS-CORP. ORDER RECEIPT >>"+chr(13)
         customer_details = customer_details + "TRANSACTION_ID" + \
             request.POST['sf_transaction_id']+chr(13)
-        customer_details = customer_details+"--------------"+chr(13)
+        customer_details = customer_details + \
+            "----------------------------"+chr(13)
         customer_details = customer_details + \
             request.POST['sf_username']+chr(13)
         customer_details = customer_details + request.POST['sf_email']+chr(13)
-        customer_details = customer_details+"--------------"+chr(13)
+        customer_details = customer_details + \
+            "----------------------------"+chr(13)
         customer_details = customer_details + \
             request.POST['sf_address_line1']+chr(13)
         customer_details = customer_details + \
@@ -44,7 +54,8 @@ class Charge(TemplateView):
             request.POST['sf_post_code']+chr(13)
         customer_details = customer_details + \
             request.POST['sf_country']+chr(13)
-        customer_details = customer_details+"--------------"+chr(13)
+        customer_details = customer_details + \
+            "----------------------------"+chr(13)
 
         # CREATE A SESSION IF NOT EXISTING!!
         if not request.session.exists(request.session.session_key):
@@ -71,6 +82,12 @@ class Charge(TemplateView):
         if basket_item_count < 1:
             return redirect('shopping_cart')
 
+
+
+
+
+
+
         # WORKOUT BILL FOR CUSTOMER
         total_to_pay = 0
         for line_items in SCM:
@@ -82,8 +99,7 @@ class Charge(TemplateView):
 
         final_bill_in_stripe_format = int(final_bill * 100)
 
-        #  DELETE ITEM...TEMPORARY..REMOVE LATER!!!!!
-        # UserPurchaseHistory.objects.filter(pk=1).delete()
+    
 
         """
         GO AND MAKE A CHARGE TO STRIPE USING RECEIVED TOKEN !!!
@@ -102,7 +118,7 @@ class Charge(TemplateView):
                 )
 
             """
-            SEND OUT EMAIL
+            SEND OUT EMAIL RECEIPT
             """
             SCM = ShoppingCartModel.objects.filter(
                 cart_owner=current_user).filter(cart_session=session_key)
@@ -124,24 +140,44 @@ class Charge(TemplateView):
                 str(final_bill)+chr(13) + chr(13)
 
             send_mail('BANYAN-VIDEOS-SALES ORDER!', message_body,
-                      'cofoedu_banyan@hotmail.com', ['cofoedu@gmail.com'], fail_silently=False)
+                      'cofoedu_banyan@hotmail.com', [ SALES_DEPT_EMAIL,  request.POST['sf_email']], fail_silently=False)
+
 
             """
-            DELETE ITEMS IN CART!!
+            SALE COMPLETE ......THIS USER IS ANONYMOUS, THEREFORE DELETE ITEMS IN CART!!
             """
             for items in SCM:
                 SCM.filter(cart_owner=current_user).filter(
                     cart_session=session_key).delete()
 
+
+
         except Exception as e:
             messages.info(
                 request, 'This Transcation request Failed! Please ensure you are not repeating the Transaction! / ' + str(e))
+            
             redirect('home')
+
+
+
+
+
+
+
+
+
+
+
+
+
+        """
+        ///////////////////////////////// LOGGED IN USER PROCESSING /////////
+        """
 
         if request.user.is_authenticated:
             """
             IF AN LOGGED IN USER
-            TRANSFER CONTENTS OF CART TO PURCHASE HISTORY!!
+            SAVE .....CONTENTS OF CART TO PURCHASE HISTORY!!
             """
 
             # items_bought=[]
@@ -199,7 +235,7 @@ class Charge(TemplateView):
                 str(final_bill)+chr(13)+chr(13)
 
             send_mail('BANYAN-VIDEOS-SALES ORDER!', message_body,
-                      'cofoedu_banyan@hotmail.com', ['cofoedu@gmail.com'], fail_silently=False)
+                      'cofoedu_banyan@hotmail.com', [ SALES_DEPT_EMAIL, request.POST['sf_email']], fail_silently=False)
 
             """
             DELETE ITEMS IN CART!!
