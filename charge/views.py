@@ -25,16 +25,13 @@ class Charge(TemplateView):
         FOR CREATING CONF-EMAIL BODY LATER
 
         """
-        
-        
+
         SALES_DEPT_EMAIL = 'cofoedu@gmail.com'
-        
-        
-        
-        
+
         customer_details = chr(13)
-        
-        customer_details = customer_details + "<< BANYAN-VIDEOS-CORP. ORDER RECEIPT >>"+chr(13)
+
+        customer_details = customer_details + \
+            "<< BANYAN-VIDEOS-CORP. ORDER RECEIPT >>"+chr(13)
         customer_details = customer_details + "TRANSACTION_ID" + \
             request.POST['sf_transaction_id']+chr(13)
         customer_details = customer_details + \
@@ -82,12 +79,6 @@ class Charge(TemplateView):
         if basket_item_count < 1:
             return redirect('shopping_cart')
 
-
-
-
-
-
-
         # WORKOUT BILL FOR CUSTOMER
         total_to_pay = 0
         for line_items in SCM:
@@ -98,8 +89,6 @@ class Charge(TemplateView):
         final_bill = round((total_to_pay+shipping_charge), 2)
 
         final_bill_in_stripe_format = int(final_bill * 100)
-
-    
 
         """
         GO AND MAKE A CHARGE TO STRIPE USING RECEIVED TOKEN !!!
@@ -140,8 +129,7 @@ class Charge(TemplateView):
                 str(final_bill)+chr(13) + chr(13)
 
             send_mail('BANYAN-VIDEOS-SALES ORDER!', message_body,
-                      'cofoedu_banyan@hotmail.com', [ SALES_DEPT_EMAIL,  request.POST['sf_email']], fail_silently=False)
-
+                      'cofoedu_banyan@hotmail.com', [SALES_DEPT_EMAIL,  request.POST['sf_email']], fail_silently=False)
 
             """
             SALE COMPLETE ......THIS USER IS ANONYMOUS, THEREFORE DELETE ITEMS IN CART!!
@@ -151,40 +139,25 @@ class Charge(TemplateView):
                     SCM.filter(cart_owner=current_user).filter(
                         cart_session=session_key).delete()
 
-
-
         except Exception as e:
             messages.info(
                 request, 'This Transcation request Failed! Please ensure you are not repeating the Transaction! / ' + str(e))
-            
+
             redirect('home')
-
-
-
-
-
-
-
-
-
-
 
         else:
 
             """
             ///////////////////////////////// LOGGED IN USER PROCESSING /////////
             """
-        
-            
+
         if request.user.is_authenticated:
             """
             IF A LOGGED IN USER
             SAVE .....CONTENTS OF CART TO PURCHASE HISTORY!!
             """
-            messages.info(request,'WANNABE!!')
- 
+
             dtd = str(date.today())
-           
 
             SCM = ShoppingCartModel.objects.filter(
                 cart_owner=current_user).filter(cart_session=session_key)
@@ -237,7 +210,7 @@ class Charge(TemplateView):
                 str(final_bill)+chr(13)+chr(13)
 
             send_mail('BANYAN-VIDEOS-SALES ORDER!', message_body,
-                      'cofoedu_banyan@hotmail.com', [ SALES_DEPT_EMAIL, request.POST['sf_email']], fail_silently=False)
+                      'cofoedu_banyan@hotmail.com', [SALES_DEPT_EMAIL, request.POST['sf_email']], fail_silently=False)
 
             """
             DELETE ITEMS IN CART!!
@@ -245,8 +218,6 @@ class Charge(TemplateView):
             for items in SCM:
                 SCM.filter(cart_owner=current_user).filter(
                     cart_session=session_key).delete()
-
-
 
         context = {
 
