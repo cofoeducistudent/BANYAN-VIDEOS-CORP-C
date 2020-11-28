@@ -16,6 +16,7 @@
         <hr>
         <p class="lead">Members only content below</p>
 
+        <button class="btn btn-lg btn-success payment-button"><a class="text-dark" href="{% url 'my_account' %}">MY ACCOUNT</a></button>
       </div>
     </div>
 
@@ -26,12 +27,14 @@
       <!-- /////----///// -->
 
       <div class="card">
-        <div class="card-header " id="headingOne">
+        <div class="card-header aria-expanded" id="headingOne">
           <h2 class="mb-0">
+
             <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
               data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
               Video - Clips
             </button>
+
           </h2>
         </div>
 
@@ -45,6 +48,9 @@
               <div class="col-4  bg-secondary my-1 px-2 py-2 w-100 text-center">
 
                 <h1 class="text-white text-big">{{video_snippets.film_friendly_title}}</h1>
+
+
+
 
 
                 {% if video_snippets.film_clip_link %}
