@@ -55,12 +55,10 @@
 <!-- PURCHASE HISTORY SECTION!!! -->
 
 <div class="row container-fluid my-5">
-  <div class="col-12 mx-3">
-
-  
+  <div class="col-12">
 
     <div class="jumbotron">
-      <h1 class="display-4">PURCHASE HISTORY!</h1>
+      <h1 class="display-5">PURCHASE HISTORY!</h1>
       <p class="lead">Please see your purchase history below</p>
       <hr class="my-4">
 
@@ -69,27 +67,22 @@
 
           <td class="section-tiny-text px-2">Date</td>
 
-
           <td class="section-tiny-text px-2 d-none d-lg-block">User</td>
-
 
           <td class="section-tiny-text px-2 d-none d-lg-block">Transaction Id</td>
 
           <td class="section-tiny-text px-2">Qty</td>
           <td class="section-tiny-text px-2">Price Paid</td>
           <td class="section-tiny-text px-2 d-none d-lg-block">Genre</td>
-          <td class="section-tiny-text px-2">Sku</td>
+          <td class="section-tiny-text px-2 d-none d-lg-block">Sku</td>
           <td class="section-tiny-text px-2">Title</td>
 
-          <td class="section-tiny-text px-2">Image</td>
-
-
+          <td class="section-tiny-text px-2  d-none d-lg-block ">Image</td>
 
           <td class="section-tiny-text px-2 d-none d-lg-block">Description</td>
 
-
           <td class="section-tiny-text px-2 d-none d-lg-block">Unit Price</td>
-          <td class="section-tiny-text px-2">Member Discount </td>
+          <td class="section-tiny-text px-2  d-none d-lg-block">Member Discount </td>
         </tr>
 
         {% for entry in purchase_history %}
@@ -102,17 +95,17 @@
           <td class="section-tiny-text px-2">{{ entry.ph_cart_film_quantity }}</td>
           <td class="section-tiny-text px-2">{{ entry.ph_cart_price_paid}}</td>
           <td class="section-tiny-text px-2 d-none d-lg-block">{{ entry.ph_cart_film_genre }}</td>
-          <td class="section-tiny-text px-2">{{ entry.ph_cart_film_sku }}</td>
+          <td class="section-tiny-text px-2 d-none d-lg-block">{{ entry.ph_cart_film_sku }}</td>
           <td class="section-tiny-text px-2">{{ entry.ph_cart_film_friendly_title}}</td>
-          
-          <td class="section-tiny-text px-2">
+
+          <td class="section-tiny-text px-2 d-none d-lg-block">
             <image class="cart-pic" src="{{ entry.ph_cart_film_box_cover_url }}"></image>
           </td>
 
           <td class="section-tiny-text px-2 d-none d-lg-block">{{ entry.ph_cart_film_description}}</td>
 
           <td class="section-tiny-text px-2 d-none d-lg-block">{{ entry.ph_cart_film_price}}</td>
-          <td class="section-tiny-text px-2">{{ entry.ph_cart_film_product_discount}}</td>
+          <td class="section-tiny-text px-2  d-none d-lg-block">{{ entry.ph_cart_film_product_discount}}</td>
 
         </tr>
         {% endfor %}
