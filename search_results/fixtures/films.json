@@ -422,6 +422,148 @@
         "film_global_sale": "False",
         "film_clip_link":"https://www.youtube.com/watch?v=T5ke9IPTIJQ"
     }
+    },
+
+
+
+    {
+        "model": "search_results.films",
+        "pk": 24,
+        "fields": {
+        "film_sku": "923712",
+        "film_genre": "6",
+        "film_title": "Seven_Brides_for_Seven_Brothers",
+        "film_friendly_title": "Seven Brides for Seven Brothers",
+        "film_box_cover_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Seven_Brides_for_Seven_Brothers_%281954_poster%29.jpg/220px-Seven_Brides_for_Seven_Brothers_%281954_poster%29.jpg",
+        "film_description":"Seven Brides for Seven Brothers is a 1954 American musical film, directed by Stanley Donen, with music by Saul Chaplin and Gene de Paul, lyrics by Johnny Mercer, and choreography by Michael Kidd. The screenplay, by Albert Hackett, Frances Goodrich, and Dorothy Kingsley, is based on the short story 'The Sobbin' Women', by Stephen Vincent Benét, which was based in turn on the ancient Roman legend of the Rape of the Sabine Women. ",
+        "film_price": 7.99,
+        "film_product_discount": 10.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":"https://www.youtube.com/watch?v=oe9rr33eAFU"
     }
+    },
+
+        {
+        "model": "search_results.films",
+        "pk": 25,
+        "fields": {
+        "film_sku": "232398",
+        "film_genre": "8",
+        "film_title": "the_black_hole",
+        "film_friendly_title": "The Black Hole",
+        "film_box_cover_url": "https://upload.wikimedia.org/wikipedia/en/thumb/e/e7/The_Black_Hole.jpg/220px-The_Black_Hole.jpg",
+        "film_description":"The Black Hole is a 1979 American dark science fiction film directed by Gary Nelson and produced by Walt Disney Productions. The film stars Maximilian Schell, Robert Forster, Joseph Bottoms, Yvette Mimieux, Anthony Perkins and Ernest Borgnine, while the voices of the main robot characters are provided by Roddy McDowall and Slim Pickens (both uncredited). The music for the film was composed by John Barry.",
+        "film_price": 14.99,
+        "film_product_discount": 0.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":"https://www.youtube.com/watch?v=hKYFa9FHEU4"
+    }
+    },
+
+    {
+        "model": "search_results.films",
+        "pk": 26,
+        "fields": {
+        "film_sku": "111333",
+        "film_genre": "8",
+        "film_title": "alien",
+        "film_friendly_title": "Alien",
+        "film_box_cover_url": "https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Alien_movie_poster.jpg/220px-Alien_movie_poster.jpg",
+        "film_description":"Alien is a 1979 science fiction horror film directed by Ridley Scott and written by Dan O'Bannon. Based on a story by O'Bannon and Ronald Shusett, it follows the crew of the commercial space tug Nostromo, who encounter the eponymous Alien, a deadly and aggressive extraterrestrial set loose on the ship. The film stars Tom Skerritt, Sigourney Weaver, Veronica Cartwright, Harry Dean Stanton, John Hurt, Ian Holm, and Yaphet Kotto. It was produced by Gordon Carroll, David Giler, and Walter Hill through their company Brandywine Productions, and was distributed by 20th Century Fox.",
+        "film_price": 9.99,
+        "film_product_discount": 0.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":"https://www.youtube.com/watch?v=LjLamj-b0I8"
+    }
+    },
+
+    {
+        "model": "search_results.films",
+        "pk": 27,
+        "fields": {
+        "film_sku": "445657",
+        "film_genre": "1",
+        "film_title": "flash_gordon",
+        "film_friendly_title": "Flash Gordon(1980)",
+        "film_box_cover_url": "https://upload.wikimedia.org/wikipedia/en/5/50/Flash_gordon_movie_poster.jpg",
+        "film_description":"Flash Gordon is a 1980 space opera film directed by Mike Hodges, based on the King Features comic strip of the same name created by Alex Raymond. The film stars Sam J. Jones, Melody Anderson, Ornella Muti, Max von Sydow and Topol, with Timothy Dalton, Mariangela Melato, Brian Blessed and Peter Wyngarde in supporting roles. The film follows star quarterback Flash Gordon (Jones) and his allies Dale Arden (Anderson) and Hans Zarkov (Topol) as they unite the warring factions of the planet Mongo against the oppression of Ming the Merciless (von Sydow), who is intent on destroying Earth.",
+        "film_price": 12.99,
+        "film_product_discount": 10.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":"https://www.youtube.com/watch?v=O6uOHnxf85g"
+    }
+    },
+
+    {
+        "model": "search_results.films",
+        "pk": 28,
+        "fields": {
+        "film_sku": "28",
+        "film_genre": "8",
+        "film_title": "moon",
+        "film_friendly_title": "Moon (2009)",
+        "film_box_cover_url": "https://upload.wikimedia.org/wikipedia/en/thumb/b/b0/Moon_%282008%29_film_poster.jpg/215px-Moon_%282008%29_film_poster.jpg",
+        "film_description":"Moon is a 2009 science fiction film directed by Duncan Jones (in his directorial debut) and written by Nathan Parker from a story by Jones. The film follows Sam Bell (Sam Rockwell), a man who experiences a personal crisis as he nears the end of a three-year solitary stint mining helium-3 on the far side of the Moon. Kevin Spacey voices Sam's robot companion, GERTY. Moon premiered at the 2009 Sundance Film Festival ",
+        "film_price": 9.99,
+        "film_product_discount": 0.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":"https://www.youtube.com/watch?v=WWoDBcSW4_c"
+    }
+    },
+
+    {
+        "model": "search_results.films",
+        "pk": 29,
+        "fields": {
+        "film_sku": "678432",
+        "film_genre": "8",
+        "film_title": "blade_runner_2049",
+        "film_friendly_title": "Blade Runner 2049",
+        "film_box_cover_url": "https://upload.wikimedia.org/wikipedia/en/9/9b/Blade_Runner_2049_poster.png",
+        "film_description":"Blade Runner 2049 is a 2017 American science fiction film directed by Denis Villeneuve and written by Hampton Fancher and Michael Green. A sequel to the 1982 film Blade Runner, the film stars Ryan Gosling and Harrison Ford, with Ana de Armas, Sylvia Hoeks, Robin Wright, Mackenzie Davis, Carla Juri, Lennie James, Dave Bautista, and Jared Leto in supporting roles. Ford and Edward James Olmos reprise their roles from the original. Gosling plays K, a Nexus-9 replicant 'blade runner' who uncovers a secret that threatens to destabilize society and the course of civilization.",
+        "film_price": 13.99,
+        "film_product_discount": 10.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":"https://www.youtube.com/watch?v=gCcx85zbxz4"
+    }
+    },
+
+    {
+        "model": "search_results.films",
+        "pk": 30,
+        "fields": {
+        "film_sku": "999234",
+        "film_genre": "1",
+        "film_title": "man_of_steel",
+        "film_friendly_title": "Man of Steel",
+        "film_box_cover_url": "https://upload.wikimedia.org/wikipedia/en/thumb/8/85/ManofSteelFinalPoster.jpg/220px-ManofSteelFinalPoster.jpg",
+        "film_description":"Man of Steel is a 2013 superhero film based on the DC Comics character Superman. Produced by Warner Bros. Pictures, Legendary Pictures, DC Entertainment, Syncopy and Peters Entertainment, and distributed by Warner Bros. Pictures, it is a British-American production[2] and the first installment in the DC Extended Universe (DCEU).[5][6] The film is directed by Zack Snyder, written by David S. Goyer, and stars Henry Cavill, Amy Adams, Michael Shannon, Kevin Costner, Diane Lane, Laurence Fishburne, Antje Traue, Ayelet Zurer, Christopher Meloni and Russell Crowe.",
+        "film_price": 9.99,
+        "film_product_discount": 0.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":"https://www.youtube.com/watch?v=T6DJcgm3wNY"
+    }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ]
