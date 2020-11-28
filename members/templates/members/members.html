@@ -1,21 +1,14 @@
 {% extends 'home/base.html' %}
 {% load static %}
 
-
 {% block post-title %} members-page {% endblock post-title %}
 
-
 {% block main-content %}
-
-
 
 <div class="row container-fluid">
   <div class="col-12 mx-3">
 
     <!-- <h1 class="section-title text-center">MEMBERS!</h1> -->
-
-
-
 
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
@@ -26,16 +19,147 @@
       </div>
     </div>
 
+    <!-- // -->
+
+    <div class="accordion" id="accordionExample">
+
+      <!-- /////----///// -->
+
+      <div class="card">
+        <div class="card-header " id="headingOne">
+          <h2 class="mb-0">
+            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+              data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Video - Clips
+            </button>
+          </h2>
+        </div>
+
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+          <div class="card-body">
+
+            <div class="row container-fluid">
+
+              {% for video_snippets in FLM %}
+
+              <div class="col-4  bg-secondary my-1 px-2 py-2 text-center">
+
+                <h1 class="text-white text-big">{{video_snippets.film_friendly_title}}</h1>
+
+              </div>
+
+
+
+              <!-- /-/ -->
+
+              <div class="col-4 bg-light text-center my-5">
+
+                {% if video_snippets.film_clip_link %}
+                <button class="btn btn-sm btn-primary login_register-buttons"><a
+                    href="{{ video_snippets.film_clip_link }}" target="_blank">Play-Clip</a></button>
+                {%endif%}
+
+                {%  if not video_snippets.film_clip_link %}
+                <h1 class="px-2 py-2">SORRY - NO VIDEO CLIP AVAILABLE AT PRESENT</h1>
+                {% endif %}
+
+              </div>
+
+              <!-- /-/ -->
+
+
+
+              <div class="col-4 bg-secondary my-1 px-2 py-2">
+                <h1 class="text-white">{{ video_snippets.film_description }}</h1>
+
+                <hr>
+              </div>
+
+              {% endfor%}
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- /////----///// -->
+
+      <div class="card my-5">
+        <div class="card-header" id="headingTwo">
+          <h2 class="mb-0">
+            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+              data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              News - Snippets
+            </button>
+          </h2>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+          <div class="card-body">
+
+
+
+
+
+            {% for items in SNP %}
+            <div class="row">
+
+              <div class="col-12">
+               <h1 class="bg-dark text-white px-2 my-2 ">{{ items.snippet_friendly_name }}</h1>
+              </div>
+
+              <div class="div col-12">
+                <image class="img-fluid" src="{{ items.snippet_image }}"></image>
+              </div>
+
+              <div class="col-12 text-muted">
+                {{ items.snippet_detail }}
+              </div>
+
+            </div>
+
+            {% endfor %}
 
 
 
 
 
 
+          </div>
+         
 
+
+
+
+
+        </div>
+      </div>
+    </div>
+
+    <!-- /////----///// -->
+
+    <div class="card my-5">
+      <div class="card-header" id="headingThree">
+        <h2 class="mb-0">
+          <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+            data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Discussion & Comments
+          </button>
+        </h2>
+      </div>
+      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+        <div class="card-body">
+
+          TEST
+
+        </div>
+      </div>
+    </div>
   </div>
+
+  <!-- // -->
+
 </div>
-
-
+</div>
 
 {% endblock main-content %}

@@ -1,3 +1,4 @@
+import search_results
 from home.views import HomePageView
 from django.http import request
 from django.contrib.auth import authenticate, login, logout, get_user_model
@@ -11,6 +12,8 @@ from django.views.generic   import TemplateView
 
 from shopping_cart.models  import ShoppingCartModel
 
+from search_results.models  import  Films
+from home.models    import Snippet
  
 # Create your views here.
 
@@ -22,7 +25,8 @@ class Members(TemplateView):
     def get(self, request):
         
     
-    
+        FLM = Films.objects.all()
+        SNP = Snippet.objects.all()
     
         
     # CREATE A SESSION IF NOT EXISTING!!
@@ -41,6 +45,18 @@ class Members(TemplateView):
         if request.user.is_authenticated:
             current_user = request.user
         
+           
+
+                
+
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -56,7 +72,9 @@ class Members(TemplateView):
             'session_key':session_key,
             'current_user':current_user,
             'basket_item_count':basket_item_count,
-            'SCM':SCM, 
+            'SCM':SCM,
+            'FLM':FLM,
+            'SNP':SNP,
              
         }
     
