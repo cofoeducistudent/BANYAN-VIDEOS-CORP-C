@@ -101,7 +101,7 @@ class Charge(TemplateView):
 
                 charge = stripe.Charge.create(
                     amount=final_bill_in_stripe_format,
-                    currency='gbp',
+                    currency='GBP',
                     description='A Banyan-Videos-Corp charge',
                     source=request.POST['stripeToken']
                 )

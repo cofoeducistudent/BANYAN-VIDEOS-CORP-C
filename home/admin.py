@@ -12,7 +12,7 @@ class FrontPageCarouselAdmin(admin.ModelAdmin):
     ordering = ('c_item',)
     
 class ArticleAdmin(admin.ModelAdmin):
-    list_display = ('article_name', 'article_friendly_name', 'article_image')
+    list_display = ('article_live', 'article_name', 'article_friendly_name', 'article_image' )
 
     ordering = ('article_name', )
     

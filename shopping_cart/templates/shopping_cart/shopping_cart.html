@@ -1,9 +1,7 @@
 {% extends 'home/base.html' %}
 {% load static %}
 
-
 {% block post-title %} shopping-cart-page {% endblock post-title %}
-
 
 {% block main-content %}
 
@@ -25,24 +23,19 @@
 <!-- ALERT -->
 <div class="row container-fluid">
     <div class="col-12 mx-2">
-        <div class="alert alert-warning" role="alert">
+        <div class="alert alert-secondary" role="alert">
             <p>Below are the contents of your shopping cart</p>
-            <p><strong>* Please note % Discounts are applied to members only!</strong></p>
+            <p><strong>* Please note, % Discounts are applied to members only!</strong></p>
             <p><strong>* The subtotal includes (discount x quantity) per line item</strong></p>
-            <p>* ~ Shipping Charges 10% applicable to orders < £30.00 ~ </p>
+            <p>Note: * ~ Shipping Charges @10% applicable to orders < £30.00 ~ </p>
         </div>
     </div>
 </div>
-
-
-
-
 
 <div class="row container-fluid">
     <div class="col-12 mx-3 ">
 
         <h1 class="section-title text-center"><span class="my-item fas fa-shopping-cart my-item"></span></h1>
-
 
         <!-- COSTINGS BLOCK! -->
         <div class="row">
@@ -65,19 +58,13 @@
         <div class="row">
             <div class="col-12 payment-block">
 
-
-
                 <form action="{% url 'checkout' %}" method="POST">
                     {% csrf_token %}
 
                     <ul>
 
                         <li class="pay-selector"> <button class="btn btn-lg btn-danger my-2   payment-button" name=""
-                                type="submit"><span class="fab fa-cc-stripe"></span> PAY WITH - STRIPE!</button> </li>
-
-                                <!-- FOR FUTURE INTEGRATION PAYPAL! -->
-                        <!-- <li class="pay-selector"> <button class="btn btn-lg btn-danger my-2   payment-button" name=""
-                                type="submit"><span class="fab fa-cc-paypal"></span> PAY WITH - PAYPAL!</button> </li> -->
+                                type="submit"><span class="fab fa-cc-stripe"></span> PAY WITH CC</button> </li>
 
                     </ul>
 
@@ -88,16 +75,11 @@
             </div>
         </div>
 
-
-
-      <!-- JUMBOTRON -->
+        <!-- JUMBOTRON -->
         <div class="jumbotron jumbotron-fluid">
             <div class="container-fluid">
 
-
-
-                <h1 class="section-title-text text-center"><strong>THE FOLLOWING ITEMS ARE IN YOUR CART</strong></h1>
-               
+                <h1 class="section-title-text text-center"><strong>THE FOLLOWING ITEMS ARE IN YOUR SHOPPING CART</strong></h1>
 
                 <!-- LIST CONTENTS OF SHOPPING CART -->
                 <div class="row mx-auto">
@@ -105,7 +87,6 @@
 
                         {% if basket_item_count  %}
                         <table class="">
-
 
                             <tr class="section-tiny-text">
                                 <td class="table-spacer">DELETE</td>
@@ -121,13 +102,7 @@
                                 <td class="table-spacer ">TOT</td>
                             </tr>
 
-
-
-
-
                             {% for items in SCM %}
-
-
 
                             <h1 class="section-tiny-text">{{ items.product_session }}</h1>
                             <tr>
@@ -143,31 +118,17 @@
                                     </form>
                                 </td>
 
-
-
                                 <td>
                                     <h2 class="cart-items cart-text">{{ items.cart_film_quantity }}</h2>
                                 </td>
-
-
- 
-
 
                                 <td class="d-none d-md-block">
                                     <h2 class="cart-items cart-text">{{ items.cart_film_sku }}</h2>
                                 </td>
 
-
-
-
-
                                 <td>
                                     <h2 class="cart-items cart-text">{{ items.cart_film_friendly_title }}</h2>
                                 </td>
-
-
-
-
 
                                 <td class="d-none d-md-block text-justify" style='border:single'>
                                     <h2 class="cart-items cart-text">{{ items.cart_film_description }}</h2>
@@ -180,30 +141,19 @@
                                     </h2>
                                 </td>
 
-
-
-
-
-
                                 <td>
                                     <h2 class="cart-items cart-text">{{ items.cart_film_price }}</h2>
                                 </td>
-
-
-
 
                                 <td class="d-none d-sm-block">
                                     <h2 class="cart-items cart-text"> -% {{ items.cart_film_product_discount }}
                                     </h2>
                                 </td>
 
-
                                 <td class="">
                                     <!-- Product price total with discount -->
                                     <h2 class="cart-items cart-text"><b>{{ items.cart_price_paid }}</b></h2>
                                 </td>
-
-
 
                             </tr>
 
@@ -212,22 +162,13 @@
                         <hr>
                         {% endif %}
 
-
-
                     </div>
                 </div>
-
 
             </div>
         </div>
 
         <!-- // JUMBOTRON END -->
-
- 
-
-
-
-
 
         {% endblock main-content %}
 

@@ -88,6 +88,7 @@
 
             {% for items in articles  %}
 
+            {% if items.article_live  %}
             <h1 class="section-title">{{ items.article_friendly_name }}</h1>
 
             <image class="img-fluid " src="{{ items.article_image }}"></image>
@@ -95,6 +96,8 @@
             <h1 class="section-content text-justify">{{ items.article_content }}</h1>
 
             <hr>
+            {% endif %}
+
 
             {% endfor %}
 
