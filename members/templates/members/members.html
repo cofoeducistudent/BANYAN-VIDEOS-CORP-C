@@ -42,17 +42,10 @@
 
               {% for video_snippets in FLM %}
 
-              <div class="col-4  bg-secondary my-1 px-2 py-2 text-center">
+              <div class="col-4  bg-secondary my-1 px-2 py-2 w-100 text-center">
 
                 <h1 class="text-white text-big">{{video_snippets.film_friendly_title}}</h1>
 
-              </div>
-
-
-
-              <!-- /-/ -->
-
-              <div class="col-4 bg-light text-center my-5">
 
                 {% if video_snippets.film_clip_link %}
                 <button class="btn btn-sm btn-primary login_register-buttons"><a
@@ -60,16 +53,16 @@
                 {%endif%}
 
                 {%  if not video_snippets.film_clip_link %}
-                <h1 class="px-2 py-2">SORRY - NO VIDEO CLIP AVAILABLE AT PRESENT</h1>
+                <h1 class="px-2 py-2">NO VIDEO</h1>
                 {% endif %}
+
 
               </div>
 
-              <!-- /-/ -->
 
+ 
 
-
-              <div class="col-4 bg-secondary my-1 px-2 py-2">
+              <div class="col-8 bg-secondary my-1 px-2 py-2 w-100">
                 <h1 class="text-white">{{ video_snippets.film_description }}</h1>
 
                 <hr>
