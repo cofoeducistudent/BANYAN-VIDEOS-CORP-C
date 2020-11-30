@@ -1,7 +1,6 @@
 {% extends 'home/base.html' %}
 {% load static %}
 
- 
 {% block post-title %} login-register-page {% endblock post-title %}
 
 {% block main-content %}
@@ -14,24 +13,26 @@
       <p class="lead">Log in to your account here if registered. If not Please register below</p>
       <hr class="my-4">
 
-      <!-- LOGIN FORM!! -->
+      <!-- GOTO LOGIN FORM!! -->
       <div class="row container-fluid">
         <div class="col-12">
 
-          <button class="btn btn-primary btn-lg  login_register-buttons" role="button"><a href="{% url 'account_login' %}">Login</a></button>
+          <button class="btn btn-primary btn-lg  login_register-buttons" role="button"><a
+              href="{% url 'account_login' %}">Login</a></button>
 
         </div>
 
       </div>
 
     </div>
-
-    <div class="jumbotron">
+    <!-- GOTO REGISTER FORM -->
+    <div class="jumbotron my-5">
       <h1 class="display-4">REGISTER</h1>
       <p class="lead">Register Here!</p>
       <hr class="my-4">
 
-      <button class="btn btn-primary btn-lg   login_register-buttons" role="button"><a href="{% url 'account_signup' %}">Sign Up</a></button>
+      <button class="btn btn-primary btn-lg   login_register-buttons" role="button"><a
+          href="{% url 'account_signup' %}">Sign Up</a></button>
     </div>
 
   </div>

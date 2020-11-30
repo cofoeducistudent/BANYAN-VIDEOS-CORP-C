@@ -56,7 +56,6 @@
     }
     },
 
-
     {
         "model": "search_results.films",
         "pk": 4,
@@ -205,7 +204,6 @@
     }
     },
 
-
     {
         "model": "search_results.films",
         "pk": 12,
@@ -241,7 +239,6 @@
         "film_clip_link":"https://www.youtube.com/watch?v=64R2MYUt394"
     }
     },
-
 
     {
         "model": "search_results.films",
@@ -351,7 +348,6 @@
     }
     },
 
-
     {
         "model": "search_results.films",
         "pk": 20,
@@ -423,8 +419,6 @@
         "film_clip_link":"https://www.youtube.com/watch?v=T5ke9IPTIJQ"
     }
     },
-
-
 
     {
         "model": "search_results.films",
@@ -550,20 +544,24 @@
         "film_global_sale": "False",
         "film_clip_link":"https://www.youtube.com/watch?v=T6DJcgm3wNY"
     }
+    },
+
+    {
+        "model": "search_results.films",
+        "pk": 31,
+        "fields": {
+        "film_sku": "762533",
+        "film_genre": "5",
+        "film_title": "the_attachment",
+        "film_friendly_title": "The Attachment",
+        "film_box_cover_url": "https://cdn.the-putlocker.net/files-media/imdbcache/tt3234668.jpg",
+        "film_description":"An innocent girls world is turned upside-down when an ancient evil begins to stalk her family. An attempt by a religious sect to rid the evil from the family results in catastrophic results that will have far reaching consequences.",
+        "film_price": 9.99,
+        "film_product_discount": 0.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":"https://www.imdb.com/video/vi4169708057?playlistId=tt3234668&ref_=tt_ov_vi"
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    }
 
 ]

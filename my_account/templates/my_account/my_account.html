@@ -23,9 +23,8 @@
 
         <p class="lead">Below is your Profile. Please ensure its completed</p>
 
-
-        <button class="btn btn-lg btn-success payment-button"><a class="text-dark" href="{% url 'members' %}">MEMBERS LOUNGE</a></button>
-
+        <button class="btn btn-lg btn-success payment-button"><a class="text-dark" href="{% url 'members' %}">MEMBERS
+            LOUNGE</a></button>
 
       </div>
     </div>
@@ -62,7 +61,7 @@
 <div class="row container-fluid my-5">
   <div class="col-12">
 
-    <div class="jumbotron">
+    <div class="jumbotron my-5">
       <h1 class="display-5">PURCHASE HISTORY!</h1>
       <p class="lead">Please see your purchase history below</p>
       <hr class="my-4">
@@ -122,6 +121,17 @@
     <!-- {{ purchase_history }} -->
 
   </div>
+</div>
+
+<!-- JUMP TO TOP OF SCREERN -->
+<div class="row">
+<div class="col-12 my-5 text-center">
+  <button class="btn btn-lg btn-success payment-button"><a class="text-dark" href="{% url 'my_account' %}">TOP OF PAGE</a></button>
+</div>
+
+
+</div>
+
 </div>
 
 {% endblock main-content %}

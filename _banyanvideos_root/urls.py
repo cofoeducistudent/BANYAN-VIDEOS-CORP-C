@@ -50,4 +50,6 @@ urlpatterns = [
     
     path('charge/', include('charge.urls')),
     
+    path('contact_sent/', include('contact_sent.urls')),
+    
 ]

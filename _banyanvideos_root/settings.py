@@ -81,6 +81,7 @@ INSTALLED_APPS = [
     'checkout',
     'login_success',
     'charge',
+    'contact_sent',
 
 
 ]
