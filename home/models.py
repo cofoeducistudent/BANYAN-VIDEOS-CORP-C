@@ -49,18 +49,4 @@ class Snippet(models.Model):
     def __str__(self):
         return self.snippet_name
 
-
-class ClassifiedAdds(models.Model):
-    class Meta:
-        verbose_name_plural = "Classifieds Adds"
-
-    classified_date = models.DateField(auto_now=True)
-    classified_name = models.CharField(max_length=254, null=True, blank=True)
-    classified_friendly_name = models.CharField(
-        max_length=254, null=True, blank=True)
-    classified_detail = models.TextField(
-        max_length=2000, null=True, blank=True)
-    classified_image = models.URLField(max_length=254, null=True, blank=True)
-
-    def __str__(self):
-        return self.classified_name
+ 

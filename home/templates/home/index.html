@@ -16,7 +16,9 @@
 
     <div class="col-md-6 px-3">
 
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <a href="{% url 'login_register' %}"> 
+          
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 
             <div class="carousel-inner my-2 c-image-size">
                 <div class="carousel-item active">
@@ -65,17 +67,23 @@
 
         <hr>
 
+</a>
+
+
     </div>
 
     <!-- RIGHT-SIDE GENRE LIST -->
 
     <div class="col-xs-12  col-md-6 genre-items py-2">
+
+ 
         {% for items in genre %}
-        <div class="alert alert-dark custom-alert " role="alert">
-            <a class="text-decoration-none"
-                href="{% url 'search_results' %}?sel_genre={{ items.genre_name }} ">{{ items.genre_friendly_name }}</a>
-        </div>
+        <a class="text-decoration-none"
+                href="{% url 'search_results' %}?sel_genre={{ items.genre_name }} "><div class="alert alert-dark custom-alert " role="alert">
+            {{ items.genre_friendly_name }}
+        </div></a>
         {% endfor %}
+
 
     </div>
     <hr>

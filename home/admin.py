@@ -2,7 +2,7 @@ from django.contrib import admin
 
 # Register your models here.
 from django.contrib import admin
-from . models import FrontPageCarousel, Article, Snippet, ClassifiedAdds
+from . models import FrontPageCarousel, Article, Snippet
 
 # Register your models here.
 
@@ -21,18 +21,11 @@ class SnippetAdmin(admin.ModelAdmin):
     
     ordering =('snippet_name', )
 
-class ClassifiedAddsAdmin(admin.ModelAdmin):
-    list_display = (
-        'classified_date',
-        'classified_name',
-        'classified_friendly_name',
-        'classified_image',
-
-    )
+ 
     
-    ordering =('classified_date', )
+ 
 
 admin.site.register(FrontPageCarousel, FrontPageCarouselAdmin)
 admin.site.register(Article, ArticleAdmin)
 admin.site.register(Snippet, SnippetAdmin)
-admin.site.register(ClassifiedAdds, ClassifiedAddsAdmin)
+ 
