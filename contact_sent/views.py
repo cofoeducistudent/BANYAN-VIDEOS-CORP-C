@@ -69,6 +69,9 @@ class ContactSent(TemplateView):
             cart_owner=current_user).filter(cart_session=session_key)
         basket_item_count = SCM.count
 
+
+
+
         message_subject = "BYVC - ENQUIRY : ** " + str(request.POST['subject'])
 
         message_body = str(request.POST['comment']) + chr(13)+chr(13)
