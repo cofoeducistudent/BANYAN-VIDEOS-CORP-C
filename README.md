@@ -1,10 +1,15 @@
 # BANYAN-VIDEOS-CORP-C
 BANYAN-VIDEOS-CORPORATION-C
 
- 
- 
+ Live Site:
+ https://banyan-videos-corp-c.herokuapp.com/
 
-<img src="writeup_stuff/home_page.jpg" width="600">
+
+GitHub:
+https://github.com/cofoeducistudent/BANYAN-VIDEOS-CORP-C
+
+
+<img src="_support_docs/images/home-page.jpg" width="600">
 
 ## Index ##
 
@@ -14,96 +19,115 @@ Banyan videos project brief.
 
 Banyan videos corporation has asked for a website but will help them retail their video merchandise online.
 
-For this reason they have provided a brief stating what they would like to see on the site and some features that would definately wish on it.
-I would like the slight appearance to be plain and corporate like.
+For this reason they have provided a brief stating what they would like to see on the site with features that would definately wish on it.
 
-The Front page should have a search facility allowing users to search for products
-It should have a carousel showing a selection of film products for sale
-It should show for news which banyan videos been fit. This will not be an integrated feed to new sites, but a section allowing banyan videos administrators to post corporate messages and news.
 
-On the page there should be an integrated session for classified ads. Banyan videos will sell this space to the public for their ads at a fee
-on the bottom half of the screen there should be more article links to other important news on the web. This will have a small title and description, a picture, all linkable to the source material.
-The colour theme should be plain and simplistic, and the appearance of the site should be whitish and clean.
+* Firtsly the site would be light in appearance and corporate like ( flash etc).
 
-The frequency and volume of the products very from small changes to a large influx. Therefore, they wish to have a way of populating the product line very quickly. In the future they wish to have a separate server to serve images for their products, which will have a commercial uniform asset look, like major retailers such as Argos or Sainsbury's. However, the division that will handle that is not yet up and running. For this reason, they simply wish to use images but are readily available online showing the video covers. These images are owned by the movie production companies, and banyan videos will be purchasing their videos from their main distributors, thus avoiding copyright infringement.
+* The Front page should have a search facility allowing users to search for products
 
-Videos products should be presented on the site within specific grouping for genres of film type
-Video products should have the ability to have discount added by the administrator of the site
-discounts on the products should only be given to people who have signed up and are members to the site. Otherwise people will pay the full price for the video products.
-Four members of the site there should be a member's area, where banyan videos will post inside news and features, and allow users to post comments.
-Banyan videos say that they have a separate corporate division that will deal with all issues from customers and therefore it is sufficient to have a contacts page that provides an email address for customers to write to. They wish this strategy to be implemented so they can holistically monitor what is going on with the marketing, as they intend to have physical retail stores and online venues.
-Finally, they wish website to be up and running in a quick timescale and the overall cost to be small to moderate.
+* It should have a carousel showing a selection of film products for sale
+
+* It should show for news/information which banyan videos deem fit.This is not an rss-feed or an integrated feed to other sites, but a section allowing banyan videos administrators to post corporate messages and news, or whatever they wish.
+
+* On a members section there should be more article links to other important news on the web (curated by banyan videos admin). This should have a title/description, a picture, all linkable to the source material.
+
+* The colour theme should be plain and simplistic, and the appearance of the site should predominantly light and clean.
+
+
+* The frequency and volume of the products will be centrally controlled. Therefore, they wish to have a way of populating the product line very quickly. This will ensure prices and sale discounts are also effectively controlled. The intention is for head Office (H.O) to email a file to the site admin, who will simply upload the data with a single command. BVC do not wish to have a CMS for creating items, aas that will remove a single point of control.
+
+
+* In the future they wish to have a separate server to serve images for their products, which will have a commercial uniform asset look, like major retailers such as Argos or Sainsbury's. However, the division that will handle that is not yet up and running. For this reason, they simply wish to use images that are readily available online showing the video covers. These images are owned by the movie production companies and placed in the public domain for promotion. Banyan videos corp will be purchasing their videos from their main distributors, thus avoiding copyright infringement or legal entanglements.
+
+
+
+* Videos film products should also be presented on the site within specific genre or classification for quick search if a customer does not know a specific film title but has an idea of the flavour of film they wish to purchase.
+
+
+* Various Video products will have discounts applied to members.
+
+* For members, there should be a member's area, where banyan videos will post inside news and features, and watch trailers or any sneek peak teasers posted.
+
+* Banyan videos say that they have a corporate head office (H.O) that will deal with all issues from customers and therefore it is sufficient to have a contacts page that provides a contact form. 
+
+* Finally, they wish website to be up and running in a quick timescale and the overall cost to be small to moderate.
 
 
 > ## 1. UX ##
  
-* a. Strategy
+>a. Strategy
  
-Following the project brief and some clarification, I have decided to approach that will facilitate banyan videos requirements.
-The site will be built using a framework for the benefit of speed. I will implement the site using the Django framework.
+Following the project brief and further clarification, I have decided to approach that will facilitate banyan videos requirements in the following way.
 
-The finished site will be hosted initially on the Heroku	 platform. I expect the site will be migrated to banyan corporations own hosting service as a future date. 
 
-Although Django internally has an SQL light database integrated, I will utilise the POSTGRES relational database hosted on Heroku.
+* The site will be built using a framework for the benefit of speed. I will implement the site using the Django framework.
 
-Using Django will allow me to create the database items in abstracted format, therefore if banyan Corporation choose to change databases in the future it will be reasonably easy to implement.
+* The finished site will be hosted initially on the Heroku platform.I expect the site will be migrated to banyan corporations own hosting service as a future date. 
 
-I am not quite sure of the colour scheme yet, as banyan videos left this slightly open-ended, however having seen some of their logo artwork, I will endeavor to use something in a similar style.
 
-For e-commerce commercial aspects all employ strike payment system. The benefit of this is the security will be strengthened, as user payment details will be left to stripe to handle and not resident within four website architecture. So, file
+* Although the Django framework defaults to an SQL-light database, I will utilise the POSTGRES SQL relational database management system (RMDBS) hosted on Heroku.
 
-I identified users of the site and classify them as:-
+* In addition using Django will allow me to create the database items in abstracted format (models), therefore if banyan Corporation choose to change databases in the future it will be reasonably easy to implement.
 
-Administrator
-the administrator will have the ability to create and post material to the site. In addition, there will also be able to populate the site with new products.
+* I am not quite sure of the colour scheme to use yet, as banyan videos left this open-ended, however having seen some of their logo artwork, I will endeavor to use something in a similar style.
 
-Registered user
-registered user will have access to browse the site make purchases, have their details on the profile page for speedier purchases, and have the ability to access a member’s page, on which they can post comments to any features set up by banyan videos. Finally, members will have access to discounted prices on products they purchase
-
-Anonymous user
-an anonymous user, or a new user to the site will have the ability to browse the site and purchase products. However, it will not have the benefit of discounted prices, or access to the members area
+* For e-commerce and commerce aspects,  I will  employ "Stripe-Payment" solution. The benefit of this is the security will be strengthened, as user payment credit card (CC)details will be handled completely by the "STRIPE Corporation" and reside within our website architecture. 
 
 
 
-* b. Scope
+I have identified users of the site and classify them as:-
 
-Therefore, in summary the scope of the project will involve the following
+|User Type|Ability|
+|---------|-------|
+|Administrator - level|The administrator will be able create and post material to the site. In addition, there will also be able to populate the site with new products.|
+|Registered user - level|Registered users will have access to browse the site make purchases, have their details on the profile page for speedier purchases, and have the ability to access a member’s page, on which they can post comments to any features set up by banyan videos. Finally, members will have access to discounted prices on products they purchase|
+|Anonymous user - level|An anonymous user, or a new user to the site will have the ability to browse the site and purchase products. However, it will not have the benefit of discounted prices, or access to the members area|
 
-The design and creation of a site to allow banyan videos corporation to post the video assets for purchase by the general public.
 
-The design will be of a clean and corporate style
+
+>b. Scope
+
+- Therefore, in summary, the scope of the project will involve the following:
+
+- The design and creation of a site to allow banyan videos corporation to post the video assets for purchase by the general public.
+
+- The design will be of a clean and corporate style
 
 The site will cater for free identified primary users
-an administrator
-a registered user
-an anonymous user
+
+* Administrator
+* Registered user
+* Anonymous user
+
+>Summary
+
+- The sites will offer discount prices to registered users
+
+- The site will allow new customers membership sign-up
+
+- The site will allow members to access to a member’s section, where they will view members only content
+
+- Members will have the ability to complete a profile page to speed up future transactions.
+
+- Video products on the site will be categorized by genre.
+
+- Visitors to the site can search for products either by genre or by text on a search bar
+
+- The site will be designed [ ** mobile first ** ] and fluid, allowing it to adjust for the you on mobile phones tablets and desktop computers.
+
+- From technical aspects of meeting developement speed, the site will be created user Django framework.
+
+- The database will be the Postgres SQL relational database.
+
+- The administrator will have access the backend for the purpose of pacing a "FILE" containing new products catalouge
+
+- Initially the site will be hosted on the "Heroku platform". It is understood it may be rehosted in the future
+
+- A small demo catalogue of products will be loaded for testing purposes. This will be deleted and replaced by banyan videos corporation
 
 
-The sites will offer discount prices of their products to registered users
-
-The site will allow users to sign up and become members
-
-the site will allow members to post comments in response to articles in a member’s section, for which you will have access to as a member
-
-Members will have the ability to complete a profile page to speed up transactions at future date
-
-Video products on the site will be categorized by genre.
-
-Visitors to the site can search for products either by genre or by text on a search bar
-
-The site will be designed mobile first and fluid, allowing it to adjust for the you on mobile phones tablets and desktop computers.
-
-From the technical aspects, the site will be created user Django framework.
-The database will be the PostgreSQL relational database.
-The administrator will have access to a CMS backend (which will allow them to add/delete products)
-initially the site will be presented to banyan videos corporation on the Heroku platform
-
-A small demo catalogue of products will be loaded for testing purposes. This will be deleted and replaced by banyan videos corporation
-
-
-
- 
-* c. Structure
+> c. Structure
  
 ## * (d). Skeleton
 
