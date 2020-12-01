@@ -562,6 +562,572 @@
         "film_global_sale": "False",
         "film_clip_link":"https://www.imdb.com/video/vi4169708057?playlistId=tt3234668&ref_=tt_ov_vi"
     }
+    },
+
+
+        {
+        "model": "search_results.films",
+        "pk": 32,
+        "fields": {
+        "film_sku": "000202",
+        "film_genre": "2",
+        "film_title": "ace_ventura",
+        "film_friendly_title": "Ace Ventura",
+        "film_box_cover_url": "https://upload.wikimedia.org/wikipedia/en/9/9f/AceVenturaFilm.PNG",
+        "film_description":"Ace is a Miami-based private detective specializing in the retrieval of missing animals, the son of Rex Ventura and descendant of such as 'Ernest Ventura Shackleton' and 'Jacques Ventura Costeau'. It is not known whether the animated television series was contiguous with the feature-films; but if it was it may take place before them because the only one of his pets to appear in the series is his capuchin monkey, Spike. His eccentricities make him a laughing stock to the Miami-Dade Police Department in the early part of the first movie, but he eventually earned their respect after his rescue of Dan Marino and the dolphin, Snowflake.",
+        "film_price": 9.99,
+        "film_product_discount": 5.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":"https://www.youtube.com/watch?v=xicKEpMJz58"
     }
+    },
+
+        {
+        "model": "search_results.films",
+        "pk": 33,
+        "fields": {
+        "film_sku": "098445",
+        "film_genre": "6",
+        "film_title": "brigadoon",
+        "film_friendly_title": "Brigadoon",
+        "film_box_cover_url": "https://upload.wikimedia.org/wikipedia/en/thumb/3/33/Brigadoon_%28french_poster%29.jpg/220px-Brigadoon_%28french_poster%29.jpg",
+        "film_description":"Brigadoon is a 1954 American Metro-Goldwyn-Mayer musical film made in CinemaScope and Metrocolor based on the 1947 Broadway musical of the same name by Alan Jay Lerner and Frederick Loewe.[4] The film was directed by Vincente Minnelli and stars Gene Kelly, Van Johnson, and Cyd Charisse.[5] Brigadoon has been broadcast on American television and is available in VHS, DVD and Blu Ray formats.",
+        "film_price": 9.99,
+        "film_product_discount": 0.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":"https://www.youtube.com/watch?v=Qpk9JNUDr9k"
+    }
+    },
+
+        {
+        "model": "search_results.films",
+        "pk": 34,
+        "fields": {
+        "film_sku": "200567",
+        "film_genre": "2",
+        "film_title": "the_cannonball_run",
+        "film_friendly_title": "The Cannonball Run",
+        "film_box_cover_url": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a0/Cannonball_run.jpg/220px-Cannonball_run.jpg",
+        "film_description":"The Cannonball Run is a 1981 action comedy film[5]. Filmed in Panavision, it was directed by Hal Needham, produced by Hong Kong's Golden Harvest films, and distributed by 20th Century Fox. It features an all-star supporting cast, including Burt Reynolds, Roger Moore, Dom DeLuise, Farrah Fawcett, and Jackie Chan. The film is based on the 1979 running of an actual cross-country outlaw road race in the United States, beginning in Connecticut and ending in California.",
+        "film_price": 12.99,
+        "film_product_discount": 10.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":"https://www.youtube.com/watch?v=k1oyj7CQ4Ks"
+    }
+    },
+
+        {
+        "model": "search_results.films",
+        "pk": 35,
+        "fields": {
+        "film_sku": "200067",
+        "film_genre": "1",
+        "film_title": "deathrace_2000",
+        "film_friendly_title": "Deathrace 2000",
+        "film_box_cover_url": "https://upload.wikimedia.org/wikipedia/en/4/40/Deathrace2000poster.jpg",
+        "film_description":"Death Race 2000 is a 1975 American science fiction sports film produced by Roger Corman, directed by Paul Bartel, and starring David Carradine, Simone Griffeth and Sylvester Stallone. The film takes place in a dystopian American society in the year 2000, where the murderous Transcontinental Road Race has become a form of national entertainment. The screenplay is based on the short story The Racer by Ib Melchior.[4]",
+        "film_price": 9.99,
+        "film_product_discount": 0.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":"https://www.youtube.com/watch?v=F2GEKV1dOgY"
+    }
+    },
+
+        {
+        "model": "search_results.films",
+        "pk": 36,
+        "fields": {
+        "film_sku": "2009876",
+        "film_genre": "1",
+        "film_title": "et_the_extra_terrestrial",
+        "film_friendly_title": "The Extra-Terrestrial",
+        "film_box_cover_url": "https://upload.wikimedia.org/wikipedia/en/thumb/6/66/E_t_the_extra_terrestrial_ver3.jpg/220px-E_t_the_extra_terrestrial_ver3.jpg",
+        "film_description":"E.T. the Extra-Terrestrial is a 1982 American science fiction film produced and directed by Steven Spielberg, and written by Melissa Mathison. It tells the story of Elliott, a boy who befriends an extraterrestrial, dubbed E.T., who is stranded on Earth. The film stars Dee Wallace, Peter Coyote, and Henry Thomas.",
+        "film_price": 9.99,
+        "film_product_discount": 3.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":"https://www.youtube.com/watch?v=qYAETtIIClk"
+    }
+    },
+
+        {
+        "model": "search_results.films",
+        "pk": 37,
+        "fields": {
+        "film_sku": "900023",
+        "film_genre": "1",
+        "film_title": "firefox",
+        "film_friendly_title": "FireFox",
+        "film_box_cover_url": "https://upload.wikimedia.org/wikipedia/en/4/42/Firefox%281982_film%29_poster.jpg",
+        "film_description":"Firefox is a 1982 American action techno-thriller film produced, directed by and starring Clint Eastwood. It is based upon the 1977 novel of the same name by Craig Thomas. The film was set in Russia, but Cold War considerations had Eastwood's and Fritz Manes's Malpaso Company using Vienna and other locations in Austria to double for many of the Eurasian story locations. The film was shot on a $21 million budget, the largest production budget ever for Malpaso.[2] Of that amount, over $20 million was spent on special effects.[3]",
+        "film_price": 12.99,
+        "film_product_discount": 0.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":"https://www.youtube.com/watch?v=C5U41IAcX2M"
+    }
+    },
+
+        {
+        "model": "search_results.films",
+        "pk": 38,
+        "fields": {
+        "film_sku": "850098",
+        "film_genre": "4",
+        "film_title": "great_expectations",
+        "film_friendly_title": "Great Expectations",
+        "film_box_cover_url": "https://upload.wikimedia.org/wikipedia/en/8/85/Great_expectations.jpg",
+        "film_description":"Great Expectations is a 1946 British film directed by David Lean, based on the 1861 novel by Charles Dickens and starring John Mills, Bernard Miles, Finlay Currie, Jean Simmons, Martita Hunt, Alec Guinness and Valerie Hobson. It won two Academy Awards (Best Art Direction and Best Cinematography) and was nominated for three others (Best Picture, Best Director and Best Screenplay).",
+        "film_price": 14.99,
+        "film_product_discount": 0.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":"https://www.youtube.com/watch?v=HbSib00NgiI"
+    }
+    },
+
+        {
+        "model": "search_results.films",
+        "pk": 39,
+        "fields": {
+        "film_sku": "6723456",
+        "film_genre": "5",
+        "film_title": "the_exorcist",
+        "film_friendly_title": "The Exorcist",
+        "film_box_cover_url": "https://upload.wikimedia.org/wikipedia/en/7/7b/Exorcist_ver2.jpg",
+        "film_description":"The Exorcist is an American media franchise that originated with William Peter Blatty's 1971 horror novel of the same name and most prominently featured in a 1973 film adapted from the novel, and many subsequent prequels and sequels. All of these installments focus on fictional accounts of people possessed by Pazuzu, the main antagonist of the series, and the efforts of religious authorities to counter this possession.",
+        "film_price": 12.99,
+        "film_product_discount": 10.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":"https://www.youtube.com/watch?v=a8g3h2JaVE4"
+    }
+    },
+
+        {
+        "model": "search_results.films",
+        "pk": 40,
+        "fields": {
+        "film_sku": "572200",
+        "film_genre": "8",
+        "film_title": "forbidden_planet",
+        "film_friendly_title": "Forbidden Planet",
+        "film_box_cover_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Forbiddenplanetposter.jpg/800px-Forbiddenplanetposter.jpg",
+        "film_description":"Forbidden Planet is a 1956 American science fiction film, produced by Nicholas Nayfack, directed by Fred M. Wilcox, that stars Walter Pidgeon, Anne Francis, and Leslie Nielsen. Shot in Eastmancolor and CinemaScope, it is considered one of the great science fiction films of the 1950s,[4] a precursor of contemporary science fiction cinema. The characters and isolated setting have been compared to those in William Shakespeare's The Tempest,[5] and the plot contains certain analogues to the play, leading many to consider it a loose adaptation.",
+        "film_price": 10.99,
+        "film_product_discount": 0.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":"https://www.youtube.com/watch?v=F17CCRoMttQ"
+    }
+    },
+
+        {
+        "model": "search_results.films",
+        "pk": 41,
+        "fields": {
+        "film_sku": "300876",
+        "film_genre": "4",
+        "film_title": "a_man_for_all_seasons",
+        "film_friendly_title": "A Man For All Seasons",
+        "film_box_cover_url": "https://upload.wikimedia.org/wikipedia/en/c/cb/A_Man_for_All_Seasons_%281966_movie_poster%29.gif",
+        "film_description":"A Man for All Seasons is a 1966 British biographical drama film based on Robert Bolt's 1960 play of the same name and adapted for cinema by Bolt. It was released on 12 December 1966. It was directed by Fred Zinnemann, who had previously directed the films High Noon and From Here to Eternity.",
+        "film_price": 12.99,
+        "film_product_discount": 5.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":"https://www.youtube.com/watch?v=MlANWgyK2PY"
+    }
+    },
+
+        {
+        "model": "search_results.films",
+        "pk": 42,
+        "fields": {
+        "film_sku": "0198200",
+        "film_genre": "4",
+        "film_title": "a_taste_of_honey",
+        "film_friendly_title": "A taste of Honey",
+        "film_box_cover_url": "https://i.pinimg.com/originals/1b/f2/e7/1bf2e7b38148ad15eb764d95b425d504.jpg",
+        "film_description":"A Taste of Honey is a 1961 British film adaptation of the 1958 play of the same name by Shelagh Delaney. Delaney wrote the screenplay with director Tony Richardson, who had directed the play on the stage. It is an exemplar of a gritty genre of British film that has come to be called kitchen sink realism.",
+        "film_price": 12.99,
+        "film_product_discount": 0.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":"https://www.youtube.com/watch?v=y7LK_-rUfdU"
+    }
+    },
+
+        {
+        "model": "search_results.films",
+        "pk": 43,
+        "fields": {
+        "film_sku": "9022878",
+        "film_genre": "4",
+        "film_title": "the_help",
+        "film_friendly_title": "The Help",
+        "film_box_cover_url": "https://upload.wikimedia.org/wikipedia/en/b/b5/Help_poster.jpg",
+        "film_description":"The Help is a 2011 period drama film written and directed by Tate Taylor and based on Kathryn Stockett's 2009 novel of the same name. The film features an ensemble cast, including Jessica Chastain, Viola Davis, Bryce Dallas Howard, Allison Janney, Octavia Spencer, and Emma Stone. The film and novel recount the story of a young white woman and aspiring journalist Eugenia 'Skeeter' Phelan.[4] The story focuses on her relationship with two black maids, Aibileen Clark and Minny Jackson, during the Civil Rights Movement in 1963 Jackson, Mississippi. In an attempt to become a legitimate journalist and writer, Skeeter decides to write a book from the point of view of the maids, exposing the racism they are faced with as they work for white families. Black domestic workers in 1960s America were referred to as 'the help', hence the title of the journalistic exposé, the novel and the film.",
+        "film_price": 9.99,
+        "film_product_discount": 0.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":"https://www.youtube.com/watch?v=aT9eWGjLv6s"
+    }
+    },
+
+        {
+        "model": "search_results.films",
+        "pk": 44,
+        "fields": {
+        "film_sku": "0987221",
+        "film_genre": "4",
+        "film_title": "A passage_to_india",
+        "film_friendly_title": "A Passage To India",
+        "film_box_cover_url": "https://upload.wikimedia.org/wikipedia/en/2/20/PassageToIndiaPoster.jpg",
+        "film_description":"A Passage to India is a 1984 epic historical drama film written, directed and edited by David Lean. The screenplay is based on the 1960 play of the same name by Santha Rama Rau, which was in turn based on the 1924 novel of the same name by E.M. Forster. Set in the 1920s during the period of the British Raj, the film tells the story of the interactions of several characters in the fictional city of Chandrapore, namely Dr Aziz, Mrs Moore, Adela Quested, and Cyril Fielding. When newcomer to India, Adela, accuses Aziz of an attempted rape within the famed Marabar Caves, the city is split between the British elite and the native underclass as the budding friendship between Aziz and Fielding is tested. The film explores themes of racism, imperialism, religion, and the nature of relationships both friendly and marital.",
+        "film_price": 9.99,
+        "film_product_discount": 0.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":"https://www.youtube.com/watch?v=MRz8rzv5rM4"
+    }
+    },
+
+        {
+        "model": "search_results.films",
+        "pk": 45,
+        "fields": {
+        "film_sku": "09914454",
+        "film_genre": "2",
+        "film_title": "jumping_jack_flash",
+        "film_friendly_title": "Jumpin Jack Flash",
+        "film_box_cover_url": "https://upload.wikimedia.org/wikipedia/en/b/bb/Jumpin_jack_flash.jpg",
+        "film_description":"Jumpin' Jack Flash is a 1986 American comedy film starring Whoopi Goldberg. The film was directed by Penny Marshall in her theatrical film directorial debut.The soundtrack includes two versions of the song 'Jumpin' Jack Flash': the original by the Rolling Stones, and a remake by Aretha Franklin heard over the end credits. Franklin's version was not included on the film's soundtrack album but was released as a single.",
+        "film_price": 9.99,
+        "film_product_discount": 0.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":"https://www.youtube.com/watch?v=DAKRSu5AOls"
+    }
+    },
+
+        {
+        "model": "search_results.films",
+        "pk": 46,
+        "fields": {
+        "film_sku": "1112233",
+        "film_genre": "1",
+        "film_title": "a_knights_tale",
+        "film_friendly_title": "A Knights Tale",
+        "film_box_cover_url": "https://upload.wikimedia.org/wikipedia/en/a/a6/AKnightsTale.jpg",
+        "film_description":"A Knight's Tale is a 2001 British-American medieval adventure comedy film written, produced, and directed by Brian Helgeland. The film stars Heath Ledger, Shannyn Sossamon, Mark Addy, Alan Tudyk, Rufus Sewell, Laura Fraser, Paul Bettany as Geoffrey Chaucer, and James Purefoy as Sir Thomas Colville/Edward the Black Prince. The story is told in an anachronistic style with many modern references. It follows a peasant named William who poses as a knight and competes in tournaments, winning accolades and acquiring friendships with such historical figures as Edward the Black Prince and Geoffrey Chaucer.",
+        "film_price": 9.99,
+        "film_product_discount": 0.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":"https://www.youtube.com/watch?v=_KzsTKqTq1M"
+    }
+    },
+
+        {
+        "model": "search_results.films",
+        "pk": 47,
+        "fields": {
+        "film_sku": "2300987",
+        "film_genre": "4",
+        "film_title": "chariots_of_fire",
+        "film_friendly_title": "Chariots Of Fire",
+        "film_box_cover_url": "https://static.rogerebert.com/uploads/movie/movie_poster/chariots-of-fire-1981/large_tDt0QreHAiM44km0Iek0UwLdyIW.jpg",
+        "film_description":"Chariots of Fire is a 1981 British historical drama film. It is based on the true story of two British athletes in the 1924 Olympics: Eric Liddell: a devout Scottish Christian who runs for the glory of God, and Harold Abrahams, an English Jew who runs to overcome prejudice. The film was conceived and produced by David Puttnam, written by Colin Welland, and directed by Hugh Hudson. Ben Cross and Ian Charleson starred as Abrahams and Liddell, alongside Nigel Havers, Ian Holm, Lindsay Anderson, John Gielgud, Cheryl Campbell, and Alice Krige in supporting roles. ",
+        "film_price": 9.99,
+        "film_product_discount": 0.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":"https://www.youtube.com/watch?v=odtqtlhsv4E"
+    }
+    },
+
+        {
+        "model": "search_results.films",
+        "pk": 48,
+        "fields": {
+        "film_sku": "123009",
+        "film_genre": "5",
+        "film_title": "creature_from_the_black_lagoon",
+        "film_friendly_title": "Creature From The Black Lagoon",
+        "film_box_cover_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Creature_from_the_Black_Lagoon_poster.jpg/800px-Creature_from_the_Black_Lagoon_poster.jpg",
+        "film_description":"",
+        "film_price": 10.99,
+        "film_product_discount": 0.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":"https://www.youtube.com/watch?v=lM1o1xe5FGE"
+    }
+    },
+
+        {
+        "model": "search_results.films",
+        "pk": 49,
+        "fields": {
+        "film_sku": "1009283",
+        "film_genre": "6",
+        "film_title": "pinocchio",
+        "film_friendly_title": "Pinocchio",
+        "film_box_cover_url": "https://upload.wikimedia.org/wikipedia/en/b/ba/Pinocchio-1940-poster.jpg",
+        "film_description":"Pinocchio is a 1940 American animated musical fantasy adventure film produced by Walt Disney Productions and based on the 1883 Italian children's novel The Adventures of Pinocchio by Carlo Collodi. It was the second animated feature film produced by Disney, made after the first animated success Snow White and the Seven Dwarfs (1937).",
+        "film_price": 9.99,
+        "film_product_discount": 0.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":"https://www.youtube.com/watch?v=GBgyVY_ClzQ"
+    }
+    },
+
+        {
+        "model": "search_results.films",
+        "pk": 50,
+        "fields": {
+        "film_sku": "1111333",
+        "film_genre": "6",
+        "film_title": "the_jungle_book",
+        "film_friendly_title": "The Jungle Book",
+        "film_box_cover_url": "https://upload.wikimedia.org/wikipedia/en/a/a4/The_Jungle_Book_%282016%29.jpg",
+        "film_description":"The Jungle Book is a 2016 American fantasy adventure film directed and produced by Jon Favreau, written by Justin Marks and produced by Walt Disney Pictures. Based on Rudyard Kipling's eponymous collective works and inspired by Walt Disney's 1967 animated film of the same name,[5][6] The Jungle Book is a live-action/CGI film that tells the story of Mowgli, an orphaned human boy who, guided by his animal guardians, sets out on a journey of self-discovery while evading the threatening Shere Khan. The film introduces Neel Sethi as Mowgli, along with voice and motion capture performances from Bill Murray, Ben Kingsley, Idris Elba, Lupita Nyong'o, Scarlett Johansson, Giancarlo Esposito, and Christopher Walken.",
+        "film_price": 9.99,
+        "film_product_discount": 5.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":"https://www.youtube.com/watch?v=5mkm22yO-bs"
+    }
+    },
+
+        {
+        "model": "search_results.films",
+        "pk": 51,
+        "fields": {
+        "film_sku": "0986787",
+        "film_genre": "8",
+        "film_title": "2001_a_space_odyssey",
+        "film_friendly_title": "2001 A Space Odyssey",
+        "film_box_cover_url": "https://upload.wikimedia.org/wikipedia/en/1/11/2001_A_Space_Odyssey_%281968%29.png",
+        "film_description":"2001: A Space Odyssey is a 1968 epic science fiction film produced and directed by Stanley Kubrick. The screenplay was written by Kubrick and Arthur C. Clarke, and was inspired by Clarke's 1951 short story 'The Sentinel' and other short stories by Clarke. A novel released after the film's premiere was in part written concurrently with the screenplay. The film, which follows a voyage to Jupiter with the sentient computer HAL after the discovery of an alien monolith affecting human evolution, deals with themes of existentialism, human evolution, technology, artificial intelligence, and the possibility of extraterrestrial life.",
+        "film_price": 9.99,
+        "film_product_discount": 10.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":"https://www.youtube.com/watch?v=Z2UWOeBcsJI"
+    }
+    },
+
+        {
+        "model": "search_results.films",
+        "pk": 52,
+        "fields": {
+        "film_sku": "0924456",
+        "film_genre": "1",
+        "film_title": "war_for_the_planet_of_the_apes",
+        "film_friendly_title": "War For The Planet Of The Apes",
+        "film_box_cover_url": "https://upload.wikimedia.org/wikipedia/en/d/d7/War_for_the_Planet_of_the_Apes_poster.jpg",
+        "film_description":"War for the Planet of the Apes is a 2017 American science fiction action film[5] directed by Matt Reeves, produced by Dylan Clark, Rick Jaffa and Amanda Silver and written by Mark Bomback and Reeves. A sequel to Rise of the Planet of the Apes (2011) and Dawn of the Planet of the Apes (2014), it is the third and final film in the Planet of the Apes reboot series, and the ninth film in the Planet of the Apes film series.[6] The film stars Andy Serkis, Woody Harrelson and Steve Zahn, and follows a confrontation between the apes, led by Caesar, and the humans for control of Earth. Like its predecessor, its premise shares several similarities to the fifth film in the original series, Battle for the Planet of the Apes (1973), but it is not a direct remake.",
+        "film_price": 9.99,
+        "film_product_discount": 0.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":"https://www.youtube.com/watch?v=qxjPjPzQ1iU"
+    }
+    },
+
+        {
+        "model": "search_results.films",
+        "pk": 53,
+        "fields": {
+        "film_sku": "900012",
+        "film_genre": "1",
+        "film_title": "batman_begins",
+        "film_friendly_title": "Batman Begins",
+        "film_box_cover_url": "https://upload.wikimedia.org/wikipedia/en/a/af/Batman_Begins_Poster.jpg",
+        "film_description":"Batman Begins is a 2005 superhero film directed by Christopher Nolan and written by Nolan and David S. Goyer. Based on the DC Comics character Batman, it stars Christian Bale, Michael Caine, Liam Neeson, Katie Holmes, Gary Oldman, Cillian Murphy, Tom Wilkinson, Rutger Hauer, Ken Watanabe, and Morgan Freeman. The film reboots the Batman film series, telling the origin story of Bruce Wayne from the death of his parents to his journey to become Batman and his fight to stop Ra's al Ghul and the Scarecrow from plunging Gotham City into chaos.",
+        "film_price": 9.99,
+        "film_product_discount": 0.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":"https://www.youtube.com/watch?v=neY2xVmOfUM"
+    }
+    },
+
+        {
+        "model": "search_results.films",
+        "pk": 54,
+        "fields": {
+        "film_sku": "389000",
+        "film_genre": "4",
+        "film_title": "onedin_line",
+        "film_friendly_title": "Onedin Line",
+        "film_box_cover_url": "https://www.sanity.com.au/media/Images/fullimage/378409/SDC_2339189_2017-22-6--00-15-47.jpg",
+        "film_description":"The series is set in Liverpool from 1860 to 1886[1] and covers the rise of a fictional shipping company, the Onedin Line, named after its owner James Onedin. Around this, it depicts the lives of his family, most notably his brother and partner Robert, a ship chandler, and his sister Elizabeth, giving insight into the lifestyle and customs at the time, not only at sea, but also ashore (mostly lower- and upper-middle-class). The series also illustrates some of the changes in business and shipping, such as from wooden to steel ships and from sailing ships to steamships. It shows the role that ships played in such matters as international politics, uprisings and the slave trade.",
+        "film_price": 24.99,
+        "film_product_discount": 10.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":"https://www.youtube.com/watch?v=L2IuPjpAHnI"
+    }
+    },
+
+        {
+        "model": "search_results.films",
+        "pk": 55,
+        "fields": {
+        "film_sku": "322780",
+        "film_genre": "1",
+        "film_title": "around_the_world_in_80_days",
+        "film_friendly_title": "Around The World in 80 Days",
+        "film_box_cover_url": "https://upload.wikimedia.org/wikipedia/en/5/5e/Around_the_World_in_80_Days_%281956_film%29_poster.jpg",
+        "film_description":"round the World in 80 Days (sometimes spelled as Around the World in Eighty Days) is a 1956 American epic adventure-comedy film starring David Niven and Cantinflas, produced by the Michael Todd Company and released by United Artists. The epic picture was directed by Michael Anderson and produced by Mike Todd, with Kevin McClory and William Cameron Menzies as associate producers. The screenplay, based on the classic 1873 novel of the same name by Jules Verne, was written by James Poe, John Farrow, and S.J. Perelman. The music score was composed by Victor Young, and the Todd-AO 70 mm cinematography (shot in Technicolor) was by Lionel Lindon. The film's six-minute-long animated title sequence, shown at the end of the film, was created by award-winning designer Saul Bass.[3]",
+        "film_price": 9.99,
+        "film_product_discount": 0.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":"https://www.youtube.com/watch?v=vjiCO8k6Jhg"
+    }
+    },
+
+        {
+        "model": "search_results.films",
+        "pk": 56,
+        "fields": {
+        "film_sku": "230093",
+        "film_genre": "6",
+        "film_title": "the_wizard_of_oz",
+        "film_friendly_title": "The Wizard Of Oz",
+        "film_box_cover_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Wizard_of_oz_movie_poster.jpg/800px-Wizard_of_oz_movie_poster.jpg",
+        "film_description":"The Wizard of Oz is a 1939 American musical fantasy film produced by Metro-Goldwyn-Mayer. Widely known as one of the greatest films of all time,[5][citation needed] it is the most commercially successful adaptation of L. Frank Baum's 1900 children's fantasy novel The Wonderful Wizard of Oz.[6] Directed primarily by Victor Fleming (who left the production to take over the troubled Gone with the Wind), the film stars Judy Garland as Dorothy Gale alongside Ray Bolger, Jack Haley, Bert Lahr and Margaret Hamilton.",
+        "film_price": 9.99,
+        "film_product_discount": 0.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":"https://www.youtube.com/watch?v=FfpF8UUVTeM"
+    }
+    },
+
+        {
+        "model": "search_results.films",
+        "pk": 57,
+        "fields": {
+        "film_sku": "121990",
+        "film_genre": "4",
+        "film_title": "casablanca",
+        "film_friendly_title": "Casablanca",
+        "film_box_cover_url": "https://upload.wikimedia.org/wikipedia/commons/b/b3/CasablancaPoster-Gold.jpg",
+        "film_description":"Casablanca is a 1942 American wartime romantic drama film directed by Michael Curtiz, and starring Humphrey Bogart, Ingrid Bergman, and Paul Henreid. Filmed and set during World War II, it focuses on an American expatriate (Bogart) who must choose between his love for a woman (Bergman) and helping her and her husband (Henreid), a Czech resistance leader, escape from the Vichy-controlled city of Casablanca to continue his fight against the Germans. The screenplay is based on Everybody Comes to Rick's, an unproduced stage play by Murray Burnett and Joan Alison. The supporting cast features Claude Rains, Conrad Veidt, Sydney Greenstreet, Peter Lorre, and Dooley Wilson.",
+        "film_price": 9.99,
+        "film_product_discount": 5.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":"https://www.youtube.com/watch?v=a2MnKebNlRo"
+    }
+    },
+
+        {
+        "model": "search_results.films",
+        "pk": 58,
+        "fields": {
+        "film_sku": "8900221",
+        "film_genre": "1",
+        "film_title": "the_big_sleep",
+        "film_friendly_title": "The Big Sleep",
+        "film_box_cover_url": "https://static.rogerebert.com/uploads/movie/movie_poster/the-big-sleep-1946/large_ok4U0K45lxL0BUWv0gBf0Wg4CXa.jpg",
+        "film_description":"The Big Sleep is a 1946 film noir directed by Howard Hawks,[2][3] the first film version of the 1939 novel of the same name by Raymond Chandler. The film stars Humphrey Bogart as private detective Philip Marlowe and Lauren Bacall as Vivian Rutledge in a story about the 'process of a criminal investigation, not its results'.[4] William Faulkner, Leigh Brackett and Jules Furthman co-wrote the screenplay. In 1997, the U.S. Library of Congress deemed the film 'culturally, historically, or aesthetically significant,' and added it to the National Film Registry. Parts of the unreleased 1945 cut were significantly re-scripted and shot to take advantage of the public's fascination with 'Bogie and Bacall'. The original 1945 version was restored and released in 1997.",
+        "film_price": 12.99,
+        "film_product_discount": 10.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":"https://www.youtube.com/watch?v=n-K49CUaeto"
+    }
+    },
+
+        {
+        "model": "search_results.films",
+        "pk": 59,
+        "fields": {
+        "film_sku": "1237890",
+        "film_genre": "1",
+        "film_title": "casino_royale",
+        "film_friendly_title": "Casino Royale",
+        "film_box_cover_url": "https://i.ebayimg.com/images/g/r94AAOSwEDtbiGwz/s-l300.jpg",
+        "film_description":"Casino Royale is a 2006 spy film, the twenty-first in the Eon Productions James Bond series, and the third screen adaptation of Ian Fleming's 1953 novel of the same name. Directed by Martin Campbell and written by Neil Purvis, Robert Wade and Paul Haggis, it is the first film to star Daniel Craig as the fictional MI6 agent James Bond, and was produced by Eon Productions for Metro-Goldwyn-Mayer and Columbia Pictures, making it the first Eon-produced Bond film to be co-produced by Columbia. Following Die Another Day, Eon Productions decided to reboot the series,[4][5] allowing them to show a less experienced and more vulnerable Bond.",
+        "film_price": 9.99,
+        "film_product_discount": 0.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":"https://www.youtube.com/watch?v=36mnx8dBbGE"
+    }
+    },
+
+        {
+        "model": "search_results.films",
+        "pk": 60,
+        "fields": {
+        "film_sku": "8722672",
+        "film_genre": "8",
+        "film_title": "silent_running",
+        "film_friendly_title": "Silent Running",
+        "film_box_cover_url": "https://upload.wikimedia.org/wikipedia/en/4/46/Silent_running.jpg",
+        "film_description":"In the future, all plant life on Earth is becoming extinct. As many specimens as possible have been preserved in a series of enormous, greenhouse-like geodesic domes, attached to a large spaceship named Valley Forge, forming part of a Freeman Lowell, one of four crewmen aboard, is the resident botanist and ecologist who carefully maintains a variety of plants for their eventual return to Earth and the reforestation of the planet. Lowell spends most of his time in the domes.",
+        "film_price": 9.99,
+        "film_product_discount": 5.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":"https://www.youtube.com/watch?v=p69lEMn0I8k"
+    }
+    },
+
+        {
+        "model": "search_results.films",
+        "pk": 61,
+        "fields": {
+        "film_sku": "0976556",
+        "film_genre": "1",
+        "film_title": "aliens",
+        "film_friendly_title": "Aliens",
+        "film_box_cover_url": "https://upload.wikimedia.org/wikipedia/en/f/fb/Aliens_poster.jpg",
+        "film_description":"Aliens is a 1986 American science fiction action film written and directed by James Cameron. It is the sequel to the 1979 science fiction horror film Alien and the second film in the Alien franchise. Set in the far future, the film stars Sigourney Weaver as Lieutenant Ellen Ripley, the sole survivor of an alien attack on her ship. When communications are lost with a human colony on the same moon her crew first encountered the alien creatures, Ripley agrees to return to the site alongside a troop of colonial marines to investigate. Aliens also features Michael Biehn, Paul Reiser, Lance Henriksen, and Carrie Henn in supporting roles.",
+        "film_price": 9.99,
+        "film_product_discount": 0.00,
+        "film_stock_available": "True",
+        "film_global_sale": "False",
+        "film_clip_link":"https://www.youtube.com/watch?v=bTCaVjQ8nU4"
+    }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
 
 ]

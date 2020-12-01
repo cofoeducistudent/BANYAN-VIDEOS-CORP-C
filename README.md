@@ -18,8 +18,9 @@ For this reason they have provided a brief stating what they would like to see o
 I would like the slight appearance to be plain and corporate like.
 
 The Front page should have a search facility allowing users to search for products
-a carousel showing a selection of film products for sale
-on the right-hand side section for news which banyan videos been fit. This will not be an integrated feed to new sites, but a section allowing banyan videos administrators to post corporate messages and news.
+It should have a carousel showing a selection of film products for sale
+It should show for news which banyan videos been fit. This will not be an integrated feed to new sites, but a section allowing banyan videos administrators to post corporate messages and news.
+
 On the page there should be an integrated session for classified ads. Banyan videos will sell this space to the public for their ads at a fee
 on the bottom half of the screen there should be more article links to other important news on the web. This will have a small title and description, a picture, all linkable to the source material.
 The colour theme should be plain and simplistic, and the appearance of the site should be whitish and clean.
