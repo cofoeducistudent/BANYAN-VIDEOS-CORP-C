@@ -446,3 +446,20 @@ a, :link {
     color: var(--theme-fgc) !important;
     background-color: var(--banner-bckg) !important;
 }
+
+
+/* MEMBERS AREA SNIPPIT TEXT */
+div .snippet :link {
+    color: var(--ink) !important;
+    text-decoration: none! important;
+}
+
+div .snippet :visited {
+    color: var(--ink) !important;
+    text-decoration: none! important;
+}
+
+div .snippet :hover {
+    color: var(--theme-c3) !important;
+    text-decoration: none! important;
+}
