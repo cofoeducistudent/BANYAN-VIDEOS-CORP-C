@@ -40,7 +40,7 @@
           </h2>
         </div>
 
-        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
           <div class="card-body">
 
             <div class="row container-fluid">
@@ -76,6 +76,7 @@
 
           </div>
         </div>
+
       </div>
 
       <!-- /////----///// -->
@@ -89,6 +90,7 @@
             </button>
           </h2>
         </div>
+
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
           <div class="card-body">
 
@@ -96,15 +98,19 @@
             <div class="row">
 
               <div class="col-12">
-                <a  href="{{items.snippet_source_url }}" target="_blank"><h2 class="bg-dark text-white px-2 my-2 ">{{ items.snippet_friendly_name }}</h2></a>
+                <a href="{{items.snippet_source_url }}" target="_blank">
+                  <h2 class="bg-dark text-white px-2 my-2 ">{{ items.snippet_friendly_name }}</h2>
+                </a>
               </div>
 
               <div class="div col-12 text-muted snippet">
-                <a  href="{{items.snippet_source_url }}" target="_blank"><image class="img-fluid" src="{{ items.snippet_image }}"></image></a>
+                <a href="{{items.snippet_source_url }}" target="_blank">
+                  <image class="img-fluid" src="{{ items.snippet_image }}"></image>
+                </a>
               </div>
 
               <div class="col-12 text-muted snippet">
-              <a  href="{{items.snippet_source_url }}" target="_blank" >  {{ items.snippet_detail }} </a>
+                <a href="{{items.snippet_source_url }}" target="_blank"> {{ items.snippet_detail }} </a>
               </div>
 
             </div>
@@ -114,6 +120,7 @@
           </div>
 
         </div>
+
       </div>
     </div>
 
