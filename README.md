@@ -92,11 +92,13 @@ I have identified users of the site and classify them as:-
 
 >b. Scope
 
-- Therefore, in summary, the scope of the project will involve the following:
+- Therefore, the scope of the project will involve the following:
 
 - The design and creation of a site to allow banyan videos corporation to post the video assets for purchase by the general public.
 
 - The design will be of a clean and corporate style
+
+- Inital data to support the site. ( These may be replaced by the Banyan Videos Corp to match their catalouge)
 
 Three specific users have been idenytified
 
@@ -146,7 +148,7 @@ Mockups were created for the various pages required. When They were tried, I was
 |C|Login page|<img src="_support_docs/images/banyan-videos-corp-Login.png" width="200">|<img src="_support_docs/images/login-page.png" width="200">|
 |D|Register page|<img src="_support_docs/images/banyan-videos-corp-Register.png" width="200">|<img src="_support_docs/images/register-page.png" width="200">|
 |E|Account profile page|<img src="_support_docs/images/banyan-videos-corp-profile-form.png" width="200">|<img src="_support_docs/images/my_account-page.png" width="200">|
-|F|Search Results page|<img src="_support_docs/images/banyan-videos-corp-SearchResults.png" width="200">|<img src="_support_docs/images/search-results-lg.jpg" width="200">|
+|F|Search Results page|<img src="_support_docs/images/banyan-videos-corp-SearchResults.png" width="200">|<img src="_support_docs/images/search-results-small.jpg" width="200">|
 |G|Members Area page|<img src="_support_docs/images/banyan-videos-corp-Members.png" width="200">|<img src="_support_docs/images/members-lounge.png" width="200">|
 |H|Contact page|<img src="_support_docs/images/banyan-videos-corp-Contact.png" width="200">|<img src="_support_docs/images/contact-page-form.png" width="200">|
 |I|Logout page|<img src="_support_docs/images/banyan-videos-corp-Logout.png" width="200">|<img src="_support_docs/images/logout-page.png" width="200">|
@@ -154,8 +156,16 @@ Mockups were created for the various pages required. When They were tried, I was
 |K|Payments page|<img src="_support_docs/images/banyan-videos-corp-stripe-payment.png" width="200">|<img src="_support_docs/images/stripe-payment-panel.png" width="200">|
 |L|Shipping Details page|<img src="_support_docs/images/banyan-videos-corp-Shipping Details.png" width="200">|<img src="_support_docs/images/shipping-form.png" width="200">|
 
+<hr>
+
 >e. Surface
- 
+
+The colour scheme I finally settled on is as follows. As directed I tried to make it light and airy, clean and simple
+
+|Colour Scheme|
+|-------------|
+|<img src="_support_docs/images/color-pallet-1of2.png" width="200">|
+|<img src="_support_docs/images/color-pallet-2of2.png" width="200">|
 
 
 > ## 2. Features ##
@@ -182,15 +192,18 @@ Here are the features that has been implemented on the site
 
 |No.|Feature|Implemented|
 |---|-------|---------|
-|1|Member Discount|<img src="writeup_stuff/feature-member-sale.jpg" width="200">|
-|2|Front Page Carousel|<img src="writeup_stuff/Banyan-Videos-corp-feature-carousel.jpg" width="200">|
-|3|Classified Ads|<img src="writeup_stuff/Banyan-Videos-corp-classifieds.jpg" width="200">|
-|4|Articles|<img src="writeup_stuff/Banyan-Videos-corp -articles.png" width="200">|
+|1|Member Discount|<img src="_support_docs/images/member-discount.png" width="400">|
+|2|Front Page Carousel|<img src="_support_docs/images/fp-carousel.jpg" width="400">|
+|4|Articles|<img src="_support_docs/images/fp-articles.jpg" width="400">|
  
 
 
 > ## 3. Features Left to Implement ##
 
+
+* Most of the features expected have been implemented. However for the film models a feied was left for global sales.
+The intention was to apply a discount to every item in Banyan Videos catalouge at once. My reasoning was for a flash sale.
+having the facility to make that happen would be a plus. However BVC has said tha it is not neccesary at present and it is under consideration. Therefore the model conmtains that option , but it will not be implemented presntly.
 
 
 
@@ -200,17 +213,33 @@ Here are the features that has been implemented on the site
  
 > ## 4. Technologies Used ##
 
+|Hardware|OS|
+|--------|--|
+|Apple Mac| - OS Catalina 10.15.7 (19H15)|
 
 
-
-
-
-
-
-
+|Technology|Version|Purpose|
+|----------|-------|-------|
+|Visual Code Studio|Version: 1.51.1| Developement IDE|
+|Terminal|Version 2.10 (433)| CLI interface|
+|Monosnap|Version 3.6.21 (November 23, 2020)|Screenshot Capture|
+|Just Color Picker|Version 3.6.21 (November 23, 2020)|Color Picker|
+|Notepad|Version 1.1 (1.1)|Used to copy search, copy, and replace data segments|
+|Google-Chrome|Version 87.0.4280.67 (Official Build) (x86_64)| Dev and Test|
+|Safari|Version 14.0 (15610.1.28.1.9, 15610)|Dev & Test|
  
 > ## 5. Testing ##
 
+* The  site has been tested on most of the popular browsers
+
+|Browser|Version|Icon|
+|-------|-------|----|
+|Safari|Version 14.0 (15610.1.28.1.9, 15610)|<img src="_support_docs/images/safari-icon.png" width="50">|
+|Google Chrome|Version 87.0.4280.67 (Official Build) (x86_64)|<img src="_support_docs/images/google-chrome-icon.png" width="50">|
+|Opera|Version:72.0.3815.400|<img src="_support_docs/images/opera-icon.png" width="50">|
+|Firefox|83.0(64-bit)|<img src="_support_docs/images/firefox-icon.png" width="50">|
+
+* Further testing was carried out 
 
 
 
@@ -225,6 +254,7 @@ Here are the features that has been implemented on the site
 
 
 
+<hr>
 
 >## **Local Install**
 The Banyan-Videos-Corp website is a full stack website. A Django framework and Postgres
@@ -286,6 +316,39 @@ What you see is the structure of the Django site. The folders individual folders
 
 <img src="_support_docs/images/installed-packages.png" width="400">
 
+
+**IF YOU LAUNCH THE SITE AND NOTHING SHOWS FOLLOW THE PROCESS BELOW:**
+* we need to create the database strcutures by using the django models
+- python manage.py makemigrations
+- python manage.py migrate
+
+
+* Finally we need to upload the inital data to populate the models
+
+- python manage.py loaddata **< * JSON FILES>**
+
+
+|*JSON File|Purpose|
+|---------|-------|
+|genre|create the genre for the films|
+|films|The film product items|
+|article|The articles for the sites frontpage|
+|frontpagecarousel| The selected images for the frontpage carousel|
+|snippet|News snippets and stuff for members area|
+
+
+**IN THE TERMINAL WINDOW CREATE A SUPER USER ACCOUNT FOR THE SITE**
+
+* python manage.py createsuperuser , and follow the prompts
+
+* This is carried out on a new databse, as it will not have any information. 
+* Keep the details secure and safe, as this is the **MASTER account** that will get you into the backend(server-side) of the Django application!
+
+<hr>
+
+ 
+
+
 To lauch the site type
 
 **python3 manage.py runserver  (enter)**
@@ -297,6 +360,7 @@ The home page will launch if you open a local browser to
 
 <img src="_support_docs/images/banyan-videos-corp-home-page.jpg" width="400">
 
+<hr>
 
 >## **Heroku Install**
 
@@ -314,18 +378,92 @@ You need to ensure that you hosting platform has
 
 The **"HEROKU"** platform supports the first two elements, however the fourth ('STATIC' file serving ) requires the installation of a module called 'Whitenoise' to acheive it. You will see whitenoise version 5.2.0 in the pip isntalled modules list
 
-First
 
-* Sign up to Heroku, and attain an account
+##**Process:**##
+
+**Ensure you have completed the local install!**
+
+
+* Sign up to **Heroku.com**, and attain an account
 * Create a heroku app - "banyan-videos-corp-c"
+* Attach a Postgress-db resource
+
+<img src="_support_docs/images/heroku-postgress-db.png" width="400">
+
+
+* Next setup the Heroku environment variables under the settings tab - ( reveal config vars)
+
+<img src="_support_docs/images/heroku-env-vars.png" width="400">
+
+* The environment variables are what the sysadmin would configure in the background on a hosted server, and would not be available to the user through a http serve. Therefore it is secure.
+
+* The important environment variables are highlighted with the red arrrow.
+
+|Environment Variable|Purpose|
+|--------------------|-------|
+|DATABASE_URL|The url pointing to the heroku Postgres databse instance|
+|DBKEY|The key for the database to logit in|
+|DISABLE_COLLECTSTATIC| Stops heroku running a collect static files on compile|
+|PRODUCTION| * This key variable django to source its database from sql-lite3(internal) or Heroku Postgres|
+|SECRET_KEY|Security key required for the django app to launch|
+|STRIPE_PRIVATE_KEY| Provided by stripe.com for transactions|
+|STRIPE_PUBLIC_KEY|Provided by stripe.com for transactions|
+
+* It's important to  mention that **the django application like most will depend on the database**. after all all webservers simply serve data.
+
+* Therefore while developing it is possible to not worry so much and use the integrated sql-lite3 database. However that will not usually be possible on a foreign hosting platform. This is the reason **I chose "POSTGRES" database , an SQL - compatiable RDMBS that is available on the HEROKU platform**.
+
+* I use the **"PRODUCTION"** environment variable to tell the APPLICATION uppon lauch to use either the integrated SQL-Lite3 database or the Heroku external( to Django Application ) database using the code below in the settings.py
+
+<img src="_support_docs/images/database-switcher.png" width="400">
+
+
+Within the filestructure of the local repo, there are two important files
+
+* requirements.txt
+* Procfile
+
+* Heroku uses the contents of these to provision the application on heroku. The formert tells Heroku which modules to install and the latter essentially tells Heroku to provision a webserver WSGI compatiable
+
+<img src="_support_docs/images/folders.png" width="200">
+
+
+* Now follow the Heroku guide and **"use git to uplaod the local repo to Heroku"**
+
+* we need to create the database strcutures by using the django models
+- heroku run python manage.py makemigrations
+- heroku run python manage.py migrate
+
+
+* Finally we need to upload the inital data to populate the models
+
+- heroku run python manage.py loaddata **< * JSON FILES>**
+
+
+|*JSON File|Purpose|
+|---------|-------|
+|genre|create the genre for the films|
+|films|The film product items|
+|article|The articles for the sites frontpage|
+|frontpagecarousel| The selected images for the frontpage carousel|
+|snippet|News snippets and stuff for members area|
+
+
+**IN THE TERMINAL WINDOW CREATE A SUPER USER ACCOUNT FOR THE SITE**
+
+* python manage.py createsuperuser , and follow the prompts
+
+* This is carried out on a new databse, as it will not have any information. 
+* Keep the details secure and safe, as this is the **MASTER account** that will get you into the backend(server-side) of the Django application!
 
 
 
 
+Finally if you send your browser to :
 
-![name-of-you-image](https://cofoeducistudent/BANYAN-VIDEOS-CORP/clone-github-link.png)
+* Your app can be found at **https://banyan-videos-corp-c.herokuapp.com/**
 
- 
+You shoud see your site.
 
 
 
@@ -335,40 +473,40 @@ First
 
 
 
-* Code from Stackoverflow - Philip Feldmann */
-* Keep text from overspilling out of columns */
+>Code from Stackoverflow - Philip Feldmann */
+Keep text from overspilling out of columns */
 
 
-* .keep-insideBSol {
+>**.keep-insideBSol {
     -moz-hyphens: auto;
     -ms-hyphens: auto;
     -webkit-hyphens: auto;
     hyphens: auto;
-    word-wrap: break-word;}
+    word-wrap: break-word;}**
 
 
 * Video box images - owend by their respective film proruction companies
 
-* ShoppingCart.objects.filter(pk=3).delete()
--Milad Khodabandehloo
-/ stack overflow
+* ShoppingCart.objects.filter(pk=3).delete() -Milad Khodabandehloo / stack overflow
 
 
 
 
 > ## 8. Content ##
+* Some code was taken from the Bootstrap documentation ( Carousel )
 
+* Thanks for the code snippet by Phillip Feldmann which stopped text content escaping the Bootstrap columns. Stop text moving out of bootstrap column - Stack-Overflow - Phillip Feldmann
 
+* software code from stack-overflow - Using nav-fill w-100 with Bootstrap 4 - rav-ram Filling navbar total width - stack-overflow
 
  
 > ## 9. Media ##
 
-The site images and data are hyperlinked, remaining the copyright of their respective owners.
-
-The images are not copied or stolen from a remote location, but remain within the public domain.
-
+* The **site images and data** are hyperlinked, remaining the copyright of their respective owners.
+* The images are not copied or stolen from a remote location, but remain within the public domain.
+* Screenshots were captured from the **Mac version of Monosnap**
 
 > ## 10. Acknowledgements ##
 
-* Thanks to mentor Precious Ijeje for helpful advice
-* Thanks to Student care for assitance
+* Thanks to mentor **Precious Ijeje** for helpful advice
+* Thanks to **Student care** for assitance
