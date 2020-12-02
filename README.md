@@ -9,8 +9,11 @@ GitHub:
 https://github.com/cofoeducistudent/BANYAN-VIDEOS-CORP-C
 
 
-<img src="_support_docs/images/home-page.jpg" width="500">
-<img src="_support_docs/images/banyan-videos-corp-home-page.jpg " width="500">
+|Screen|Size|
+|------|----|
+|<img src="_support_docs/images/home-page.jpg" width="400">|* Mobile First - Small Screen|
+|<img src="_support_docs/images/banyan-videos-corp-home-page.jpg " width="400">|* Large Screen Size|
+ 
 
 ## Index ##
 
@@ -136,21 +139,20 @@ Three specific users have been idenytified
 
 Mockups were created for the various pages required. When They were tried, I wasnt comfortable with them all, So some did change to their final incarnation. I lerant that what looks good on paper does not always translate
 
-| Index.| Page | Mock-up|
-|-------|--------|------|
-|A|Homepage|<img src="" width="200">|
-|B|Login/SignUp|<img src="" width="200">|
-|C|Login page|<img src="" width="200">|
-|D|Register page|<img src="" width="200">|
-|E|Account profile page|<img src="" width="200">|
-|F|Browse page|<img src="" width="200">|
-|G|Search Results page|<img src="" width="200">|
-|H|Members Area page|<img src="" width="200">|
-|I|Contact page|<img src="" width="200">|
-|J|Logout page|<img src="" width="200">|
-|K|Cart page|<img src="" width="200">|
-|L|Payments page|<img src="" width="200">|
-|M|Shipping Details page|<img src="" width="200">|
+| Index.| Page | Mock-up|Final|
+|-------|--------|------|-----|
+|A|Homepage|<img src="_support_docs/images/banyan-videos-corp-homepage.png" width="200">|<img src="_support_docs/images/home-page.jpg" width="200">|
+|B|Login/SignUp|<img src="_support_docs/images/banyan-videos-corp-Login_SignUp.png" width="200">|<img src="_support_docs/images/login-register-page.png" width="200">|
+|C|Login page|<img src="_support_docs/images/banyan-videos-corp-Login.png" width="200">|<img src="_support_docs/images/login-page.png" width="200">|
+|D|Register page|<img src="_support_docs/images/banyan-videos-corp-Register.png" width="200">|<img src="_support_docs/images/register-page.png" width="200">|
+|E|Account profile page|<img src="_support_docs/images/banyan-videos-corp-profile-form.png" width="200">|<img src="_support_docs/images/my_account-page.png" width="200">|
+|F|Search Results page|<img src="_support_docs/images/banyan-videos-corp-SearchResults.png" width="200">|<img src="_support_docs/images/search-results-lg.jpg" width="200">|
+|G|Members Area page|<img src="_support_docs/images/banyan-videos-corp-Members.png" width="200">|<img src="_support_docs/images/members-lounge.png" width="200">|
+|H|Contact page|<img src="_support_docs/images/banyan-videos-corp-Contact.png" width="200">|<img src="_support_docs/images/contact-page-form.png" width="200">|
+|I|Logout page|<img src="_support_docs/images/banyan-videos-corp-Logout.png" width="200">|<img src="_support_docs/images/logout-page.png" width="200">|
+|J|Cart page|<img src="_support_docs/images/banyan-videos-corp-Cart.png" width="200">|<img src="_support_docs/images/shopping-cart-page.png" width="200">|
+|K|Payments page|<img src="_support_docs/images/banyan-videos-corp-stripe-payment.png" width="200">|<img src="_support_docs/images/stripe-payment-panel.png" width="200">|
+|L|Shipping Details page|<img src="_support_docs/images/banyan-videos-corp-Shipping Details.png" width="200">|<img src="_support_docs/images/shipping-form.png" width="200">|
 
 * e. Surface
  
@@ -310,12 +312,12 @@ You need to ensure that you hosting platform has
 * A database supporting SQL.. ( for this site I have chosen **POSTGRES** as mentioned in the strtegy spec )
 * The ability to serve 'STATIC' files**
 
-The **"HEROKU"** platform supports the first two elements, however the third requires the installation of a module called 'Whitenoise' to acheive it. You will see whitenoise version 5.2.0 in the pip isntalled modules list
+The **"HEROKU"** platform supports the first two elements, however the fourth ('STATIC' file serving ) requires the installation of a module called 'Whitenoise' to acheive it. You will see whitenoise version 5.2.0 in the pip isntalled modules list
 
 First
 
 * Sign up to Heroku, and attain an account
-* Create a heroku app 
+* Create a heroku app - "banyan-videos-corp-c"
 
 
 
