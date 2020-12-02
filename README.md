@@ -9,7 +9,8 @@ GitHub:
 https://github.com/cofoeducistudent/BANYAN-VIDEOS-CORP-C
 
 
-<img src="_support_docs/images/home-page.jpg" width="600">
+<img src="_support_docs/images/home-page.jpg" width="500">
+<img src="_support_docs/images/banyan-videos-corp-home-page.jpg " width="500">
 
 ## Index ##
 
@@ -94,11 +95,13 @@ I have identified users of the site and classify them as:-
 
 - The design will be of a clean and corporate style
 
-The site will cater for free identified primary users
+Three specific users have been idenytified
 
-* Administrator
+* Administrator 
+
 * Registered user
 * Anonymous user
+
 
 >Summary
 
@@ -135,19 +138,19 @@ Mockups were created for the various pages required. When They were tried, I was
 
 | Index.| Page | Mock-up|
 |-------|--------|------|
-|A|Homepage|<img src="writeup_stuff/banyan-videos-corp-homepage.png" width="200">|
-|B|Login/SignUp|<img src="writeup_stuff/banyan-videos-corp-Login_SignUp.png" width="200">|
-|C|Login page|<img src="writeup_stuff/banyan-videos-corp-Login.png" width="200">|
-|D|Register page|<img src="writeup_stuff/banyan-videos-corp-Register.png" width="200">|
-|E|Account page|<img src="writeup_stuff/banyan-videos-corp-Account.png" width="200">|
-|F|Browse page|<img src="writeup_stuff/banyan-videos-corp-Browse.png" width="200">|
-|G|Search Results page|<img src="writeup_stuff/banyan-videos-corp-SearchResults.png" width="200">|
-|H|Members Area page|<img src="writeup_stuff/banyan-videos-corp-Members.png" width="200">|
-|I|Contact page|<img src="writeup_stuff/banyan-videos-corp-Contact.png" width="200">|
-|J|Logout page|<img src="writeup_stuff/banyan-videos-corp-Logout.png" width="200">|
-|K|Cart page|<img src="writeup_stuff/banyan-videos-corp-Cart.png" width="200">|
-|L|Payments page|<img src="writeup_stuff/banyan-videos-corp-Payments.png" width="200">|
-|M|Shipping Details page|<img src="writeup_stuff/banyan-videos-corp-ShippingDetails.png" width="200">|
+|A|Homepage|<img src="" width="200">|
+|B|Login/SignUp|<img src="" width="200">|
+|C|Login page|<img src="" width="200">|
+|D|Register page|<img src="" width="200">|
+|E|Account profile page|<img src="" width="200">|
+|F|Browse page|<img src="" width="200">|
+|G|Search Results page|<img src="" width="200">|
+|H|Members Area page|<img src="" width="200">|
+|I|Contact page|<img src="" width="200">|
+|J|Logout page|<img src="" width="200">|
+|K|Cart page|<img src="" width="200">|
+|L|Payments page|<img src="" width="200">|
+|M|Shipping Details page|<img src="" width="200">|
 
 * e. Surface
  
@@ -217,31 +220,140 @@ Here are the features that has been implemented on the site
  
 > ## 6. Deployment ##
 
+
+
+
+
+>## **Local Install**
 The Banyan-Videos-Corp website is a full stack website. A Django framework and Postgres
 backed site. The deployment of the site will be in distinct stages
 
 * Clone the Git-Hub Site
 
-* install Git on your local drive, an  ensure it is working
+* Install "Git" on your local drive, an  ensure it is working
 
-* From the Github site * , copy the link and create a local repo
+* From the Github * , copy the repo-download-link and paste to a local drive like this
+
+<img src="_support_docs/images/git-clone-link.png" width="300">
+
+**git clone <"copied link">  (return)**
+
+Initialize Git
+
+**git Initialize**
+
+Git will create a clone of the Banyan-Videos-Corp site on ypur local drive.
+At this stage you you have a copy of the site on your local computer.
+However, we are not done.  The site was developed on a virtual environment( This abstracts the site from its surroundings, helping keep the integrety of all its support files). You will need to 
+
+Initialize this virtual environment (venv) to loaunch the site locally
+
+**source venv/bin/activate**
+
+This will launch the virtual environment. You can confirm this because in the terminal session window
+you will have venv in brackets at the begining like so.
+
+**(venv) mac1@mac1s-MacBook-Pro banyan-videos-corp-c**
+
+Your terminmal command line will vary but essentiall look similar
+
+<img src="_support_docs/images/terminal-project-folder.png" width="600">
+
+What you see is the structure of the Django site. The folders individual folders represent the project and Apps of the site, as django philosophy states. Then there are some specific files that are important for the migration of the app to the Heroku platform later...
+
+|Folder|Type|Purpose|
+|------|-------|-------|
+|_banyanvideos_root|Django project|
+|home|app|Homepage|
+|about|app|about page of site|
+|charge|app|works out the and submits to Stripe Payments Corp|
+|Checkout|app|summary of the shopping cart value and presents table |
+|contact|app|Contact form for customers to email inquiries|
+|contact_sent|app|process payment confirmation|
+|delete_from_shopping_cart|app|delete shopping cart item|
+|login_register|app|holds both login/register page|
+|login_success|app|success on login|
+|logout|app|logout logout & confirmation|
+|members|app|members page content|
+|my_account|app|holds customer profile & purchase history|
+|search_results|app|Video film serach results & add to cart button|
+|shopping_cart|app| Displays the contents of the shopping cart|
+|templates|app| copy of allauth templates|
+|venv|virtual environment support| * |
+|_support_docs|app| contains images that support this readme file ** can be deleted *|
+
+<img src="_support_docs/images/installed-packages.png" width="400">
+
+To lauch the site type
+
+**python3 manage.py runserver  (enter)**
+
+
+The home page will launch if you open a local browser to 
+**http:127.0.0.1:8000** which is a localhost address
+
+
+<img src="_support_docs/images/banyan-videos-corp-home-page.jpg" width="400">
+
+
+>## **Heroku Install**
+
+The local install works for two reasons
+* Django has included by default a database sql-lite-3
+* Django has a WSGI compatiable http server inbuilt to its suite
+
+Running the django app on any platform other than a local setup, requires a bit more consideration.
+You need to ensure that you hosting platform has 
+
+* A webserver that supports **WSGI** 
+* A platform that will run python 
+* A database supporting SQL.. ( for this site I have chosen **POSTGRES** as mentioned in the strtegy spec )
+* The ability to serve 'STATIC' files**
+
+The **"HEROKU"** platform supports the first two elements, however the third requires the installation of a module called 'Whitenoise' to acheive it. You will see whitenoise version 5.2.0 in the pip isntalled modules list
+
+First
+
+* Sign up to Heroku, and attain an account
+* Create a heroku app 
+
+
+
+
 
 ![name-of-you-image](https://cofoeducistudent/BANYAN-VIDEOS-CORP/clone-github-link.png)
 
  
+
+
+
+
+
 > ## 7. Credits ##
+
+
 
 * Code from Stackoverflow - Philip Feldmann */
 * Keep text from overspilling out of columns */
+
 
 * .keep-insideBSol {
     -moz-hyphens: auto;
     -ms-hyphens: auto;
     -webkit-hyphens: auto;
     hyphens: auto;
-    word-wrap: break-word;
-* }
- 
+    word-wrap: break-word;}
+
+
+* Video box images - owend by their respective film proruction companies
+
+* ShoppingCart.objects.filter(pk=3).delete()
+-Milad Khodabandehloo
+/ stack overflow
+
+
+
+
 > ## 8. Content ##
 
 
@@ -249,10 +361,12 @@ backed site. The deployment of the site will be in distinct stages
  
 > ## 9. Media ##
 
-The site images and data are hyperlinked, remaining the copyright ogf their respective owners.
+The site images and data are hyperlinked, remaining the copyright of their respective owners.
+
 The images are not copied or stolen from a remote location, but remain within the public domain.
 
 
 > ## 10. Acknowledgements ##
 
-Thanks for mentor Precious Ijeje for helpful advice
+* Thanks to mentor Precious Ijeje for helpful advice
+* Thanks to Student care for assitance
