@@ -154,7 +154,7 @@ Mockups were created for the various pages required. When They were tried, I was
 |K|Payments page|<img src="_support_docs/images/banyan-videos-corp-stripe-payment.png" width="200">|<img src="_support_docs/images/stripe-payment-panel.png" width="200">|
 |L|Shipping Details page|<img src="_support_docs/images/banyan-videos-corp-Shipping Details.png" width="200">|<img src="_support_docs/images/shipping-form.png" width="200">|
 
-* e. Surface
+>e. Surface
  
 
 

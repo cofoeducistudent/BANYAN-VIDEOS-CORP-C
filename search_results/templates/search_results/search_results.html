@@ -61,6 +61,10 @@
 
                         <div class="card-body">
 
+                            {% if items.film_clip_link %}
+                            <a href="{% url 'members' %}"><h5 class="bg-darker"><span class="fas fa-video"></span> : Trailer/Clips</h5></a>
+                            {% endif %}
+
                             <h5   class="section-tiny-text text-muted">SKU:{{ items.film_sku }}</h5>
 
                             <h5 class="card-title">{{ items.film_friendly_title }}</h5>
