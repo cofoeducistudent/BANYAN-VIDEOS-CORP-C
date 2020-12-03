@@ -28,8 +28,6 @@ STRIPE_PRIVATE_KEY = os.getenv("STRIPE_PRIVATE_KEY")
 MAINTENANCE = os.getenv("MAINTENANCE")
 
 
-
-
 DISABLE_COLLECTSTATIC=0
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
