@@ -447,8 +447,8 @@ a, :link {
     background-color: var(--banner-bckg) !important;
 }
 
-
 /* MEMBERS AREA SNIPPIT TEXT */
+
 div .snippet :link {
     color: var(--ink) !important;
     text-decoration: none! important;
@@ -462,4 +462,16 @@ div .snippet :visited {
 div .snippet :hover {
     color: var(--theme-c3) !important;
     text-decoration: none! important;
+}
+
+/* MAINTENANCE BUTTON */
+
+button, .maintenance-button {
+    color: var(--theme-c3)!important;
+    /* background-color: red !important; */
+}
+
+button, .maintenance-button :hover {
+    color: red!important;
+    /* background-color: red !important; */
 }

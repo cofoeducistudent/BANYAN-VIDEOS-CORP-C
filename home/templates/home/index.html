@@ -1,15 +1,8 @@
 {% extends 'home/base.html' %}
 
-
-
 {% block post-title %} home-page {% endblock post-title %}
 
-
-
 {% block main-content %}
-
-<hr>
-
 
 <!-- ADMIN BUTTON -->
 <div class="row container-fluid">
@@ -17,16 +10,20 @@
 
         {% if current_user.is_staff %}
 
-       <a href="https://banyan-videos-corp-c.herokuapp.com/admin"><button class="btn btn-sm btn-success">MAINTENANCE</button></a>
+        <div class="row my-5">
+            <div class="col-12 maintenance-button">
+
+                <a href="{{MA}}"><button class="maintenance-button">MAINTENANCE</button></a>
+
+            </div>
+        </div>
 
         {% endif %}
 
     </div>
 </div>
 
-
-
-
+<hr>
 
 <div class="row container-fluid mx-auto">
 
@@ -87,13 +84,11 @@
 
         </a>
 
-
     </div>
 
     <!-- RIGHT-SIDE GENRE LIST -->
 
     <div class="col-xs-12  col-md-6 genre-items py-2">
-
 
         {% for items in genre %}
         <a class="text-decoration-none" href="{% url 'search_results' %}?sel_genre={{ items.genre_name }} ">
@@ -102,7 +97,6 @@
             </div>
         </a>
         {% endfor %}
-
 
     </div>
     <hr>
@@ -124,7 +118,6 @@
 
             <hr>
             {% endif %}
-
 
             {% endfor %}
 

@@ -1,3 +1,4 @@
+from _banyanvideos_root.settings import MAINTENANCE
 from shopping_cart.views import ShoppingCart
 from django.contrib.auth import authenticate, login, logout, get_user_model
 from django.contrib import sessions
@@ -15,32 +16,30 @@ from django.shortcuts  import render
 
 from django.contrib import messages
  
-
 from search_results import models as genre_models
 from search_results import models as film_models
-
 
 from django.contrib  import sessions
 from django.contrib.auth.models import User
 
 from shopping_cart.models  import ShoppingCartModel
- 
- 
- 
+from django.conf    import  settings
+from dotenv import load_dotenv
+import  os
+
 # Create your views here.
 
 class HomePageView(TemplateView):
     template_name = 'home/index.html'
 
- 
-
-
-
     def get(self,request):
+        
+        MA = MAINTENANCE
+        print(MA)
+        
         carousel = models.FrontPageCarousel.objects.all()
         articles = models.Article.objects.all()
         genre = film_models.Genre.objects.all()
-        
         
         # CREATE A SESSION IF NOT EXISTING!!
         if not request.session.exists(request.session.session_key):
@@ -53,12 +52,8 @@ class HomePageView(TemplateView):
         if request.user.is_authenticated:
             current_user = request.user
         
-        
-        
-        
         SCM = ShoppingCartModel.objects.filter(cart_owner = current_user).filter(cart_session = session_key)
         basket_item_count = SCM.count
-        
         
         context = {
             'carousel':carousel,
@@ -70,12 +65,9 @@ class HomePageView(TemplateView):
             'basket_item_count':basket_item_count,
             
             'SCM': SCM,
+            'MA':MA,
             
         }
         return render (request, 'home/index.html', context)
     
-    
- 
-
-
     
