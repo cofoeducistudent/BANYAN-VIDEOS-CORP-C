@@ -1,0 +1,465 @@
+:root {
+    /* DEFINE CSS VARIBLES */
+    --wallpaper: #ffffff;
+    --ink: #000000;
+    --discount-colour: #202937;
+    --banner-bckg: #000000;
+    --banner-fgnd: #ffffff;
+    /* --theme-bgc: #202937; */
+    --theme-bgc: #000000;
+    --theme-fgc: #ffffff;
+    /* --theme-c1: #EFC055; */
+    --theme-c1: rgb(243, 239, 222);
+    /* --theme-c2: #f80303; */
+    --theme-c2: rgb(245, 240, 219);
+    --theme-c3: #636677;
+    /* FONTS */
+    font-family: 'Roboto', sans-serif;
+}
+
+/* DEFAULT  SETUP CLEAR  MARGIN,PADDING,BORDER */
+
+html {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    /* color: var(--ink);
+    background-color: var(--wallpaper); */
+}
+
+body {
+    background-color: var(--wallpaper);
+    color: var(--theme-bgc);
+}
+
+/* Code from Stackoverflow - Philip Feldmann */
+
+/* Keep text from overspilling out of columns */
+
+.keep-insideBSol {
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    word-wrap: break-word;
+}
+
+/* WALLPAPER */
+
+.wallpaper {
+    background-color: var(--wallpaper);
+}
+
+/* BRAND LOGO */
+
+.brand {
+    color: var(--theme-c1) !important;
+    background-color: var(--theme-bgc) !important;
+}
+
+/* NAVBAR */
+
+.navbar {
+    opacity: .80 !important;
+}
+
+.custom-nav-color, span {
+    background-color: var(--theme-bgc) !important;
+    color: var(--theme-fgc) !important;
+}
+
+.custom-nav-color, a {
+    /* background-color: #202937 !important; */
+    color: #ffffff !important;
+}
+
+li, nav-link, :hover {
+    color: var(--theme-c1) !important;
+    transition: .5s;
+}
+
+/* NAV ITEM HOVER!!!@ */
+
+.nav-item :hover {
+    color: var(--theme-c1) !important;
+}
+
+/* BURGER BUTTON */
+
+button, navbar-toggler {
+    background-color: var(--theme-c1) !important;
+}
+
+span, navbar-toggler-icon, bbut {
+    background-color: var(--theme-c1) !important;
+}
+
+/* BUTTONS */
+
+.btn, btn-success {
+    color: var(--ink) !important;
+    background-color: var(--theme-c1) !important;
+}
+
+.btn, btn-success {
+    color: var(--ink) !important;
+    background-color: var(--theme-c1) !important;
+}
+
+.btn, btn-warning {
+    color: var(--ink) !important;
+    background-color: var(--theme-c1) !important;
+}
+
+.go-back-button {
+    box-shadow: 3px 3px var(--theme-bgc) !important;
+}
+
+/* ADD TO CART BUTTON */
+
+.add-to-cart-button {
+    font-size: 1.5rem;
+    box-shadow: 3px 3px var(--theme-bgc) !important;
+}
+
+.add-to-cart-button :hover {
+    font-size: 1.5rem;
+    color: var(--theme-fgc)!important;
+    /* box-shadow: 3px 3px var(--theme-bgc) !important; */
+}
+
+.add-to-cart-button :hover {
+    font-size: 1.5rem;
+    color: rgb(68, 119, 143) !important;
+    /* box-shadow: 3px 3px var(--theme-bgc) !important; */
+}
+
+/* ARTICLE TITLE */
+
+.article-title {
+    background-color: var(--wallpaper);
+    color: var(--ink);
+}
+
+/* GENRE */
+
+.genre-box {
+    height: 200px;
+    width: auto;
+}
+
+.genre-items {
+    list-style: none;
+}
+
+.genre-items, a {
+    color: var(--theme-bgc);
+}
+
+/* SECTION FONT STUFF */
+
+.section-title :hover {
+    color: var(--ink) !important;
+    background-color: var(--wallpaper) !important;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    color: var(--ink);
+    background-color: var(--wallpaper)
+}
+
+.section-content {
+    font-size: 1rem;
+    color: var(--ink);
+    background-color: var(--wallpaper);
+}
+
+.section-tiny-text {
+    font-size: .75rem;
+    color: var(--ink);
+    background-color: var(--wallpaper);
+}
+
+/* BANNER ADVERT ROTOR */
+
+#advert {
+    color: var(--theme-fgc);
+    /* background-color: var(--theme-bgc); */
+    color: var(--ink);
+    background-color: var(--banner-bckg);
+    height: 60px;
+    /* width: 80%; */
+    margin: auto;
+    box-shadow: 3px 3px var(--theme-c1);
+}
+
+#advert {
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: .75rem;
+    width: 90%;
+    margin: auto;
+}
+
+#advert h1 {
+    font-size: .75rem;
+    color: var(--theme-c2);
+    background-color: var(--banner-bckg);
+}
+
+.custom-alert {
+    background-color: var(--theme-bgc) !important;
+    color: var(--theme-fgc) !important;
+    transition: .5s;
+}
+
+/* LARGE SEARCH STUFF */
+
+.large-search-bar {
+    margin-top: 80px !important;
+    width: 33%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* SMALL SEARCH */
+
+.small-search {
+    margin-left: 10px, !important;
+}
+
+/* RESULTS CARD STUFF */
+
+.card-text {
+    height: 100px;
+    max-height: 100px !important;
+    overflow: hidden;
+    color: var(--theme-bgc);
+    background-color: var(--theme-fgc);
+}
+
+/* FOUND BADGE */
+
+.found-badge {
+    color: var(--ink) !important;
+    background-color: var(--discount-colour) !important;
+}
+
+/* CAROUSEL SIZE */
+
+.c-image-size {
+    height: 550px;
+    width: auto;
+    box-shadow: 5px 5px #d1c3c3;
+}
+
+/* GENRE - LIST */
+
+.genre-items :hover {
+    color: var(--theme-c1) !important;
+    background-color: var(--theme-c3) !important;
+}
+
+/* SUSER & SHOPPING CART ICONS */
+
+.fa-user {
+    color: var(--theme-fgc) !important;
+    background-color: var(--theme-bgc) !important;
+}
+
+.fa-shopping-cart {
+    color: var(--theme-fgc) !important;
+    background-color: var(--theme-bgc) !important;
+}
+
+/* DISCOUNTED PRODUCTS */
+
+.discounted-product {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    width: 5%;
+    border-radius: 10px;
+    background-color: var(--discount-colour);
+    color: var(--wallpaper)
+}
+
+.discounted-product, h1 {
+    font-size: .75rem;
+}
+
+.discounted-product :hover {
+    color: var(--theme-fgc) !important;
+}
+
+/* FOOTER BOX */
+
+.footer-box {
+    height: 80px;
+    max-height: 80px;
+    width: 100%;
+    color: var(--banner-fgnd);
+    background-color: var(--theme-bgc);
+    opacity: .80;
+    margin-left: 0px;
+}
+
+.sm-icons {
+    font-size: 1.5rem;
+    background-color: var(--theme-bgc) !important;
+    color: var(--wallpaper) !important;
+    margin-bottom: 10px;
+}
+
+.footer-box {
+    color: #ffffff !important;
+}
+
+/* USER & SHOPPING CART */
+
+.fa-user {
+    color: var(--theme-c1) !important;
+}
+
+.fa-shopping-cart {
+    color: var(--theme-c1) !important;
+}
+
+.u-name {
+    color: var(--theme-c1) !important;
+    background-color: var(--theme-bgc) !important;
+}
+
+/* TABLES */
+
+table, th, td {
+    border: .5px solid var(--ink);
+}
+
+table, th, td, :hover {
+    /* border: 1px solid black; */
+    color: var(--ink) !important;
+}
+
+th, .table-spacer {
+    width: auto;
+}
+
+/* CART */
+
+span, .my-item, .fas .fa-shopping-cart {
+    color: var(--ink) !important;
+    background-color: var(--theme-fgc) !important;
+}
+
+.cart-text {
+    font-size: .5rem;
+}
+
+.cart-pic {
+    height: 50px;
+    width: auto;
+}
+
+.cart-items {
+    font-size: 1rem;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+h4, .cart-text {
+    font-size: .5rem;
+}
+
+/* CART BUTTON  */
+
+.btn, span, .fas-cart-plus {
+    color: var(--ink) !important;
+    background-color: var(--theme-c1) !important;
+}
+
+/* COST BLOCK STUFF */
+
+h3, .cost-block {
+    font-size: x-large;
+}
+
+.fb-high-light {
+    background-color: var(--theme-c1);
+    color: var(--ink);
+    padding: 10px 10px 10px 10px;
+}
+
+/* PAYMENT BLOCK */
+
+.payment-block {
+    background-color: var(--wallpaper);
+    color: var(--ink);
+}
+
+/* PAYMENT BUTTON */
+
+.payment-button {
+    box-shadow: 3px 3px var(--discount-colour);
+}
+
+.pay-selector {
+    list-style: none;
+}
+
+/* FAS-VIDEO ICON ON HEADER NAV BAR */
+
+.header-icon {
+    list-style: none;
+    color: var(--theme-c1) !important;
+    background-color: var(--theme-bgc) !important;
+    /* font-size: 2rem !important; */
+}
+
+/* REMOVE ASTERIX ON REQUIRED FILED REF# CRISPY FORMS LOGIN */
+
+.asteriskField {
+    display: none;
+}
+
+a, :link {
+    color: var(--ink);
+}
+
+/* CHECKOUT IMAGE BOX SIZE */
+
+.checkout-image-box {
+    height: 50px;
+    width: auto;
+}
+
+/* LOGIN REGISTER PAGE!! */
+
+.login_register-buttons {
+    color: var(--ink) !important;
+    background-color: var(--banner-bckg) !important;
+}
+
+.login_register-buttons :hover {
+    color: var(--theme-fgc) !important;
+    background-color: var(--banner-bckg) !important;
+}
+
+
+/* MEMBERS AREA SNIPPIT TEXT */
+div .snippet :link {
+    color: var(--ink) !important;
+    text-decoration: none! important;
+}
+
+div .snippet :visited {
+    color: var(--ink) !important;
+    text-decoration: none! important;
+}
+
+div .snippet :hover {
+    color: var(--theme-c3) !important;
+    text-decoration: none! important;
+}
