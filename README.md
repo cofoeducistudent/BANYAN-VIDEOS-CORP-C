@@ -6,6 +6,7 @@ BANYAN-VIDEOS-CORPORATION-C
 
 
 GitHub:
+
 https://github.com/cofoeducistudent/BANYAN-VIDEOS-CORP-C
 
 
@@ -79,14 +80,16 @@ Following the project brief and further clarification, I have decided to approac
 * For e-commerce and commerce aspects,  I will  employ "Stripe-Payment" solution. The benefit of this is the security will be strengthened, as user payment credit card (CC)details will be handled completely by the "STRIPE Corporation" and reside within our website architecture. 
 
 
+<hr>
 
 I have identified users of the site and classify them as:-
 
 |User Type|Ability|
 |---------|-------|
+|Owner|Banyan Videos Corp - Online Reatiler of fine videos|
 |Administrator - level|The administrator will be able create and post material to the site. In addition, there will also be able to populate the site with new products.|
-|Registered user - level|Registered users will have access to browse the site make purchases, have their details on the profile page for speedier purchases, and have the ability to access a member’s page, on which they can post comments to any features set up by banyan videos. Finally, members will have access to discounted prices on products they purchase|
-|Anonymous user - level|An anonymous user, or a new user to the site will have the ability to browse the site and purchase products. However, it will not have the benefit of discounted prices, or access to the members area|
+|Customer(Registered) - level|Registered users will have access to browse the site make purchases, have their details on the profile page for speedier purchases, and have the ability to access a member’s page, on which they can post comments to any features set up by banyan videos. Finally, members will have access to discounted prices on products they purchase|
+|Customer(Anonymous) - level|An anonymous user, or a new user to the site will have the ability to browse the site and purchase products. However, it will not have the benefit of discounted prices, or access to the members area|
 
 <hr>
 
@@ -111,7 +114,7 @@ Basic user stories suppoted the features
 |Customer|I require a purchase_history|So I can review what I bought and spent|
 |Customer|I require a shopping cart feature| So I can add items and pay once I have completed browsing|
 |Customer|I wish to register my address & email|So I can receive my order and a confirmation receipt|
-|Customer|I wish purcahse ability without membership|So I can purchase without becomming a member|
+|Customer (Anonymous)|I wish purcahse ability without membership|So I can purchase without becomming a member|
 |Customer|I wish a credit card payment feature| So that I can pay by credit card|
 |Customer|I wish for a contact feature| So that I can mail the company if I have any issues|
 |Customer|I require a Logout feature| So I can safely logout of the site|
@@ -128,7 +131,7 @@ Basic user stories suppoted the features
 
 - Inital data to support the site. ( These may be replaced by the Banyan Videos Corp to match their catalouge)
 
-Three specific users have been idenytified
+**Three specific users have been identified**
 
 * Administrator 
 
