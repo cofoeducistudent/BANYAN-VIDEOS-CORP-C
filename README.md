@@ -88,7 +88,35 @@ I have identified users of the site and classify them as:-
 |Registered user - level|Registered users will have access to browse the site make purchases, have their details on the profile page for speedier purchases, and have the ability to access a member’s page, on which they can post comments to any features set up by banyan videos. Finally, members will have access to discounted prices on products they purchase|
 |Anonymous user - level|An anonymous user, or a new user to the site will have the ability to browse the site and purchase products. However, it will not have the benefit of discounted prices, or access to the members area|
 
+<hr>
 
+**USER STORIES**
+
+Basic user stories suppoted the features
+
+|User| Requirement|So that I can Achieve|
+|----|------------|----------------------|
+|Owner|I require a sales banner|So that I can present the merits/products/offers of our site to customers|
+|Owner|I require the ability to send a file of our products to a site admin| So that they could upload it to the site, and I retain control of the prices and discounts|
+|Owner|I require a membership join feature| So I can build a customer base and communicate with customers|
+|Owner|I require a membership video/trailer clip ability| So I can offer members vidoe clips and trailers or premium content|
+|Owner|I require a membership News/Snippets feature|So I can provide premium content to members|
+|Owner|I wish a selective discount feature on products|So that I can give discounts to signed-up Members, thus providing an incentive|
+|Administrator|I require a login feature| So that I can login to the site and carry out my tasks|
+|Administrator|I require an upload feature/process |So I can update the product database in bulk|
+|Customer|I require a feature |So I can update the product database|
+|Customer|I require a registration/Login page|So that I can register or login to my account|
+|Customer|I require a serach feature|So I can search for products I wish|
+|Customer|I require a simple purchase facility|So I can purchase Items|
+|Customer|I require a purchase_history|So I can review what I bought and spent|
+|Customer|I require a shopping cart feature| So I can add items and pay once I have completed browsing|
+|Customer|I wish to register my address & email|So I can receive my order and a confirmation receipt|
+|Customer|I wish purcahse ability without membership|So I can purchase without becomming a member|
+|Customer|I wish a credit card payment feature| So that I can pay by credit card|
+|Customer|I wish for a contact feature| So that I can mail the company if I have any issues|
+|Customer|I require a Logout feature| So I can safely logout of the site|
+
+<hr>
 
 >b. Scope
 
@@ -134,9 +162,29 @@ Three specific users have been idenytified
 
 - A small demo catalogue of products will be loaded for testing purposes. This will be deleted and replaced by banyan videos corporation
 
+<hr>
 
 > c. Structure
  
+DATABASE MODELS
+
+Django uses the concept of models to abstract data-content and data-structure from the "database type".
+This is fantastic and it allow the developer to not worry about specificity of databases, and the developer can remain certain it will be easy to port the application to whatever database engine the client requires!
+
+
+A few database models were created to allow the django web-site to function 
+
+|Model|Purpose|Model Implementation|
+|-----|-------|--------------------|
+|homepage-models|Frontpage Carousel / Article / Snippets|<img src="_support_docs/images/1-homepage-models.png" width="600">|
+|my-account-models|User Profile details / User Purchase History |<img src="_support_docs/images/2-my-account-models.png" width="600">|
+|search-results-models|Film Video models / Genre models |<img src="_support_docs/images/3-search-results-models.png" width="600">|
+|shopping-cart models-models|shopping-cart models |<img src="_support_docs/images/4-shopping-cart-models.png" width="600">|
+|contact-form-models|contact-form models |<img src="_support_docs/images/5-contact-form-model.png" width="600">|
+|checkout-form-models|checkout-form models |<img src="_support_docs/images/6-checkout-form-model.png" width="600">|
+
+ <hr>
+
 ## * (d). Skeleton
 
 Mockups were created for the various pages required. When They were tried, I wasnt comfortable with them all, So some did change to their final incarnation. I lerant that what looks good on paper does not always translate
@@ -157,6 +205,7 @@ Mockups were created for the various pages required. When They were tried, I was
 |L|Shipping Details page|<img src="_support_docs/images/banyan-videos-corp-Shipping Details.png" width="200">|<img src="_support_docs/images/shipping-form.png" width="200">|
 
 <hr>
+
 
 >e. Surface
 
@@ -218,16 +267,31 @@ having the facility to make that happen would be a plus. However BVC has said th
 |Apple Mac| - OS Catalina 10.15.7 (19H15)|
 
 
-|Technology|Version|Purpose|
+|Software Technology|Version|Purpose|
 |----------|-------|-------|
 |Visual Code Studio|Version: 1.51.1| Developement IDE|
 |Terminal|Version 2.10 (433)| CLI interface|
 |Monosnap|Version 3.6.21 (November 23, 2020)|Screenshot Capture|
 |Just Color Picker|Version 3.6.21 (November 23, 2020)|Color Picker|
 |Notepad|Version 1.1 (1.1)|Used to copy search, copy, and replace data segments|
-|Google-Chrome|Version 87.0.4280.67 (Official Build) (x86_64)| Dev and Test|
+|Google-Chrome-Tools|Version 87.0.4280.67 (Official Build) (x86_64)| Dev and Test|
 |Safari|Version 14.0 (15610.1.28.1.9, 15610)|Dev & Test|
- 
+
+<hr>
+
+|Web-Technologies|Version|Purpose|
+|----------------|-------|-------|
+|HTML| 5.0| Website structure|
+|CSS|3.0|Web-page sattelite|
+|Bootstrap|4|Helps to structure page & Mobile Firts Design|
+|Django Framework|Design Framework Selected for Speed|
+|Python|3.x|For backend logic|
+|Javascript|Used for bespoke logic ..eg Banner Rotor on home page|
+|Fontawsome|4.x|Provides Icons, especially for social media stuff|
+
+
+<hr>
+
 > ## 5. Testing ##
 
 * The  site has been tested on most of the popular browsers
@@ -241,6 +305,7 @@ having the facility to make that happen would be a plus. However BVC has said th
 
 * Further testing was carried out 
 
+<hr>
 
 
 
