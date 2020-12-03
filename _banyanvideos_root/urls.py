@@ -52,4 +52,5 @@ urlpatterns = [
     
     path('contact_sent/', include('contact_sent.urls')),
     
+    
 ]

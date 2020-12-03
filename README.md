@@ -16,6 +16,15 @@ https://github.com/cofoeducistudent/BANYAN-VIDEOS-CORP-C
 |<img src="_support_docs/images/banyan-videos-corp-home-page.jpg " width="400">|* Large Screen Size|
  
 
+
+USER_ACCOUNTS FOR TESTING
+siteadmin -
+anonuser -
+memberuser -  
+
+
+
+
 ## Index ##
 
 > Project Brief
@@ -533,8 +542,12 @@ Finally if you send your browser to :
 
 You shoud see your site.
 
+>**WARNING:**
+* The site settings promote the view of the site from any host. It is possible in production that you may wish a limited range of access. The ALLOWED_HOSTS = ['*'] settings should be modified and made more specific in that instance.
 
+* DEBUG = False  should be left as is in Production 
 
+* DISABLE_COLLECTSTATIC=0 should be left as 0 in PRODUCTION, allowig static files to be collected and compiled to the project 'static' folder during bootup, otherwise you may recieve a internal '500 server error'
 
 
 > ## 7. Credits ##
