@@ -25,6 +25,7 @@ STRIPE_PUBLIC_KEY = os.getenv("STRIPE_PUBLIC_KEY")
 STRIPE_PRIVATE_KEY = os.getenv("STRIPE_PRIVATE_KEY")
 
 
+# For Miantenace button
 MAINTENANCE = os.getenv("MAINTENANCE")
 
 
