@@ -29,9 +29,14 @@ class ContactSent(TemplateView):
         if request.user.is_authenticated:
             current_user = request.user
 
+
+
         SCM = ShoppingCartModel.objects.filter(
             cart_owner=current_user).filter(cart_session=session_key)
         basket_item_count = SCM.count
+
+
+
 
         context = {
 
@@ -78,6 +83,8 @@ class ContactSent(TemplateView):
 
         send_mail(message_subject, message_body, 'cofoedu_banyan@hotmail.com',
                   [SALES_DEPT_EMAIL, request.POST['email']], fail_silently=False)
+
+
 
         context = {
 

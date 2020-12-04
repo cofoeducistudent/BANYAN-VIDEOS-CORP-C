@@ -10,7 +10,6 @@ from django.views.generic import TemplateView
 from shopping_cart.models import ShoppingCartModel
 from .forms import ContactForm
 
-
 from django.contrib import messages
 
 # Create your views here.
@@ -20,7 +19,7 @@ class Contact(TemplateView):
     template_name = 'contact/contact.html'
 
     """
-    GET SECTION
+    GET CODE SECTION
     """
 
     def get(self, request):
@@ -46,7 +45,7 @@ class Contact(TemplateView):
         prefill ={}
         
         """
-        IF USER IS REGISTERD - GO GRAB USERNAME 
+        IF USER IS REGISTERD - GO GRAB USER NAME 
         AND EMAIL AND PRE-POPULATE TO SAVE TIME
         """
         if request.user.is_authenticated:
@@ -55,8 +54,13 @@ class Contact(TemplateView):
                 'email': request.user.email,
             }
 
-
+        #prefill contact form
         CFM = ContactForm(prefill)
+
+
+
+
+
 
         context = {
 
