@@ -22,9 +22,9 @@ https://github.com/cofoeducistudent/BANYAN-VIDEOS-CORP-C
 
 |User Name|Password|Role|
 |---------|--------|----|
-|bvcsiteadmin|Alexkid1bvc|Staff
-|bvcmemberuser|Alexkid1muser| Active - Member User
-|any - user - name ||Non-Member User| Non member status
+|bvcsiteadmin|Bvc2020$|Staff
+|bvcmemberuser|Bvcuser2020$| Active - Member User
+
 
 <hr>
  
@@ -41,7 +41,7 @@ Banyan videos corporation has asked for a website but will help them retail thei
 For this reason, they have provided a brief stating what they would like to see on the site with features that they would wish on it.
 
 
-* Firtsly the site would be light in appearance and corporate like ( flash etc).
+* The site will be of a light colourscheme be and corporate like ( flash etc).
 
 * The Front page should have a search facility allowing users to search for products
 
