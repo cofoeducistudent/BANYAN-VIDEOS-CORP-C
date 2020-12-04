@@ -97,7 +97,7 @@ I have identified users of the site and classify them as:-
 |---------|-------|
 |Owner|Banyan Videos Corp - Online Reatiler of fine videos|
 |Administrator - level|The administrator will be able create and post material to the site. In addition, there will also be able to populate the site with new products.|
-|Customer(Registered) - level|Registered users will have access to browse the site make purchases, have their details on the profile page for speedier purchases, and have the ability to access a member’s page, on which they can post comments to any features set up by banyan videos. Finally, members will have access to discounted prices on products they purchase|
+|Customer(Registered) - level|Registered users will have access to browse the site make purchases, have their details on the profile page for speedier purchases, and have the ability to access a member’s page, on which they can view video clips and specific articles set up by banyan videos. Finally, members will have access to discounted prices on products they purchase|
 |Customer(Anonymous) - level|An anonymous user, or a new user to the site will have the ability to browse the site and purchase products. However, it will not have the benefit of discounted prices, or access to the members area|
 
 <hr>
@@ -467,6 +467,12 @@ The **"HEROKU"** platform supports the first two elements, however the fourth ('
 
 <img src="_support_docs/images/heroku-postgress-db.png" width="400">
 
+
+**ENVIRONMENT VARIABLES**
+
+* Environment variables are important and are the missing link to make things operate. They are mainly used to hold some arbitary value which we do not necessarialy wish to disclose in hardformat where users can get access. Because environment variables are controlled by the sysadmin, any user other than a sysadmin will not have access to the. For this reason we keep the secret keys and other credentials we wish to remain secure.
+
+* In the local install the environment variables are kept in the **.env file**, and are loaded on django launch by the module **'python_dotenv'**. However on the heroku platform it is manually entered under the 'settings tab'
 
 * Next setup the Heroku environment variables under the settings tab - ( reveal config vars)
 
