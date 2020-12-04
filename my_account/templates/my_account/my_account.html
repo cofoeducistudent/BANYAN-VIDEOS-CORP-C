@@ -11,10 +11,21 @@
 <div class="row container-fluid">
   <div class="col-12 mx-3">
 
-    <!-- <h1 class="section-title text-center">MY_ACCOUNT!</h1> -->
+    
 
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
+
+
+        <div class="row">
+          <div class="col-12 my-3">
+
+            <a class="text-dark" href="{% url 'logout' %}"><button class="btn btn-lg btn-danger payment-button">LOGOUT</button></a>
+
+          </div>
+        </div>
+
+
         <h1 class="display-4">Hello, {{ current_user }}</h1>
         <hr>
 

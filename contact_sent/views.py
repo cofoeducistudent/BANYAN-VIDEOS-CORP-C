@@ -1,10 +1,15 @@
-from django.shortcuts import render
+from _banyanvideos_root.settings import SALES_DEPARTMENT_EMAIL
+from django.shortcuts import render,redirect
 from django.contrib import messages
 
 from django.views.generic import TemplateView
 from shopping_cart.models import ShoppingCartModel
 
 from django.core.mail import send_mail
+
+from dotenv import load_dotenv
+
+import os
 
 # Create your views here.
 
@@ -55,9 +60,14 @@ class ContactSent(TemplateView):
 
     def post(self, request):
 
-        SALES_DEPT_EMAIL = 'cofoedu@gmail.com'
+        SALES_DEPARTMENT_EMAIL = os.getenv("SALES_DEPT")
+        BANYAN_VIDEOS_CORP_EMAIL_BOX=os.getenv("BVC_EMAIL_BOX")
+        
+        
 
-        messages.info(request, "Message Sent!")
+        
+
+       
 
         # CREATE A SESSION IF NOT EXISTING!!
         if not request.session.exists(request.session.session_key):
@@ -75,16 +85,28 @@ class ContactSent(TemplateView):
         basket_item_count = SCM.count
 
 
+   
 
 
-        message_subject = "BYVC - ENQUIRY : ** " + str(request.POST['subject'])
+
+        message_subject = "** BVC - ENQUIRY ** :" + str(request.POST['subject'])
 
         message_body = str(request.POST['comment']) + chr(13)+chr(13)
 
-        send_mail(message_subject, message_body, 'cofoedu_banyan@hotmail.com',
-                  [SALES_DEPT_EMAIL, request.POST['email']], fail_silently=False)
 
 
+        """
+        VALIDATE FORM
+        """
+        if len(str(request.POST['subject'])) < 4 or len(str(request.POST['comment'])) < 4 :
+            messages.info(request,'Please Include a Proper Subject Field or Message!')
+            return redirect ('contact')
+
+
+        send_mail(message_subject, message_body, BANYAN_VIDEOS_CORP_EMAIL_BOX,
+                  [SALES_DEPARTMENT_EMAIL, request.POST['email']], fail_silently=False)
+
+        messages.info(request, "Message Successfully Sent!")
 
         context = {
 

@@ -145,7 +145,7 @@ class ShoppingCart(TemplateView):
                 price_paid = round(price_paid,2)
                 
             
-   
+        tdate = str(date)  
            
                 
         # ASSEMBLED FILM ITEM
@@ -207,11 +207,7 @@ class ShoppingCart(TemplateView):
         
         
 
-        
-        # DELETE ALL SHOPPING CART WITH SPECIFIC OWNER
-        # my_object = ShoppingCartModel.objects.filter(cart_film_quantity = 1)
-        # my_object.delete()
-
+     
         context = {
 
             'session_key': session_key,

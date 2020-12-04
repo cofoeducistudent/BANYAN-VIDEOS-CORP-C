@@ -103,10 +103,10 @@ class MyAccount(TemplateView):
 
         return render(request, 'my_account/my_account.html', context)
 
-    """
-    POST CLASS
-    """
 
+    """
+    POST CLASS  CODE
+    """
 
     def post(self, request):
         # CREATE A SESSION IF NOT EXISTING!!
@@ -124,7 +124,7 @@ class MyAccount(TemplateView):
             cart_owner=current_user).filter(cart_session=session_key)
         basket_item_count = SCM.count
 
-        # UPROFILEDATA = UserProfile.objects.all()
+       
 
         """
         SAVE PROFILE
@@ -148,10 +148,32 @@ class MyAccount(TemplateView):
             up_country=(request.POST['country']),
 
         )
-
+        
+        
+        """
+        VALIDATE FORM
+        """
+        if len(b.up_first_name) < 4 or len(b.up_last_name) < 4 :
+            messages.info(request,
+            'Please Complete The form Properly..Something seems incorrect in the names section!')
+            return redirect ('my_account')
+        
+        if len(b.up_address_line1) < 1 or len(b.up_address_line2) < 4 or len(b.up_address_line3) < 4:
+            messages.info(request,
+            'Please Complete The form Properly..Something seems incorrect in the address section!')
+            return redirect ('my_account')
+        
+        if len(b.up_post_code) < 4 or len(b.up_country) < 4 :
+            messages.info(request,
+            'Please Complete The form Properly..Something seems incorrect in the post-code or country section!')
+            return redirect ('my_account')
+        
+        # OK TO SAVE FORM NOW!!
         b.save()
 
-        messages.info(request, "Your Profile has been Saved")
+
+
+        messages.info(request, "Your profile has been successfully saved!!")
 
         return redirect('home')
 

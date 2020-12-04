@@ -21,12 +21,29 @@ load_dotenv(verbose=True)
 
 SECRET_KEY = os.getenv("SECRET_KEY")
 
+
+
 STRIPE_PUBLIC_KEY = os.getenv("STRIPE_PUBLIC_KEY")
 STRIPE_PRIVATE_KEY = os.getenv("STRIPE_PRIVATE_KEY")
 
 
-# For Miantenace button
+
+"""
+BANYAN - VIDEOS - CORP.
+CUSTOM APPLICATION CONFIGURATION.
+
+MAINTENANCE ; maintenace mode available... staff only
+BANYAN_VIDEOS_CORP_EMAIL_BOX ; Email box used by banyan videos
+SALES_DEPARTMENT_EMAIL ; Email that gets a copy of sales transaction & contacts
+
+"""
 MAINTENANCE = os.getenv("MAINTENANCE")
+BANYAN_VIDEOS_CORP_EMAIL_BOX=os.getenv("BVC_EMAIL_BOX")
+SALES_DEPARTMENT_EMAIL=os.getenv("SALES_DEPT")
+
+
+
+
 
 
 DISABLE_COLLECTSTATIC=0

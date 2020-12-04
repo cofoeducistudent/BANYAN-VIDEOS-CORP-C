@@ -102,7 +102,7 @@ class Charge(TemplateView):
                 charge = stripe.Charge.create(
                     amount=final_bill_in_stripe_format,
                     currency='GBP',
-                    description='A Banyan-Videos-Corp charge',
+                    description='A Banyan-Videos-Corp Charge',
                     source=request.POST['stripeToken']
                 )
 
@@ -129,7 +129,9 @@ class Charge(TemplateView):
                 str(final_bill)+chr(13) + chr(13)
 
             send_mail('BANYAN-VIDEOS-SALES ORDER!', message_body,
-                      'cofoedu_banyan@hotmail.com', [SALES_DEPT_EMAIL,  request.POST['sf_email']], fail_silently=False)
+                      'cofoedu_banyan@hotmail.com', [SALES_DEPT_EMAIL,
+                                                     request.POST['sf_email']],
+                      fail_silently=False)
 
             """
             SALE COMPLETE ......THIS USER IS ANONYMOUS, THEREFORE DELETE ITEMS IN CART!!
@@ -210,7 +212,9 @@ class Charge(TemplateView):
                 str(final_bill)+chr(13)+chr(13)
 
             send_mail('BANYAN-VIDEOS-SALES ORDER!', message_body,
-                      'cofoedu_banyan@hotmail.com', [SALES_DEPT_EMAIL, request.POST['sf_email']], fail_silently=False)
+                      'cofoedu_banyan@hotmail.com', [SALES_DEPT_EMAIL,
+                                                     request.POST['sf_email']],
+                      fail_silently=False)
 
             """
             DELETE ITEMS IN CART!!
