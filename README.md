@@ -16,18 +16,23 @@ https://github.com/cofoeducistudent/BANYAN-VIDEOS-CORP-C
 |<img src="_support_docs/images/banyan-videos-corp-home-page.jpg " width="400">|* Large Screen Size|
  
 
+<hr>
 
-USER_ACCOUNTS FOR TESTING
-siteadmin -
-anonuser -
-memberuser -  
+**USERS CONFIGURED FOR TEST**
 
+|User Name|Password|Role|
+|---------|--------|----|
+|bvcsiteadmin|Alexkid1bvc|Staff
+|bvcmemberuser|Alexkid1muser| Active - Member User
+|any - user - name ||Non-Member User| Non member status
 
+<hr>
+ 
 
 
 ## Index ##
 
-> Project Brief
+> **Project Brief**
 
 Banyan videos project brief.
 
