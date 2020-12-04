@@ -38,7 +38,7 @@ Banyan videos project brief.
 
 Banyan videos corporation has asked for a website but will help them retail their video merchandise online.
 
-For this reason they have provided a brief stating what they would like to see on the site with features that would definately wish on it.
+For this reason, they have provided a brief stating what they would like to see on the site with features that they would wish on it.
 
 
 * Firtsly the site would be light in appearance and corporate like ( flash etc).
@@ -47,35 +47,35 @@ For this reason they have provided a brief stating what they would like to see o
 
 * It should have a carousel showing a selection of film products for sale
 
-* It should show for news/information which banyan videos deem fit.This is not an rss-feed or an integrated feed to other sites, but a section allowing banyan videos administrators to post corporate messages and news, or whatever they wish.
+* It should show news/information which banyan videos deem fit. This is not expected to be an RSS-feed or an integrated feed from other sites, but a section allowing banyan video administrators to post corporate messages and news.
 
-* On a members section there should be more article links to other important news on the web (curated by banyan videos admin). This should have a title/description, a picture, all linkable to the source material.
+* On the members-only section, there should be more article links to other important news on the web (curated by banyan videos admin). This should have a title/description, a picture, all linkable to the source material.
 
-* The colour theme should be plain and simplistic, and the appearance of the site should predominantly light and clean.
-
-
-* The frequency and volume of the products will be centrally controlled. Therefore, they wish to have a way of populating the product line very quickly. This will ensure prices and sale discounts are also effectively controlled. The intention is for head Office (H.O) to email a file to the site admin, who will simply upload the data with a single command. BVC do not wish to have a CMS for creating items, aas that will remove a single point of control.
+* The colour theme should be straightforward and simplistic, and the appearance of the site should be predominantly light and clean.
 
 
-* In the future they wish to have a separate server to serve images for their products, which will have a commercial uniform asset look, like major retailers such as Argos or Sainsbury's. However, the division that will handle that is not yet up and running. For this reason, they simply wish to use images that are readily available online showing the video covers. These images are owned by the movie production companies and placed in the public domain for promotion. Banyan videos corp will be purchasing their videos from their main distributors, thus avoiding copyright infringement or legal entanglements.
+* The frequency and volume of the products will be centrally controlled and updated infrequently. Therefore, they wish to have a way of populating the product line very quickly. This will ensure prices and sale discounts are also effectively controlled. The intention is for head Office (H.O) to connect to the server via an admin access, upload the data every so often. BVC do not wish to have a CMS for creating items( except in odd circumstances), as that will redact a central control model and lead to chaos and potential fraud.
+
+
+* In the future, they wish to have a separate server to serve images for their products, which will have a commercial uniform asset look, like significant retailers such as Argos or Sainsbury's. However, the division that will handle that is not yet up and running. For this reason, they simply wish to use images that are readily available online showing the video covers. These images are owned by the movie production companies and placed in the public domain for promotion. Banyan videos corp will be purchasing their videos from their leading distributors, thus avoiding copyright infringement or legal entanglements.
 
 
 
-* Videos film products should also be presented on the site within specific genre or classification for quick search if a customer does not know a specific film title but has an idea of the flavour of film they wish to purchase.
+* Videos film products should also be presented on the site within specific genre or classification for quick search if a customer does not know a particular title of a film but has an idea of the flavour of film they wish to purchase.
 
 
-* Various Video products will have discounts applied to members.
+* Various Video films will be discounted to members.
 
-* For members, there should be a member's area, where banyan videos will post inside news and features, and watch trailers or any sneek peak teasers posted.
+* For members, there should be a member's area, where banyan videos will post inside news and features, and watch trailers or any sneak peek teasers posted.
 
-* Banyan videos say that they have a corporate head office (H.O) that will deal with all issues from customers and therefore it is sufficient to have a contacts page that provides a contact form. 
+* Banyan videos say that they have a corporate head office (H.O) that will deal with all issues from customers, and therefore it is sufficient to have a contacts page that provides a contact form. 
 
-* Finally, they wish website to be up and running in a quick timescale and the overall cost to be small to moderate.
+* Finally, they wish the website to be up and running quickly & cheaply.
 
 
 > ## 1. UX ##
  
->a. Strategy
+>**a. Strategy**
  
 Following the project brief and further clarification, I have decided to approach that will facilitate banyan videos requirements in the following way.
 
@@ -91,7 +91,11 @@ Following the project brief and further clarification, I have decided to approac
 
 * I am not quite sure of the colour scheme to use yet, as banyan videos left this open-ended, however having seen some of their logo artwork, I will endeavor to use something in a similar style.
 
-* For e-commerce and commerce aspects,  I will  employ "Stripe-Payment" solution. The benefit of this is the security will be strengthened, as user payment credit card (CC)details will be handled completely by the "STRIPE Corporation" and reside within our website architecture. 
+* For e-commerce and commerce aspects, I will employ the "Stripe-Payment" solution. The benefit of this is that the security will be inherently strengthened, as user payment credit card (CC)details will be handled entirely by the "STRIPE Corporation" and not reside within our website architecture. Although the Django framework defaults to an SQL-light database, I will utilise the POSTGRES SQL relational database management system (RMDBS) hosted on Heroku.
+
+
+* Banyan videos say that they have a corporate head office (H.O) that will deal with all issues from customers, and therefore it is sufficient to have a contacts page that provides a contact form. 
+
 
 
 <hr>
@@ -135,7 +139,7 @@ Basic user stories suppoted the features
 
 <hr>
 
->b. Scope
+>**b. Scope**
 
 - Therefore, the scope of the project will involve the following:
 
@@ -143,7 +147,8 @@ Basic user stories suppoted the features
 
 - The design will be of a clean and corporate style
 
-- Inital data to support the site. ( These may be replaced by the Banyan Videos Corp to match their catalouge)
+- Initial data to support the site. (The Banyan Videos Corp may replace these to match their catalogue)
+
 
 **Three specific users have been identified**
 
@@ -159,7 +164,7 @@ Basic user stories suppoted the features
 
 - The site will allow new customers membership sign-up
 
-- The site will allow members to access to a member’s section, where they will view members only content
+- The site will allow members to access a member’s section, where they will view members-only content
 
 - Members will have the ability to complete a profile page to speed up future transactions.
 
@@ -167,29 +172,28 @@ Basic user stories suppoted the features
 
 - Visitors to the site can search for products either by genre or by text on a search bar
 
-- The site will be designed [ ** mobile first ** ] and fluid, allowing it to adjust for the you on mobile phones tablets and desktop computers.
+- The site will be designed (** mobile-first **) and fluid, allowing it to adjust on mobile phones tablets and desktop computers.
 
-- From technical aspects of meeting developement speed, the site will be created user Django framework.
+- From technical aspects of meeting development speed, the site will be created user Django framework.
 
 - The database will be the Postgres SQL relational database.
 
-- The administrator will have access the backend for the purpose of pacing a "FILE" containing new products catalouge
+- The administrator will have access to the backend to update a "FILE" containing new products catalogue
 
-- Initially the site will be hosted on the "Heroku platform". It is understood it may be rehosted in the future
+- Initially, the site will be hosted on the "Heroku platform". It is understood it may be rehosted on some other platform in the future.
 
-- A small demo catalogue of products will be loaded for testing purposes. This will be deleted and replaced by banyan videos corporation
-
+ 
 <hr>
 
-> c. Structure
+>**c. Structure**
  
-DATABASE MODELS
+**DATABASE MODELS**
 
 Django uses the concept of models to abstract data-content and data-structure from the "database type".
-This is fantastic and it allow the developer to not worry about specificity of databases, and the developer can remain certain it will be easy to port the application to whatever database engine the client requires!
+This is fantastic, and it allows the developer to not worry about the specificity of databases. The developer can remain certain it will be easy to port the application to whatever database engine the client requires!
 
 
-A few database models were created to allow the django web-site to function 
+A few database models were created to allow the Django website to function 
 
 |Model|Purpose|Model Implementation|
 |-----|-------|--------------------|
@@ -202,9 +206,9 @@ A few database models were created to allow the django web-site to function
 
  <hr>
 
-## * (d). Skeleton
+>**d. Skeleton**
 
-Mockups were created for the various pages required. When They were tried, I wasnt comfortable with them all, So some did change to their final incarnation. I lerant that what looks good on paper does not always translate
+I created mock-ups for the site pages. However, when they were built and tested, I was not comfortable with all of them. So, some were changed to their final incarnation. From that, I learnt that what looks good on paper does not always translate
 
 | Index.| Page | Mock-up|Final|
 |-------|--------|------|-----|
@@ -224,9 +228,9 @@ Mockups were created for the various pages required. When They were tried, I was
 <hr>
 
 
->e. Surface
+>**e. Surface**
 
-The colour scheme I finally settled on is as follows. As directed I tried to make it light and airy, clean and simple
+The colour scheme I finally settled on is as follows. As directed, I tried to make it light and airy, clean and simple
 
 |Colour Scheme|
 |-------------|
@@ -235,7 +239,8 @@ The colour scheme I finally settled on is as follows. As directed I tried to mak
 
 
 > ## 2. Features ##
-The website will contain a few features. Some have bee explicitly requested by Banyan Videos Corp (BVC), and the others have been implicitly added as part of the design process
+
+The website will contain a few features. Some have been explicitly requested by Banyan Videos Corporation (BVC), and the others have been implicitly added as part of the design process
 
 Feature Table
 
@@ -339,8 +344,11 @@ having the facility to make that happen would be a plus. However BVC has said th
 <hr>
 
 >## **Local Install**
+
+<img src="_support_docs/images/django-local-stack-overview.png" width="600">
+
 The Banyan-Videos-Corp website is a full stack website. A Django framework and Postgres
-backed site. The deployment of the site will be in distinct stages
+backed site. However for the local deployment. The deployment of the site will be in distinct stages
 
 * Clone the Git-Hub Site
 
@@ -446,11 +454,13 @@ The home page will launch if you open a local browser to
 
 >## **Heroku Install**
 
+<img src="_support_docs/images/bd-heroku-install-overview.png" width="600">
+
 The local install works for two reasons
 * Django has included by default a database sql-lite-3
 * Django has a WSGI compatiable http server inbuilt to its suite
 
-Running the django app on any platform other than a local setup, requires a bit more consideration.
+Running the django app on any platform other than a local setup requires a bit more consideration.
 You need to ensure that you hosting platform has 
 
 * A webserver that supports **WSGI** 
@@ -458,7 +468,7 @@ You need to ensure that you hosting platform has
 * A database supporting SQL.. ( for this site I have chosen **POSTGRES** as mentioned in the strtegy spec )
 * The ability to serve 'STATIC' files**
 
-The **"HEROKU"** platform supports the first two elements, however the fourth ('STATIC' file serving ) requires the installation of a module called 'Whitenoise' to acheive it. You will see whitenoise version 5.2.0 in the pip isntalled modules list
+The **"HEROKU"** platform supports the first two elements, however the fourth ('STATIC' file serving ) requires the installation of a module called 'Whitenoise' to acheive it. You will see whitenoise version 5.2.0 in the pip installed modules list
 
 
 ##**Process:**##
@@ -481,7 +491,7 @@ The **"HEROKU"** platform supports the first two elements, however the fourth ('
 
 * Next setup the Heroku environment variables under the settings tab - ( reveal config vars)
 
-<img src="_support_docs/images/heroku-env-vars.png" width="400">
+<img src="_support_docs/images/heroku-env-vars.png" width="300">
 
 * The environment variables are what the sysadmin would configure in the background on a hosted server, and would not be available to the user through a http serve. Therefore it is secure.
 
@@ -492,7 +502,7 @@ The **"HEROKU"** platform supports the first two elements, however the fourth ('
 |DATABASE_URL|The url pointing to the heroku Postgres databse instance|
 |DBKEY|The key for the database to logit in|
 |DISABLE_COLLECTSTATIC| Stops heroku running a collect static files on compile|
-|PRODUCTION| * This key variable django to source its database from sql-lite3(internal) or Heroku Postgres|
+|PRODUCTION| * This variable is used to direct the source database from sql-lite3(internal) or alternitivley Heroku Postgres|
 |SECRET_KEY|Security key required for the django app to launch|
 |STRIPE_PRIVATE_KEY| Provided by stripe.com for transactions|
 |STRIPE_PUBLIC_KEY|Provided by stripe.com for transactions|
