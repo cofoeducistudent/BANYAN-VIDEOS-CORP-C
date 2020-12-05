@@ -175,11 +175,12 @@ class MyAccount(TemplateView):
 
         messages.info(request, "Your profile has been successfully saved!!")
 
-        return redirect('home')
-
+        
+       
+            
         preload = {
 
-            'username': current_user,
+        'username': current_user,
             'email': request.user.email,
 
         }
