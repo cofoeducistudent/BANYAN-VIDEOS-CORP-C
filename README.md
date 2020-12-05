@@ -257,6 +257,35 @@ Feature Table
 |10|Members Sections|Yes|-| Provides members only space containing messages,articles,competitions|
 |10|Member Discounts Only|Yes|-| Intrisic facility allowing product discount for members only|
 
+<hr>
+
+**Maintainable features by site admin**
+
+As an administrator tasked with installing / maintaining the site. You can change features en-masse by accessing the server command line interface and then running these command processes.
+
+* The 'add-banner' is a javascript file. siply open it up and type.
+
+**Logged in as administrator:**
+
+|Install Type|Action|
+|------------|------|
+|* after loging in to heroku| ----- heroku run python manage.py loaddata ---'server-file'|
+|* local install| python manage.py loaddata --- 'server-file'|
+
+
+<hr>
+
+|Server File - Feature|User|Purpose|Mode|Server Sides - Folder|
+|-------|----|-------|----|---------|
+|Add Banner / core.js|Administrator|Generic promotion Message - Changed infrequently|Administrator| home -> templates ->static -> js|
+|genre.json|Administrator|Film Genre for Film Catalouge|Administrator|search_results -> fixtures -> genre.json|
+|films.json|Administrator|Film Catalouge|Administrator|search_results -> fixtures -> films.json|
+|-|-|-|-|-|
+|article.json|Administrator|Articles on front page of site|Administrator|home -> fixtures -> article.json|
+|frontpagecarousel.json|Administrator|Carousel on front page of site|Administrator|home -> fixtures -> frontpagecarousel.json|
+|snippet.json|Administrator|snippets/news on members section of site|Administrator|home -> fixtures -> snippet.json|
+
+<p>
 
 > ## 3. Existing Features ##
 Here are the features that has been implemented on the site

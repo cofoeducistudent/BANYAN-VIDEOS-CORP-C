@@ -18,15 +18,10 @@ from os.path import join,dirname
 from dotenv import load_dotenv
 load_dotenv(verbose=True)
 
-
 SECRET_KEY = os.getenv("SECRET_KEY")
-
-
 
 STRIPE_PUBLIC_KEY = os.getenv("STRIPE_PUBLIC_KEY")
 STRIPE_PRIVATE_KEY = os.getenv("STRIPE_PRIVATE_KEY")
-
-
 
 """
 BANYAN - VIDEOS - CORP.
@@ -37,7 +32,17 @@ BANYAN_VIDEOS_CORP_EMAIL_BOX ; Email box used by banyan videos
 SALES_DEPARTMENT_EMAIL ; Email that gets a copy of sales transaction & contacts
 FREE_SHIPPING_THRESHOLD ; free shipping activated at this value
 """
-MAINTENANCE = os.getenv("MAINTENANCE")
+PRODUCTION = os.getenv("PRODUCTION")
+
+
+#Set CMS link for local deployment
+MAINTENANCE='http://localhost:8000/admin'
+
+#Set CMS for heroku install
+if PRODUCTION =='True':
+    MAINTENANCE = os.getenv("MAINTENANCE")
+
+
 BANYAN_VIDEOS_CORP_EMAIL_BOX=os.getenv("BVC_EMAIL_BOX")
 SALES_DEPARTMENT_EMAIL=os.getenv("SALES_DEPT")
 FREE_SHIPPING_THRESHOLD=os.getenv("FREE_SHIPPING_THRESHOLD")
@@ -51,7 +56,6 @@ DISABLE_COLLECTSTATIC=0
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
@@ -62,7 +66,6 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-
 
 # Application definition
 
@@ -87,7 +90,6 @@ INSTALLED_APPS = [
     'my_account',
     'delete_from_shopping_cart',
   
-    
     # The following apps are required for allauth:
     'django.contrib.sites',
     'allauth',
@@ -99,7 +101,6 @@ INSTALLED_APPS = [
     'login_success',
     'charge',
     'contact_sent',
-
 
 ]
 
@@ -120,8 +121,6 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 ROOT_URLCONF = '_banyanvideos_root.urls'
 
-
-
 AUTHENTICATION_BACKENDS = [
    
     # Needed to login by username in Django admin, regardless of `allauth`
@@ -131,9 +130,6 @@ AUTHENTICATION_BACKENDS = [
     'allauth.account.auth_backends.AuthenticationBackend',
     
 ]
-
-
-
 
 TEMPLATES = [
     {
@@ -159,11 +155,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'my_app.wsgi.application'
 
-
-
-
-
-
 SITE_ID = 1
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
@@ -184,18 +175,8 @@ LOGIN_REDIRECT_URL ='login_success'
 
 WSGI_APPLICATION = '_banyanvideos_root.wsgi.application'
 
-
-
-
-
-
-
-
- 
-
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-
 
 DATABASES = {
     'default': {
@@ -204,10 +185,8 @@ DATABASES = {
     }
 }
 
-
-
 # CHECK If IN PRODUCTION
-PRODUCTION = os.getenv("PRODUCTION")
+
 if PRODUCTION == True:
      
     DBKEY = os.getenv("DBKEY")
@@ -219,27 +198,11 @@ if PRODUCTION == True:
      
     }
  
- 
- 
- 
- 
- 
- 
- 
- 
 import dj_database_url
 
 db_from_env = dj_database_url.config(conn_max_age=600)
 
 DATABASES['default'].update(db_from_env)
-
-
-
-
-
-
-
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -259,7 +222,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Static files (CSS, JavaScript, Images)
@@ -271,10 +233,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
-
-
-
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
@@ -289,18 +247,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-
-
-
-
-
-
-
-
-
-
-
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
@@ -310,7 +256,7 @@ STATIC_URL = '/static/'
 
 
 """
-EMAIL CONFIGURATION
+EMAIL SYSTEM CONFIGURATION
 """
 
 EMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend'
@@ -325,26 +271,13 @@ EMAIL_HOST_PASSWORD='Alexkid1b'
 
 
 
-
-
-
-
-
-
-
-
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
 
-
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
 
 MEDIA_URL ='/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
-
 CRISPY_TEMPLATE_PACK ='bootstrap4'
-
-
