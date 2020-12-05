@@ -41,7 +41,7 @@ Banyan videos corporation has asked for a website but will help them retail thei
 For this reason, they have provided a brief stating what they would like to see on the site with features that they would wish on it.
 
 
-* The site will be of a light colourscheme be and corporate like ( flash etc).
+* The site will be of a light colour scheme be and corporate like (Flash etc).
 
 * The Front page should have a search facility allowing users to search for products
 
@@ -54,7 +54,7 @@ For this reason, they have provided a brief stating what they would like to see 
 * The colour theme should be straightforward and simplistic, and the appearance of the site should be predominantly light and clean.
 
 
-* The frequency and volume of the products will be centrally controlled and updated infrequently. Therefore, they wish to have a way of populating the product line very quickly. This will ensure prices and sale discounts are also effectively controlled. The intention is for head Office (H.O) to connect to the server via an admin access, upload the data every so often. BVC do not wish to have a CMS for creating items( except in odd circumstances), as that will redact a central control model and lead to chaos and potential fraud.
+* The frequency and volume of the products will be centrally controlled and updated infrequently. Therefore, they wish to have a way of populating the product line very quickly. This will ensure prices and sale discounts are also effectively controlled. The intention is for head Office (H.O) to connect to the server via an administrator access, upload the data every so often. BVC do not wish to have a CMS for creating items(except in odd circumstances), as that will redact a central control model and lead to chaos and potential fraud.
 
 
 * In the future, they wish to have a separate server to serve images for their products, which will have a commercial uniform asset look, like significant retailers such as Argos or Sainsbury's. However, the division that will handle that is not yet up and running. For this reason, they simply wish to use images that are readily available online showing the video covers. These images are owned by the movie production companies and placed in the public domain for promotion. Banyan videos corp will be purchasing their videos from their leading distributors, thus avoiding copyright infringement or legal entanglements.
@@ -82,16 +82,16 @@ Following the project brief and further clarification, I have decided to approac
 
 * The site will be built using a framework for the benefit of speed. I will implement the site using the Django framework.
 
-* The finished site will be hosted initially on the Heroku platform.I expect the site will be migrated to banyan corporations own hosting service as a future date. 
+* The finished site will be hosted initially on the HEROKU platform. I expect the site will be migrated to banyan corporations own hosting service as a future date. 
 
 
-* Although the Django framework defaults to an SQL-light database, I will utilise the POSTGRES SQL relational database management system (RMDBS) hosted on Heroku.
+* Although the Django framework defaults to an SQL-light database, I will utilize the POSTGRES SQL relational database management system (RMDBS) hosted on HEROKU.
 
 * In addition using Django will allow me to create the database items in abstracted format (models), therefore if banyan Corporation choose to change databases in the future it will be reasonably easy to implement.
 
 * I am not quite sure of the colour scheme to use yet, as banyan videos left this open-ended, however having seen some of their logo artwork, I will endeavor to use something in a similar style.
 
-* For e-commerce and commerce aspects, I will employ the "Stripe-Payment" solution. The benefit of this is that the security will be inherently strengthened, as user payment credit card (CC)details will be handled entirely by the "STRIPE Corporation" and not reside within our website architecture. Although the Django framework defaults to an SQL-light database, I will utilise the POSTGRES SQL relational database management system (RMDBS) hosted on Heroku.
+* For e-commerce and commerce aspects, I will employ the "Stripe-Payment" solution. The benefit of this is that the security will be inherently strengthened, as user payment credit card (CC)details will be handled entirely by the "STRIPE Corporation" and not reside within our website architecture. Although the Django framework defaults to an SQL-light database, I will utilize the POSTGRES SQL relational database management system (RMDBS) hosted on HEROKU.
 
 
 * Banyan videos say that they have a corporate head office (H.O) that will deal with all issues from customers, and therefore it is sufficient to have a contacts page that provides a contact form. 
@@ -104,7 +104,7 @@ I have identified users of the site and classify them as:-
 
 |User Type|Ability|
 |---------|-------|
-|Owner|Banyan Videos Corp - Online Reatiler of fine videos|
+|Owner|Banyan Videos Corp - Online Retailer of fine videos|
 |Administrator - level|The administrator will be able create and post material to the site. In addition, there will also be able to populate the site with new products.|
 |Customer(Registered) - level|Registered users will have access to browse the site make purchases, have their details on the profile page for speedier purchases, and have the ability to access a member’s page, on which they can view video clips and specific articles set up by banyan videos. Finally, members will have access to discounted prices on products they purchase|
 |Customer(Anonymous) - level|An anonymous user, or a new user to the site will have the ability to browse the site and purchase products. However, it will not have the benefit of discounted prices, or access to the members area|
@@ -113,26 +113,26 @@ I have identified users of the site and classify them as:-
 
 **USER STORIES**
 
-Basic user stories suppoted the features
+Basic user stories supported the features
 
 |User| Requirement|So that I can Achieve|
 |----|------------|----------------------|
 |Owner|I require a sales banner|So that I can present the merits/products/offers of our site to customers|
 |Owner|I require the ability to send a file of our products to a site admin| So that they could upload it to the site, and I retain control of the prices and discounts|
 |Owner|I require a membership join feature| So I can build a customer base and communicate with customers|
-|Owner|I require a membership video/trailer clip ability| So I can offer members vidoe clips and trailers or premium content|
+|Owner|I require a membership video/trailer clip ability| So I can offer members video clips and trailers or premium content|
 |Owner|I require a membership News/Snippets feature|So I can provide premium content to members|
 |Owner|I wish a selective discount feature on products|So that I can give discounts to signed-up Members, thus providing an incentive|
 |Administrator|I require a login feature| So that I can login to the site and carry out my tasks|
 |Administrator|I require an upload feature/process |So I can update the product database in bulk|
 |Customer|I require a feature |So I can update the product database|
 |Customer|I require a registration/Login page|So that I can register or login to my account|
-|Customer|I require a serach feature|So I can search for products I wish|
+|Customer|I require a search feature|So I can search for products I wish|
 |Customer|I require a simple purchase facility|So I can purchase Items|
 |Customer|I require a purchase_history|So I can review what I bought and spent|
 |Customer|I require a shopping cart feature| So I can add items and pay once I have completed browsing|
 |Customer|I wish to register my address & email|So I can receive my order and a confirmation receipt|
-|Customer (Anonymous)|I wish purcahse ability without membership|So I can purchase without becomming a member|
+|Customer (Anonymous)|I wish purchase ability without membership|So I can purchase without becoming a member|
 |Customer|I wish a credit card payment feature| So that I can pay by credit card|
 |Customer|I wish for a contact feature| So that I can mail the company if I have any issues|
 |Customer|I require a Logout feature| So I can safely logout of the site|
@@ -180,7 +180,7 @@ Basic user stories suppoted the features
 
 - The administrator will have access to the backend to update a "FILE" containing new products catalogue
 
-- Initially, the site will be hosted on the "Heroku platform". It is understood it may be rehosted on some other platform in the future.
+- Initially, the site will be hosted on the "HEROKU platform". It is understood it may be re-hosted on some other platform in the future.
 
  
 <hr>
@@ -197,7 +197,7 @@ A few database models were created to allow the Django website to function
 
 |Model|Purpose|Model Implementation|
 |-----|-------|--------------------|
-|homepage-models|Frontpage Carousel / Article / Snippets|<img src="_support_docs/images/1-homepage-models.png" width="600">|
+|homepage-models|Front page Carousel / Article / Snippets|<img src="_support_docs/images/1-homepage-models.png" width="600">|
 |my-account-models|User Profile details / User Purchase History |<img src="_support_docs/images/2-my-account-models.png" width="600">|
 |search-results-models|Film Video models / Genre models |<img src="_support_docs/images/3-search-results-models.png" width="600">|
 |shopping-cart models-models|shopping-cart models |<img src="_support_docs/images/4-shopping-cart-models.png" width="600">|
@@ -251,11 +251,11 @@ Feature Table
 |3|Genre Search|Yes|-|Search video films available by genre|
 |4|Add Banner|Yes|-|Present cycling promotion messages from BVC|
 |5|Right-Side Article block|Yes|-|Present articles from BVC|
-|6|Navigation Bar|-|Yes|Navigation Bar Presenting Site Links Uniformally |
+|6|Navigation Bar|-|Yes|Navigation Bar Presenting Site Links Uniform-ally |
 |8|Classified Advert Block|Yes|-| A advert block space - holding paid classified adverts|
-|9|News Snippets|Yes|-| Provides News Snippets Links -jumpoff to external sources|
+|9|News Snippets|Yes|-| Provides News Snippets Links jump-off to external sources|
 |10|Members Sections|Yes|-| Provides members only space containing messages,articles,competitions|
-|10|Member Discounts Only|Yes|-| Intrisic facility allowing product discount for members only|
+|10|Member Discounts Only|Yes|-| Intrinsic facility allowing product discount for members only|
 
 <hr>
 
@@ -263,13 +263,13 @@ Feature Table
 
 As an administrator tasked with installing / maintaining the site. You can change features en-masse by accessing the server command line interface and then running these command processes.
 
-* The 'add-banner' is a javascript file. siply open it up and type.
+* The 'add-banner' is a javascript file. simply open it up and type.
 
 **Logged in as administrator:**
 
 |Install Type|Action|
 |------------|------|
-|* after loging in to heroku| ----- heroku run python manage.py loaddata ---'server-file'|
+|* after logging in to HEROKU| ----- HEROKU run python manage.py loaddata ---'server-file'|
 |* local install| python manage.py loaddata --- 'server-file'|
 
 
@@ -278,8 +278,8 @@ As an administrator tasked with installing / maintaining the site. You can chang
 |Server File - Feature|User|Purpose|Mode|Server Sides - Folder|
 |-------|----|-------|----|---------|
 |Add Banner / core.js|Administrator|Generic promotion Message - Changed infrequently|Administrator| home -> templates ->static -> js|
-|genre.json|Administrator|Film Genre for Film Catalouge|Administrator|search_results -> fixtures -> genre.json|
-|films.json|Administrator|Film Catalouge|Administrator|search_results -> fixtures -> films.json|
+|genre.json|Administrator|Film Genre for Film Catalogue|Administrator|search_results -> fixtures -> genre.json|
+|films.json|Administrator|Film Catalogue|Administrator|search_results -> fixtures -> films.json|
 |-|-|-|-|-|
 |article.json|Administrator|Articles on front page of site|Administrator|home -> fixtures -> article.json|
 |frontpagecarousel.json|Administrator|Carousel on front page of site|Administrator|home -> fixtures -> frontpagecarousel.json|
@@ -292,24 +292,21 @@ Here are the features that has been implemented on the site
 
 |No.|Feature|Implemented|
 |---|-------|---------|
-|1|Member Discount|<img src="_support_docs/images/member-discount.png" width="400">|
-|2|Front Page Carousel|<img src="_support_docs/images/fp-carousel.jpg" width="400">|
-|4|Articles|<img src="_support_docs/images/fp-articles.jpg" width="400">|
+|1|**Member Discount**|<img src="_support_docs/images/member-discount.png" width="400">|
+|2|**Front Page Carousel**|<img src="_support_docs/images/fp-carousel.jpg" width="400">|
+|4|**Articles**|<img src="_support_docs/images/fp-articles.jpg" width="400">|
  
 
+<hr>
 
 > ## 3. Features Left to Implement ##
 
 
-* Most of the features expected have been implemented. However for the film models a feied was left for global sales.
-The intention was to apply a discount to every item in Banyan Videos catalouge at once. My reasoning was for a flash sale.
-having the facility to make that happen would be a plus. However BVC has said tha it is not neccesary at present and it is under consideration. Therefore the model conmtains that option , but it will not be implemented presntly.
+* Most of the features expected have been implemented. However for the film models a field was left for global sales.The intention was to apply a discount to every item in Banyan Videos catalogue at once. My reasoning was for a flash sale.having the facility to make that happen would be a plus. However BVC has said that it is not necessary at present and it is under consideration. Therefore the model contains that option , but it will not be implemented presently.
 
+* A backend Tool can be created to garner data from orphaned or incomplete purchase, as data is ket in the database during a shopping session, rather than kept in browser memory and lost. This can be exploited to get keener information on shopping habits, like facebook do with user activity.
 
-
-
-
-
+<hr>
  
 > ## 4. Technologies Used ##
 
@@ -320,7 +317,7 @@ having the facility to make that happen would be a plus. However BVC has said th
 
 |Software Technology|Version|Purpose|
 |----------|-------|-------|
-|Visual Code Studio|Version: 1.51.1| Developement IDE|
+|Visual Code Studio|Version: 1.51.1| Development IDE|
 |Terminal|Version 2.10 (433)| CLI interface|
 |Monosnap|Version 3.6.21 (November 23, 2020)|Screenshot Capture|
 |Just Color Picker|Version 3.6.21 (November 23, 2020)|Color Picker|
@@ -333,8 +330,8 @@ having the facility to make that happen would be a plus. However BVC has said th
 |Web-Technologies|Version|Purpose|
 |----------------|-------|-------|
 |HTML| 5.0| Website structure|
-|CSS|3.0|Web-page sattelite|
-|Bootstrap|4|Helps to structure page & Mobile Firts Design|
+|CSS|3.0|Web-page satellite|
+|Bootstrap|4|Helps to structure page & Mobile First Design|
 |Django Framework|Design Framework Selected for Speed|
 |Python|3.x|For backend logic|
 |Javascript|Used for bespoke logic ..eg Banner Rotor on home page|
@@ -358,17 +355,11 @@ having the facility to make that happen would be a plus. However BVC has said th
 
 <hr>
 
-
-
-
-
-
-
+ 
  
 > ## 6. Deployment ##
 
-
-
+The deployment of the site can be done locally , it would then be really intranet based. Or, (more usual) on a web platform in a Demilitarized Zone (DMZ), as most other internet sites.
 
 <hr>
 
@@ -393,24 +384,24 @@ Initialize Git
 
 **git Initialize**
 
-Git will create a clone of the Banyan-Videos-Corp site on ypur local drive.
+Git will create a clone of the Banyan-Videos-Corp site on your local drive.
 At this stage you you have a copy of the site on your local computer.
-However, we are not done.  The site was developed on a virtual environment( This abstracts the site from its surroundings, helping keep the integrety of all its support files). You will need to 
+However, we are not done.  The site was developed on a virtual environment( This abstracts the site from its surroundings, helping keep the integrity of all its support files). You will need to 
 
-Initialize this virtual environment (venv) to loaunch the site locally
+Initialize this virtual environment (venv) to launch the site locally
 
 **source venv/bin/activate**
 
 This will launch the virtual environment. You can confirm this because in the terminal session window
-you will have venv in brackets at the begining like so.
+you will have venv in brackets at the beginning like so.
 
 **(venv) mac1@mac1s-MacBook-Pro banyan-videos-corp-c**
 
-Your terminmal command line will vary but essentiall look similar
+Your terminal command line will vary but essential look similar
 
 <img src="_support_docs/images/terminal-project-folder.png" width="600">
 
-What you see is the structure of the Django site. The folders individual folders represent the project and Apps of the site, as django philosophy states. Then there are some specific files that are important for the migration of the app to the Heroku platform later...
+What you see is the structure of the Django site. The folders individual folders represent the project and Apps of the site, as Django philosophy states. Then there are some specific files that are important for the migration of the app to the HEROKU platform later...
 
 |Folder|Type|Purpose|
 |------|-------|-------|
@@ -427,7 +418,7 @@ What you see is the structure of the Django site. The folders individual folders
 |logout|app|logout logout & confirmation|
 |members|app|members page content|
 |my_account|app|holds customer profile & purchase history|
-|search_results|app|Video film serach results & add to cart button|
+|search_results|app|Video film search results & add to cart button|
 |shopping_cart|app| Displays the contents of the shopping cart|
 |templates|app| copy of allauth templates|
 |venv|virtual environment support| * |
@@ -437,12 +428,12 @@ What you see is the structure of the Django site. The folders individual folders
 
 
 **IF YOU LAUNCH THE SITE AND NOTHING SHOWS FOLLOW THE PROCESS BELOW:**
-* we need to create the database strcutures by using the django models
+* we need to create the database structures by using the Django models
 - python manage.py makemigrations
 - python manage.py migrate
 
 
-* Finally we need to upload the inital data to populate the models
+* Finally we need to upload the initial data to populate the models
 
 - python manage.py loaddata **< * JSON FILES>**
 
@@ -451,7 +442,7 @@ What you see is the structure of the Django site. The folders individual folders
 |---------|-------|
 |genre|create the genre for the films|
 |films|The film product items|
-|article|The articles for the sites frontpage|
+|article|The articles for the sites front page|
 |frontpagecarousel| The selected images for the frontpage carousel|
 |snippet|News snippets and stuff for members area|
 
@@ -460,15 +451,13 @@ What you see is the structure of the Django site. The folders individual folders
 
 * python manage.py createsuperuser , and follow the prompts
 
-* This is carried out on a new databse, as it will not have any information. 
+* This is carried out on a new database, as it will not have any information. 
 * Keep the details secure and safe, as this is the **MASTER account** that will get you into the backend(server-side) of the Django application!
 
 <hr>
 
- 
 
-
-To lauch the site type
+To launch the site type
 
 **python3 manage.py runserver  (enter)**
 
@@ -481,23 +470,23 @@ The home page will launch if you open a local browser to
 
 <hr>
 
->## **Heroku Install**
+>## **HEROKU Install**
 
 <img src="_support_docs/images/bd-heroku-install-overview.png" width="600">
 
 The local install works for two reasons
 * Django has included by default a database sql-lite-3
-* Django has a WSGI compatiable http server inbuilt to its suite
+* Django has a WSGI compatible http server inbuilt to its suite
 
-Running the django app on any platform other than a local setup requires a bit more consideration.
+Running the Django app on any platform other than a local setup requires a bit more consideration.
 You need to ensure that you hosting platform has 
 
 * A webserver that supports **WSGI** 
 * A platform that will run python 
-* A database supporting SQL.. ( for this site I have chosen **POSTGRES** as mentioned in the strtegy spec )
+* A database supporting SQL.. ( for this site I have chosen **POSTGRES** as mentioned in the strategy spec )
 * The ability to serve 'STATIC' files**
 
-The **"HEROKU"** platform supports the first two elements, however the fourth ('STATIC' file serving ) requires the installation of a module called 'Whitenoise' to acheive it. You will see whitenoise version 5.2.0 in the pip installed modules list
+The **"HEROKU"** platform supports the first two elements, however the fourth ('STATIC' file serving ) requires the installation of a module called 'Whitenoise' to achieve it. You will see whitenoise version 5.2.0 in the pip installed modules list
 
 
 ##**Process:**##
@@ -505,74 +494,74 @@ The **"HEROKU"** platform supports the first two elements, however the fourth ('
 **Ensure you have completed the local install!**
 
 
-* Sign up to **Heroku.com**, and attain an account
-* Create a heroku app - "banyan-videos-corp-c"
-* Attach a Postgress-db resource
+* Sign up to **HEROKU.com**, and attain an account
+* Create a HEROKU app - "banyan-videos-corp-c"
+* Attach a Postgres-db resource
 
 <img src="_support_docs/images/heroku-postgress-db.png" width="400">
 
 
 **ENVIRONMENT VARIABLES**
 
-* Environment variables are important and are the missing link to make things operate. They are mainly used to hold some arbitary value which we do not necessarialy wish to disclose in hardformat where users can get access. Because environment variables are controlled by the sysadmin, any user other than a sysadmin will not have access to the. For this reason we keep the secret keys and other credentials we wish to remain secure.
+* Environment variables are important and are the missing link to make things operate. They are mainly used to hold some arbitrary value which we do not necessarily wish to disclose in hard-format where users can get access. Because environment variables are controlled by the sysadmin, any user other than a sysadmin will not have access to the. For this reason we keep the secret keys and other credentials we wish to remain secure.
 
-* In the local install the environment variables are kept in the **.env file**, and are loaded on django launch by the module **'python_dotenv'**. However on the heroku platform it is manually entered under the 'settings tab'
+* In the local install the environment variables are kept in the **.env file**, and are loaded on Django launch by the module **'python_dotenv'**. However on the HEROKU platform it is manually entered under the 'settings tab'
 
-* Next setup the Heroku environment variables under the settings tab - ( reveal config vars)
+* Next setup the HEROKU environment variables under the settings tab - ( reveal config vars)
 
 <img src="_support_docs/images/heroku-env-vars.png" width="300">
 
 * The environment variables are what the sysadmin would configure in the background on a hosted server, and would not be available to the user through a http serve. Therefore it is secure.
 
-* The important environment variables are highlighted with the red arrrow.
+* The important environment variables are highlighted with the red arrow.
 
 |Environment Variable|Purpose|
 |--------------------|-------|
-|DATABASE_URL|The url pointing to the heroku Postgres databse instance|
-|DBKEY|The key for the database to logit in|
-|DISABLE_COLLECTSTATIC| Stops heroku running a collect static files on compile|
-|PRODUCTION| * This variable is used to direct the source database from sql-lite3(internal) or alternitivley Heroku Postgres|
-|SECRET_KEY|Security key required for the django app to launch|
+|DATABASE_URL|The url pointing to the HEROKU Postgres database instance|
+|DBKEY|The key for the database to log it in|
+|DISABLE_COLLECTSTATIC| Stops HEROKU running a collect static files on compile|
+|PRODUCTION| * This variable is used to direct the source database from sql-lite3(internal) or  HEROKU Postgres|
+|SECRET_KEY|Security key required for the Django app to launch|
 |STRIPE_PRIVATE_KEY| Provided by stripe.com for transactions|
 |STRIPE_PUBLIC_KEY|Provided by stripe.com for transactions|
 
-* It's important to  mention that **the django application like most will depend on the database**. after all all webservers simply serve data.
+* It's important to  mention that **the Django application like most will depend on the database**. after all all web-servers simply serve data.
 
-* Therefore while developing it is possible to not worry so much and use the integrated sql-lite3 database. However that will not usually be possible on a foreign hosting platform. This is the reason **I chose "POSTGRES" database , an SQL - compatiable RDMBS that is available on the HEROKU platform**.
+* Therefore while developing it is possible to not worry so much and use the integrated sql-lite3 database. However that will not usually be possible on a foreign hosting platform. This is the reason **I chose "POSTGRES" database , an SQL - compatible RDMBS that is available on the HEROKU platform**.
 
-* I use the **"PRODUCTION"** environment variable to tell the APPLICATION uppon lauch to use either the integrated SQL-Lite3 database or the Heroku external( to Django Application ) database using the code below in the settings.py
+* I use the **"PRODUCTION"** environment variable to tell the APPLICATION upon launch to use either the integrated SQL-Lite3 database or the HEROKU external( to Django Application ) database using the code below in the settings.py
 
 <img src="_support_docs/images/database-switcher.png" width="400">
 
 
-Within the filestructure of the local repo, there are two important files
+Within the file-structure of the local repo, there are two important files
 
 * requirements.txt
 * Procfile
 
-* Heroku uses the contents of these to provision the application on heroku. The formert tells Heroku which modules to install and the latter essentially tells Heroku to provision a webserver WSGI compatiable
+* HEROKU uses the contents of these to provision the application on HEROKU. The format tells HEROKU which modules to install and the latter essentially tells HEROKU to provision a webserver WSGI compatible
 
 <img src="_support_docs/images/folders.png" width="200">
 
 
-* Now follow the Heroku guide and **"use git to uplaod the local repo to Heroku"**
+* Now follow the HEROKU guide and **"use git to upload the local repo to HEROKU"**
 
-* we need to create the database strcutures by using the django models
-- heroku run python manage.py makemigrations
-- heroku run python manage.py migrate
+* we need to create the database structures by using the Django models
+- HEROKU run python manage.py makemigrations
+- HEROKU run python manage.py migrate
 
 
-* Finally we need to upload the inital data to populate the models
+* Finally we need to upload the initial data to populate the models
 
-- heroku run python manage.py loaddata **< * JSON FILES>**
+- HEROKU run python manage.py loaddata **< * JSON FILES>**
 
 
 |*JSON File|Purpose|
 |---------|-------|
 |genre|create the genre for the films|
 |films|The film product items|
-|article|The articles for the sites frontpage|
-|frontpagecarousel| The selected images for the frontpage carousel|
+|article|The articles for the sites front page|
+|frontpagecarousel| The selected images for the front page carousel|
 |snippet|News snippets and stuff for members area|
 
 
@@ -580,7 +569,7 @@ Within the filestructure of the local repo, there are two important files
 
 * python manage.py createsuperuser , and follow the prompts
 
-* This is carried out on a new databse, as it will not have any information. 
+* This is carried out on a new database, as it will not have any information. 
 * Keep the details secure and safe, as this is the **MASTER account** that will get you into the backend(server-side) of the Django application!
 
 
@@ -590,21 +579,29 @@ Finally if you send your browser to :
 
 * Your app can be found at **https://banyan-videos-corp-c.herokuapp.com/**
 
-You shoud see your site.
+You should see your site.
 
 >**WARNING:**
 * The site settings promote the view of the site from any host. It is possible in production that you may wish a limited range of access. The ALLOWED_HOSTS = ['*'] settings should be modified and made more specific in that instance.
 
 * DEBUG = False  should be left as is in Production 
 
-* DISABLE_COLLECTSTATIC=0 should be left as 0 in PRODUCTION, allowig static files to be collected and compiled to the project 'static' folder during bootup, otherwise you may recieve a internal '500 server error'
+* DISABLE_COLLECTSTATIC=0 should be left as 0 in PRODUCTION, allowing static files to be collected and compiled to the project 'static' folder during boot-up, otherwise you may receive a internal '500 server error'
+
+* **HouseKeeping**
+There are times when users would peruse the site and add items to the basket. They may then leave the system or
+shut down the browser. This cause orphaned product cart entries. There is no real way to stop this. However because the entries are dated the site-admin can log into the CMS and delete items that a a few days older than the present from the shopping-cart model.
+
+* It is worth a mention that all data is useful, and I could in a future release, write a too that can extract these orphans, and this would yield important data as to products that the customer are seeking. The orphan may be because they have found a cheaper supplier. However we do know that the product was at once of interest. If the username is not anonymous , a script can be written to mail that username in the future an advert regarding that same product.
+
+Therefore this would be something to bring to BVC as a future enhancement.
 
 
 > ## 7. Credits ##
 
 
 
->Code from Stackoverflow - Philip Feldmann */
+>Code from Stack-overflow - Philip Feldmann */
 Keep text from overspilling out of columns */
 
 
@@ -616,7 +613,7 @@ Keep text from overspilling out of columns */
     word-wrap: break-word;}**
 
 
-* Video box images - owend by their respective film proruction companies
+* Video box images - owned by their respective film production companies
 
 * ShoppingCart.objects.filter(pk=3).delete() -Milad Khodabandehloo / stack overflow
 
@@ -628,7 +625,7 @@ Keep text from overspilling out of columns */
 
 * Thanks for the code snippet by Phillip Feldmann which stopped text content escaping the Bootstrap columns. Stop text moving out of bootstrap column - Stack-Overflow - Phillip Feldmann
 
-* software code from stack-overflow - Using nav-fill w-100 with Bootstrap 4 - rav-ram Filling navbar total width - stack-overflow
+* software code from stack-overflow - Using nav-fill w-100 with Bootstrap 4 - nav-ram Filling nav-bar total width - stack-overflow
 
  
 > ## 9. Media ##
@@ -640,4 +637,4 @@ Keep text from overspilling out of columns */
 > ## 10. Acknowledgements ##
 
 * Thanks to mentor **Precious Ijeje** for helpful advice
-* Thanks to **Student care** for assitance
+* Thanks to **Student care** for assistance
