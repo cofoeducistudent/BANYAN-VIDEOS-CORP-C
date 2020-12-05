@@ -1,5 +1,4 @@
 from datetime import date, datetime
-import re
 from django.contrib import messages
 from stripe.util import dashboard_link
 from _banyanvideos_root.settings import STRIPE_PRIVATE_KEY
@@ -13,6 +12,14 @@ import stripe
 
 from django.core.mail import send_mail
 
+from dotenv import load_dotenv
+
+import os
+
+from checkout.forms import  ShippingForm
+
+from django.core.mail import send_mail
+from _banyanvideos_root.settings    import FREE_SHIPPING_THRESHOLD
 # Create your views here.
 
 
@@ -26,7 +33,7 @@ class Charge(TemplateView):
 
         """
 
-        SALES_DEPT_EMAIL = 'cofoedu@gmail.com'
+        # SALES_DEPT_EMAIL = 'cofoedu@gmail.com'
 
         customer_details = chr(13)
 
@@ -84,16 +91,25 @@ class Charge(TemplateView):
         for line_items in SCM:
             total_to_pay = total_to_pay + line_items.cart_price_paid
         shipping_charge = 0
-        if total_to_pay < 30:
+        if total_to_pay < float(FREE_SHIPPING_THRESHOLD):
             shipping_charge = round((total_to_pay * 10)/100, 2)
         final_bill = round((total_to_pay+shipping_charge), 2)
 
         final_bill_in_stripe_format = int(final_bill * 100)
 
+
+        SALES_DEPARTMENT_EMAIL = os.getenv("SALES_DEPT")
+        BANYAN_VIDEOS_CORP_EMAIL_BOX=os.getenv("BVC_EMAIL_BOX")
+
+
         """
         GO AND MAKE A CHARGE TO STRIPE USING RECEIVED TOKEN !!!
         """
         try:
+            
+            
+            
+            
 
             if request.method == 'POST':
 
@@ -128,8 +144,11 @@ class Charge(TemplateView):
             message_body = message_body + "£ " + \
                 str(final_bill)+chr(13) + chr(13)
 
+
+            # NOT LOGGED IN USER
+ 
             send_mail('BANYAN-VIDEOS-SALES ORDER!', message_body,
-                      'cofoedu_banyan@hotmail.com', [SALES_DEPT_EMAIL,
+                      BANYAN_VIDEOS_CORP_EMAIL_BOX, [SALES_DEPARTMENT_EMAIL,
                                                      request.POST['sf_email']],
                       fail_silently=False)
 
@@ -148,6 +167,14 @@ class Charge(TemplateView):
             redirect('home')
 
         else:
+
+
+
+
+
+
+
+
 
             """
             ///////////////////////////////// LOGGED IN USER PROCESSING /////////
@@ -212,7 +239,7 @@ class Charge(TemplateView):
                 str(final_bill)+chr(13)+chr(13)
 
             send_mail('BANYAN-VIDEOS-SALES ORDER!', message_body,
-                      'cofoedu_banyan@hotmail.com', [SALES_DEPT_EMAIL,
+                      BANYAN_VIDEOS_CORP_EMAIL_BOX, [SALES_DEPARTMENT_EMAIL,
                                                      request.POST['sf_email']],
                       fail_silently=False)
 

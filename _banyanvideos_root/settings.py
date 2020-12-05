@@ -35,12 +35,12 @@ CUSTOM APPLICATION CONFIGURATION.
 MAINTENANCE ; maintenace mode available... staff only
 BANYAN_VIDEOS_CORP_EMAIL_BOX ; Email box used by banyan videos
 SALES_DEPARTMENT_EMAIL ; Email that gets a copy of sales transaction & contacts
-
+FREE_SHIPPING_THRESHOLD ; free shipping activated at this value
 """
 MAINTENANCE = os.getenv("MAINTENANCE")
 BANYAN_VIDEOS_CORP_EMAIL_BOX=os.getenv("BVC_EMAIL_BOX")
 SALES_DEPARTMENT_EMAIL=os.getenv("SALES_DEPT")
-
+FREE_SHIPPING_THRESHOLD=os.getenv("FREE_SHIPPING_THRESHOLD")
 
 
 

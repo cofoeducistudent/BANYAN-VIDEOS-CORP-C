@@ -17,6 +17,8 @@ from django.views.generic import TemplateView
 from .models import ShoppingCartModel
 from search_results.models import Films as film_models
 
+from _banyanvideos_root.settings    import  FREE_SHIPPING_THRESHOLD
+
 # Create your views here.
 
 class ShoppingCart(TemplateView):
@@ -55,7 +57,7 @@ class ShoppingCart(TemplateView):
         for line_items in SCM:
             total_to_pay = total_to_pay + line_items.cart_price_paid
         shipping_charge = 0
-        if total_to_pay <30:
+        if total_to_pay < float(FREE_SHIPPING_THRESHOLD):
             shipping_charge = round((total_to_pay * 10 )/100,2)
         final_bill=round((total_to_pay+shipping_charge),2)
         
@@ -201,7 +203,7 @@ class ShoppingCart(TemplateView):
         for line_items in SCM:
             total_to_pay = total_to_pay + line_items.cart_price_paid
         shipping_charge = 0
-        if total_to_pay <30:
+        if total_to_pay < float(FREE_SHIPPING_THRESHOLD):
             shipping_charge = round((total_to_pay * 10 )/100,2)
         final_bill=round((total_to_pay+shipping_charge),2)
         

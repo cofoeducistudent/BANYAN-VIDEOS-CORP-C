@@ -1,3 +1,5 @@
+from django import shortcuts
+from django.contrib import messages
 from _banyanvideos_root.settings import STRIPE_PUBLIC_KEY
 from django.shortcuts import redirect, render
 from django.views.generic   import TemplateView
@@ -10,7 +12,7 @@ from  .forms import ShippingForm
 from my_account import models as UPD
 from django.conf    import  settings # get access to settings variables
 
-
+from _banyanvideos_root.settings    import FREE_SHIPPING_THRESHOLD
 
 #------
 # import jsonify
@@ -58,7 +60,7 @@ class Checkout(TemplateView):
         for line_items in SCM:
             total_to_pay = total_to_pay + line_items.cart_price_paid
         shipping_charge = 0
-        if total_to_pay <30:
+        if total_to_pay < float(FREE_SHIPPING_THRESHOLD):
             shipping_charge = round((total_to_pay * 10 )/100,2)
         final_bill=round((total_to_pay+shipping_charge),2)
         
@@ -79,6 +81,7 @@ class Checkout(TemplateView):
         PREPOULATE AND INSTANTIATE SHIPPING FORM!!!
         """
         sf_email='cofoedu@gmail.com'
+       
         if request.user.is_authenticated:
             sf_email=request.user.email
         
@@ -121,7 +124,8 @@ class Checkout(TemplateView):
         SF = ShippingForm(preload)
        
        
-       
+
+    
        
        
        
@@ -198,11 +202,13 @@ class Checkout(TemplateView):
         
         
         # WORKOUT BILL FOR CUSTOMER
+       
+        
         total_to_pay = 0
         for line_items in SCM:
             total_to_pay = total_to_pay + line_items.cart_price_paid
         shipping_charge = 0
-        if total_to_pay <30:
+        if total_to_pay < float(FREE_SHIPPING_THRESHOLD):
             shipping_charge = round((total_to_pay * 10 )/100,2)
         final_bill=round((total_to_pay+shipping_charge),2)
         
@@ -214,7 +220,8 @@ class Checkout(TemplateView):
         """
         PREPOULATE AND INSTANTIATE SHIPPING FORM!!!
         """
-        sf_email='cofoedu@gmail.com'
+        # sf_email='cofoedu@gmail.com'
+        sf_email=''
         if request.user.is_authenticated:
             sf_email=request.user.email
         
@@ -222,7 +229,7 @@ class Checkout(TemplateView):
         TID=str(current_user)+':'+str(session_key)
         preload = {
            
-           'sf_username':current_user,
+           'sf_username':'',
            'sf_email':sf_email,
            'sf_transaction_id':TID
            
@@ -267,26 +274,7 @@ class Checkout(TemplateView):
     
     
         stripe_key = STRIPE_PUBLIC_KEY
-        # print(stripe_key)
-    
-    
-        # try:
-        #     # data = json.loads('banyan-videos-corp-items')
-        #     data = 'banyan-videos-corp-merchandise'
-        #     intent = stripe.PaymentIntent.create(
-        #         # amount=calculate_order_amount(data['items']),
-        #         amount = final_bill,
-        #         currency='gbp'
-        #     )
-            
-        #     return jsonify({
-        #     'clientSecret': intent['client_secret']
-        #     })
-            
-        # except Exception as e:
-        #     return jsonify(error=str(e)), 403
-        #     # return
-    
+         
     
     
     
