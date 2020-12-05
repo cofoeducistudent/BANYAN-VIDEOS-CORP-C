@@ -76,6 +76,7 @@ class ShoppingCart(TemplateView):
             
             
             'SCM': SCM,
+            'FREE_SHIPPING_THRESHOLD':str(FREE_SHIPPING_THRESHOLD)
             
             
 
@@ -208,7 +209,7 @@ class ShoppingCart(TemplateView):
         final_bill=round((total_to_pay+shipping_charge),2)
         
         
-
+       
      
         context = {
 
@@ -221,6 +222,7 @@ class ShoppingCart(TemplateView):
             'final_bill':final_bill,
             
             'SCM': SCM,
+            'FREE_SHIPPING_THRESHOLD':str(FREE_SHIPPING_THRESHOLD)
 
         }
 
