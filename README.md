@@ -64,18 +64,28 @@ https://github.com/cofoeducistudent/BANYAN-VIDEOS-CORP-C
 
 >[2. Features](#features)
 
-    a.  Existing Features
-        Payment Gateway
+    Feature Table
+    Maintainable features by site admin
 
-    b. Features Left to Implement
+    a.  Existing Features
+    b.  Payment Gateway
+
+    Features Left to Implement
 
 >[3. Technologies Used](#technologiesused)
+
+    Hardware
+    Software Tools Used
+    Web-Tech Used
 
 >[4. Testing](#testing)
 
 >[5. Deployment](#deployment)
 
     Local install
+        
+        Folders
+
     Heroku Install
     Environment Variables
 
@@ -327,7 +337,7 @@ The **Crispy Forms** module was use to beautify the forms within the various app
 
 The website will contain a few features. Some have been explicitly requested by Banyan Videos Corporation (BVC), and the others have been implicitly added as part of the design process
 
-Feature Table
+**Feature Table**
 
 |No.|Feature|Requested|Implicit|Purpose|
 |---|-------|---------|------------------|-------|
@@ -354,8 +364,8 @@ As an administrator tasked with installing / maintaining the site. You can chang
 
 |Install Type|Action|
 |------------|------|
-|* after logging in to HEROKU| ----- HEROKU run python manage.py loaddata ---'server-file'|
-|* local install| python manage.py loaddata --- 'server-file'|
+|* After logging in to HEROKU| ----- HEROKU run python manage.py loaddata ---'server-file'|
+|* Local install| python manage.py loaddata --- 'server-file'|
 
 
 <hr>
@@ -425,11 +435,13 @@ https://dashboard.stripe.com/test/dashboard
 
 [<< Back](#top)
 
+**Hardware**
 
 |Hardware|OS|
 |--------|--|
 |Apple Mac| - OS Catalina 10.15.7 (19H15)|
 
+**Software Tools Used**
 
 |Software Technology|Version|Purpose|
 |----------|-------|-------|
@@ -442,6 +454,8 @@ https://dashboard.stripe.com/test/dashboard
 |Safari|Version 14.0 (15610.1.28.1.9, 15610)|Dev & Test|
 
 <hr>
+
+**Web-Tech Used**
 
 |Web-Technologies|Version|Purpose|
 |----------------|-------|-------|
@@ -480,7 +494,9 @@ https://dashboard.stripe.com/test/dashboard
 
 [<< Back](#top)
 
-The deployment of the site can be done locally , it would then be really intranet based. Or, (more usual) on a web platform in a Demilitarized Zone (DMZ), as most other internet sites.
+* The deployment of the site can be done locally , it would then be really intranet based.
+
+* Or, (more usual) on a web platform in a Demilitarized Zone (DMZ), as most other internet sites.
 
 <hr>
 
@@ -524,6 +540,8 @@ Your terminal command line will vary but essential look similar
 
 What you see is the structure of the Django site. The folders individual folders represent the project and Apps of the site, as Django philosophy states. Then there are some specific files that are important for the migration of the app to the HEROKU platform later...
 
+**Folders**
+
 |Folder|Type|Purpose|
 |------|-------|-------|
 |_banyanvideos_root|Django project|
@@ -545,8 +563,13 @@ What you see is the structure of the Django site. The folders individual folders
 |venv|virtual environment support| * |
 |_support_docs|app| contains images that support this readme file ** can be deleted *|
 
+<hr>
+
+**Modules**
+
 <img src="_support_docs/images/installed-packages.png" width="400">
 
+<hr>
 
 **IF YOU LAUNCH THE SITE AND NOTHING SHOWS FOLLOW THE PROCESS BELOW:**
 * we need to create the database structures by using the Django models
@@ -661,7 +684,7 @@ Within the file-structure of the local repo, there are two important files
 * requirements.txt
 * Procfile
 
-* HEROKU uses the contents of these to provision the application on HEROKU. The format tells HEROKU which modules to install and the latter essentially tells HEROKU to provision a webserver WSGI compatible
+* HEROKU uses the **contents of these two files to provision the application on HEROKU**. The format tells HEROKU which modules to install and the latter essentially tells HEROKU to provision a webserver WSGI compatible
 
 <img src="_support_docs/images/folders.png" width="200">
 
@@ -677,6 +700,7 @@ Within the file-structure of the local repo, there are two important files
 
 - HEROKU run python manage.py loaddata **< * JSON FILES>**
 
+**Json Files**
 
 |*JSON File|Purpose|
 |---------|-------|
