@@ -44,18 +44,28 @@ https://github.com/cofoeducistudent/BANYAN-VIDEOS-CORP-C
 
     a. Strategy
 
+        Potential Users
+        User stories
+
     b. Scope
 
+        Specific users identified
+
     c. Structure
+
+        Database Models
 
     d. Skeleton
 
     e. Surface
 
+        Colour scheme
+
 
 >[2. Features](#features)
 
-    a. Existing Features
+    a.  Existing Features
+        Payment Gateway
 
     b. Features Left to Implement
 
@@ -64,6 +74,11 @@ https://github.com/cofoeducistudent/BANYAN-VIDEOS-CORP-C
 >[4. Testing](#testing)
 
 >[5. Deployment](#deployment)
+
+    Local install
+    Heroku Install
+    Environment Variables
+
 
 >[6. Credits](#credits)
 
@@ -157,7 +172,9 @@ Following the project brief and further clarification, I have decided to approac
 
 <hr>
 
-I have identified users of the site and classify them as:-
+**Potential Users**
+
+I have identified some potential users of the site and have classified them as:-
 
 |User Type|Ability|
 |---------|-------|
@@ -215,7 +232,7 @@ Basic user stories supported the features
 * Anonymous user
 
 
->Summary
+**Scope Summary**
 
 - The sites will offer discount prices to registered users
 
@@ -246,11 +263,14 @@ Basic user stories supported the features
  
 **DATABASE MODELS**
 
-Django uses the concept of models to abstract data-content and data-structure from the "database type".
-This is fantastic, and it allows the developer to not worry about the specificity of databases. The developer can remain certain it will be easy to port the application to whatever database engine the client requires!
+* Django uses the concept of models to abstract data-content and data-structure from the "database type".
 
+* This is fantastic, and it allows the developer to not worry about the specificity of databases. The developer can remain certain it will be easy to port the application to whatever database engine the client requires!
 
-A few database models were created to allow the Django website to function 
+* A few database models were created to allow the Django website to function 
+
+* A **'Foreign-Key'** is used between video films and video-film-genre, creating a relationship
+
 
 |Model|Purpose|Model Implementation|
 |-----|-------|--------------------|
@@ -287,13 +307,19 @@ I created mock-ups for the site pages. However, when they were built and tested,
 
 >**e. Surface**
 
-The colour scheme I finally settled on is as follows. As directed, I tried to make it light and airy, clean and simple
+**Colour Scheme**
+
+The colour scheme I settled on is as follows. As directed, I tried to make it light and airy, clean and simple
 
 |Colour Scheme|
 |-------------|
 |<img src="_support_docs/images/color-pallet-1of2.png" width="200">|
 |<img src="_support_docs/images/color-pallet-2of2.png" width="200">|
 
+Aesthetics
+
+The **Bootstrap** class was used for the buttons and forms, giving them a consistent rounded edge look.
+The **Crispy Forms** module was use to beautify the forms within the various apps.
 
 ># <a id="features">2. Features</a>
 
@@ -347,13 +373,25 @@ As an administrator tasked with installing / maintaining the site. You can chang
 <p>
 
 >**Existing Features**
+
+[<< Back](#top)
+
 Here are the features that has been implemented on the site
 
 |No.|Feature|Implemented|
 |---|-------|---------|
 |1|**Member Discount**|<img src="_support_docs/images/member-discount.png" width="400">|
 |2|**Front Page Carousel**|<img src="_support_docs/images/fp-carousel.jpg" width="400">|
-|4|**Articles**|<img src="_support_docs/images/fp-articles.jpg" width="400">|
+|3|**Articles**|<img src="_support_docs/images/fp-articles.jpg" width="400">|
+|4|**Members Area**|<img src="_support_docs/images/fe-member-lounge.png" width="400">|
+|4|**Members Snippets/News**|<img src="_support_docs/images/" width="400">|
+|5|**Login Messages**|<img src="_support_docs/images/fe-login-messages.png" width="400">|
+|6|**Search For films**|<img src="_support_docs/images/fe-films-search.png" width="400">|
+|7|**Genre Film Search**|<img src="_support_docs/images/fe-genre-search.png" width="400">|
+|9|**Advert Banner**|<img src="_support_docs/images/fe-advert-banner.png" width="400">|
+|10|**Purchase History** (Note this is the minified view. The Desktop view has images |<img src="_support_docs/images/fe-purchase-history.png" width="400">|
+
+
 
 
 <hr>
@@ -382,6 +420,8 @@ https://dashboard.stripe.com/test/dashboard
 <hr>
  
 ># <a id="technologiesused">4. Technologies Used</a>
+
+<hr>
 
 [<< Back](#top)
 
@@ -605,6 +645,7 @@ The **"HEROKU"** platform supports the first two elements, however the fourth ('
 |SECRET_KEY|Security key required for the Django app to launch|
 |STRIPE_PRIVATE_KEY| Provided by stripe.com for transactions|
 |STRIPE_PUBLIC_KEY|Provided by stripe.com for transactions|
+|FREE_SHIPPING_THRESHHOLD|40.00 (Value can be changed)|
 
 * It's important to  mention that **the Django application like most will depend on the database**. after all all web-servers simply serve data.
 
