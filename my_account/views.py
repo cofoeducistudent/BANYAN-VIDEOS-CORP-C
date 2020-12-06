@@ -31,6 +31,8 @@ class MyAccount(TemplateView):
 
     def get(self, request):
         # CREATE A SESSION IF NOT EXISTING!!
+        
+        
         if not request.session.exists(request.session.session_key):
             request.session.create()
         session_key = request.session.session_key
@@ -38,14 +40,23 @@ class MyAccount(TemplateView):
         current_user = request.user
         if not request.user.is_authenticated:
             return redirect("login_register")
+        
+        
+        
+        
         if request.user.is_authenticated:
             current_user = request.user
-
+              
+            
         SCM = ShoppingCartModel.objects.filter(
             cart_owner=current_user).filter(cart_session=session_key)
         basket_item_count = SCM.count
 
+        #GET Correct User
         UPD = UserProfile.objects.filter(up_username=current_user)
+
+
+       
 
         """
         CREATE INITIAL BLANK FORM 
@@ -59,9 +70,14 @@ class MyAccount(TemplateView):
 
         UPF = UserProfileForm(preload)
 
+
+
+
         c = UserProfile.objects.all().filter(up_username=str(current_user))
 
         if c:
+
+           
 
             """
             LOAD UP USER PROFILE FORM
@@ -69,8 +85,7 @@ class MyAccount(TemplateView):
             preload = {
 
                 'username': current_user,
-                'email': request.user.email,
-
+                'email': UPD[0].up_email,
                 'first_name': UPD[0].up_first_name,
                 'last_name': UPD[0].up_last_name,
                 'address_line1': UPD[0].up_address_line1,
@@ -102,6 +117,15 @@ class MyAccount(TemplateView):
         }
 
         return render(request, 'my_account/my_account.html', context)
+
+
+
+
+
+
+
+
+
 
 
     """
@@ -139,8 +163,8 @@ class MyAccount(TemplateView):
             up_first_name=(request.POST['first_name']),
             up_last_name=(request.POST['last_name']),
 
-            # up_email = (request.POST['email']),
-            up_email=request.user.email,
+            up_email = (request.POST['email']),
+            
             up_address_line1=(request.POST['address_line1']),
             up_address_line2=(request.POST['address_line2']),
             up_address_line3=(request.POST['address_line3']),
@@ -168,6 +192,7 @@ class MyAccount(TemplateView):
             'Please Complete The form Properly..Something seems incorrect in the post-code or country section!')
             return redirect ('my_account')
         
+        
         # OK TO SAVE FORM NOW!!
         b.save()
 
@@ -181,7 +206,7 @@ class MyAccount(TemplateView):
         preload = {
 
         'username': current_user,
-            'email': request.user.email,
+        'email': request.user.email,
 
         }
 
@@ -193,12 +218,9 @@ class MyAccount(TemplateView):
 
 
 
-        purchase_history = PH.objects.filter(ph_cart_owner = current_user)
+        # purchase_history = PH.objects.filter(ph_cart_owner = current_user)
  
-        print('----')
-        print(purchase_history)
-        print('----')
-
+   
 
 
 

@@ -77,16 +77,25 @@ class Checkout(TemplateView):
      
         
         
+        
+        
+        
+        
+        
         """
         PREPOULATE AND INSTANTIATE SHIPPING FORM!!!
         """
-        sf_email='cofoedu@gmail.com'
+        # sf_email='cofoedu@gmail.com'
+       
+        sf_email=""
        
         if request.user.is_authenticated:
             sf_email=request.user.email
         
         
+        #TRansaction ID
         TID=str(current_user)+':'+str(session_key)
+        
         preload = {
            
            'sf_username':current_user,
@@ -97,6 +106,7 @@ class Checkout(TemplateView):
     
         SF = ShippingForm(preload)
         
+ 
        
         """
         POPULATER IF A PROFILE ALREADY EXISTS FOR USER
@@ -105,13 +115,17 @@ class Checkout(TemplateView):
         
         if userprofile:
         
+            #Transaction ID
             TID=str(current_user)+':'+str(session_key)
             
             preload = {
            
            'sf_username':current_user,
-           'sf_email':sf_email,
-           'sf_transaction_id':TID,
+        #    'sf_email':sf_email,
+           
+            'sf_email':userprofile[0].up_email,
+           
+            'sf_transaction_id':TID,
            
            'sf_address_line1':userprofile[0].up_address_line1,
            'sf_address_line2':userprofile[0].up_address_line2,
@@ -122,21 +136,7 @@ class Checkout(TemplateView):
             }    
             
         SF = ShippingForm(preload)
-       
-       
-
-    
-       
-       
-       
-       
-       
-       
-  
-  
-  
-  
-    
+ 
     
         context = {
             
@@ -240,10 +240,27 @@ class Checkout(TemplateView):
  
 
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         """
-        POPULATER IF A PROFILE ALREADY EXISTS FOR USER
+        POPULATE IF A PROFILE ALREADY EXISTS FOR USER
         """
         userprofile = UPD.UserProfile.objects.filter(up_username = current_user)
+        sf_email=""
         
         if userprofile:
         
@@ -251,9 +268,10 @@ class Checkout(TemplateView):
             
             preload = {
            
-           'sf_username':current_user,
-           'sf_email':sf_email,
-           'sf_transaction_id':TID,
+            'sf_username':current_user,
+        #   'sf_email':sf_email,
+            'sf_email':userprofile[0].up_email,
+            'sf_transaction_id':TID,
            
            'sf_address_line1':userprofile[0].up_address_line1,
            'sf_address_line2':userprofile[0].up_address_line2,
