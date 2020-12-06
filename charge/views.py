@@ -102,6 +102,19 @@ class Charge(TemplateView):
         BANYAN_VIDEOS_CORP_EMAIL_BOX=os.getenv("BVC_EMAIL_BOX")
 
 
+
+        """
+        VALIDATE ***********
+        """
+
+        if request.POST['sf_username'] =="":
+            return redirect ('checkout')
+
+
+
+
+
+
         """
         GO AND MAKE A CHARGE TO STRIPE USING RECEIVED TOKEN !!!
         """

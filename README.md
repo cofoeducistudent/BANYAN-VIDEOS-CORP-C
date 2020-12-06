@@ -1,20 +1,25 @@
 # BANYAN-VIDEOS-CORP-C
 BANYAN-VIDEOS-CORPORATION-C
 
- Live Site:
+<hr>
+
+ Live Site Link:
+
  https://banyan-videos-corp-c.herokuapp.com/
 
+<hr>
 
-GitHub:
+GitHub Link:
 
 https://github.com/cofoeducistudent/BANYAN-VIDEOS-CORP-C
+
+<hr>
 
 
 |Screen|Size|
 |------|----|
-|<img src="_support_docs/images/home-page.jpg" width="400">|* Mobile First - Small Screen|
-|<img src="_support_docs/images/banyan-videos-corp-home-page.jpg " width="400">|* Large Screen Size|
- 
+|<img src="_support_docs/images/home-page.jpg" width="600">|* Mobile First - Small Screen |
+
 
 <hr>
 
@@ -30,11 +35,60 @@ https://github.com/cofoeducistudent/BANYAN-VIDEOS-CORP-C
  
 
 
+<a id="top"></a>
+
 ## Index ##
+>[Project Brief](#projectbrief)
 
-> **Project Brief**
+>[1. Ux](#ux)
 
-Banyan videos project brief.
+    a. Strategy
+
+    b. Scope
+
+    c. Structure
+
+    d. Skeleton
+
+    e. Surface
+
+
+>[2. Features](#features)
+
+    a. Existing Features
+
+    b. Features Left to Implement
+
+>[3. Technologies Used](#technologiesused)
+
+>[4. Testing](#testing)
+
+>[5. Deployment](#deployment)
+
+>[6. Credits](#credits)
+
+>[7. Content](#content)
+
+>[8. Media](#media)
+
+>[9. Acknowledgements](#acknowledgements)
+ 
+
+
+
+
+
+<hr>
+<hr>
+
+
+><a id="projectbrief">Project Brief</a>
+
+[<< Back](#top)
+
+<hr>
+
+**Banyan-Videos-Corporation - project brief**.
 
 Banyan videos corporation has asked for a website but will help them retail their video merchandise online.
 
@@ -72,10 +126,13 @@ For this reason, they have provided a brief stating what they would like to see 
 
 * Finally, they wish the website to be up and running quickly & cheaply.
 
+<hr>
 
-> ## 1. UX ##
- 
->**a. Strategy**
+> # <a id="ux">1. UX</a>
+
+[<< Back](#top)
+
+**a. Strategy**
  
 Following the project brief and further clarification, I have decided to approach that will facilitate banyan videos requirements in the following way.
 
@@ -139,7 +196,7 @@ Basic user stories supported the features
 
 <hr>
 
->**b. Scope**
+**b. Scope**
 
 - Therefore, the scope of the project will involve the following:
 
@@ -238,7 +295,9 @@ The colour scheme I finally settled on is as follows. As directed, I tried to ma
 |<img src="_support_docs/images/color-pallet-2of2.png" width="200">|
 
 
-> ## 2. Features ##
+># <a id="features">2. Features</a>
+
+[<< Back](#top)
 
 The website will contain a few features. Some have been explicitly requested by Banyan Videos Corporation (BVC), and the others have been implicitly added as part of the design process
 
@@ -287,7 +346,7 @@ As an administrator tasked with installing / maintaining the site. You can chang
 
 <p>
 
-> ## 3. Existing Features ##
+>**Existing Features**
 Here are the features that has been implemented on the site
 
 |No.|Feature|Implemented|
@@ -295,11 +354,25 @@ Here are the features that has been implemented on the site
 |1|**Member Discount**|<img src="_support_docs/images/member-discount.png" width="400">|
 |2|**Front Page Carousel**|<img src="_support_docs/images/fp-carousel.jpg" width="400">|
 |4|**Articles**|<img src="_support_docs/images/fp-articles.jpg" width="400">|
- 
+
 
 <hr>
 
-> ## 3. Features Left to Implement ##
+**PAYMENT GATEWAY**
+
+STRIPE is a payment solution which I have implemented on the site.
+The benefit of using stripe is that I do not have to hold any of the users card payment details within the site. Stripe provides an abstraction layer which makes the site compliant with online and banking payment industries.
+
+For development purposes all the payments are test and not real
+
+https://dashboard.stripe.com/test/dashboard
+
+<img src="_support_docs/images/stripe-payments.png" width="600">
+
+
+<hr>
+
+**Features Left to Implement**
 
 
 * Most of the features expected have been implemented. However for the film models a field was left for global sales.The intention was to apply a discount to every item in Banyan Videos catalogue at once. My reasoning was for a flash sale.having the facility to make that happen would be a plus. However BVC has said that it is not necessary at present and it is under consideration. Therefore the model contains that option , but it will not be implemented presently.
@@ -308,7 +381,10 @@ Here are the features that has been implemented on the site
 
 <hr>
  
-> ## 4. Technologies Used ##
+># <a id="technologiesused">4. Technologies Used</a>
+
+[<< Back](#top)
+
 
 |Hardware|OS|
 |--------|--|
@@ -340,7 +416,10 @@ Here are the features that has been implemented on the site
 
 <hr>
 
-> ## 5. Testing ##
+># <a id="testing">5. Testing</a>
+
+[<< Back](#top)
+
 
 * The  site has been tested on most of the popular browsers
 
@@ -357,7 +436,9 @@ Here are the features that has been implemented on the site
 
  
  
-> ## 6. Deployment ##
+># <a id="deployment">6. Deployment</a>
+
+[<< Back](#top)
 
 The deployment of the site can be done locally , it would then be really intranet based. Or, (more usual) on a web platform in a Demilitarized Zone (DMZ), as most other internet sites.
 
@@ -597,9 +678,9 @@ shut down the browser. This cause orphaned product cart entries. There is no rea
 Therefore this would be something to bring to BVC as a future enhancement.
 
 
-> ## 7. Credits ##
+># <a id="credits">7. Credits</a>
 
-
+[<< Back](#top)
 
 >Code from Stack-overflow - Philip Feldmann */
 Keep text from overspilling out of columns */
@@ -620,7 +701,10 @@ Keep text from overspilling out of columns */
 
 
 
-> ## 8. Content ##
+># <a id="content">8. Content</a>
+
+[<< Back](#top)
+
 * Some code was taken from the Bootstrap documentation ( Carousel )
 
 * Thanks for the code snippet by Phillip Feldmann which stopped text content escaping the Bootstrap columns. Stop text moving out of bootstrap column - Stack-Overflow - Phillip Feldmann
@@ -628,13 +712,17 @@ Keep text from overspilling out of columns */
 * software code from stack-overflow - Using nav-fill w-100 with Bootstrap 4 - nav-ram Filling nav-bar total width - stack-overflow
 
  
-> ## 9. Media ##
+># <a id="media">9. Media</a>
+
+[<< Back](#top)
 
 * The **site images and data** are hyperlinked, remaining the copyright of their respective owners.
 * The images are not copied or stolen from a remote location, but remain within the public domain.
 * Screenshots were captured from the **Mac version of Monosnap**
 
-> ## 10. Acknowledgements ##
+># <a id="acknowledgements">10. Acknowledgements</a>
+
+[<< Back](#top)
 
 * Thanks to mentor **Precious Ijeje** for helpful advice
 * Thanks to **Student care** for assistance
