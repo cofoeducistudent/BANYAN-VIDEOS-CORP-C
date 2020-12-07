@@ -126,16 +126,21 @@
 
 
           <!-- STRIPE STUFF!!!! -->
-
+          
           <div class="row my-5">
-            <div class="col-12">
+            <div class="col-12 stripe-button-visible">
  
-               
+              {% if stripe_button_visible == True %} 
 
-                <script src="https://checkout.stripe.com/checkout.js" 
+                <script src="https://checkout.stripe.com/checkout.js"
                 
                 
-                class="stripe-button"
+
+                
+                  class="stripe-button"
+            
+           
+                
                 data-key="{{ stripe_key }}"
                 data-description="A Banyan-Videos-Charge"
                 data-amount={{ final_bill_in_stripe_format }}
@@ -143,6 +148,8 @@
                 
                 </script>
  
+ 
+              {% endif %}
 
 
 
@@ -150,7 +157,7 @@
             </div>
           </div>
 
-
+      
 
 
 

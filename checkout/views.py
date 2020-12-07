@@ -137,6 +137,8 @@ class Checkout(TemplateView):
             
         SF = ShippingForm(preload)
  
+ 
+        # stripe_button_visible=True
     
         context = {
             
@@ -147,10 +149,21 @@ class Checkout(TemplateView):
             
             'SCM':SCM,
             'SF':SF,
+            # 'stripe_button_visible':stripe_button_visible,
             
         }
  
         return render(request, self.template_name, context)
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -259,6 +272,9 @@ class Checkout(TemplateView):
         """
         POPULATE IF A PROFILE ALREADY EXISTS FOR USER
         """
+        
+       
+        
         userprofile = UPD.UserProfile.objects.filter(up_username = current_user)
         sf_email=""
         
@@ -280,6 +296,8 @@ class Checkout(TemplateView):
            'sf_post_code':userprofile[0].up_post_code,
            'sf_country':userprofile[0].up_country,
            
+           
+           
             }    
             
         SF = ShippingForm(preload)
@@ -295,14 +313,32 @@ class Checkout(TemplateView):
          
     
     
+        """
+        VALIDATE FORM FIRST BEFORE ALLOWING STIPE PAYMENT BODY
+        """
+
+        #HIDE STRIPE BUTTON UNTILL FORM VALIDATED
+        stripe_button_visible = False
+
+        #VALIDATE LOGGED IN USER!!
+        if request.user.is_authenticated:
+
+            if  len(userprofile[0].up_email) < 4:
+                messages.info(request,'Sorry Something is wrong with Username or Email')
+                return redirect('checkout')
+
+            if len(userprofile[0].up_address_line1) < 1  or len(userprofile[0].up_address_line2) <4 or len(userprofile[0].up_address_line3) <4:
+                messages.info(request,'Sorry Something is wrong with Address')
+                return redirect('checkout')
+
+            if len(userprofile[0].up_post_code) <4 or len(userprofile[0].up_country) <4:
+                messages.info(request,'Sorry Something is wrong with Postcode or Country')
+            return redirect('checkout')
+
+
     
-    
-    
-    
+        stripe_button_visible = True
         
-    
-    
-    
         context = {
             'session_key':session_key,
             'basket_item_count': basket_item_count,
@@ -315,7 +351,9 @@ class Checkout(TemplateView):
             'SCM':SCM,
             'SF':SF,
             
-            'stripe_key':stripe_key
+            'stripe_key':stripe_key,
+            
+            'stripe_button_visible':stripe_button_visible,
         }
  
         return render(request, self.template_name, context)

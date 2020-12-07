@@ -16,10 +16,10 @@ from dotenv import load_dotenv
 
 import os
 
-from checkout.forms import  ShippingForm
+from checkout.forms import ShippingForm
 
 from django.core.mail import send_mail
-from _banyanvideos_root.settings    import FREE_SHIPPING_THRESHOLD
+from _banyanvideos_root.settings import FREE_SHIPPING_THRESHOLD
 # Create your views here.
 
 
@@ -97,32 +97,30 @@ class Charge(TemplateView):
 
         final_bill_in_stripe_format = int(final_bill * 100)
 
-
         SALES_DEPARTMENT_EMAIL = os.getenv("SALES_DEPT")
-        BANYAN_VIDEOS_CORP_EMAIL_BOX=os.getenv("BVC_EMAIL_BOX")
-
-
+        BANYAN_VIDEOS_CORP_EMAIL_BOX = os.getenv("BVC_EMAIL_BOX")
 
         """
         VALIDATE ***********
         """
 
-        if request.POST['sf_username'] =="":
-            return redirect ('checkout')
+        if len(request.POST['sf_username']) <4 or len(request.POST['sf_email']) <4:
+            messages.info(request,'Sorry Something is wrong with Username or Email')
+            return redirect('checkout')
 
+        if len(request.POST['sf_address_line1']) < 4  or len(request.POST['sf_address_line2']) <4 or len(request.POST['sf_address_line3']) <4:
+            messages.info(request,'Sorry Something is wrong with Address')
+            return redirect('checkout')
 
-
-
+        if len(request.POST['sf_post_code']) <4 or len(request.POST['sf_country']) <4:
+            messages.info(request,'Sorry Something is wrong with Postcode or Country')
+            return redirect('checkout')
 
 
         """
         GO AND MAKE A CHARGE TO STRIPE USING RECEIVED TOKEN !!!
         """
         try:
-            
-            
-            
-            
 
             if request.method == 'POST':
 
@@ -157,9 +155,8 @@ class Charge(TemplateView):
             message_body = message_body + "£ " + \
                 str(final_bill)+chr(13) + chr(13)
 
-
             # NOT LOGGED IN USER
- 
+
             send_mail('BANYAN-VIDEOS-SALES ORDER!', message_body,
                       BANYAN_VIDEOS_CORP_EMAIL_BOX, [SALES_DEPARTMENT_EMAIL,
                                                      request.POST['sf_email']],
@@ -180,14 +177,6 @@ class Charge(TemplateView):
             redirect('home')
 
         else:
-
-
-
-
-
-
-
-
 
             """
             ///////////////////////////////// LOGGED IN USER PROCESSING /////////
