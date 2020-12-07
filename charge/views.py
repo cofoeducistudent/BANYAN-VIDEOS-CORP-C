@@ -1,6 +1,6 @@
-from datetime import date, datetime
+from datetime import date
 from django.contrib import messages
-from stripe.util import dashboard_link
+
 from _banyanvideos_root.settings import STRIPE_PRIVATE_KEY
 from django.shortcuts import render, redirect
 from django.views.generic import TemplateView
@@ -12,17 +12,14 @@ import stripe
 
 from django.core.mail import send_mail
 
-from dotenv import load_dotenv
-
 import os
-
-from checkout.forms import ShippingForm
 
 from django.core.mail import send_mail
 from _banyanvideos_root.settings import FREE_SHIPPING_THRESHOLD
 # Create your views here.
 
 stripe.api_key = STRIPE_PRIVATE_KEY
+
 
 class Charge(TemplateView):
     template_name = 'charge/charge.html'
@@ -33,8 +30,6 @@ class Charge(TemplateView):
         FOR CREATING CONF-EMAIL BODY LATER
 
         """
-
-        # SALES_DEPT_EMAIL = 'cofoedu@gmail.com'
 
         customer_details = chr(13)
 
@@ -101,23 +96,10 @@ class Charge(TemplateView):
         SALES_DEPARTMENT_EMAIL = os.getenv("SALES_DEPT")
         BANYAN_VIDEOS_CORP_EMAIL_BOX = os.getenv("BVC_EMAIL_BOX")
 
-
-
         """
         VALIDATE SECTION HERE 
         """
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+
         """
         GO AND MAKE A CHARGE TO STRIPE USING RECEIVED TOKEN !!!
         """
@@ -133,12 +115,6 @@ class Charge(TemplateView):
                     description='A Banyan-Videos-Corp Charge',
                     source=request.POST['stripeToken']
                 )
-
-
-
-
-
-
 
             """
             SEND OUT EMAIL RECEIPT
@@ -169,9 +145,6 @@ class Charge(TemplateView):
                                                      request.POST['sf_email']],
                       fail_silently=False)
 
-
-
-
             """
             SALE COMPLETE ......THIS USER IS ANONYMOUS, THEREFORE DELETE ITEMS IN CART!!
             """
@@ -179,9 +152,6 @@ class Charge(TemplateView):
                 for items in SCM:
                     SCM.filter(cart_owner=current_user).filter(
                         cart_session=session_key).delete()
-                    
-                    
-                    
 
         except Exception as e:
             messages.info(
@@ -190,10 +160,6 @@ class Charge(TemplateView):
             redirect('home')
 
         else:
-
-
-
-
 
             """
             ///////////////////////////////// LOGGED IN USER PROCESSING /////////
@@ -235,10 +201,6 @@ class Charge(TemplateView):
 
                 b.save()
 
-
-
-
-
             """
             SEND OUT CONFIRMATION EMAIL TO SALES
             """
@@ -273,9 +235,6 @@ class Charge(TemplateView):
                 SCM.filter(cart_owner=current_user).filter(
                     cart_session=session_key).delete()
 
-
-
-
         context = {
 
             'session_key': session_key,
@@ -283,7 +242,7 @@ class Charge(TemplateView):
             'current_user': current_user,
             'shipping_charge': shipping_charge,
             'final_bill': final_bill,
-            
+
             'final_bill_in_stripe_format': final_bill_in_stripe_format,
 
             'SCM': SCM,

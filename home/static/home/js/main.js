@@ -11,7 +11,7 @@ var rotor_messages = [
     'FREQUENT SALES',
     'MEMBERS GET DISCOUNTS!',
     'JOIN NOW!!!',
-    'ORDERS OVER £30.00, ITEMS SHIPPED FREE',
+    'ORDERS OVER £40.00, ITEMS SHIPPED FREE',
 
 ];
 var rotor_count = 0;

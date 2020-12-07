@@ -1,13 +1,11 @@
-from _banyanvideos_root.settings import SALES_DEPARTMENT_EMAIL
-from django.shortcuts import render,redirect
+
+from django.shortcuts import render, redirect
 from django.contrib import messages
 
 from django.views.generic import TemplateView
 from shopping_cart.models import ShoppingCartModel
 
 from django.core.mail import send_mail
-
-from dotenv import load_dotenv
 
 import os
 
@@ -34,14 +32,9 @@ class ContactSent(TemplateView):
         if request.user.is_authenticated:
             current_user = request.user
 
-
-
         SCM = ShoppingCartModel.objects.filter(
             cart_owner=current_user).filter(cart_session=session_key)
         basket_item_count = SCM.count
-
-
-
 
         context = {
 
@@ -61,13 +54,7 @@ class ContactSent(TemplateView):
     def post(self, request):
 
         SALES_DEPARTMENT_EMAIL = os.getenv("SALES_DEPT")
-        BANYAN_VIDEOS_CORP_EMAIL_BOX=os.getenv("BVC_EMAIL_BOX")
-        
-        
-
-        
-
-       
+        BANYAN_VIDEOS_CORP_EMAIL_BOX = os.getenv("BVC_EMAIL_BOX")
 
         # CREATE A SESSION IF NOT EXISTING!!
         if not request.session.exists(request.session.session_key):
@@ -84,24 +71,19 @@ class ContactSent(TemplateView):
             cart_owner=current_user).filter(cart_session=session_key)
         basket_item_count = SCM.count
 
-
-   
-
-
-
-        message_subject = "** BVC - ENQUIRY ** :" + str(request.POST['subject'])
+        message_subject = "** BVC - ENQUIRY ** :" + \
+            str(request.POST['subject'])
 
         message_body = str(request.POST['comment']) + chr(13)+chr(13)
-
-
 
         """
         VALIDATE FORM
         """
-        if len(str(request.POST['subject'])) < 4 or len(str(request.POST['comment'])) < 4 :
-            messages.info(request,'Please Include a Proper Subject Field or Message!')
-            return redirect ('contact')
 
+        if len(str(request.POST['subject'])) < 4 or len(str(request.POST['comment'])) < 4:
+            messages.info(
+                request, 'Please Include a Proper Subject Field or Message!')
+            return redirect('contact')
 
         send_mail(message_subject, message_body, BANYAN_VIDEOS_CORP_EMAIL_BOX,
                   [SALES_DEPARTMENT_EMAIL, request.POST['email']], fail_silently=False)

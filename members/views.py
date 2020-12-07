@@ -1,14 +1,7 @@
-import search_results
-from home.views import HomePageView
-from django.http import request
-from django.contrib.auth import authenticate, login, logout, get_user_model
-from django.contrib import sessions
-from django.urls import reverse
 
 from django.shortcuts import render, redirect
 
 from django.views.generic import TemplateView
-# from django.views.generic.base import RedirectView
 
 from shopping_cart.models import ShoppingCartModel
 

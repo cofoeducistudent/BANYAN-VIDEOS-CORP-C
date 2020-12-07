@@ -1,9 +1,6 @@
 
-from django.db import models
 from my_account.models import UserProfile
-from django.contrib.auth import authenticate, login, logout, get_user_model
-from django.contrib import sessions
-from django.db.models.fields import NullBooleanField
+
 from django.contrib import messages
 
 from django.shortcuts import render, redirect
@@ -15,9 +12,7 @@ from .forms import UserProfileForm
 
 from . import models as UPAD
 
-
 from .models import UserPurchaseHistory as PH
-
 
 # Create your views here.
 
@@ -31,8 +26,7 @@ class MyAccount(TemplateView):
 
     def get(self, request):
         # CREATE A SESSION IF NOT EXISTING!!
-        
-        
+
         if not request.session.exists(request.session.session_key):
             request.session.create()
         session_key = request.session.session_key
@@ -40,23 +34,16 @@ class MyAccount(TemplateView):
         current_user = request.user
         if not request.user.is_authenticated:
             return redirect("login_register")
-        
-        
-        
-        
+
         if request.user.is_authenticated:
             current_user = request.user
-              
-            
+
         SCM = ShoppingCartModel.objects.filter(
             cart_owner=current_user).filter(cart_session=session_key)
         basket_item_count = SCM.count
 
-        #GET Correct User
+        # GET Correct User
         UPD = UserProfile.objects.filter(up_username=current_user)
-
-
-       
 
         """
         CREATE INITIAL BLANK FORM 
@@ -70,14 +57,9 @@ class MyAccount(TemplateView):
 
         UPF = UserProfileForm(preload)
 
-
-
-
         c = UserProfile.objects.all().filter(up_username=str(current_user))
 
         if c:
-
-           
 
             """
             LOAD UP USER PROFILE FORM
@@ -98,11 +80,7 @@ class MyAccount(TemplateView):
 
             UPF = UserProfileForm(preload)
 
- 
-
-        purchase_history = PH.objects.filter(ph_cart_owner = current_user)
- 
-  
+        purchase_history = PH.objects.filter(ph_cart_owner=current_user)
 
         context = {
 
@@ -112,21 +90,11 @@ class MyAccount(TemplateView):
 
             'SCM': SCM,
             'UPF': UPF,
-            'purchase_history':purchase_history,
+            'purchase_history': purchase_history,
 
         }
 
         return render(request, 'my_account/my_account.html', context)
-
-
-
-
-
-
-
-
-
-
 
     """
     POST CLASS  CODE
@@ -148,8 +116,6 @@ class MyAccount(TemplateView):
             cart_owner=current_user).filter(cart_session=session_key)
         basket_item_count = SCM.count
 
-       
-
         """
         SAVE PROFILE
         """
@@ -163,8 +129,8 @@ class MyAccount(TemplateView):
             up_first_name=(request.POST['first_name']),
             up_last_name=(request.POST['last_name']),
 
-            up_email = (request.POST['email']),
-            
+            up_email=(request.POST['email']),
+
             up_address_line1=(request.POST['address_line1']),
             up_address_line2=(request.POST['address_line2']),
             up_address_line3=(request.POST['address_line3']),
@@ -172,57 +138,40 @@ class MyAccount(TemplateView):
             up_country=(request.POST['country']),
 
         )
-        
-        
+
         """
         VALIDATE FORM
         """
-        if len(b.up_first_name) < 4 or len(b.up_last_name) < 4 :
+        if len(b.up_first_name) < 4 or len(b.up_last_name) < 4:
             messages.info(request,
-            'Please Complete The form Properly..Something seems incorrect in the names section!')
-            return redirect ('my_account')
-        
+                          'Please Complete The form Properly..Something seems incorrect in the names section!')
+            return redirect('my_account')
+
         if len(b.up_address_line1) < 1 or len(b.up_address_line2) < 4 or len(b.up_address_line3) < 4:
             messages.info(request,
-            'Please Complete The form Properly..Something seems incorrect in the address section!')
-            return redirect ('my_account')
-        
-        if len(b.up_post_code) < 4 or len(b.up_country) < 4 :
+                          'Please Complete The form Properly..Something seems incorrect in the address section!')
+            return redirect('my_account')
+
+        if len(b.up_post_code) < 4 or len(b.up_country) < 4:
             messages.info(request,
-            'Please Complete The form Properly..Something seems incorrect in the post-code or country section!')
-            return redirect ('my_account')
-        
-        
+                          'Please Complete The form Properly..Something seems incorrect in the post-code or country section!')
+            return redirect('my_account')
+
         # OK TO SAVE FORM NOW!!
         b.save()
 
-
-
         messages.info(request, "Your profile has been successfully saved!!")
 
-        
-       
-            
         preload = {
 
-        'username': current_user,
-        'email': request.user.email,
+            'username': current_user,
+            'email': request.user.email,
 
         }
 
         UPF = UserProfileForm(preload)
 
-
-
-
-
-
-
         # purchase_history = PH.objects.filter(ph_cart_owner = current_user)
- 
-   
-
-
 
         context = {
 
@@ -232,7 +181,7 @@ class MyAccount(TemplateView):
 
             'SCM': SCM,
             'UPF': UPF,
-            'PH':PH,
+            'PH': PH,
         }
 
         return render(request, 'my_account/my_account.html', context)

@@ -1,16 +1,9 @@
-from home import models
-from django.http import request
-from django.contrib.auth import authenticate, login, logout, get_user_model
-from django.contrib import sessions
 
 from django.shortcuts import render, redirect
 from django.views.generic import TemplateView
 
-# from shopping_cart import models
 from shopping_cart.models import ShoppingCartModel
 from .forms import ContactForm
-
-from django.contrib import messages
 
 # Create your views here.
 
@@ -25,7 +18,7 @@ class Contact(TemplateView):
     def get(self, request):
 
         SALES_DEPT_EMAIL = 'cofoedu@gmail.com'
-  
+
         # CREATE A SESSION IF NOT EXISTING!!
         if not request.session.exists(request.session.session_key):
             request.session.create()
@@ -41,9 +34,8 @@ class Contact(TemplateView):
             cart_owner=current_user).filter(cart_session=session_key)
         basket_item_count = SCM.count
 
+        prefill = {}
 
-        prefill ={}
-        
         """
         IF USER IS REGISTERD - GO GRAB USER NAME 
         AND EMAIL AND PRE-POPULATE TO SAVE TIME
@@ -54,13 +46,12 @@ class Contact(TemplateView):
                 'email': request.user.email,
             }
 
-        #prefill contact form
+        # prefill contact form
         CFM = ContactForm(prefill)
 
-
-
-
-
+        # if not CFM.is_valid():
+        #     messages.info(request, 'Something is wrong in the form. Please review it!')
+        #     return render('contact')
 
         context = {
 

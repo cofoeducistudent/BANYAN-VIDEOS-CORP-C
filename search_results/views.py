@@ -1,14 +1,9 @@
-from django.contrib.auth import authenticate, login, logout, get_user_model
-from django.contrib import sessions
-from django.template import context
-
 
 from home import views
-from django.db import models
+
 from django.shortcuts import redirect, render
 from django.views.generic import TemplateView
 
-from .import models as search_result_models
 from .import models as film_models
 
 from django.contrib import messages
@@ -36,7 +31,7 @@ class SearchResults(TemplateView):
             session_key = request.session.session_key
 
             current_user = request.user
-            if not request.user.is_authenticated: 
+            if not request.user.is_authenticated:
                 current_user = request.user
             if request.user.is_authenticated:
                 current_user = request.user
@@ -52,15 +47,9 @@ class SearchResults(TemplateView):
 
             total_items_found = len(results_collection)
 
-            SCM = ShoppingCartModel.objects.filter(cart_owner = current_user).filter(cart_session = session_key)
+            SCM = ShoppingCartModel.objects.filter(
+                cart_owner=current_user).filter(cart_session=session_key)
             basket_item_count = SCM.count
-
-      
-
-
-
-
-
 
             context = {
                 'total_items_found': total_items_found,
@@ -68,19 +57,11 @@ class SearchResults(TemplateView):
 
                 'basket_item_count': basket_item_count,
                 'current_user': current_user,
-                
+
                 'SCM': SCM,
 
             }
             return render(request, self.template_name, context)
-
-
-
-
-
-
-
-
 
         """
         USE SERACH BOX
@@ -94,7 +75,7 @@ class SearchResults(TemplateView):
             session_key = request.session.session_key
 
             current_user = request.user
-            if not request.user.is_authenticated: 
+            if not request.user.is_authenticated:
                 current_user = request.user
             if request.user.is_authenticated:
                 current_user = request.user
@@ -110,12 +91,9 @@ class SearchResults(TemplateView):
                     results_collection.append(item)
             total_items_found = len(results_collection)
 
-            SCM = ShoppingCartModel.objects.filter(cart_owner = current_user).filter(cart_session = session_key)
+            SCM = ShoppingCartModel.objects.filter(
+                cart_owner=current_user).filter(cart_session=session_key)
             basket_item_count = SCM.count
-            
- 
- 
-
 
             context = {
 
@@ -124,7 +102,6 @@ class SearchResults(TemplateView):
 
                 'basket_item_count': basket_item_count,
                 'current_user': current_user,
-
 
                 'SCM': SCM,
 
