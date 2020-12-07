@@ -22,6 +22,7 @@ from django.core.mail import send_mail
 from _banyanvideos_root.settings import FREE_SHIPPING_THRESHOLD
 # Create your views here.
 
+stripe.api_key = STRIPE_PRIVATE_KEY
 
 class Charge(TemplateView):
     template_name = 'charge/charge.html'
@@ -100,23 +101,23 @@ class Charge(TemplateView):
         SALES_DEPARTMENT_EMAIL = os.getenv("SALES_DEPT")
         BANYAN_VIDEOS_CORP_EMAIL_BOX = os.getenv("BVC_EMAIL_BOX")
 
+
+
         """
-        VALIDATE ***********
+        VALIDATE SECTION HERE 
         """
-
-        if len(request.POST['sf_username']) <4 or len(request.POST['sf_email']) <4:
-            messages.info(request,'Sorry Something is wrong with Username or Email')
-            return redirect('checkout')
-
-        if len(request.POST['sf_address_line1']) < 4  or len(request.POST['sf_address_line2']) <4 or len(request.POST['sf_address_line3']) <4:
-            messages.info(request,'Sorry Something is wrong with Address')
-            return redirect('checkout')
-
-        if len(request.POST['sf_post_code']) <4 or len(request.POST['sf_country']) <4:
-            messages.info(request,'Sorry Something is wrong with Postcode or Country')
-            return redirect('checkout')
-
-
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
         """
         GO AND MAKE A CHARGE TO STRIPE USING RECEIVED TOKEN !!!
         """
@@ -132,6 +133,12 @@ class Charge(TemplateView):
                     description='A Banyan-Videos-Corp Charge',
                     source=request.POST['stripeToken']
                 )
+
+
+
+
+
+
 
             """
             SEND OUT EMAIL RECEIPT
@@ -162,6 +169,9 @@ class Charge(TemplateView):
                                                      request.POST['sf_email']],
                       fail_silently=False)
 
+
+
+
             """
             SALE COMPLETE ......THIS USER IS ANONYMOUS, THEREFORE DELETE ITEMS IN CART!!
             """
@@ -169,6 +179,9 @@ class Charge(TemplateView):
                 for items in SCM:
                     SCM.filter(cart_owner=current_user).filter(
                         cart_session=session_key).delete()
+                    
+                    
+                    
 
         except Exception as e:
             messages.info(
@@ -177,6 +190,10 @@ class Charge(TemplateView):
             redirect('home')
 
         else:
+
+
+
+
 
             """
             ///////////////////////////////// LOGGED IN USER PROCESSING /////////
@@ -218,6 +235,10 @@ class Charge(TemplateView):
 
                 b.save()
 
+
+
+
+
             """
             SEND OUT CONFIRMATION EMAIL TO SALES
             """
@@ -252,6 +273,9 @@ class Charge(TemplateView):
                 SCM.filter(cart_owner=current_user).filter(
                     cart_session=session_key).delete()
 
+
+
+
         context = {
 
             'session_key': session_key,
@@ -259,6 +283,7 @@ class Charge(TemplateView):
             'current_user': current_user,
             'shipping_charge': shipping_charge,
             'final_bill': final_bill,
+            
             'final_bill_in_stripe_format': final_bill_in_stripe_format,
 
             'SCM': SCM,

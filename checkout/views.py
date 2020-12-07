@@ -14,20 +14,16 @@ from django.conf    import  settings # get access to settings variables
 
 from _banyanvideos_root.settings    import FREE_SHIPPING_THRESHOLD
 
-#------
-# import jsonify
-# import json
-
+ 
 import os
 import stripe
-# This is your real test secret API key.
-# stripe.api_key = STRIPE_PRIVATE_KEY
-#------
-
+ 
 
 #Create Your Views
 
 
+
+stripe_key = STRIPE_PUBLIC_KEY
 
 class Checkout(TemplateView):
     template_name = 'checkout/checkout.html'
@@ -38,6 +34,8 @@ class Checkout(TemplateView):
     GET CLASSS
     """
     def get(self, request):
+        
+        
         
         # CREATE A SESSION IF NOT EXISTING!!
         if not request.session.exists(request.session.session_key):
@@ -65,7 +63,6 @@ class Checkout(TemplateView):
         final_bill=round((total_to_pay+shipping_charge),2)
         
   
-        
         """
         EXIT PAYMENT IF NOTHING IN BASKET!
         """
@@ -76,24 +73,17 @@ class Checkout(TemplateView):
             return redirect('shopping_cart')
      
         
-        
-        
-        
-        
-        
-        
+      
         """
         PREPOULATE AND INSTANTIATE SHIPPING FORM!!!
         """
-        # sf_email='cofoedu@gmail.com'
-       
+      
         sf_email=""
        
         if request.user.is_authenticated:
             sf_email=request.user.email
         
-        
-        #TRansaction ID
+        #Transaction ID
         TID=str(current_user)+':'+str(session_key)
         
         preload = {
@@ -109,7 +99,7 @@ class Checkout(TemplateView):
  
        
         """
-        POPULATER IF A PROFILE ALREADY EXISTS FOR USER
+        POPULATE IF A PROFILE ALREADY EXISTS FOR USER
         """
         userprofile = UPD.UserProfile.objects.filter(up_username = current_user)
         
@@ -120,25 +110,21 @@ class Checkout(TemplateView):
             
             preload = {
            
-           'sf_username':current_user,
-        #    'sf_email':sf_email,
-           
+            'sf_username':current_user,
             'sf_email':userprofile[0].up_email,
-           
             'sf_transaction_id':TID,
-           
-           'sf_address_line1':userprofile[0].up_address_line1,
-           'sf_address_line2':userprofile[0].up_address_line2,
-           'sf_address_line3':userprofile[0].up_address_line3,
-           'sf_post_code':userprofile[0].up_post_code,
-           'sf_country':userprofile[0].up_country,
+            'sf_address_line1':userprofile[0].up_address_line1,
+            'sf_address_line2':userprofile[0].up_address_line2,
+            'sf_address_line3':userprofile[0].up_address_line3,
+            'sf_post_code':userprofile[0].up_post_code,
+            'sf_country':userprofile[0].up_country,
            
             }    
             
         SF = ShippingForm(preload)
  
  
-        # stripe_button_visible=True
+        stripe_button_visible=True
     
         context = {
             
@@ -149,7 +135,7 @@ class Checkout(TemplateView):
             
             'SCM':SCM,
             'SF':SF,
-            # 'stripe_button_visible':stripe_button_visible,
+            'stripe_button_visible':stripe_button_visible,
             
         }
  
@@ -181,6 +167,8 @@ class Checkout(TemplateView):
     POST CLASS
     """
     def post(self, request):
+        
+        # stripe_key = STRIPE_PUBLIC_KEY
         
         # CREATE A SESSION IF NOT EXISTING!!
         if not request.session.exists(request.session.session_key):
@@ -309,35 +297,21 @@ class Checkout(TemplateView):
     
     
     
-        stripe_key = STRIPE_PUBLIC_KEY
-         
-    
-    
+        # stripe_key = STRIPE_PUBLIC_KEY
+  
         """
         VALIDATE FORM FIRST BEFORE ALLOWING STIPE PAYMENT BODY
         """
 
-        #HIDE STRIPE BUTTON UNTILL FORM VALIDATED
-        stripe_button_visible = False
-
-        #VALIDATE LOGGED IN USER!!
-        if request.user.is_authenticated:
-
-            if  len(userprofile[0].up_email) < 4:
-                messages.info(request,'Sorry Something is wrong with Username or Email')
-                return redirect('checkout')
-
-            if len(userprofile[0].up_address_line1) < 1  or len(userprofile[0].up_address_line2) <4 or len(userprofile[0].up_address_line3) <4:
-                messages.info(request,'Sorry Something is wrong with Address')
-                return redirect('checkout')
-
-            if len(userprofile[0].up_post_code) <4 or len(userprofile[0].up_country) <4:
-                messages.info(request,'Sorry Something is wrong with Postcode or Country')
-            return redirect('checkout')
-
+      
+      
+      
+      
+      
 
     
         stripe_button_visible = True
+        print(stripe_key)
         
         context = {
             'session_key':session_key,
@@ -350,7 +324,6 @@ class Checkout(TemplateView):
             
             'SCM':SCM,
             'SF':SF,
-            
             'stripe_key':stripe_key,
             
             'stripe_button_visible':stripe_button_visible,
