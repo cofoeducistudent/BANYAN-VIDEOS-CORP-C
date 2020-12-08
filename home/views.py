@@ -10,6 +10,8 @@ from search_results import models as film_models
 
 from shopping_cart.models import ShoppingCartModel
 
+
+
 # Create your views here.
 
 
@@ -19,7 +21,7 @@ class HomePageView(TemplateView):
     def get(self, request):
 
         MA = MAINTENANCE
-        print(MA)
+     
 
         carousel = models.FrontPageCarousel.objects.all()
         articles = models.Article.objects.all()

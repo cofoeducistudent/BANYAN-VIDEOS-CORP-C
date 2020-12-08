@@ -1,16 +1,9 @@
-from home.views import HomePageView
+
 from django.urls import path
 from .views import Members
- 
 
- 
- 
+urlpatterns = [
 
+    path('members', Members.as_view(), name="members"),
 
-urlpatterns =[
-    
-   
-    path('members', Members.as_view(), name="members" ),
-              
-              
-              ]
+]

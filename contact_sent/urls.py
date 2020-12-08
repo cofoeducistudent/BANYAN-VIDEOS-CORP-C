@@ -1,4 +1,4 @@
-from contact.views import Contact
+
 from django.urls   import path
 from .views import  ContactSent
 

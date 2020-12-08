@@ -1,9 +1,8 @@
-from django.urls    import path
+from django.urls import path
 from .views import MyAccount
 
+urlpatterns = [
 
-urlpatterns =[
-    
-    path('my_account', MyAccount.as_view(), name = "my_account" )
-    
+    path('my_account', MyAccount.as_view(), name="my_account")
+
 ]

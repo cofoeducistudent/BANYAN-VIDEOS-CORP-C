@@ -1,18 +1,5 @@
 from datetime import date
-# from search_results.views import SearchResults
-# from my_account import views
-# from django.contrib.auth import authenticate, login, logout, get_user_model
-# from django.contrib import sessions
-# from django.core.checks import messages
-# from django.db import models
-# from django.db.models.query import FlatValuesListIterable
-
-# from django.http import request
-# from django.contrib.auth import authenticate, login, logout, get_user_model
-# from django.contrib import sessions
-
-# from django.shortcuts import render,redirect
-
+ 
 from django.shortcuts import render
 from django.views.generic import TemplateView
 
