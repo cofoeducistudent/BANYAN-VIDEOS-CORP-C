@@ -47,6 +47,10 @@ class ContactSent(TemplateView):
 
         return render(request, 'contact_sent/contact_sent.html', context)
 
+
+
+
+
     """
     POST METHOD
     """
@@ -76,6 +80,7 @@ class ContactSent(TemplateView):
 
         message_body = str(request.POST['comment']) + chr(13)+chr(13)
 
+
         """
         VALIDATE FORM
         """
@@ -84,6 +89,19 @@ class ContactSent(TemplateView):
             messages.info(
                 request, 'Please Include a Proper Subject Field or Message!')
             return redirect('contact')
+
+
+
+
+
+
+
+
+
+        """
+        SENDMAIL
+        
+        """
 
         send_mail(message_subject, message_body, BANYAN_VIDEOS_CORP_EMAIL_BOX,
                   [SALES_DEPARTMENT_EMAIL, request.POST['email']], fail_silently=False)

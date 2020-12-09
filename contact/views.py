@@ -1,5 +1,5 @@
 
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 from django.views.generic import TemplateView
 
 from shopping_cart.models import ShoppingCartModel
@@ -17,8 +17,6 @@ class Contact(TemplateView):
 
     def get(self, request):
 
-        SALES_DEPT_EMAIL = 'cofoedu@gmail.com'
-
         # CREATE A SESSION IF NOT EXISTING!!
         if not request.session.exists(request.session.session_key):
             request.session.create()
@@ -34,6 +32,9 @@ class Contact(TemplateView):
             cart_owner=current_user).filter(cart_session=session_key)
         basket_item_count = SCM.count
 
+
+
+
         prefill = {}
 
         """
@@ -48,10 +49,18 @@ class Contact(TemplateView):
 
         # prefill contact form
         CFM = ContactForm(prefill)
+ 
+ 
+ 
+        if CFM.is_valid():
+            cd = CFM.cleaned_data
+            print(cd)
+            CFM = ContactForm(cd)
 
-        # if not CFM.is_valid():
-        #     messages.info(request, 'Something is wrong in the form. Please review it!')
-        #     return render('contact')
+
+
+
+
 
         context = {
 
@@ -61,6 +70,7 @@ class Contact(TemplateView):
 
             'SCM': SCM,
             'CFM': CFM,
+           
 
         }
 

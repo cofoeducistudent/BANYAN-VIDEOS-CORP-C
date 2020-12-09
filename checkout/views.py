@@ -1,4 +1,5 @@
 
+from django.contrib import messages
 from _banyanvideos_root.settings import STRIPE_PUBLIC_KEY
 from django.shortcuts import redirect, render
 from django.views.generic import TemplateView
@@ -122,6 +123,17 @@ class Checkout(TemplateView):
 
         return render(request, self.template_name, context)
 
+
+
+
+
+
+
+
+
+
+
+
     """
     POST CLASS
     """
@@ -184,6 +196,10 @@ class Checkout(TemplateView):
 
         SF = ShippingForm(preload)
 
+
+       
+
+
         """
         POPULATE IF A PROFILE ALREADY EXISTS FOR USER
         """
@@ -216,6 +232,13 @@ class Checkout(TemplateView):
         """
         VALIDATE FORM FIRST BEFORE ALLOWING STIPE PAYMENT BODY
         """
+
+  
+
+
+
+
+
 
         stripe_button_visible = True
 
