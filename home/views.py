@@ -20,6 +20,7 @@ class HomePageView(TemplateView):
 
     def get(self, request):
 
+        
         MA = MAINTENANCE
      
 

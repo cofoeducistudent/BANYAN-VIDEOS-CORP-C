@@ -144,17 +144,20 @@ class MyAccount(TemplateView):
         """
         if len(b.up_first_name) < 4 or len(b.up_last_name) < 4:
             messages.info(request,
-                          'Please Complete The form Properly..Something seems incorrect in the names section!')
+                          'Please Complete The form Properly..\
+                              Something seems incorrect in the names section!')
             return redirect('my_account')
 
         if len(b.up_address_line1) < 1 or len(b.up_address_line2) < 4 or len(b.up_address_line3) < 4:
             messages.info(request,
-                          'Please Complete The form Properly..Something seems incorrect in the address section!')
+                          'Please Complete The form Properly..\
+                              Something seems incorrect in the address section!')
             return redirect('my_account')
 
         if len(b.up_post_code) < 4 or len(b.up_country) < 4:
             messages.info(request,
-                          'Please Complete The form Properly..Something seems incorrect in the post-code or country section!')
+                          'Please Complete The form Properly..\
+                              Something seems incorrect in the post-code or country section!')
             return redirect('my_account')
 
         # OK TO SAVE FORM NOW!!

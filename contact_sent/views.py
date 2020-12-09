@@ -85,7 +85,8 @@ class ContactSent(TemplateView):
         VALIDATE FORM
         """
 
-        if len(str(request.POST['subject'])) < 4 or len(str(request.POST['comment'])) < 4:
+        if len(str(request.POST['subject'])) < 4\
+        or len(str(request.POST['comment'])) < 4:
             messages.info(
                 request, 'Please Include a Proper Subject Field or Message!')
             return redirect('contact')

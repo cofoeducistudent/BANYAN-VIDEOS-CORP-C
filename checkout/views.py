@@ -1,5 +1,5 @@
 
-from django.contrib import messages
+# from django.contrib import messages
 from _banyanvideos_root.settings import STRIPE_PUBLIC_KEY
 from django.shortcuts import redirect, render
 from django.views.generic import TemplateView

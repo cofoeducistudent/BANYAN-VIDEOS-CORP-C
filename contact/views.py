@@ -32,9 +32,6 @@ class Contact(TemplateView):
             cart_owner=current_user).filter(cart_session=session_key)
         basket_item_count = SCM.count
 
-
-
-
         prefill = {}
 
         """
@@ -49,18 +46,11 @@ class Contact(TemplateView):
 
         # prefill contact form
         CFM = ContactForm(prefill)
- 
- 
- 
+
         if CFM.is_valid():
             cd = CFM.cleaned_data
             print(cd)
             CFM = ContactForm(cd)
-
-
-
-
-
 
         context = {
 
@@ -70,7 +60,6 @@ class Contact(TemplateView):
 
             'SCM': SCM,
             'CFM': CFM,
-           
 
         }
 

@@ -28,8 +28,6 @@ class Charge(TemplateView):
     template_name = 'charge/charge.html'
 
     def post(self, request):
-        
- 
         """
         GRAB COMPLETED FORM DETAILS
         FOR CREATING CONF-EMAIL BODY LATER
@@ -101,59 +99,49 @@ class Charge(TemplateView):
         SALES_DEPARTMENT_EMAIL = os.getenv("SALES_DEPT")
         BANYAN_VIDEOS_CORP_EMAIL_BOX = os.getenv("BVC_EMAIL_BOX")
 
-
-
-
-
         """
         VALIDATE FORM SECTION HERE 
         """
-        failure=0
-        if request.POST['sf_username']=="":
-            messages.info(request, 'Transaction faild: something wrong with * username *')
-            failure=1
+        failure = 0
+        if request.POST['sf_username'] == "":
+            messages.info(
+                request, 'Transaction failed: something wrong with * username *')
+            failure = 1
 
-        if request.POST['sf_email']=="" or not('@' in request.POST['sf_email']):
-            messages.info(request, 'Transaction failed: something wrong with * email *')
-            failure=1
+        if request.POST['sf_email'] == "" or not('@' in request.POST['sf_email']):
+            messages.info(
+                request, 'Transaction failed: something wrong with * email *')
+            failure = 1
 
+        if request.POST['sf_address_line1'] == "" or len(request.POST['sf_address_line1']) < 1:
+            messages.info(
+                request, 'Transaction failed: something wrong with * Address Line 1 *')
+            failure = 1
 
-        if request.POST['sf_address_line1']=="" or len(request.POST['sf_address_line1'])<1 :
-            messages.info(request, 'Transaction failed: something wrong with * Address Line 1 *')
-            failure=1
+        if request.POST['sf_address_line2'] == "" or len(request.POST['sf_address_line2']) < 4:
+            messages.info(
+                request, 'Transaction failed: something wrong with * Address Line 2 *')
+            failure = 1
 
-        if request.POST['sf_address_line2']=="" or len(request.POST['sf_address_line2'])<4 :
-            messages.info(request, 'Transaction failed: something wrong with * Address Line 2 *')
-            failure=1
+        if request.POST['sf_address_line3'] == "" or len(request.POST['sf_address_line3']) < 4:
+            messages.info(
+                request, 'Transaction failed: something wrong with * Address Line 3 *')
+            failure = 1
 
-        if request.POST['sf_address_line3']=="" or len(request.POST['sf_address_line3'])<4 :
-            messages.info(request, 'Transaction failed: something wrong with * Address Line 3 *')
-            failure=1
+        if request.POST['sf_post_code'] == "" or len(request.POST['sf_post_code']) < 5:
+            messages.info(
+                request, 'Transaction failed: something wrong with * post code *')
+            failure = 1
 
-        if request.POST['sf_post_code']=="" or len(request.POST['sf_post_code'])<5 :
-            messages.info(request, 'Transaction failed: something wrong with * post code *')
-            failure=1
-
-        if request.POST['sf_country']=="" or len(request.POST['sf_post_code'])<4 :
-            messages.info(request, 'Transaction failed: something wrong with * country *')
-            failure=1
-
-
-
-
+        if request.POST['sf_country'] == "" or len(request.POST['sf_post_code']) < 4:
+            messages.info(
+                request, 'Transaction failed: something wrong with * country *')
+            failure = 1
 
         # If form incorrect..or failed in anyway stop transaction
-        if failure ==1:
-            stripe.api_key = "" # wipe API key
+        if failure == 1:
+            stripe.api_key = ""  # wipe API key
             return redirect('home')
-
-
-
-
-
-
-
-
 
         """
         GO AND MAKE A CHARGE TO STRIPE USING RECEIVED TOKEN !!!
@@ -210,14 +198,15 @@ class Charge(TemplateView):
 
         except Exception as e:
             messages.info(
-                request, 'This Transcation request Failed! Please ensure you are not repeating the Transaction! / ' + str(e))
+                request, 'This Transcation request Failed! Please ensure you\
+                    are not repeating the Transaction! / ' + str(e))
 
             redirect('home')
 
         else:
 
             """
-            ///////////////////////////////// LOGGED IN USER PROCESSING /////////
+            ///////////////////////////////// LOGGED IN USER PROCESSING
             """
 
         if request.user.is_authenticated:
