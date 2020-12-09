@@ -484,7 +484,9 @@ https://dashboard.stripe.com/test/dashboard
 |Opera|Version:72.0.3815.400|<img src="_support_docs/images/opera-icon.png" width="50">|
 |Firefox|83.0(64-bit)|<img src="_support_docs/images/firefox-icon.png" width="50">|
 
-* Further testing was carried out 
+* Further testing was carried out, by using automated testing. Specifically an administrator can execute on the terminal command line **"python manage.py test"**. This command will execute Django unit testing **( setup inside  the home app 'test.py' )** and carry out a check on the accessible pages of the site.
+
+
 
 <hr>
 

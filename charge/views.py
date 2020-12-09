@@ -114,28 +114,28 @@ class Charge(TemplateView):
             failure=1
 
         if request.POST['sf_email']=="" or not('@' in request.POST['sf_email']):
-            messages.info(request, 'Transaction faild: something wrong with * email *')
+            messages.info(request, 'Transaction failed: something wrong with * email *')
             failure=1
 
 
         if request.POST['sf_address_line1']=="" or len(request.POST['sf_address_line1'])<1 :
-            messages.info(request, 'Transaction faild: something wrong with * Address Line 1 *')
+            messages.info(request, 'Transaction failed: something wrong with * Address Line 1 *')
             failure=1
 
         if request.POST['sf_address_line2']=="" or len(request.POST['sf_address_line2'])<4 :
-            messages.info(request, 'Transaction faild: something wrong with * Address Line 2 *')
+            messages.info(request, 'Transaction failed: something wrong with * Address Line 2 *')
             failure=1
 
         if request.POST['sf_address_line3']=="" or len(request.POST['sf_address_line3'])<4 :
-            messages.info(request, 'Transaction faild: something wrong with * Address Line 3 *')
+            messages.info(request, 'Transaction failed: something wrong with * Address Line 3 *')
             failure=1
 
         if request.POST['sf_post_code']=="" or len(request.POST['sf_post_code'])<5 :
-            messages.info(request, 'Transaction faild: something wrong with * post code *')
+            messages.info(request, 'Transaction failed: something wrong with * post code *')
             failure=1
 
         if request.POST['sf_country']=="" or len(request.POST['sf_post_code'])<4 :
-            messages.info(request, 'Transaction faild: something wrong with * country *')
+            messages.info(request, 'Transaction failed: something wrong with * country *')
             failure=1
 
 
