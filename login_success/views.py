@@ -4,6 +4,8 @@ from django.views.generic import TemplateView
 from shopping_cart.models import ShoppingCartModel
 from login_success.models import LoginMessages
 
+
+from django.contrib.auth.models import Group,User
 # Create your views here.
 
 
@@ -23,6 +25,15 @@ class LoginSuccess(TemplateView):
 
         if request.user.is_authenticated:
             current_user = request.user
+
+ 
+
+
+
+
+
+
+
 
         SCM = ShoppingCartModel.objects.filter(
             cart_owner=current_user).filter(cart_session=session_key)
