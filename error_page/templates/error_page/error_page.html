@@ -1,0 +1,81 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block post-title %} Error-page {% endblock post-title %}
+
+{% block main-content %}
+
+<div class="row container-fluid">
+  <div class="col-12 mx-3">
+
+    <!-- <h1 class="section-title text-center">ABOUT PAGE!</h1> -->
+
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">ERROR PAGE!!!</h1>
+
+        <p class="lead">You have hit an error. One of the following possibly happend</p>
+
+     
+
+        <hr>
+
+        <p>You have hit a malformed or non-existent page!</p>
+
+
+
+
+      </div>
+    </div>
+
+    <!-- ADMIN LOGIN MESSAGES -->
+    <div class="row">
+      <div class="col-12">
+
+        {% for messages in ALM %}
+
+        {% if messages.messages_visible %}
+
+        <div class="row my-5">
+          <div class="col-12">
+
+            <div class="card bg-dark text-white">
+              <div class="card-header">
+                {{ messages.message_date }}
+              </div>
+              <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                  <p>{{ messages.message_title }}</p>
+                  <p>{{ messages.message_content }}</p>
+                  <footer class="blockquote-footer">Banyan-Videos-Corp Admin </footer>
+                </blockquote>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        {% endif %}
+
+        {% endfor %}
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-12">
+
+    <div class="col-12 text-center">
+      <a href="{% url 'home' %}"><button type="submit" class="btn btn-lg btn-success my-5">HOME-PAGE</button></a>
+    </div>
+
+  </div>
+</div>
+
+
+
+{% endblock main-content %}

@@ -14,9 +14,14 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
+from error_page.views import ErrorPage
+from home.views import HomePageView
 from django.contrib import admin
 from django.urls import path, include
-from django.conf.urls import url
+
+
+from error_page import views
+
  
 urlpatterns = [
     
@@ -52,5 +57,11 @@ urlpatterns = [
     
     path('contact_sent/', include('contact_sent.urls')),
     
+
     
 ]
+
+
+
+handler404 = views.ErrorPage.as_view()
+handler400 = views.ErrorPage.as_view()

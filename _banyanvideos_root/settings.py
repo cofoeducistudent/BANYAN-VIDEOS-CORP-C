@@ -101,6 +101,7 @@ INSTALLED_APPS = [
     'login_success',
     'charge',
     'contact_sent',
+    'error_page',
 
 ]
 
@@ -135,7 +136,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         
-        # 'DIRS': [str(os.path.join(BASE_DIR, 'templates')), str(os.path.join(BASE_DIR, 'templates', 'accounts'))  ],
+        
         'DIRS': [str(os.path.join(BASE_DIR, 'templates'))],
         
         'APP_DIRS': True,
@@ -194,7 +195,7 @@ if PRODUCTION == True:
     DATABASES = {
     
         'default':dj_database_url.parse(DBKEY)
-        # 'default': dj_database_url.parse('postgres://khweztnfpjqgir:696bbd937f6988e34e46341f798c0865b74178b4f06995200c1970386f95ce86@ec2-54-247-94-127.eu-west-1.compute.amazonaws.com:5432/ddt1ven83jkqfs')
+        
      
     }
  
