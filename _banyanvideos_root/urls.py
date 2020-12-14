@@ -65,3 +65,5 @@ urlpatterns = [
 
 handler404 = views.ErrorPage.as_view()
 handler400 = views.ErrorPage.as_view()
+
+handler403 = views.ErrorPage.as_view()

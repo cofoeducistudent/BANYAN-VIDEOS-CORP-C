@@ -677,7 +677,7 @@ The local install works for two reasons
 Running the Django app on any platform other than a local setup requires a bit more consideration.
 You need to ensure that you hosting platform has 
 
-* A webserver that supports **WSGI** 
+* A web-server that supports **WSGI** 
 * A platform that will run python 
 * A database supporting SQL.. ( for this site I have chosen **POSTGRES** as mentioned in the strategy spec )
 * The ability to serve 'STATIC' files**

@@ -1,12 +1,7 @@
-{%  extends 'home/base.html' %}
+{% extends 'home/base.html' %}
 {% load static %}
 
-
-
-
 {% block post-title %} search-results-page {% endblock post-title %}
-
-
 
 {% block main-content %}
 
@@ -23,7 +18,6 @@
     </div>
 </div>
 {% endif %}
- 
 
 <!-- BACK BUTTON -->
 <div class="row my-1">
@@ -46,7 +40,7 @@
 
         <div class="row ">
 
-            {%  for items in results_collection  %}
+            {% for items in results_collection %}
 
             <div class="col-md-6 mx-auto my-2  ">
 
@@ -62,15 +56,16 @@
                         <div class="card-body">
 
                             {% if items.film_clip_link %}
-                            <a href="{% url 'members' %}"><h5 class="bg-darker"><span class="fas fa-video"></span> : Trailer/Clips</h5></a>
+                            <a href="{% url 'members' %}">
+                                <h5 class="bg-darker"><span class="fas fa-video"></span> : Trailer/Clips</h5>
+                            </a>
                             {% endif %}
 
-                            <h5   class="section-tiny-text text-muted">SKU:{{ items.film_sku }}</h5>
+                            <h5 class="section-tiny-text text-muted">SKU:{{ items.film_sku }}</h5>
 
                             <h5 class="card-title">{{ items.film_friendly_title }}</h5>
 
-                            <p class="card-text  section-tiny-text text-justify">{{  items.film_description }}</p>
-
+                            <p class="card-text  section-tiny-text text-justify">{{ items.film_description }}</p>
 
                             <hr>
 
@@ -86,7 +81,7 @@
                                 <div class="col-12 text-center">
 
                                     <!-- SHOW DISCOUNT -->
-                                    {% if items.film_product_discount  %}
+                                    {% if items.film_product_discount %}
 
                                     <div class="row">
                                         <div class="col-8  discounted-product mx-auto">
@@ -99,7 +94,7 @@
                                     {% endif %}
 
                                     <!-- VOLUMES -->
-                                    <select name="quantity">         
+                                    <select name="quantity">
                                         <option value="1" selected='selected'>1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
@@ -114,10 +109,7 @@
                             <div class="row my-2">
                                 <div class="col-12 text-center">
 
-
-
-                                    <input type="hidden" name="sku" value={{ items.film_sku }}
-
+                                    <input type="hidden" name="sku" value={{ items.film_sku }}>
 
                                     <!-- ADD CART BUTTON -->
                                     <button type="submit" class="btn btn-lg bt add-to-cart-button">
