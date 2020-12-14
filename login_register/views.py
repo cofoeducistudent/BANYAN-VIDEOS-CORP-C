@@ -24,7 +24,10 @@ class LoginRegister(TemplateView):
         current_user = request.user
         if not request.user.is_authenticated:
             current_user = request.user
+            
+        logged_in=False    
         if request.user.is_authenticated:
+            logged_in=True
             current_user = request.user
 
         SCM = ShoppingCartModel.objects.filter(
@@ -40,6 +43,7 @@ class LoginRegister(TemplateView):
 
             'SCM': SCM,
             'LIF': LIF,
+            'logged_in':logged_in,
         }
 
         return render(request, 'login_register/login_register.html', context)

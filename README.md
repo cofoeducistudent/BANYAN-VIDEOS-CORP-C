@@ -281,6 +281,14 @@ Basic user stories supported the features
 
 * A **'Foreign-Key'** is used between video films and video-film-genre, creating a relationship
 
+Here is an ERP diagram. This shows the basic grouping and relationship of the various models and forms
+
+* Green - product and product grouping, linked with a foreign Key
+* Yellow - shopping/transaction grouping
+* Blue - published content group  (general and members only )
+* Red - Communications group content ( forms)
+
+<img src="_support_docs/images/erp.png" width="600">
 
 |Model|Purpose|Model Implementation|
 |-----|-------|--------------------|
@@ -487,7 +495,26 @@ https://dashboard.stripe.com/test/dashboard
 
 * Further testing was carried out, by using automated testing. Specifically an administrator can execute on the terminal command line **"python manage.py test"**. This command will execute Django unit testing **( setup inside  the home app 'test.py' )** and carry out a check on the accessible pages of the site.
 
+**UI Changes**
+* The original design thought I had, went with smaller fonts and sharper lines. However when I used the app on mobile devices such as Iphone & Ipad, it was difficult to navigate. And test users complained , frequently using the pinch option to magnify the screen. This was another step people had to perform. I therefore decided to modify the UI and make the buttons larger and the UI more simplistic. My concern was mobile-fist as opposed to desktop.
 
+* The usual expectations in Mobile-First Design are there. 
+
+* The navigation bar changes on smaller devices.
+* The tables omit certain columns to fit better on small devices. ( in the purchase history e.g)
+
+**Tested Physically on on:**
+
+|Device|Type|
+|------|----|
+|Iphone 5| mobile|
+|Iphone 7plus|mobile|
+| Apple Mac| Desktop|
+
+**Code validation**
+
+* I implemented a 404 bad url catch-all more fore desktop users
+* I implemented form empty content and  insufficient character check on contact form
 
 <hr>
 
@@ -614,6 +641,28 @@ The home page will launch if you open a local browser to
 
 
 <img src="_support_docs/images/banyan-videos-corp-home-page.jpg" width="400">
+
+
+**Local Environment Variables**
+
+To run, the software depends on some environment variables, which are kept on the server side. 
+The user will not have access to these
+
+* These variables are set up by the server/system admin during software install
+
+* The software will use the **Python-dot-env** Module to load these variables into service on the local platform
+
+|Variable|Use|
+|--------|---|
+|SECRET_KEY| Allows Django to Operate|
+|PRODUCTION| Tells software to use the internal sql-lite3 or Postgres|
+|STRIPE_PUBLIC_KEY| For STRIPE transaction|
+|STRIPE_PRIVATE_KEY| For STRIPE transaction|
+|MAINTENANCE| Location of admin page * if an authorized user|
+|SALES_DEPT| Email address - all transactions copied to for servicing|
+|BVC_EMAIL_BOX|Email address - HO Email address source|
+|FREE_SHIPPING_THRESHOLD| Value in £ where free shipping becomes applicable. * Note also a change in the Home Javascript banner advert|
+
 
 <hr>
 
@@ -750,7 +799,7 @@ Therefore this would be something to bring to BVC as a future enhancement.
 
 [<< Back](#top)
 
->Code from Stack-overflow - Philip Feldmann */
+>Code from **Stack-overflow** - Philip Feldmann */
 Keep text from overspilling out of columns */
 
 
@@ -762,11 +811,11 @@ Keep text from overspilling out of columns */
     word-wrap: break-word;}**
 
 
-* Video box images - owned by their respective film production companies
+* Video box images **(Google Search)**- owned by their respective film production companies
+* Basic video items content text **Wikipedia**
+* ShoppingCart.objects.filter(pk=3).delete() -Milad Khodabandehloo / **stack overflow**
 
-* ShoppingCart.objects.filter(pk=3).delete() -Milad Khodabandehloo / stack overflow
-
-
+* Video Clips **Youtube & IMBD**
 
 
 ># <a id="content">8. Content</a>

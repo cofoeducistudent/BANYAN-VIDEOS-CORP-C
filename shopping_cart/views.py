@@ -25,7 +25,9 @@ class ShoppingCart(TemplateView):
         if not request.user.is_authenticated:
             current_user = request.user
 
+        logged_in=False
         if request.user.is_authenticated:
+            logged_in=True
             current_user = request.user
 
         SCM = ShoppingCartModel.objects.filter(
@@ -53,8 +55,8 @@ class ShoppingCart(TemplateView):
             'final_bill': final_bill,
 
             'SCM': SCM,
-            'FREE_SHIPPING_THRESHOLD': str(FREE_SHIPPING_THRESHOLD)
-
+            'FREE_SHIPPING_THRESHOLD': str(FREE_SHIPPING_THRESHOLD),
+            'logged_in':logged_in,
         }
 
         return render(request, 'shopping_cart/shopping_cart.html', context)
@@ -71,7 +73,12 @@ class ShoppingCart(TemplateView):
         current_user = request.user
         if not request.user.is_authenticated:
             current_user = request.user
-        # current_user = request.user
+        
+        logged_in=False
+        if request.user.is_authenticated:
+            logged_in=True
+        
+        
 
         selected_quantity = int(request.POST['quantity'])
         selected_sku = request.POST['sku']
@@ -161,8 +168,8 @@ class ShoppingCart(TemplateView):
             'final_bill': final_bill,
 
             'SCM': SCM,
-            'FREE_SHIPPING_THRESHOLD': str(FREE_SHIPPING_THRESHOLD)
-
+            'FREE_SHIPPING_THRESHOLD': str(FREE_SHIPPING_THRESHOLD),
+            'logged_in':logged_in,
         }
 
         return render(request, 'shopping_cart/shopping_cart.html', context)

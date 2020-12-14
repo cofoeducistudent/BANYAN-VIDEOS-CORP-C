@@ -20,7 +20,10 @@ class Logout(View):
         current_user = request.user
         if not request.user.is_authenticated:
             current_user = request.user
+            
+        logged_in=False    
         if request.user.is_authenticated:
+            logged_in=True
             current_user = request.user
 
         """
@@ -48,7 +51,7 @@ class Logout(View):
             'SCM': SCM,
 
             'basket_item_count': basket_item_count,
-
+            'logged_in':logged_in,
         }
 
         return render(request, 'logout/logout.html', context)

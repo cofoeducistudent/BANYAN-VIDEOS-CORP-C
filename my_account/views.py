@@ -35,7 +35,9 @@ class MyAccount(TemplateView):
         if not request.user.is_authenticated:
             return redirect("login_register")
 
+        logged_in=False
         if request.user.is_authenticated:
+            logged_in=True
             current_user = request.user
 
         SCM = ShoppingCartModel.objects.filter(
@@ -91,7 +93,7 @@ class MyAccount(TemplateView):
             'SCM': SCM,
             'UPF': UPF,
             'purchase_history': purchase_history,
-
+            'logged_in':logged_in,
         }
 
         return render(request, 'my_account/my_account.html', context)
@@ -109,7 +111,10 @@ class MyAccount(TemplateView):
         current_user = request.user
         if not request.user.is_authenticated:
             return redirect("login_register")
+        
+        logged_in=False
         if request.user.is_authenticated:
+            logged_in=True
             current_user = request.user
 
         SCM = ShoppingCartModel.objects.filter(
@@ -185,6 +190,7 @@ class MyAccount(TemplateView):
             'SCM': SCM,
             'UPF': UPF,
             'PH': PH,
+            'logged_in':logged_in,
         }
 
         return render(request, 'my_account/my_account.html', context)

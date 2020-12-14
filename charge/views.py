@@ -65,11 +65,14 @@ class Charge(TemplateView):
             request.session.create()
         session_key = request.session.session_key
 
+        
         current_user = request.user
         if not request.user.is_authenticated:
             current_user = request.user
 
+        logged_in=False
         if request.user.is_authenticated:
+            logged_in = True
             current_user = request.user
 
         SCM = ShoppingCartModel.objects.filter(
@@ -290,6 +293,7 @@ class Charge(TemplateView):
             'final_bill_in_stripe_format': final_bill_in_stripe_format,
 
             'SCM': SCM,
+            'logged_in':logged_in,
 
         }
 

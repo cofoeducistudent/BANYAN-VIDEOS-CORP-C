@@ -68,7 +68,10 @@ class ContactSent(TemplateView):
         current_user = request.user
         if not request.user.is_authenticated:
             current_user = request.user
+            
+        logged_in=False  
         if request.user.is_authenticated:
+            logged_in=True
             current_user = request.user
 
         SCM = ShoppingCartModel.objects.filter(
@@ -115,6 +118,7 @@ class ContactSent(TemplateView):
             'basket_item_count': basket_item_count,
 
             'SCM': SCM,
+            'logged_in':logged_in,
 
         }
 

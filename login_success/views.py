@@ -23,7 +23,9 @@ class LoginSuccess(TemplateView):
         if not request.user.is_authenticated:
             current_user = request.user
 
+        logged_in=False
         if request.user.is_authenticated:
+            logged_in=True
             current_user = request.user
 
  
@@ -51,7 +53,7 @@ class LoginSuccess(TemplateView):
 
             'SCM': SCM,
             'ALM': ALM,
-
+            'logged_in':logged_in,
         }
 
         return render(request, 'login_success/login_success.html', context)

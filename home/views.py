@@ -33,10 +33,12 @@ class HomePageView(TemplateView):
             request.session.create()
         session_key = request.session.session_key
 
+        logged_in=False
         current_user = request.user
         if not request.user.is_authenticated:
             current_user = request.user
         if request.user.is_authenticated:
+            logged_in=True
             current_user = request.user
 
         SCM = ShoppingCartModel.objects.filter(
@@ -54,6 +56,7 @@ class HomePageView(TemplateView):
 
             'SCM': SCM,
             'MA': MA,
+            'logged_in':logged_in,
 
         }
         return render(request, 'home/index.html', context)

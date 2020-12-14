@@ -17,10 +17,12 @@ class AboutView(TemplateView):
             request.session.create()
         session_key = request.session.session_key
 
+        logged_in =False
         current_user = request.user
         if not request.user.is_authenticated:
             current_user = request.user
         if request.user.is_authenticated:
+            logged_in=True
             current_user = request.user
 
         SCM = ShoppingCartModel.objects.filter(
@@ -34,6 +36,7 @@ class AboutView(TemplateView):
             'basket_item_count': basket_item_count,
 
             'SCM': SCM,
+            'logged_in':logged_in,
         }
 
         return render(request, 'about/about.html', context)

@@ -29,7 +29,9 @@ class Members(TemplateView):
 
             return redirect("login_register")
 
+        logged_in=False
         if request.user.is_authenticated:
+            logged_in=True
             current_user = request.user
 
         SCM = ShoppingCartModel.objects.filter(
@@ -44,7 +46,7 @@ class Members(TemplateView):
             'SCM': SCM,
             'FLM': FLM,
             'SNP': SNP,
-
+            'logged_in':logged_in,
         }
 
         return render(request, 'members/members.html', context)

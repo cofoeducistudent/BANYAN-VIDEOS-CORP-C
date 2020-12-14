@@ -23,7 +23,9 @@ class ErrorPage(TemplateView):
         if not request.user.is_authenticated:
             current_user = request.user
 
+        logged_in=False
         if request.user.is_authenticated:
+            logged_in=True
             current_user = request.user
 
         SCM = ShoppingCartModel.objects.filter(
@@ -42,6 +44,7 @@ class ErrorPage(TemplateView):
 
             'SCM': SCM,
             'ALM': ALM,
+            'logged_in':logged_in,
 
         }
 

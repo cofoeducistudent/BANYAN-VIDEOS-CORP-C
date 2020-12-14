@@ -25,7 +25,10 @@ class DeleteFromShoppingCart(TemplateView):
         current_user = request.user
         if not request.user.is_authenticated:
             current_user = request.user
+            
+        logged_in=False 
         if request.user.is_authenticated:
+            logged_in=True
             current_user = request.user
 
         message_item = ""
@@ -63,6 +66,7 @@ class DeleteFromShoppingCart(TemplateView):
             'SCM': SCM,
 
             'basket_item_count': basket_item_count,
+            'logged_in':logged_in,
 
         }
 
@@ -77,7 +81,10 @@ class DeleteFromShoppingCart(TemplateView):
         current_user = request.user
         if not request.user.is_authenticated:
             current_user = request.user
+            
+        logged_in=False 
         if request.user.is_authenticated:
+            logged_in=True
             current_user = request.user
 
         SCM = ShoppingCartModel.objects.filter(
@@ -91,7 +98,7 @@ class DeleteFromShoppingCart(TemplateView):
             'SCM': SCM,
 
             'basket_item_count': basket_item_count,
-
+            'logged_in':logged_in,
         }
 
         return render(request, 'delete_from_shopping_cart/delete_from_shopping_cart.html', context)

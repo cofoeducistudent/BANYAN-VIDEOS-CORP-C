@@ -108,9 +108,11 @@
                             <a class="nav-link" href="{% url 'contact' %}">Contact<span class="sr-only"></span></a>
                         </li>
 
+                        {% if logged_in %}
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'logout' %}">Logout<span class="sr-only"></span></a>
                         </li>
+                        {% endif %}
 
                         <!-- CURRENT USER -->
                         <li class="nav-item">

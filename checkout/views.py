@@ -31,11 +31,14 @@ class Checkout(TemplateView):
             request.session.create()
         session_key = request.session.session_key
 
+       
         current_user = request.user
         if not request.user.is_authenticated:
             current_user = request.user
 
+        logged_in=False
         if request.user.is_authenticated:
+            logged_in=True
             current_user = request.user
 
         SCM = ShoppingCartModel.objects.filter(
@@ -118,7 +121,7 @@ class Checkout(TemplateView):
             'SCM': SCM,
             'SF': SF,
             'stripe_button_visible': stripe_button_visible,
-
+            'logged_in':logged_in,
         }
 
         return render(request, self.template_name, context)
@@ -149,7 +152,9 @@ class Checkout(TemplateView):
         if not request.user.is_authenticated:
             current_user = request.user
 
+        logged_in=False
         if request.user.is_authenticated:
+            logged_in=True
             current_user = request.user
 
         SCM = ShoppingCartModel.objects.filter(
@@ -256,6 +261,7 @@ class Checkout(TemplateView):
             'stripe_key': stripe_key,
 
             'stripe_button_visible': stripe_button_visible,
+            'logged_in':logged_in,
         }
 
         return render(request, self.template_name, context)
