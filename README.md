@@ -311,7 +311,7 @@ I created mock-ups for the site pages. However, when they were built and tested,
 |J|Cart page|<img src="_support_docs/images/banyan-videos-corp-Cart.png" width="200">|<img src="_support_docs/images/shopping-cart-page.png" width="200">|
 |K|Payments page|<img src="_support_docs/images/banyan-videos-corp-stripe-payment.png" width="200">|<img src="_support_docs/images/stripe-payment-panel.png" width="200">|
 |L|Shipping Details page|<img src="_support_docs/images/banyan-videos-corp-Shipping Details.png" width="200">|<img src="_support_docs/images/shipping-form.png" width="200">|
-
+|M|ErrorPage|<img src="_support_docs/images/error_page.png" width="200">|
 <hr>
 
 
