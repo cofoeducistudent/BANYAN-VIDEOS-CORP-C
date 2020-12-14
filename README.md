@@ -452,6 +452,7 @@ https://dashboard.stripe.com/test/dashboard
 |Notepad|Version 1.1 (1.1)|Used to copy search, copy, and replace data segments|
 |Google-Chrome-Tools|Version 87.0.4280.67 (Official Build) (x86_64)| Dev and Test|
 |Safari|Version 14.0 (15610.1.28.1.9, 15610)|Dev & Test|
+|Autoprefixer CSS online|V4|https://autoprefixer.github.io/|
 
 <hr>
 

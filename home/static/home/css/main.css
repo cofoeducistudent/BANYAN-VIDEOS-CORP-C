@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 :root {
     /* DEFINE CSS VARIBLES */
     --wallpaper: #ffffff;
@@ -37,7 +44,6 @@ body {
 /* Keep text from overspilling out of columns */
 
 .keep-insideBSol {
-    -moz-hyphens: auto;
     -ms-hyphens: auto;
     -webkit-hyphens: auto;
     hyphens: auto;
@@ -75,6 +81,8 @@ body {
 
 li, nav-link, :hover {
     color: var(--theme-c1) !important;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
 }
 
@@ -112,14 +120,16 @@ span, navbar-toggler-icon, bbut {
 }
 
 .go-back-button {
-    box-shadow: 3px 3px var(--theme-bgc) !important;
+    -webkit-box-shadow: 3px 3px var(--theme-bgc) !important;
+            box-shadow: 3px 3px var(--theme-bgc) !important;
 }
 
 /* ADD TO CART BUTTON */
 
 .add-to-cart-button {
     font-size: 1.5rem;
-    box-shadow: 3px 3px var(--theme-bgc) !important;
+    -webkit-box-shadow: 3px 3px var(--theme-bgc) !important;
+            box-shadow: 3px 3px var(--theme-bgc) !important;
 }
 
 .add-to-cart-button :hover {
@@ -191,7 +201,8 @@ span, navbar-toggler-icon, bbut {
     height: 60px;
     /* width: 80%; */
     margin: auto;
-    box-shadow: 3px 3px var(--theme-c1);
+    -webkit-box-shadow: 3px 3px var(--theme-c1);
+            box-shadow: 3px 3px var(--theme-c1);
 }
 
 #advert {
@@ -212,6 +223,8 @@ span, navbar-toggler-icon, bbut {
 .custom-alert {
     background-color: var(--theme-bgc) !important;
     color: var(--theme-fgc) !important;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
 }
 
@@ -252,7 +265,8 @@ span, navbar-toggler-icon, bbut {
 .c-image-size {
     height: 550px;
     width: auto;
-    box-shadow: 5px 5px #d1c3c3;
+    -webkit-box-shadow: 5px 5px #d1c3c3;
+            box-shadow: 5px 5px #d1c3c3;
 }
 
 /* GENRE - LIST */
@@ -402,7 +416,8 @@ h3, .cost-block {
 /* PAYMENT BUTTON */
 
 .payment-button {
-    box-shadow: 3px 3px var(--discount-colour);
+    -webkit-box-shadow: 3px 3px var(--discount-colour);
+            box-shadow: 3px 3px var(--discount-colour);
 }
 
 .pay-selector {
