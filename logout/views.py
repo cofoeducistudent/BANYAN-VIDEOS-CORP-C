@@ -35,6 +35,8 @@ class Logout(View):
         for line_items in SCM:
             line_items.delete()
 
+
+
         """
         LOGOUT USER !
         """

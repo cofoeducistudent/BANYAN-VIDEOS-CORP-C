@@ -234,10 +234,7 @@ class Checkout(TemplateView):
 
         SF = ShippingForm(preload)
 
-        """
-        VALIDATE FORM FIRST BEFORE ALLOWING STIPE PAYMENT BODY
-        """
-
+  
   
 
 

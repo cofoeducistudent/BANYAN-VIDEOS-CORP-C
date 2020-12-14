@@ -208,8 +208,11 @@ class Charge(TemplateView):
 
         else:
 
+
+
+
             """
-            ///////////////////////////////// LOGGED IN USER PROCESSING
+             LOGGED IN USER PROCESSING
             """
 
         if request.user.is_authenticated:

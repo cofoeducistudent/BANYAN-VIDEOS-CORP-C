@@ -1,4 +1,4 @@
- 
+
 // TOP BANNER
 var rotor_messages = [
 
@@ -15,15 +15,13 @@ var rotor_messages = [
 
 ];
 
-
-var rotor_count = 0;
-
 // ADVERT ROTOR
+var rotor_count = 0;
 function bannerRotor() {
     if (rotor_count < rotor_messages.length) {
         var insert = '<h1>' + rotor_messages[rotor_count] + '</h1>';
-        $( "#advert" ).html(insert);
-       
+        $("#advert").html(insert);
+
         rotor_count++;
     }
     if (rotor_count == rotor_messages.length) {
@@ -31,10 +29,6 @@ function bannerRotor() {
     }
     window.setTimeout("bannerRotor()", 5000);
 }
-
-
-
-
 
 // ARTICLE ROTOR
 article_rotor_count = 0
@@ -44,9 +38,9 @@ function articleRotor() {
 
     if (article_rotor_count < article_rotor_max) {
 
-        var insert ="<h2>"+ '{{ART.'+article_rotor_count+'.article_friendly_name}}' + "</h2>"
- 
-        $( "#article_here" ).html(insert);
+        var insert = "<h2>" + '{{ART.' + article_rotor_count + '.article_friendly_name}}' + "</h2>"
+
+        $("#article_here").html(insert);
 
         article_rotor_count++;
     }

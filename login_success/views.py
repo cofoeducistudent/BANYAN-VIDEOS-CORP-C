@@ -28,11 +28,6 @@ class LoginSuccess(TemplateView):
             logged_in=True
             current_user = request.user
 
- 
-
-
-
-
 
 
 

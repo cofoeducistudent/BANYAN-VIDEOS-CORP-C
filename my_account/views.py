@@ -179,8 +179,7 @@ class MyAccount(TemplateView):
 
         UPF = UserProfileForm(preload)
 
-        # purchase_history = PH.objects.filter(ph_cart_owner = current_user)
-
+     
         context = {
 
             'session_key': session_key,
