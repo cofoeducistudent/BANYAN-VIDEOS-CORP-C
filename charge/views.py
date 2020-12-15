@@ -186,7 +186,7 @@ class Charge(TemplateView):
 
             # NOT LOGGED IN USER
 
-            send_mail('BANYAN-VIDEOS-SALES ORDER!', message_body,
+            send_mail('Banyan-Videos-Corp - Sales Order!', message_body,
                       BANYAN_VIDEOS_CORP_EMAIL_BOX, [SALES_DEPARTMENT_EMAIL,
                                                      request.POST['sf_email']],
                       fail_silently=False)
@@ -273,7 +273,7 @@ class Charge(TemplateView):
             message_body = message_body + "£ " + \
                 str(final_bill)+chr(13)+chr(13)
 
-            send_mail('BANYAN-VIDEOS-SALES ORDER!', message_body,
+            send_mail('Banyan-Videos-Corp - Sales Order!', message_body,
                       BANYAN_VIDEOS_CORP_EMAIL_BOX, [SALES_DEPARTMENT_EMAIL,
                                                      request.POST['sf_email']],
                       fail_silently=False)

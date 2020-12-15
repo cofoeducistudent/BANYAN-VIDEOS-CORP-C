@@ -1,3 +1,4 @@
+from django.contrib import messages
 from django.shortcuts import render
 from django.views.generic import TemplateView
 
@@ -26,6 +27,7 @@ class LoginSuccess(TemplateView):
         logged_in=False
         if request.user.is_authenticated:
             logged_in=True
+            messages.info(request,'As a member please remember to complete and save your profile on the "Account Page" for speedy checkout! ')
             current_user = request.user
 
 

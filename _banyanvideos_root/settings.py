@@ -43,6 +43,8 @@ if PRODUCTION =='True':
     MAINTENANCE = os.getenv("MAINTENANCE")
 
 
+
+
 BANYAN_VIDEOS_CORP_EMAIL_BOX=os.getenv("BVC_EMAIL_BOX")
 SALES_DEPARTMENT_EMAIL=os.getenv("SALES_DEPT")
 FREE_SHIPPING_THRESHOLD=os.getenv("FREE_SHIPPING_THRESHOLD")
@@ -63,7 +65,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!@+@
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -260,13 +262,20 @@ STATIC_URL = '/static/'
 EMAIL SYSTEM CONFIGURATION
 """
 
-EMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST_USER='cofoedu_banyan@hotmail.com'
-EMAIL_HOST = 'smtp.office365.com'
-EMAIL_PORT=587
-EMAIL_USE_TLS=True
-EMAIL_HOST_PASSWORD='Alexkid1b'
+# EMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST_USER='cofoedu_banyan@hotmail.com'
+# EMAIL_HOST = 'smtp.office365.com'
+# EMAIL_PORT=587
+# EMAIL_USE_TLS=True
+# EMAIL_HOST_PASSWORD='Alexkid1b'
 
+EMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
+EMAIL_HOST = 'in-v3.mailjet.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
+ 
 
 
 

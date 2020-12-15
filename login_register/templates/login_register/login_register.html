@@ -17,8 +17,10 @@
       <div class="row container-fluid">
         <div class="col-12">
 
-          <button class="btn btn-primary btn-lg  login_register-buttons" role="button"><a
-              href="{% url 'account_login' %}">Login</a></button>
+          <!-- <button class="btn btn-primary btn-lg  login_register-buttons" role="button"><a
+              href="{% url 'account_login' %}">Login</a></button> -->
+
+          <a href="{% url 'account_login' %}"><button class="btn btn-primary btn-lg" role="button">Login</button></a>
 
         </div>
 
@@ -31,8 +33,15 @@
       <p class="lead">Register Here!</p>
       <hr class="my-4">
 
-      <button class="btn btn-primary btn-lg   login_register-buttons" role="button"><a
-          href="{% url 'account_signup' %}">Sign Up</a></button>
+      <!-- <button class="btn btn-primary btn-lg   login_register-buttons" role="button"><a
+          href="{% url 'account_signup' %}">Sign Up</a></button> -->
+
+
+      <a href="{% url 'account_signup' %}"><button class="btn btn-primary btn-lg" role="button">Sign Up</button></a>
+
+
+
+
     </div>
 
   </div>

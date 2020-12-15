@@ -47,7 +47,13 @@ class SearchResults(TemplateView):
             sr = request.GET.get('sel_genre')
             for items in all_films:
                 if str(items.film_genre) == (sr):
+                    
+                  
+                    
+                    # Add film to results
                     results_collection.append(items)
+
+
 
             total_items_found = len(results_collection)
 
