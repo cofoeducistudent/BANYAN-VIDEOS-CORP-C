@@ -65,12 +65,11 @@ class Charge(TemplateView):
             request.session.create()
         session_key = request.session.session_key
 
-        
         current_user = request.user
         if not request.user.is_authenticated:
             current_user = request.user
 
-        logged_in=False
+        logged_in = False
         if request.user.is_authenticated:
             logged_in = True
             current_user = request.user
@@ -103,12 +102,13 @@ class Charge(TemplateView):
         BANYAN_VIDEOS_CORP_EMAIL_BOX = os.getenv("BVC_EMAIL_BOX")
 
         """
-        VALIDATE FORM SECTION HERE 
+        VALIDATE FORM SECTION HERE
         """
         failure = 0
         if request.POST['sf_username'] == "":
             messages.info(
-                request, 'Transaction failed: something wrong with * username *')
+                request, 'Transaction failed: something\
+                    wrong with * username *')
             failure = 1
 
         if request.POST['sf_email'] == "" or not('@' in request.POST['sf_email']):
@@ -208,9 +208,6 @@ class Charge(TemplateView):
 
         else:
 
-
-
-
             """
              LOGGED IN USER PROCESSING
             """
@@ -296,7 +293,7 @@ class Charge(TemplateView):
             'final_bill_in_stripe_format': final_bill_in_stripe_format,
 
             'SCM': SCM,
-            'logged_in':logged_in,
+            'logged_in': logged_in,
 
         }
 

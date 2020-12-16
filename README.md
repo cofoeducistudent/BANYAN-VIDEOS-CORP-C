@@ -484,6 +484,7 @@ https://dashboard.stripe.com/test/dashboard
 |Python|3.x|For backend logic|
 |Javascript|Used for bespoke logic ..eg Banner Rotor on home page|
 |Fontawsome|4.x|Provides Icons, especially for social media stuff|
+|Jquery|3.5.1|Easy Selector access|
 
 
 <hr>
