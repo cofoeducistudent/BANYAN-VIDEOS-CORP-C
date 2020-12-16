@@ -468,7 +468,9 @@ https://dashboard.stripe.com/test/dashboard
 |Google-Chrome-Tools|Version 87.0.4280.67 (Official Build) (x86_64)| Dev and Test|
 |Safari|Version 14.0 (15610.1.28.1.9, 15610)|Dev & Test|
 |Autoprefixer CSS online|V4|https://autoprefixer.github.io/|
-
+|Balsamiq|3.x|Creating Page Layout Mockups|
+|Git|2.230|Versioning|
+|GitHub|-|Stores Git/Project data|
 <hr>
 
 **Web-Tech Used**
@@ -482,8 +484,7 @@ https://dashboard.stripe.com/test/dashboard
 |Python|3.x|For backend logic|
 |Javascript|Used for bespoke logic ..eg Banner Rotor on home page|
 |Fontawsome|4.x|Provides Icons, especially for social media stuff|
-|Git|2.230|Versioning|
-|GitHub|-|Stores Git/Project data|
+
 
 <hr>
 
