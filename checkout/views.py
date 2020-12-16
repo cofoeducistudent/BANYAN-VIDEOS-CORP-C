@@ -1,5 +1,6 @@
 
 # from django.contrib import messages
+from django.contrib import messages
 from _banyanvideos_root.settings import STRIPE_PUBLIC_KEY
 from django.shortcuts import redirect, render
 from django.views.generic import TemplateView
@@ -104,6 +105,8 @@ class Checkout(TemplateView):
                 'sf_address_line3': userprofile[0].up_address_line3,
                 'sf_post_code': userprofile[0].up_post_code,
                 'sf_country': userprofile[0].up_country,
+  
+                 
 
             }
 
@@ -185,7 +188,7 @@ class Checkout(TemplateView):
         """
         PREPOULATE AND INSTANTIATE SHIPPING FORM!!!
         """
-        # sf_email='cofoedu@gmail.com'
+     
         sf_email = ''
         if request.user.is_authenticated:
             sf_email = request.user.email
@@ -228,13 +231,15 @@ class Checkout(TemplateView):
                 'sf_address_line3': userprofile[0].up_address_line3,
 
                 'sf_post_code': userprofile[0].up_post_code,
+                
                 'sf_country': userprofile[0].up_country,
+              
 
             }
 
         SF = ShippingForm(preload)
 
-  
+        messages.info(request,'NOTE!!! WE ARE CURRENTLY ONLY SHIPPING DOMESTIC WITHIN THE UNITED KINGDOM ')
   
 
 

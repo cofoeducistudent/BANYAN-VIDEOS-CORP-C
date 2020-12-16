@@ -115,16 +115,12 @@ https://github.com/cofoeducistudent/BANYAN-VIDEOS-CORP-C
 
 **Banyan-Videos-Corporation - project brief**.
 
-Banyan videos corporation has asked for a website but will help them retail their video merchandise online.
-
-For this reason, they have provided a brief stating what they would like to see on the site with features that they would wish on it.
+Banyan videos corporation has asked for a website to help them retail their video merchandise online.For this reason, they have provided a brief stating what they would like to see on the site with features that they would wish on it.
 
 
-* The site will be of a light colour scheme be and corporate like (Flash etc).
+* The front page should have a search facility allowing users to search for products
 
-* The Front page should have a search facility allowing users to search for products
-
-* It should have a carousel showing a selection of film products for sale
+* It should have a carousel showing a selection of films.
 
 * It should show news/information which banyan videos deem fit. This is not expected to be an RSS-feed or an integrated feed from other sites, but a section allowing banyan video administrators to post corporate messages and news.
 
@@ -133,7 +129,7 @@ For this reason, they have provided a brief stating what they would like to see 
 * The colour theme should be straightforward and simplistic, and the appearance of the site should be predominantly light and clean.
 
 
-* The frequency and volume of the products will be centrally controlled and updated infrequently. Therefore, they wish to have a way of populating the product line very quickly. This will ensure prices and sale discounts are also effectively controlled. The intention is for head Office (H.O) to connect to the server via an administrator access, upload the data every so often. BVC do not wish to have a CMS for creating items(except in odd circumstances), as that will redact a central control model and lead to chaos and potential fraud.
+* Banyan Videos plan is to  centrally control and updated the film catalogue infrequently from a file from head-office created by authorized staff. Therefore, they wish to have a way of populating the product line very quickly. This will ensure prices and sale discounts are also effectively controlled. The intention is for head Office (H.O) to connect to the server via an administrator access, upload the data every so often. BVC do not use a CMS for creating film items(except in odd circumstances), as that will redact a central control model and lead to chaos and potential fraud.
 
 
 * In the future, they wish to have a separate server to serve images for their products, which will have a commercial uniform asset look, like significant retailers such as Argos or Sainsbury's. However, the division that will handle that is not yet up and running. For this reason, they simply wish to use images that are readily available online showing the video covers. These images are owned by the movie production companies and placed in the public domain for promotion. Banyan videos corp will be purchasing their videos from their leading distributors, thus avoiding copyright infringement or legal entanglements.
@@ -143,7 +139,7 @@ For this reason, they have provided a brief stating what they would like to see 
 * Videos film products should also be presented on the site within specific genre or classification for quick search if a customer does not know a particular title of a film but has an idea of the flavour of film they wish to purchase.
 
 
-* Various Video films will be discounted to members.
+* Some Video films will be discounted to members automatically.
 
 * For members, there should be a member's area, where banyan videos will post inside news and features, and watch trailers or any sneak peek teasers posted.
 
@@ -162,16 +158,15 @@ For this reason, they have provided a brief stating what they would like to see 
 Following the project brief and further clarification, I have decided to approach that will facilitate banyan videos requirements in the following way.
 
 
-* The site will be built using a framework for the benefit of speed. I will implement the site using the Django framework.
+* The site will be built using a framework for the benefit of speed. I will use the Django framework.
 
-* The finished site will be hosted initially on the HEROKU platform. I expect the site will be migrated to banyan corporations own hosting service as a future date. 
-
+* The finished site will be hosted initially on the **HEROKU** platform. I expect the site will be migrated to Banyan Corporations own hosting service as a future date for performance reasons. 
 
 * Although the Django framework defaults to an SQL-light database, I will utilize the POSTGRES SQL relational database management system (RMDBS) hosted on HEROKU.
 
 * In addition using Django will allow me to create the database items in abstracted format (models), therefore if banyan Corporation choose to change databases in the future it will be reasonably easy to implement.
 
-* I am not quite sure of the colour scheme to use yet, as banyan videos left this open-ended, however having seen some of their logo artwork, I will endeavor to use something in a similar style.
+* I am not quite sure of the colour scheme to use yet, but will keep it plain and simple.
 
 * For e-commerce and commerce aspects, I will employ the "Stripe-Payment" solution. The benefit of this is that the security will be inherently strengthened, as user payment credit card (CC)details will be handled entirely by the "STRIPE Corporation" and not reside within our website architecture. Although the Django framework defaults to an SQL-light database, I will utilize the POSTGRES SQL relational database management system (RMDBS) hosted on HEROKU.
 
@@ -183,7 +178,14 @@ Following the project brief and further clarification, I have decided to approac
 * **unsername:transacion**
 
 
-* I will use an external email service provider **mailjet** to provide email functionality. Django email systems was configured to use this provider. The configurations settings were handled by using **environment variables**
+* I will use an external email service provider **mailjet** to provide email functionality. Django email systems was configured to use this provider. The configurations settings were handled by using **environment variables**. The mailing system is common off the shelf (COTS). below is a diagrammatic representation.
+
+* **The email is required to send:**
+* 1 Receipt to Customer
+* 2 Order to Banyan-Videos-Corp Sales Shipping Department
+* 3 Contact message to Banyan-Videos-Cortp
+
+<img src="_support_docs/images/email-transaction-system.png" width="600">
 
 <hr>
 
@@ -850,7 +852,18 @@ Keep text from overspilling out of columns */
 
 * software code from stack-overflow - Using nav-fill w-100 with Bootstrap 4 - nav-ram Filling nav-bar total width - stack-overflow
 
- 
+> **DISCLAIMER!**
+
+The software is reliant on external systems beyond my control.
+
+* Email system. Mailing providers have limits to external mail
+
+* External images sources
+
+It is possible that these systems can temporarily fail. Under real operations , these systems will be monitored and addressed. However because this is a demo, and It will be locked for marking, I have little control once project is submitted.
+
+
+
 ># <a id="media">9. Media</a>
 
 [<< Back](#top)
@@ -865,3 +878,4 @@ Keep text from overspilling out of columns */
 
 * Thanks to mentor **Precious Ijeje** for helpful advice
 * Thanks to **Student care** for assistance
+

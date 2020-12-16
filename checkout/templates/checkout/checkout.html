@@ -4,31 +4,23 @@
 {% load crispy_forms_tags %}
 {% crispy example_form example_form.helper %}
 
-
 {% block post-title %} members-page {% endblock post-title %}
-
-
-
-
-
-
 
 {% block main-content %}
 
 <div class="row container-fluid">
   <div class="col-12 mx-3 ">
 
-    <!-- <h1 class="section-title text-center">MEMBERS!</h1> -->
+  
 
     <div class="jumbotron jumbotron-fluid">
 
       <div class="container-fluid">
-        <!-- <h1 class="display-4">CHECKOUT!</h1> -->
+       
 
         <h3>Line Items:({{ basket_item_count }})</h3>
 
         <table class="text-center px-2">
-
 
           <tr class="my-2">
 
@@ -38,7 +30,6 @@
             <td class="section-tiny-text px-2"><strong>Price Paid</strong></td>
 
           </tr>
-
 
           {% for line_items in SCM %}
 
@@ -53,22 +44,15 @@
               <h1 class="text-dark section-tiny-text px-2 bg-transparent"> {{ line_items.cart_film_quantity}} </h1>
             </td>
 
-
             <td>
               <image class="checkout-image-box bg-transparent" src="{{ line_items.cart_film_box_cover_url }}">
             </td>
-
-
-
 
             <td>
               <h1 class="text-dark section-tiny-text px-2 bg-transparent"> {{ line_items.cart_price_paid }} </h1>
             </td>
 
           </tr>
-
-
-
 
           {% endfor %}
 
@@ -77,12 +61,10 @@
         <h1 class="text-tiny-text my-2 text-muted">* Membership discounts are included in the priced paid per line item
         </h1>
 
-
         <hr>
         <td>
           <h1 class="text-dark section-content px-2 text-muted bg-transparent"> Shipping £ {{ shipping_charge }} </h1>
         </td>
-
 
         <hr>
 
@@ -94,23 +76,16 @@
       </div>
     </div>
 
-
     <h1 class="section-title "> ~ SHIPPING FORM ~ </h1>
 
     <p class="my-5"> Please ensure you complete the following shipping form!</p>
 
-
-
-
-
-
     <form action="{% url 'charge' %}" method="POST">
       {% csrf_token %}
-     
 
+      {{ SF | crispy }}
 
-
-      {{  SF | crispy }}
+       
 
       <!-- // -->
 
@@ -121,66 +96,32 @@
             adress on this form!</h1>
 
 
-
-
-
+          <h2>** We currently ony ship to the United Kingdom **</h2>
 
           <!-- STRIPE STUFF!!!! -->
-          
+
           <div class="row my-5">
             <div class="col-12 stripe-button-visible">
- 
-              {% if stripe_button_visible == True %} 
 
-                <script src="https://checkout.stripe.com/checkout.js"
-                
-                
+              {% if stripe_button_visible == True %}
 
-                
-                  class="stripe-button"
-            
-           
-                
-                data-key="{{ stripe_key }}"
-                data-description="A Banyan-Videos-Charge"
-                data-amount={{ final_bill_in_stripe_format }}
+              <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="{{ stripe_key }}"
+                data-description="A Banyan-Videos-Charge" data-amount={{ final_bill_in_stripe_format }}
                 data-locale="auto">
-                
+
                 </script>
- 
- 
+
               {% endif %}
-
-
-
 
             </div>
           </div>
 
-      
-
-
-
-
-         
-
-
         </div>
       </div>
 
-
-
     </form>
-
-
-
-
 
   </div>
 </div>
-
-
-
-
 
 {% endblock main-content %}
