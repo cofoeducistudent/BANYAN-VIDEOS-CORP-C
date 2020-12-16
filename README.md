@@ -178,7 +178,12 @@ Following the project brief and further clarification, I have decided to approac
 
 * Banyan videos say that they have a corporate head office (H.O) that will deal with all issues from customers, and therefore it is sufficient to have a contacts page that provides a contact form. 
 
+* I will use the username combined with the session ID to make transactions specific.
 
+* **unsername:transacion**
+
+
+* I will use an external email service provider **mailjet** to provide email functionality. Django email systems was configured to use this provider. The configurations settings were handled by using **environment variables**
 
 <hr>
 
@@ -515,6 +520,23 @@ https://dashboard.stripe.com/test/dashboard
 
 * I implemented a 404 bad url catch-all more fore desktop users
 * I implemented form empty content and  insufficient character check on contact form
+
+
+**STRIPE PROCESSING**
+
+As this site is a demo site. On the STRIPE payment panel..
+
+<img src="_support_docs/images/stripe-payment-panel.png" width="400">
+
+1. Enter your email
+2. Enter 4242 4242 4242 4242
+3. Date in the future - MM/YY
+4. Enter any 3 digit - 123
+
+
+**EMAIL RESET**
+
+I decided to implement password change by simply asking the user to contact banyan videos, using the **contact form** 
 
 <hr>
 
