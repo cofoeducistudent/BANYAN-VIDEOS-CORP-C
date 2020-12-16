@@ -48,14 +48,12 @@ class SearchResults(TemplateView):
             for items in all_films:
                 if str(items.film_genre) == (sr):
                     
-                  
-                    
                     # Add film to results
                     results_collection.append(items)
 
-
-
             total_items_found = len(results_collection)
+
+     
 
             SCM = ShoppingCartModel.objects.filter(
                 cart_owner=current_user).filter(cart_session=session_key)
@@ -73,6 +71,12 @@ class SearchResults(TemplateView):
 
             }
             return render(request, self.template_name, context)
+
+
+
+
+
+
 
         """
         USE SERACH BOX
@@ -102,8 +106,15 @@ class SearchResults(TemplateView):
 
             for item in all_films:
                 if s_string.upper() in (item.film_friendly_title).upper():
+                    #A match for your search was found!!
                     results_collection.append(item)
             total_items_found = len(results_collection)
+            
+            if int(total_items_found) == 0:
+                messages.info(request, 'We could not find any\
+                    matches for your search. Please try again!')
+                   
+
 
             SCM = ShoppingCartModel.objects.filter(
                 cart_owner=current_user).filter(cart_session=session_key)
