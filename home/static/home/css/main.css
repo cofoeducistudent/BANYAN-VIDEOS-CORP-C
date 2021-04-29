@@ -306,10 +306,16 @@ span, navbar-toggler-icon, bbut {
 .card-text {
     height: 100px;
     max-height: 100px !important;
-    overflow: hidden;
+    
+    overflow: hidden !important;
+   
+    
+
     color: var(--theme-bgc);
     background-color: var(--theme-fgc);
 }
+
+
 
 /* FOUND BADGE */
 
@@ -561,8 +567,27 @@ div, .custom-alert:hover{
 h5{
 
     color:black;
+    text-decoration-line: none;
 
 }
+
+
+ 
+
+.vid-link-title{
+
+    color: var(--theme-C3) !important;
+    text-decoration-line: none !important;
+
+}
+a, .vid-link-title :hover{
+
+    text-decoration-line: none !important;
+
+}
+
+
+
 
 p:hover{
 
@@ -579,4 +604,17 @@ h2{
 
 h2:hover{
     color:black !important;
+}
+
+.del-button{
+
+    background-color:var(--theme-C3) !important;
+    color:#ffffff!important;
+}
+
+.fvid{
+
+    background-color: #ffffff !important;
+    color: var(--theme-C3) !important;
+
 }

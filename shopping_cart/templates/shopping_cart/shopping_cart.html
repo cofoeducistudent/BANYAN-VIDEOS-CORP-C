@@ -120,7 +120,7 @@
                                     <form action="{% url 'delete_from_shopping_cart' %}" method="POST">
                                         {% csrf_token %}
 
-                                        <h2 class="cart-items cart-text"><input type="submit" value="DELETE">
+                                        <h2 class="cart-items cart-text "><input class="del-button" type="submit" value="X">
                                         </h2>
 
                                         <input type=hidden name="dsku" value="{{ items.pk }}">
