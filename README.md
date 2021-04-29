@@ -5,7 +5,7 @@ BANYAN-VIDEOS-CORPORATION-C
 
  Live Site Link:
 
- https://banyan-videos-corp-c.herokuapp.com/
+https://banyan-videos-corp.herokuapp.com
 
 <hr>
 
