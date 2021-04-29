@@ -18,11 +18,13 @@
     --theme-bgc: #000000;
     --theme-fgc: #ffffff;
     
-    --theme-c1: rgb(243, 239, 222);
-   
+ 
+   --theme-c1:#EA6767;
+
+
     --theme-c2: rgb(245, 240, 219);
-    --theme-c3: #636677;
-   
+    /* --theme-c3: #636677; */
+   --theme-C3:rgb(32,41,54);
 }
 
 /* DEFAULT  SETUP CLEAR  MARGIN,PADDING,BORDER */
@@ -53,11 +55,11 @@ button {
 }
  
 .navbarTogglerDemo01{
-    border-radius:0px;
+    border-radius:0px !important;
 }
 
 .form-control{
-    border-radius: 0px;
+    border-radius: 0px !important;
 }
 
 
@@ -105,8 +107,12 @@ body {
 
 /* NAVBAR */
 
-.navbar {
-    /* opacity: .80 !important; */
+ 
+
+.navbar-toggler{
+
+    border-radius: 0px !important;
+
 }
 
 .custom-nav-color, span {
@@ -119,11 +125,16 @@ body {
     color: #ffffff !important;
 }
 
+ 
+
 li, nav-link, :hover {
     color: var(--theme-c1) !important;
+
     -webkit-transition: .5s;
     -o-transition: .5s;
     transition: .5s;
+
+     
 }
 
 /* NAV ITEM HOVER!!!@ */
@@ -131,7 +142,7 @@ li, nav-link, :hover {
 .nav-item :hover {
     /* color: var(--theme-c1) !important; */
     color: red !important;
-    background-color: #39465c !important;
+    background-color: var(--theme-C3) !important;
     
 }
 
@@ -179,12 +190,12 @@ span, navbar-toggler-icon, bbut {
 .add-to-cart-button :hover {
     font-size: 1.5rem;
     color: var(--theme-fgc)!important;
-    /* box-shadow: 3px 3px var(--theme-bgc) !important; */
+  
 }
 
 .add-to-cart-button :hover {
     font-size: 1.5rem;
-    color: rgb(68, 119, 143) !important;
+    /* color: rgb(68, 119, 143) !important; */
     /* box-shadow: 3px 3px var(--theme-bgc) !important; */
 }
 
@@ -213,7 +224,10 @@ span, navbar-toggler-icon, bbut {
 /* SECTION FONT STUFF */
 
 .section-title :hover {
-    color: var(--ink) !important;
+    /* color: var(--ink) !important; */
+    color:var(--theme-C3) !important;
+    font-weight: bold !important;
+
     background-color: var(--wallpaper) !important;
 }
 
@@ -527,13 +541,15 @@ div .snippet :hover {
 
 /* MAINTENANCE BUTTON */
 
-button, .maintenance-button {
+.maintenance-button {
     color: var(--theme-c3)!important;
+    
     /* background-color: red !important; */
 }
 
 button, .maintenance-button :hover {
     color: red!important;
+    background-color: var(--theme-C3) !important;
     /* background-color: red !important; */
 }
 

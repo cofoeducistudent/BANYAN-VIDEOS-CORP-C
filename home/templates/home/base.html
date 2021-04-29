@@ -70,12 +70,12 @@
 
                 <!-- SECONDARY USERNAME & CART STATUS IN NAVBAR!!!! -->
 
-                {% if current_user %}
-                <a class="nav-link nav-item col-xs-12 d-lg-none" href="{% url 'my_account' %}">
+                {% if not current_user  == "AnonymousUser" %}
+                <!-- <a class="nav-link nav-item col-xs-12 d-lg-none" href="{% url 'my_account' %}">
                     <span class="fas fa-user" class="sr-only">|
                         <span class="u-name text-muted">{{ current_user }}</span>
                     </span>
-                </a>
+                </a> -->
                 {% endif %}
 
 
@@ -133,7 +133,8 @@
 
 
                         <!-- CURRENT USER -->
-                        {% if current_user %}
+
+                        {% if not current_user == "AnonymousUser" %}
                         <li class="nav-item">
                             <a class="nav-link u_c   " href="{% url 'my_account' %}">
 
@@ -198,15 +199,15 @@
 
     <!-- LARGE SEARCH -->
     <div class="row  large-search-bar">
-        <div class="d-xs-none d-sm-block">
+        <div class="d-xs-none d-sm-block mx-auto text-center">
 
-            <form action="{% url 'search_results' %}" method="POST" class="form-inline my-1 my-lg-0 ">
+            <form action="{% url 'search_results' %}" method="POST" class="form-inline my-1 my-lg-0">
                 {% csrf_token %}
 
-                <input class="form-control mr-lg-2 my-1" type="search" name="search_string" placeholder="Search"
+                <input class="form-control mr-lg-2 my-1 w-100" type="search" name="search_string" placeholder="Search"
                     aria-label="Search">
 
-                <button class="btn btn-md btn-success mx-auto" type="submit">Search</button>
+                <button class="btn btn-md btn-success  text-center w-100" type="submit">Search</button>
 
             </form>
 
@@ -222,7 +223,7 @@
     <!-- BANNER -->
 
     <div class="row my-2 keep-insideBSol">
-        <div class="col-12 text-center mx-auto">
+        <div class="col-xs-12 text-center w-100">
 
             <a href="{% url 'login_register' %}">
                 <h1>
@@ -305,7 +306,7 @@
 
         bannerRotor()
 
-        setInterval( "nRU()", 3000);
+        // setInterval( "nRU()", 3000);
        
 
     </script>
