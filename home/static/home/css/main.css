@@ -96,6 +96,7 @@ body {
 .brand:hover{
 
     color: red !important;
+    
 
 }
 
@@ -130,6 +131,8 @@ li, nav-link, :hover {
 .nav-item :hover {
     /* color: var(--theme-c1) !important; */
     color: red !important;
+    background-color: #39465c !important;
+    
 }
 
 /* BURGER BUTTON */
