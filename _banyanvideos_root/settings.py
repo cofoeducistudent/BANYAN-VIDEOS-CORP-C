@@ -39,7 +39,7 @@ PRODUCTION = os.getenv("PRODUCTION")
 MAINTENANCE='http://localhost:8000/admin'
 
 #Set CMS for heroku install
-if PRODUCTION =='False':
+if PRODUCTION =='True':
     MAINTENANCE = os.getenv("MAINTENANCE")
 
 
