@@ -39,7 +39,7 @@ PRODUCTION = os.getenv("PRODUCTION")
 MAINTENANCE='http://localhost:8000/admin'
 
 #Set CMS for heroku install
-if PRODUCTION =='True':
+if PRODUCTION =='False':
     MAINTENANCE = os.getenv("MAINTENANCE")
 
 
@@ -52,7 +52,7 @@ FREE_SHIPPING_THRESHOLD=os.getenv("FREE_SHIPPING_THRESHOLD")
 
 
 
-DISABLE_COLLECTSTATIC=0
+DISABLE_COLLECTSTATIC=1
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -64,7 +64,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!@+@
-DEBUG = False
+DEBUG = True
 
 
 ALLOWED_HOSTS = ['*']
@@ -284,6 +284,7 @@ EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
+STATIC_URL ='/static/'
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
