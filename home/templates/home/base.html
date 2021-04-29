@@ -18,7 +18,13 @@
 
     {% block fonts %}
 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@200;300&display=swap"
+        rel="stylesheet">
+
+
+ 
+
 
     {% endblock fonts %}
 
@@ -35,7 +41,10 @@
 
     <script src="https://kit.fontawesome.com/7d102b88bf.js"></script>
 
+    <!-- CUSTOM JS -->
     <script src="{% static 'home/js/main.js' %}"></script>
+
+
 
     <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
     <script src="https://js.stripe.com/v3/"></script>
@@ -69,10 +78,13 @@
                 </a>
                 {% endif %}
 
+
+                {% if basket_item_count > 0  %}
                 <a class="nav-link nav-item col-xs-12 d-lg-none" href="{% url 'shopping_cart' %}">
                     <span class="fas fa-shopping-cart"></span><span class="sr-only"></span>
                     {{ basket_item_count }}
                 </a>
+                {% endif %}
 
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                     <a class="navbar-brand" href="{% url 'home' %}"><span class="brand">BANYAN-VIDEOS-CORP</span></a>
@@ -84,7 +96,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'login_register' %}">LogIn/SignUp<span
+                            <a class="nav-link" href="{% url 'login_register' %}">SignUp<span
                                     class="sr-only"></span></a>
                         </li>
 
@@ -92,9 +104,11 @@
                             <a class="nav-link" href="{% url 'my_account' %}">Account<span class="sr-only"></span></a>
                         </li>
 
+
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'shopping_cart' %}">Cart<span class="sr-only"></span></a>
                         </li>
+
 
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'about' %}">About<span class="sr-only"></span></a>
@@ -114,13 +128,18 @@
                         </li>
                         {% endif %}
 
+
+
+
+
                         <!-- CURRENT USER -->
+                        {% if current_user %}
                         <li class="nav-item">
                             <a class="nav-link u_c   " href="{% url 'my_account' %}">
 
                                 <span class="fas fa-user" class="sr-only">
 
-                                    {% if current_user %}
+                                    {% if current_user  %}
 
                                     <span class="u-name text-muted">{{ current_user }}</span>
 
@@ -130,13 +149,19 @@
 
                             </a>
                         </li>
+                        {% endif %}
+
+
 
                         <!-- SHOPPING CART -->
+
+                        {% if basket_item_count > 0  %}
                         <li class="nav-item">
                             <a class="nav-link u_c" href="{% url 'shopping_cart' %}"><span
                                     class="fas fa-shopping-cart"></span><span class="sr-only"> </span>
                                 {{basket_item_count}} </a>
                         </li>
+                        {% endif %}
 
                     </ul>
 
@@ -237,8 +262,9 @@
 
         <div class="col-12 my-1 text-center">
 
-            <h1 class="section-small-text">&copy; Copyright 2021 Banyan-Videos-Corp</h1>
-            <h1 class="section-small-text">1215 Ocean Industrial Estate, Beckton, London, E65 4NS, United Kingdom </h1>
+            <h1 class="">&copy; Copyright 2021 Banyan-Videos-Corp</h1>
+            <h1 class="">1215 Ocean Industrial Estate, Beckton, London, E65 4NS, United Kingdom </h1>
+            
         </div>
 
         <!-- SOCIAL MEDIA ICONS  -->
@@ -270,11 +296,17 @@
 
 
     {% block post-load-js %}
+
+   
+
     {% endblock post-load-js %}
 
     <script>
 
         bannerRotor()
+
+        setInterval( "nRU()", 3000);
+       
 
     </script>
 

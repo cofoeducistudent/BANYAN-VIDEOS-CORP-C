@@ -9,6 +9,8 @@
     /* DEFINE CSS VARIBLES */
     --wallpaper: #ffffff;
     --ink: #000000;
+
+    
     --discount-colour: #202937;
     --banner-bckg: #000000;
     --banner-fgnd: #ffffff;
@@ -20,8 +22,7 @@
    
     --theme-c2: rgb(245, 240, 219);
     --theme-c3: #636677;
-    /* FONTS */
-    font-family: 'Roboto', sans-serif;
+   
 }
 
 /* DEFAULT  SETUP CLEAR  MARGIN,PADDING,BORDER */
@@ -33,6 +34,36 @@ html {
     /* color: var(--ink);
     background-color: var(--wallpaper); */
 }
+
+body{
+
+    font-family: 'Montserrat Alternates', sans-serif;
+    /* font-family: 'Montserrat Alternates', sans-serif; */
+
+
+}
+
+
+
+
+
+
+button {
+    border-radius: 0px !important;
+}
+ 
+.navbarTogglerDemo01{
+    border-radius:0px;
+}
+
+.form-control{
+    border-radius: 0px;
+}
+
+
+
+
+
 
 body {
     background-color: var(--wallpaper);
@@ -62,11 +93,19 @@ body {
     color: var(--theme-c1) !important;
     background-color: var(--theme-bgc) !important;
 }
+.brand:hover{
+
+    color: red !important;
+
+}
+
+
+
 
 /* NAVBAR */
 
 .navbar {
-    opacity: .80 !important;
+    /* opacity: .80 !important; */
 }
 
 .custom-nav-color, span {
@@ -89,7 +128,8 @@ li, nav-link, :hover {
 /* NAV ITEM HOVER!!!@ */
 
 .nav-item :hover {
-    color: var(--theme-c1) !important;
+    /* color: var(--theme-c1) !important; */
+    color: red !important;
 }
 
 /* BURGER BUTTON */
@@ -100,6 +140,7 @@ button, navbar-toggler {
 
 span, navbar-toggler-icon, bbut {
     background-color: var(--theme-c1) !important;
+    border-radius: 0px !important;
 }
 
 /* BUTTONS */
@@ -295,7 +336,7 @@ span, navbar-toggler-icon, bbut {
     padding-bottom: 10px;
     margin-bottom: 10px;
     width: 5%;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     background-color: var(--discount-colour);
     color: var(--wallpaper)
 }
@@ -314,9 +355,11 @@ span, navbar-toggler-icon, bbut {
     height: 80px;
     max-height: 80px;
     width: 100%;
+
     color: var(--banner-fgnd);
     background-color: var(--theme-bgc);
-    opacity: .80;
+
+    /* opacity: .80; */
     margin-left: 0px;
 }
 
@@ -328,7 +371,7 @@ span, navbar-toggler-icon, bbut {
 }
 
 .footer-box {
-    color: #ffffff !important;
+    /* color: #ffffff !important; */
 }
 
 /* USER & SHOPPING CART */
@@ -353,8 +396,8 @@ table, th, td {
 }
 
 table, th, td, :hover {
-    /* border: 1px solid black; */
-    color: var(--ink) !important;
+    /* border: 1px solid red; */
+    /* color: var(--ink) !important; */
 }
 
 th, .table-spacer {
@@ -491,4 +534,30 @@ button, .maintenance-button :hover {
     /* background-color: red !important; */
 }
 
- 
+div, .custom-alert:hover{
+
+    color:red;
+}
+
+h5{
+
+    color:black;
+
+}
+
+p:hover{
+
+    color: black;
+
+}
+
+
+h2{
+
+    color:black;
+
+}
+
+h2:hover{
+    color:black !important;
+}

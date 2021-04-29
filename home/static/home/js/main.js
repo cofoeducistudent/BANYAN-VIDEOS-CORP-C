@@ -50,3 +50,24 @@ function articleRotor() {
     window.setTimeout("articleRotor()", 2000);
 }
 
+
+
+ 
+
+
+
+function nRu() {
+
+    var element,name,arr;
+
+    element = document.getElementsByClassName('navbar-collapse');
+    // element.classList.remove('show');
+
+    name="show";
+    arr =element.className.split(" ");
+    if(arr.indexOf(name) ==-1 ){
+        element.className +=" " + name;
+    }
+
+
+}
