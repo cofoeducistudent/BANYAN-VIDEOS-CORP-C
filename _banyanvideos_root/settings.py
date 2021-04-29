@@ -51,9 +51,7 @@ FREE_SHIPPING_THRESHOLD=os.getenv("FREE_SHIPPING_THRESHOLD")
 
 
 
-
-
-DISABLE_COLLECTSTATIC=0
+DISABLE_COLLECTSTATIC=1
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
