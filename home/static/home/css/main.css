@@ -393,9 +393,7 @@ span, navbar-toggler-icon, bbut {
     margin-bottom: 10px;
 }
 
-.footer-box {
-    /* color: #ffffff !important; */
-}
+
 
 /* USER & SHOPPING CART */
 
@@ -418,10 +416,10 @@ table, th, td {
     border: .5px solid var(--ink);
 }
 
-table, th, td, :hover {
+/* table, th, td, :hover { */
     /* border: 1px solid red; */
     /* color: var(--ink) !important; */
-}
+/* } */
 
 th, .table-spacer {
     width: auto;
