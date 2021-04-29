@@ -394,7 +394,6 @@ span, navbar-toggler-icon, bbut {
 }
 
 
-
 /* USER & SHOPPING CART */
 
 .fa-user {
@@ -425,7 +424,7 @@ th, .table-spacer {
     width: auto;
 }
 
-/* CART */
+/* CART.... */
 
 span, .my-item, .fas .fa-shopping-cart {
     color: var(--ink) !important;
