@@ -7,143 +7,177 @@
 
 <hr>
 
-{% if total_items_found %}
-<!-- SHOW FOUND QUANTITY TOTAL-->
-<h2 class="text-center my-2">Products In Stock:</h2>
-<div class="row">
-    <div class="col-12 my-1 text-center">
 
-        <h2> ~ {{ total_items_found }} ~ </h2>
+<div class="container-fluid  wallpaper mx-auto ">
+    <div class="row">
+        <div class="col-12">
 
-    </div>
-</div>
-{% endif %}
+            <!-- /=============================================================/  -->
 
-<!-- BACK BUTTON -->
-<div class="row my-1">
-    <div class="col-12 text-center">
-
-        <button class="btn btn-lg btn success go-back-button" onclick="goBack()">Go Back</button>
-
-        <script>
-            function goBack() {
-                window.history.back();
-            }
-        </script>
-
-    </div>
-</div>
-
-<!-- DISPLAY RESULTS OF SERACH -->
-<div class="row  container-fluid  wallpaper mx-auto">
-    <div class="col-12 mx-auto">
-
-        <div class="row ">
-
-            {% for items in results_collection %}
- 
-            <div class="col-xs-12 col-sm-6 col-md-4  col-lg-3     mx-auto my-2  ">
-
-                <div class="card mx-auto">
-
-                    <!-- FORM -->
-                    <form action="{% url 'shopping_cart' %}" method="POST">
-                        {% csrf_token%}
-
-
-
-
-
-                        
-                        <img class="card-img-top img-fluid" src="{{items.film_box_cover_url }}"
-                            alt="{{items.film_friendly_name}}">
-
-
-
-
-                        <div class="card-body">
-
-                            {% if items.film_clip_link %}
-                            <a href="{% url 'members' %}">
-                                <span class="fas fa-video fvid"></span><h5><a class="bg-darker vid-link-title">Trailer - Clips</a></h5>
-                            </a>
-                            {% endif %}
-
-                            <h5 class="section-tiny-text text-muted">SKU:{{ items.film_sku }}</h5>
-
-                            <h5 class="card-title">{{ items.film_friendly_title }}</h5>
-
-                            <p class="card-text  section-tiny-text text-justify">{{ items.film_description }}</p>
-
-                            <hr>
-
-                            <div class="row section-title">
-                                <div class="col-12 text-center">
-
-                                    £ {{ items.film_price }}
-
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-12 text-center">
-
-                                    <!-- SHOW DISCOUNT -->
-                                    {% if items.film_product_discount %}
-
-                                    <div class="row">
-                                        <div class="col-8  discounted-product mx-auto">
-                                            <h1>
-                                                MEMBERS GET: - {{ items.film_product_discount }} % DISCOUNT!
-
-                                            </h1>
-                                        </div>
-                                    </div>
-                                    {% endif %}
-
-                                    <!-- VOLUMES -->
-                                    <select name="quantity">
-                                        <option value="1" selected='selected'>1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                    </select>
-
-                                </div>
-                            </div>
-
-                            <!-- ADD TO CART -->
-                            <div class="row my-2">
-                                <div class="col-12 text-center">
-
-                                    <input type="hidden" name="sku" value={{ items.film_sku }}>
-
-                                    <!-- ADD CART BUTTON -->
-                                    <button type="submit" class="btn btn-lg bt add-to-cart-button">
-                                        <h1><span class="fas fa-cart-plus text-dark"></span> ADD TO CART</h1>
-                                    </button>
-
-                                </div>
-                            </div>
-
-                    </form>
-                    <!-- /// -->
-
+            {% if total_items_found %}
+            <!-- SHOW FOUND QUANTITY TOTAL-->
+            <h2 class="text-center my-2">Products In Stock:</h2>
+            <div class="row">
+                <div class="col-12 my-1 text-center">
+                    <h2> ~ {{ total_items_found }} ~ </h2>
                 </div>
+            </div>
+            {% endif %}
 
+            <!-- BACK BUTTON -->
+            <div class="row my-1">
+                <div class="col-12 mb-2 text-center ">
+                    <button class="btn btn-lg btn success go-back-button" onclick="goBack()">Go Back</button>
+                    <script>
+                        function goBack() {
+                            window.history.back();
+                        }
+                    </script>
+                </div>
             </div>
 
+
+
+
+
+
+
+
+
+
+
+
+            <!-- DISPLAY RESULTS OF SERACH -->
+
+
+            <!-- <div class="row text-center"> -->
+
+
+
+
+
+
+            <form action="{% url 'shopping_cart' %}" method="POST">
+                {% csrf_token%}
+
+                <div class="row">
+                    {% for items in results_collection %}
+
+
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 mx-auto text-center">
+
+
+                        <div class="card text-dark bg-light mb-3" style="max-width:100%;">
+                            <div class="card-header"><span class="text-black bg-transparent">SKU:</span>
+                                {{ items.film_sku }}</div>
+                            <div class="card-body">
+
+                                <img class="card-img-top img-fluid image-same-size" src="{{items.film_box_cover_url }}"
+                                    alt="{{items.film_friendly_name}}">
+
+
+                                <h5 class="card-title">{{ items.film_friendly_title }}</h5>
+
+
+                                {% if items.film_clip_link %}
+                                <a href="{% url 'members' %}">
+                                    <span class="fas fa-video fvid"> Trailers & Clips</span>
+                                    <!-- <h5><a class="bg-darker vid-link-title">Trailers & Clips</a></h5> -->
+                                </a>
+                                {% endif %}
+
+                                <!-- <h5 class="section-tiny-text text-muted">SKU:{{ items.film_sku }}</h5> -->
+
+                                <!-- <h5 class="card-title">{{ items.film_friendly_title }}</h5> -->
+
+                                <p class="card-text  section-tiny-text text-justify">{{ items.film_description }}</p>
+
+                                <hr>
+
+                                <div class="row section-title">
+                                    <div class="col-12 text-center">
+                                        <h5 class="film-price"><b>
+                                            £ {{ items.film_price }}
+                                        </b></h5>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-12 text-center">
+
+                                        <!-- SHOW DISCOUNT -->
+                                        {% if items.film_product_discount %}
+
+                                        <div class="row">
+                                            <div class="col-8  discounted-product mx-auto">
+                                                <h1>
+                                                    MEMBERS GET: - {{ items.film_product_discount }} % DISCOUNT!
+
+                                                </h1>
+                                            </div>
+                                        </div>
+                                        {% endif %}
+
+                                        <!-- VOLUMES -->
+                                        <select name="quantity">
+                                            <option value="1" selected='selected'>1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+
+                                    </div>
+                                </div>
+
+                                <!-- ADD TO CART -->
+                                <div class="row my-2">
+                                    <div class="col-12 text-center">
+
+                                        <input type="hidden" name="sku" value={{ items.film_sku }}>
+
+                                        <!-- ADD CART BUTTON -->
+                                        <button type="submit" class="btn btn-lg bt add-to-cart-button">
+                                            <h1><span class="fas fa-cart-plus text-dark"></span> ADD TO CART</h1>
+                                        </button>
+
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+
+                    {% endfor %}
+                </div>
+
+
+            </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- </div> -->
+
+            {% endblock main-content %}
+
+
         </div>
-
-        {% endfor %}
-
-        <!-- // -->
-
     </div>
-
 </div>
-
-</div>
-
-{% endblock main-content %}

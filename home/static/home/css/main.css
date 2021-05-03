@@ -11,6 +11,10 @@
     --ink: #000000;
 
     
+
+
+
+    
     --discount-colour: #202937;
     --banner-bckg: #000000;
     --banner-fgnd: #ffffff;
@@ -221,9 +225,28 @@ span, navbar-toggler-icon, bbut {
     color: var(--theme-bgc);
 }
 
+
+
+
+
+
+
+
+
+
+
 /* SECTION FONT STUFF */
 
+.section-title {
+    font-size: 1rem;
+    color: var(--ink);
+    background-color: var(--wallpaper)
+}
+
 .section-title :hover {
+
+    font-size: 1.25;
+
     /* color: var(--ink) !important; */
     color:var(--theme-C3) !important;
     font-weight: bold !important;
@@ -231,11 +254,7 @@ span, navbar-toggler-icon, bbut {
     background-color: var(--wallpaper) !important;
 }
 
-.section-title {
-    font-size: 1.5rem;
-    color: var(--ink);
-    background-color: var(--wallpaper)
-}
+
 
 .section-content {
     font-size: 1rem;
@@ -247,6 +266,7 @@ span, navbar-toggler-icon, bbut {
     font-size: .75rem;
     color: var(--ink);
     background-color: var(--wallpaper);
+    
 }
 
 /* BANNER ADVERT ROTOR */
@@ -566,6 +586,7 @@ h5{
     color:black;
     text-decoration-line: none;
 
+
 }
 
 
@@ -611,7 +632,52 @@ h2:hover{
 
 .fvid{
 
-    background-color: #ffffff !important;
+    background-color: transparent !important;
     color: var(--theme-C3) !important;
 
 }
+
+
+
+
+
+
+ 
+.pane{
+
+    /* min-height: 40vh; */
+    height:40vh;
+    width:auto;
+
+
+}
+
+
+
+
+.image-same-size{
+
+ 
+max-height: 100%;
+
+max-width: 100%;
+
+margin-left:auto;
+margin-right: auto;
+
+}
+
+/* /////////////// */
+
+p,.card-text{
+
+    background-color: transparent !important;
+
+}
+
+
+.film-price {
+
+    background-color: transparent !important;
+
+ }
