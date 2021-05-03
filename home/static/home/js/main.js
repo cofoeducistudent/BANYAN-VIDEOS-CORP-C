@@ -56,18 +56,18 @@ function articleRotor() {
 
 
 
-function nRu() {
+// function nRu() {
 
-    var element,name,arr;
+//     var element,name,arr;
 
-    element = document.getElementsByClassName('navbar-collapse');
-    // element.classList.remove('show');
+//     element = document.getElementsByClassName('navbar-collapse');
+//     // element.classList.remove('show');
 
-    name="show";
-    arr =element.className.split(" ");
-    if(arr.indexOf(name) ==-1 ){
-        element.className +=" " + name;
-    }
+//     name="show";
+//     arr =element.className.split(" ");
+//     if(arr.indexOf(name) ==-1 ){
+//         element.className +=" " + name;
+//     }
 
 
-}
+// }
