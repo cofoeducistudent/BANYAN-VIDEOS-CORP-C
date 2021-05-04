@@ -313,15 +313,7 @@ STATICFILES_DIRS = [
     
     os.path.join(BASE_DIR,"static"),
    
-
 ]
-
-# STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
-
-# STATICFILES_DIRS = (str(BASE_DIR.joinpath('static')),) # new
-
-
-# STATIC_ROOT = (BASE_DIR.join('staticfiles'))
 
 STATIC_ROOT = '_CLIENTS\BANYAN_VIDEOS-CORP-C\_BANYANVIDEOS_ROOT'
 

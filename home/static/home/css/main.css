@@ -133,8 +133,6 @@ li,nav-link,
 
 
 
-
-
 /* BURGER BUTTON */
 
 button,
@@ -331,11 +329,26 @@ h2, :hover{
 /* CAROUSEL SIZE */
 
 .c-image-size {
-    height: 550px;
-    width: auto;
-    -webkit-box-shadow: 5px 5px #d1c3c3;
-    box-shadow: 5px 5px #d1c3c3;
+    height:250px;
+    width: 60%;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    /* -webkit-box-shadow: 5px 5px #d1c3c3; */
+    /* box-shadow: 5px 5px #d1c3c3; */
 }
+
+/* .carousel-inner{
+    height: 200px !important;
+    width: auto !important;
+} */
+
+
+
+
+
+
 
 /* GENRE - LIST */
 
