@@ -84,7 +84,7 @@ class ShoppingCart(TemplateView):
         selected_sku = request.POST['sku']
 
 
-        print(selected_sku)#
+    
 
 
         price_paid = 0
