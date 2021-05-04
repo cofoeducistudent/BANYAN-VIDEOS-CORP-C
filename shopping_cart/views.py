@@ -83,6 +83,10 @@ class ShoppingCart(TemplateView):
         selected_quantity = int(request.POST['quantity'])
         selected_sku = request.POST['sku']
 
+
+        print(selected_sku)#
+
+
         price_paid = 0
         film_wad = []
         all_films = film_models.objects.all()
