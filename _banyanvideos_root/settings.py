@@ -52,7 +52,7 @@ FREE_SHIPPING_THRESHOLD=os.getenv("FREE_SHIPPING_THRESHOLD")
 
 
 
-DISABLE_COLLECTSTATIC=1
+DISABLE_COLLECTSTATIC=0
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -188,7 +188,7 @@ DATABASES = {
     }
 }
 
-# CHECK If IN PRODUCTION
+# CHECK If IN PRODUCTION & SWITCH DATABASE TO (POSTGRES!!)
 
 if PRODUCTION == True:
      
@@ -206,6 +206,8 @@ import dj_database_url
 db_from_env = dj_database_url.config(conn_max_age=600)
 
 DATABASES['default'].update(db_from_env)
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -244,7 +246,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 # Extra places for collectstatic to find static files.
-STATICFILES_DIRS = ( os.path.join(BASE_DIR, 'static'),)
+# STATICFILES_DIRS = ( os.path.join(BASE_DIR, 'static'),)
 
 
 
@@ -304,20 +306,32 @@ EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
 
 # Static Files
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
-STATIC_URL = '_banyanvideos_root/static/'
 
-# STATICFILES_DIRS = (str(BASE_DIR.joinpath('/_banyanvideos_root/static/')),) # new
-STATICFILES_DIRS = [os.path.join(BASE_DIR, '_banyanvideos_root/static')]
+STATIC_URL = '/static/'
 
-# STATIC_ROOT = str(BASE_DIR.joinpath('staticfiles')) # new
+STATICFILES_DIRS = [
+    
+    os.path.join(BASE_DIR,"static"),
+   
 
-STATIC_ROOT = (BASE_DIR.join('staticfiles'))
+]
 
+# STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+
+# STATICFILES_DIRS = (str(BASE_DIR.joinpath('static')),) # new
+
+
+# STATIC_ROOT = (BASE_DIR.join('staticfiles'))
+
+STATIC_ROOT = '_CLIENTS\BANYAN_VIDEOS-CORP-C\_BANYANVIDEOS_ROOT'
 
 
 
 ''' Engine used during collectstatic. default = django.contrib.staticfiles.storage.StaticFilesStorage.'''
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage' # however using whitenoise engine because of Heroku
+
+
+
 
 
 
