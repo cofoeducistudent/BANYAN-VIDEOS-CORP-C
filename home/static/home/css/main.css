@@ -314,11 +314,15 @@ font-size: .75rem !important;
 /* LARGE SEARCH STUFF */
 
 .large-search-bar {
-    margin-top: 80px !important;
-    width: 33%;
+    margin-top: 70px !important;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
 }
+
+ 
+
+
 
 /* SMALL SEARCH */
 
