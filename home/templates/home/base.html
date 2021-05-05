@@ -222,11 +222,11 @@
 
     <!-- BANNER -->
 
-    <div class="row my-1 keep-insideBSol ad-banner">
+    <div class="row my-1 keep-insideBSol ">
         <div class="col-xs-12 text-center w-100">
 
             <a href="{% url 'login_register' %}">
-                <h1>
+                <h1 class="advert-message">
                     <div id="advert">
                 </h1>
             </a>
@@ -239,7 +239,7 @@
 
             {% for message in messages %}
 
-            <div class="alert alert-danger" role="alert">
+            <div class="alert alert-warning" role="alert">
                 <p>{{ message }}</p>
             </div>
 

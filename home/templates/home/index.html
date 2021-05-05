@@ -131,9 +131,9 @@
         {% for items in articles  %}
 
         {% if items.article_live  %}
-        <h1 class="section-title"><b>{{ items.article_friendly_name }}</b></h1>
+        <h1 class="section-title news-block"><b>{{ items.article_friendly_name }}</b></h1>
 
-        <image class="img-fluid" src="{{ items.article_image }}"></image>
+        <image class="img-fluid news-block" src="{{ items.article_image }}"></image>
 
         <h1 class="section-content text-justify text-muted px-5">{{ items.article_content }}</h1>
 

@@ -264,27 +264,44 @@ h2, :hover{
 #advert {
     color: var(--theme-fgc);
     color: var(--ink);
-    background-color: var(--banner-bckg);
-    height: 60px;
-    margin: auto;
-    -webkit-box-shadow: 3px 3px var(--theme-c1);
-    box-shadow: 3px 3px var(--theme-c1);
-}
+    /* background-color: var(--banner-bckg); */
+    background-color: rgb(250, 250, 169);
+    height: 40px;
 
-#advert {
+    margin: auto;
+    /* -webkit-box-shadow: 3px 3px var(--theme-c1); */
+    /* box-shadow: 3px 3px var(--theme-c1); */
+
+    box-shadow: 10px 10px 10px #888888;
+
     padding-top: 10px;
     padding-left: 10px;
     padding-right: 10px;
+
     font-size: .75rem;
     width: 90%;
     margin: auto;
 }
 
-#advert h1 {
-    font-size: .75rem;
-    color: var(--theme-c2);
-    background-color: var(--banner-bckg);
+
+#advert :hover{
+
+font-size: .75rem !important;
+
 }
+
+
+
+ 
+
+
+.advert-message{
+
+    background-color: transparent !important;
+
+}
+
+
 
 .custom-alert {
     background-color: var(--theme-bgc) !important;
@@ -346,6 +363,7 @@ h2, :hover{
 
 
 
+
 .plauq{
 
     box-shadow: 10px 10px 10px #888888 !important;
@@ -353,7 +371,13 @@ h2, :hover{
 
 .ad-banner{
 
-    position: absolute;
+    /* position: absolute; */
+    
+    /* top:0px;
+    left:0px;
+
+    margin-left:auto;
+    margin-right:auto; */
 
 }
 
@@ -361,7 +385,8 @@ h2, :hover{
 
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
+    margin-bottom: 10px;
+    width: 95%;
 
 
 }
